@@ -1,0 +1,43 @@
+name: build
+on:
+  push:
+    branches:
+      - main
+  workflow_call:
+  pull_request:
+    branches:
+      - main
+
+env:
+  # without extension
+  TEX_WORKDIR: slides
+  TEX_FILE: main
+  OUTPUT_NAME: 24_bis_shibboleth_slides
+
+# make sure that GITHUB_TOKEN has permissions
+permissions:
+  contents: write
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Set up Git repository
+        uses: actions/checkout@v4
+
+      - name: Compile LaTeX document
+        uses: xu-cheng/latex-action@v3
+        with:
+          working_directory: ${{ env.TEX_WORKDIR }}
+          root_file: ${{ env.TEX_FILE }}.tex
+          latexmk_shell_escape: true
+
+      - name: Copy file
+        run: |
+          cp ${{ env.TEX_WORKDIR }}/${{ env.TEX_FILE }}.pdf ${{ env.OUTPUT_NAME }}.pdf
+
+      - name: Upload as artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: ${{ env.OUTPUT_NAME }}
+          path: ${{ env.OUTPUT_NAME }}.pdf

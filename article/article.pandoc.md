@@ -15,7 +15,7 @@ bibliography: slides/bibliography.bib
 
 ## Einführung
 
-Dies ist ein Test [@template].
+Quellenangabe funktioniert so [@template].
 
 ## Funktionsweise
 

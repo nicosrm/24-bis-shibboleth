@@ -15,6 +15,8 @@ bibliography: slides/bibliography.bib
 
 ## Einführung
 
+Dies ist ein Test [@template].
+
 ## Funktionsweise
 
 ## Einsatz
@@ -22,3 +24,8 @@ bibliography: slides/bibliography.bib
 ## Diskussion
 
 ## Zusammenfassung
+
+## Literatur
+
+::: {#refs}
+:::

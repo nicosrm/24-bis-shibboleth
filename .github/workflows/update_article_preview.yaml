@@ -25,7 +25,7 @@ jobs:
           args: >-
             --shift-heading-level-by=-1
             --citeproc
-            --to=gcm
+            --to=gfm
             -o ${{ env.PREVIEW_PATH }}
             ${{ env.INPUT_PATH }}
 

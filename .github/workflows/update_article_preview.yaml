@@ -6,7 +6,7 @@ on:
 
 env:
   INPUT_PATH: article/article.pandoc.md
-  PREVIEW_PATH: article/artic.preview.md
+  PREVIEW_PATH: article/article.preview.md
 
 # make sure that GITHUB_TOKEN has permissions
 permissions:
@@ -34,5 +34,5 @@ jobs:
             git config --local user.email "action@github.com"
             git config --local user.name "GitHub Action"
             git add ${{ env.PREVIEW_PATH }}
-            git commit -m "[CI] Update previews." || echo "No changes to commit."
+            git commit -m "[CI] Update preview." || echo "No changes to commit."
             git push

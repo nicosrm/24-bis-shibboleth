@@ -15,7 +15,7 @@ bibliography: slides/bibliography.bib
 
 ## Einführung
 
-Beispiel für Quellenangabe [@template].
+Quellenangaben funktionieren so [@template].
 
 ## Funktionsweise
 

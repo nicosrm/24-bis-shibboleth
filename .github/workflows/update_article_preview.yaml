@@ -35,3 +35,4 @@ jobs:
             git config --local user.name "GitHub Action"
             git add ${{ env.PREVIEW_PATH }}
             git commit -m "[CI] Update previews." || echo "No changes to commit."
+            git push

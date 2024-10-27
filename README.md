@@ -2,7 +2,7 @@
 
 Dieses Repository enthält die Projektarbeit des Moduls [C251 Betriebliche Informationssysteme](https://modulux.htwk-leipzig.de/modulux/modul/6286) über das Thema Shibboleth.
 
-Die Präsentation ist als Artefakt des letzten Commits einsehbar. Weiterhin ist der entstandene Artikel im [`article`](./article/)-Verzeichnis als [Markdown](./article/article.preview.md)- sowie [PDF](./article/24_bis_shibboleth_article.pdf)-Version abgelegt.
+Die Präsentation ist als Artefakt des letzten Commits einsehbar. Weiterhin ist der entstandene Artikel im [`article`](./article/)-Verzeichnis als von GitHub darstellbare [Markdown](./article/article.preview.md)-Version abgelegt. Eine PDF-Version kann als Artefakt der GitHub Action (`build article pdf`) eingesehen werden.
 
 > [!IMPORTANT]
 > Dieses Projekt befindet sich aktuell in der Entwicklungsphase. Sobald das Projekt abgeschlossen ist, wird dieser Hinweis entfernt.

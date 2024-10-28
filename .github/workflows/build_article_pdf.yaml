@@ -8,6 +8,8 @@ on:
 
 env:
   INPUT_PATH: article/article.pandoc.md
+  RESOURCE_PATH: article
+  BIB_PATH: slides/bibliography.bib
   OUTPUT_PATH: article/24_bis_shibboleth_article.pdf
   ARTIFACT_NAME: 24_bis_shibboleth_article
 
@@ -26,10 +28,12 @@ jobs:
         uses: docker://pandoc/latex:latest
         with:
           args: >-
+            ${{ env.INPUT_PATH }}
             --shift-heading-level-by=-1
+            --resource-path ${{ env.RESOURCE_PATH }} \
+            --bibliography ${{ env.BIB_PATH }} \
             --citeproc
             -o ${{ env.OUTPUT_PATH }}
-            ${{ env.INPUT_PATH }}
       
       - name: Upload as artifact
         uses: actions/upload-artifact@v4

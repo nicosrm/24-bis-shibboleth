@@ -14,9 +14,19 @@ if ! podman machine ls | grep -q "Currently running"; then
 fi
 
 echo "Building markdown preview..."
-podman run --rm -v "$(pwd):/data" pandoc/latex article/article.pandoc.md \
-    --shift-heading-level-by=-1 --citeproc --to=gfm -o article/article.preview.md
+podman run --rm \
+    -v "$(pwd):/data" pandoc/latex article/article.pandoc.md \
+    --shift-heading-level-by=-1 \
+    --bibliography slides/bibliography.bib \
+    --citeproc \
+    --to=gfm \
+    -o article/article.preview.md
 
 echo "Building pdf..."
-podman run --rm -v "$(pwd):/data" pandoc/latex article/article.pandoc.md \
-    --shift-heading-level-by=-1 --citeproc -o article/24_bis_shibboleth_article.pdf
+podman run --rm \
+    -v "$(pwd):/data" pandoc/latex article/article.pandoc.md \
+    --shift-heading-level-by=-1 \
+    --resource-path article \
+    --bibliography slides/bibliography.bib \
+    --citeproc \
+    -o article/24_bis_shibboleth_article.pdf

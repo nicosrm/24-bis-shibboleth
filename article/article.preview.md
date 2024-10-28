@@ -1,6 +1,14 @@
 # Einführung
 
-Quellenangaben funktionieren so (nicosrm 2024).
+Quellenangaben funktionieren mittels `[@citation-key]` (nicosrm 2024)
+und die Einbettung von Bildern so:
+
+    ![Caption](../assets/placeholder.png)
+
+<figure>
+<img src="../assets/placeholder.png" alt="Caption" />
+<figcaption aria-hidden="true">Caption</figcaption>
+</figure>
 
 # Funktionsweise
 

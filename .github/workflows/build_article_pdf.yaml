@@ -28,11 +28,11 @@ jobs:
         uses: docker://pandoc/latex:latest
         with:
           args: >-
-            ${{ env.INPUT_PATH }}
             --shift-heading-level-by=-1
             --resource-path ${{ env.RESOURCE_PATH }} \
             --bibliography ${{ env.BIB_PATH }} \
             --citeproc
+            ${{ env.INPUT_PATH }}
             -o ${{ env.OUTPUT_PATH }}
       
       - name: Upload as artifact

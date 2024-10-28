@@ -18,6 +18,7 @@ Die Präsentation ist als Artefakt des letzten Commits einsehbar. Weiterhin ist 
 
 ## Team
 
+- [@JohannesGGE](https://github.com/JohannesGGE)
 - [@irooori](https://github.com/irooori)
 - [@nicosrm](https://github.com/nicosrm)
 

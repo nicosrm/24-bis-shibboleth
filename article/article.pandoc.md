@@ -8,14 +8,20 @@ lang: de-DE
 papersize: a4
 geometry: margin=3cm
 colorlinks: true
-bibliography: slides/bibliography.bib
 ---
 
 # Shibboleth
 
 ## Einführung
 
-Quellenangaben funktionieren so [@template].
+Quellenangaben funktionieren mittels `[@citation-key]` [@template]
+und die Einbettung von Bildern so:
+
+```
+![Caption](../assets/placeholder.png)
+```
+
+![Caption](../assets/placeholder.png)
 
 ## Funktionsweise
 

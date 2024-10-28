@@ -4,7 +4,7 @@ In diesem Verzeichnis ist der entstandene Artikel zu finden. Dabei wurde mit [Pa
 
 ```sh
 # aus Root-Verzeichnis des Repositories
-$ sh build_preview.sh
+$ sh article/build_preview.sh
 ```
 
 Weiterhin werden bei jedem Push, in welchem die `article.pandoc.md`-Datei verändert wird, die Preview-Version automatisch gebaut und gepusht (siehe [`.github/workflows/update_article_preview.yaml`](../.github/workflows/update_article_preview.yaml)). Die zugehörige PDF-Version ist als Artefakt in der CI zu finden.

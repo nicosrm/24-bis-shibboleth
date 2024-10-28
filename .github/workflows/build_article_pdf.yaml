@@ -29,8 +29,8 @@ jobs:
         with:
           args: >-
             --shift-heading-level-by=-1
-            --resource-path ${{ env.RESOURCE_PATH }} \
-            --bibliography ${{ env.BIB_PATH }} \
+            --resource-path ${{ env.RESOURCE_PATH }}
+            --bibliography ${{ env.BIB_PATH }}
             --citeproc
             ${{ env.INPUT_PATH }}
             -o ${{ env.OUTPUT_PATH }}

@@ -1,5 +1,5 @@
 ---
-author: Ines Rohrbach, Nico Schramm
+author: Johannes Merkel, Ines Rohrbach, Nico Schramm
 title: Shibboleth
 subtitle: Single Sign-On Login System
 subject: BIS Projekt

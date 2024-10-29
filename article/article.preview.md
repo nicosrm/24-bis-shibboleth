@@ -27,7 +27,53 @@
 
 # Literatur
 
-<div id="refs">
+<div id="refs" class="references csl-bib-body hanging-indent"
+entry-spacing="0">
+
+<div id="ref-cantorConsortiumFAQShibboleth2023" class="csl-entry">
+
+Cantor, Scott. 2023. „Consortium FAQ - Shibboleth Consortium“.
+Confluence. 16. Februar 2023.
+<https://shibboleth.atlassian.net/wiki/spaces/consort/pages/2913075221>.
+
+</div>
+
+<div id="ref-template" class="csl-entry">
+
+nicosrm. 2024. „24-Beamer-Template“.
+<https://github.com/nicosrm/24-beamer-template>.
+
+</div>
+
+<div id="ref-robinsDemystifyingShibbolethAdapting2024"
+class="csl-entry">
+
+Robins, Simon, und Ben Daigle. 2024. „Demystifying Shibboleth: Adapting
+to Web Browser Privacy Changes“. *Journal of Library Administration* 64
+(4): 449–72. <https://doi.org/10.1080/01930826.2024.2330862>.
+
+</div>
+
+<div id="ref-shibbolethShibbolethConcepts2023" class="csl-entry">
+
+Shibboleth. 2023. „Shibboleth Concepts“. Confluence. 22. Juni 2023.
+<https://shibboleth.atlassian.net/wiki/spaces/CONCEPT/overview>.
+
+</div>
+
+<div id="ref-shibbolethOurMembers2024" class="csl-entry">
+
+———. 2024a. „Our Members“. Shibboleth Consortium. 2024.
+<https://www.shibboleth.net/about-us/members/>.
+
+</div>
+
+<div id="ref-shibbolethShibbolethConsortium2024" class="csl-entry">
+
+———. 2024b. „Shibboleth Consortium“. Shibboleth Consortium. 2024.
+<https://www.shibboleth.net/>.
+
+</div>
 
 </div>
 
@@ -37,7 +83,7 @@
 
 ## Syntax
 
-Quellenangaben funktionieren mittels `[@citation-key]` (**template?**)
+Quellenangaben funktionieren mittels `[@citation-key]` (nicosrm 2024)
 und die Einbettung von Bildern so:
 
     ![Caption](../assets/placeholder.png)
@@ -49,7 +95,7 @@ und die Einbettung von Bildern so:
 
 ## Shibboleth allgemein
 
-(**shibbolethShibbolethConsortium2024?**)
+(Shibboleth 2024b)
 
 - seit Anfang der 2000er Jahre an Spitze der
   Identitätsmanagement-Software
@@ -67,10 +113,10 @@ und die Einbettung von Bildern so:
   - Metadata Aggregator (Verarbeitung von Metadaten bei Verwendung
     mehrerer Identity Providern)
 - Mitglieder: u.a. Stanford University, University of Oxford, DFN
-  Verein, Massachusetts Institute of Technology
-  (**shibbolethOurMembers2024?**) (Auswahl)
+  Verein, Massachusetts Institute of Technology (Shibboleth 2024a)
+  (Auswahl)
 
-(**cantorConsortiumFAQShibboleth2023?**)
+(Cantor 2023)
 
 - Open-Source-Softwareprojekt
 - entwickelt Software zur Unterstützung von verschiedenen Standards zur
@@ -111,11 +157,16 @@ und die Einbettung von Bildern so:
   - stellt keine Instanz zu Verfügung oder Ähnliches
   - keine Voraussetzung für Verwendung der Software
 
+## Shibboleth Ziele
+
+- TODO:
+  <https://shibboleth.atlassian.net/wiki/spaces/CONCEPT/pages/928645487/USGoalReq>
+
 ## SAML
 
 ## Konzept
 
-(**shibbolethShibbolethConcepts2023?**)
+(Shibboleth 2023)
 
 - SAML als primäres Protokoll, welches durch IdP unterstützt wird
   - als einziges von SP unterstützt
@@ -132,17 +183,18 @@ und die Einbettung von Bildern so:
     - Unterstützung des SP bei Ermittlung des IdP des Nutzers
     - Standort überall im Web möglich
     - nicht in allen Anwendungsfällen nötig
+- TODO: (Robins und Daigle 2024)
 
 ### Basic Interaction
 
-(**shibbolethShibbolethConcepts2023?**)
+(Shibboleth 2023)
 
 <figure>
 <img src="../assets/basic_interaction.drawio.svg"
-alt="Basic Interaction (vgl. shibbolethShibbolethConcepts2023?)" />
+alt="Basic Interaction (vgl. Shibboleth 2023)" />
 <figcaption aria-hidden="true">Basic Interaction <span class="citation"
-data-cites="shibbolethShibbolethConcepts2023">(vgl.
-<strong>shibbolethShibbolethConcepts2023?</strong>)</span></figcaption>
+data-cites="shibbolethShibbolethConcepts2023">(vgl. Shibboleth
+2023)</span></figcaption>
 </figure>
 
 Grundlegende Interaktionen wie in dargestellt
@@ -158,6 +210,22 @@ Grundlegende Interaktionen wie in dargestellt
 
 - TODO: weitere Inhalte auf verlinkter Seite
 
+### Weiteres
+
+- TODO: [System
+  Flow](https://shibboleth.atlassian.net/wiki/spaces/CONCEPT/pages/928645290)
+- TODO:
+  [Metadaten](https://shibboleth.atlassian.net/wiki/spaces/CONCEPT/pages/928645459)
+- TODO:
+  [Sessions](https://shibboleth.atlassian.net/wiki/spaces/CONCEPT/pages/928645433)
+- TODO: [Name
+  Identifiers](https://shibboleth.atlassian.net/wiki/spaces/CONCEPT/pages/928645231)
+- TODO:
+  [Glossar](https://shibboleth.atlassian.net/wiki/spaces/CONCEPT/pages/928645488/Glossary)
+  - hier auch hilfreiche Definition gegeben, falls noch fehlend
+- ggf. [weitere
+  Konzepte](https://shibboleth.atlassian.net/wiki/spaces/CONCEPT/overview#More-Concepts)
+
 ### Identity Provider 5
 
 - TODO: <https://shibboleth.atlassian.net/wiki/spaces/IDP5/overview>
@@ -172,14 +240,13 @@ Grundlegende Interaktionen wie in dargestellt
 
 ## Shibboleth Consortium Mitgliedschaften
 
-(**shibbolethShibbolethConsortium2024?**)
+(Shibboleth 2024b)
 
 - Finanzierung durch Mitgliedschaften
 - erlaubt Unterstützung und Pflege des Systems
 - verringertes Risiko für Organisationen, die Shibboleth verwenden
 - u.a. Stanford University, University of Oxford, DFN Verein,
-  Massachusetts Institute of Technology (**shibbolethOurMembers2024?**)
-  (Auswahl)
+  Massachusetts Institute of Technology (Shibboleth 2024a) (Auswahl)
 
 <br>
 

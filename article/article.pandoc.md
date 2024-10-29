@@ -143,9 +143,11 @@ und die Einbettung von Bildern so:
 
 #### Basic Interaction
 
-[Bild](blob:https://shibboleth.atlassian.net/ad01605e-3709-490e-b898-58e9da6b837e#media-blob-url=true&id=68cce964-e265-4143-82b5-90139c499439&collection=contentId-928645504&contextId=928645504&mimeType=image%2Fpng&name=sso-flow.png&size=81634&width=640&height=217&alt=)
+[@shibbolethShibbolethConcepts2023]
 
-TODO: selbst zeichnen
+![Basic Interaction [vgl. @shibbolethShibbolethConcepts2023]\label{fig:basic-interaction}](../assets/basic_interaction.drawio.svg)
+
+Grundlegende Interaktionen wie in \autoref{fig:basic-interaction} dargestellt
 
 1. SP erkennt Nutzer, der versucht, auf eingeschränkte Inhalte zuzugreifen
 2. SP generiert Authentifizierungsanfrage, Senden der Anfrage und des Nutzers

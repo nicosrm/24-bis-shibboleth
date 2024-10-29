@@ -135,14 +135,14 @@ und die Einbettung von Bildern so:
 
 ### Basic Interaction
 
-(Shibboleth 2023)
+(**shibbolethShibbolethConcepts2023?**)
 
 <figure>
 <img src="../assets/basic_interaction.drawio.svg"
-alt="Basic Interaction (vgl. Shibboleth 2023)" />
+alt="Basic Interaction (vgl. shibbolethShibbolethConcepts2023?)" />
 <figcaption aria-hidden="true">Basic Interaction <span class="citation"
-data-cites="shibbolethShibbolethConcepts2023">(vgl. Shibboleth
-2023)</span></figcaption>
+data-cites="shibbolethShibbolethConcepts2023">(vgl.
+<strong>shibbolethShibbolethConcepts2023?</strong>)</span></figcaption>
 </figure>
 
 Grundlegende Interaktionen wie in dargestellt

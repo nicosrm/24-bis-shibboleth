@@ -119,6 +119,11 @@ und die Einbettung von Bildern so:
     - stellt keine Instanz zu Verfügung oder Ähnliches
     - keine Voraussetzung für Verwendung der Software
 
+### Shibboleth Ziele
+
+- TODO: [https://shibboleth.atlassian.net/wiki/spaces/CONCEPT/pages/928645487/USGoalReq](https://shibboleth.atlassian.net/wiki/spaces/CONCEPT/pages/928645487/USGoalReq)
+
+
 ### SAML
 
 ### Konzept
@@ -140,6 +145,7 @@ und die Einbettung von Bildern so:
         - Unterstützung des SP bei Ermittlung des IdP des Nutzers
         - Standort überall im Web möglich
         - nicht in allen Anwendungsfällen nötig
+- TODO: [@robinsDemystifyingShibbolethAdapting2024]
 
 #### Basic Interaction
 
@@ -159,6 +165,15 @@ Grundlegende Interaktionen wie in \autoref{fig:basic-interaction} dargestellt
 
 - TODO: weitere Inhalte auf verlinkter Seite
 
+#### Weiteres
+
+- TODO: [System Flow](https://shibboleth.atlassian.net/wiki/spaces/CONCEPT/pages/928645290)
+- TODO: [Metadaten](https://shibboleth.atlassian.net/wiki/spaces/CONCEPT/pages/928645459)
+- TODO: [Sessions](https://shibboleth.atlassian.net/wiki/spaces/CONCEPT/pages/928645433)
+- TODO: [Name Identifiers](https://shibboleth.atlassian.net/wiki/spaces/CONCEPT/pages/928645231)
+- TODO: [Glossar](https://shibboleth.atlassian.net/wiki/spaces/CONCEPT/pages/928645488/Glossary)
+    - hier auch hilfreiche Definition gegeben, falls noch fehlend
+- ggf. [weitere Konzepte](https://shibboleth.atlassian.net/wiki/spaces/CONCEPT/overview#More-Concepts)
 
 #### Identity Provider 5
 

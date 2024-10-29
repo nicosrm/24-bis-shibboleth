@@ -8,6 +8,7 @@ lang: de-DE
 papersize: a4
 geometry: margin=3cm
 colorlinks: true
+link-citations: true
 ---
 
 # Shibboleth

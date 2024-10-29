@@ -135,9 +135,17 @@ und die Einbettung von Bildern so:
 
 ### Basic Interaction
 
-[Bild](blob:https://shibboleth.atlassian.net/ad01605e-3709-490e-b898-58e9da6b837e#media-blob-url=true&id=68cce964-e265-4143-82b5-90139c499439&collection=contentId-928645504&contextId=928645504&mimeType=image%2Fpng&name=sso-flow.png&size=81634&width=640&height=217&alt=)
+(Shibboleth 2023)
 
-TODO: selbst zeichnen
+<figure>
+<img src="../assets/basic_interaction.drawio.svg"
+alt="Basic Interaction (vgl. Shibboleth 2023)" />
+<figcaption aria-hidden="true">Basic Interaction <span class="citation"
+data-cites="shibbolethShibbolethConcepts2023">(vgl. Shibboleth
+2023)</span></figcaption>
+</figure>
+
+Grundlegende Interaktionen wie in dargestellt
 
 1.  SP erkennt Nutzer, der versucht, auf eingeschränkte Inhalte
     zuzugreifen

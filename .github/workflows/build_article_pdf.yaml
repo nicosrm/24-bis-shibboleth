@@ -10,6 +10,7 @@ env:
   INPUT_PATH: article/article.pandoc.md
   RESOURCE_PATH: article
   BIB_PATH: slides/bibliography.bib
+  CSL_PATH: article/ieee.csl
   OUTPUT_PATH: article/24_bis_shibboleth_article.pdf
   ARTIFACT_NAME: 24_bis_shibboleth_article
 
@@ -31,6 +32,7 @@ jobs:
             --shift-heading-level-by=-1
             --resource-path ${{ env.RESOURCE_PATH }}
             --bibliography ${{ env.BIB_PATH }}
+            --csl ${{ env.CSL_PATH }}
             --citeproc
             ${{ env.INPUT_PATH }}
             -o ${{ env.OUTPUT_PATH }}

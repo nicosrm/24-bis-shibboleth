@@ -27,51 +27,63 @@
 
 # Literatur
 
-<div id="refs" class="references csl-bib-body hanging-indent"
-entry-spacing="0">
-
-<div id="ref-cantorConsortiumFAQShibboleth2023" class="csl-entry">
-
-Cantor, Scott. 2023. „Consortium FAQ - Shibboleth Consortium“.
-Confluence. 16. Februar 2023.
-<https://shibboleth.atlassian.net/wiki/spaces/consort/pages/2913075221>.
-
-</div>
+<div id="refs" class="references csl-bib-body" entry-spacing="0">
 
 <div id="ref-template" class="csl-entry">
 
-nicosrm. 2024. „24-Beamer-Template“.
-<https://github.com/nicosrm/24-beamer-template>.
+<span class="csl-left-margin">\[1\]
+</span><span class="csl-right-inline">nicosrm, *24-beamer-template*. (8.
+September 2024). Zugegriffen: 8. September 2024. \[Online\]. Verfügbar
+unter: <https://github.com/nicosrm/24-beamer-template></span>
+
+</div>
+
+<div id="ref-shibbolethShibbolethConsortium2024" class="csl-entry">
+
+<span class="csl-left-margin">\[2\]
+</span><span class="csl-right-inline">Shibboleth, „Shibboleth
+Consortium“. Zugegriffen: 29. Oktober 2024. \[Online\]. Verfügbar unter:
+<https://www.shibboleth.net/></span>
+
+</div>
+
+<div id="ref-shibbolethOurMembers2024" class="csl-entry">
+
+<span class="csl-left-margin">\[3\]
+</span><span class="csl-right-inline">Shibboleth, „Our Members“.
+Zugegriffen: 29. Oktober 2024. \[Online\]. Verfügbar unter:
+<https://www.shibboleth.net/about-us/members/></span>
+
+</div>
+
+<div id="ref-cantorConsortiumFAQShibboleth2023" class="csl-entry">
+
+<span class="csl-left-margin">\[4\]
+</span><span class="csl-right-inline">S. Cantor, „Consortium FAQ -
+Shibboleth Consortium“. Zugegriffen: 29. Oktober 2024. \[Online\].
+Verfügbar unter:
+<https://shibboleth.atlassian.net/wiki/spaces/consort/pages/2913075221></span>
+
+</div>
+
+<div id="ref-shibbolethShibbolethConcepts2023" class="csl-entry">
+
+<span class="csl-left-margin">\[5\]
+</span><span class="csl-right-inline">Shibboleth, „Shibboleth Concepts“.
+Zugegriffen: 29. Oktober 2024. \[Online\]. Verfügbar unter:
+<https://shibboleth.atlassian.net/wiki/spaces/CONCEPT/overview></span>
 
 </div>
 
 <div id="ref-robinsDemystifyingShibbolethAdapting2024"
 class="csl-entry">
 
-Robins, Simon, und Ben Daigle. 2024. „Demystifying Shibboleth: Adapting
-to Web Browser Privacy Changes“. *Journal of Library Administration* 64
-(4): 449–72. <https://doi.org/10.1080/01930826.2024.2330862>.
-
-</div>
-
-<div id="ref-shibbolethShibbolethConcepts2023" class="csl-entry">
-
-Shibboleth. 2023. „Shibboleth Concepts“. Confluence. 22. Juni 2023.
-<https://shibboleth.atlassian.net/wiki/spaces/CONCEPT/overview>.
-
-</div>
-
-<div id="ref-shibbolethOurMembers2024" class="csl-entry">
-
-———. 2024a. „Our Members“. Shibboleth Consortium. 2024.
-<https://www.shibboleth.net/about-us/members/>.
-
-</div>
-
-<div id="ref-shibbolethShibbolethConsortium2024" class="csl-entry">
-
-———. 2024b. „Shibboleth Consortium“. Shibboleth Consortium. 2024.
-<https://www.shibboleth.net/>.
+<span class="csl-left-margin">\[6\]
+</span><span class="csl-right-inline">S. Robins und B. Daigle,
+„Demystifying Shibboleth: Adapting to Web Browser Privacy Changes“,
+*Journal of Library Administration*, Bd. 64, Nr. 4, S. 449–472, Mai
+2024, doi:
+[10.1080/01930826.2024.2330862](https://doi.org/10.1080/01930826.2024.2330862).</span>
 
 </div>
 
@@ -83,8 +95,8 @@ Shibboleth. 2023. „Shibboleth Concepts“. Confluence. 22. Juni 2023.
 
 ## Syntax
 
-Quellenangaben funktionieren mittels `[@citation-key]` (nicosrm 2024)
-und die Einbettung von Bildern so:
+Quellenangaben funktionieren mittels `[@citation-key]`
+[\[1\]](#ref-template) und die Einbettung von Bildern so:
 
     ![Caption](../assets/placeholder.png)
 
@@ -95,7 +107,7 @@ und die Einbettung von Bildern so:
 
 ## Shibboleth allgemein
 
-(Shibboleth 2024b)
+[\[2\]](#ref-shibbolethShibbolethConsortium2024)
 
 - seit Anfang der 2000er Jahre an Spitze der
   Identitätsmanagement-Software
@@ -113,10 +125,10 @@ und die Einbettung von Bildern so:
   - Metadata Aggregator (Verarbeitung von Metadaten bei Verwendung
     mehrerer Identity Providern)
 - Mitglieder: u.a. Stanford University, University of Oxford, DFN
-  Verein, Massachusetts Institute of Technology (Shibboleth 2024a)
-  (Auswahl)
+  Verein, Massachusetts Institute of Technology
+  [\[3\]](#ref-shibbolethOurMembers2024) (Auswahl)
 
-(Cantor 2023)
+[\[4\]](#ref-cantorConsortiumFAQShibboleth2023)
 
 - Open-Source-Softwareprojekt
 - entwickelt Software zur Unterstützung von verschiedenen Standards zur
@@ -166,7 +178,7 @@ und die Einbettung von Bildern so:
 
 ## Konzept
 
-(Shibboleth 2023)
+[\[5\]](#ref-shibbolethShibbolethConcepts2023)
 
 - SAML als primäres Protokoll, welches durch IdP unterstützt wird
   - als einziges von SP unterstützt
@@ -183,18 +195,19 @@ und die Einbettung von Bildern so:
     - Unterstützung des SP bei Ermittlung des IdP des Nutzers
     - Standort überall im Web möglich
     - nicht in allen Anwendungsfällen nötig
-- TODO: (Robins und Daigle 2024)
+- TODO: [\[6\]](#ref-robinsDemystifyingShibbolethAdapting2024)
 
 ### Basic Interaction
 
-(Shibboleth 2023)
+[\[5\]](#ref-shibbolethShibbolethConcepts2023)
 
 <figure>
 <img src="../assets/basic_interaction.drawio.svg"
-alt="Basic Interaction (vgl. Shibboleth 2023)" />
+alt="Basic Interaction vgl. [5]" />
 <figcaption aria-hidden="true">Basic Interaction <span class="citation"
-data-cites="shibbolethShibbolethConcepts2023">(vgl. Shibboleth
-2023)</span></figcaption>
+data-cites="shibbolethShibbolethConcepts2023">vgl. <a
+href="#ref-shibbolethShibbolethConcepts2023"
+role="doc-biblioref">[5]</a></span></figcaption>
 </figure>
 
 Grundlegende Interaktionen wie in dargestellt
@@ -240,13 +253,14 @@ Grundlegende Interaktionen wie in dargestellt
 
 ## Shibboleth Consortium Mitgliedschaften
 
-(Shibboleth 2024b)
+[\[2\]](#ref-shibbolethShibbolethConsortium2024)
 
 - Finanzierung durch Mitgliedschaften
 - erlaubt Unterstützung und Pflege des Systems
 - verringertes Risiko für Organisationen, die Shibboleth verwenden
 - u.a. Stanford University, University of Oxford, DFN Verein,
-  Massachusetts Institute of Technology (Shibboleth 2024a) (Auswahl)
+  Massachusetts Institute of Technology
+  [\[3\]](#ref-shibbolethOurMembers2024) (Auswahl)
 
 <br>
 

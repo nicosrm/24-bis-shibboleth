@@ -27,44 +27,7 @@
 
 # Literatur
 
-<div id="refs" class="references csl-bib-body hanging-indent"
-entry-spacing="0">
-
-<div id="ref-cantorConsortiumFAQShibboleth2023" class="csl-entry">
-
-Cantor, Scott. 2023. „Consortium FAQ - Shibboleth Consortium“.
-Confluence. 16. Februar 2023.
-<https://shibboleth.atlassian.net/wiki/spaces/consort/pages/2913075221>.
-
-</div>
-
-<div id="ref-template" class="csl-entry">
-
-nicosrm. 2024. „24-Beamer-Template“.
-<https://github.com/nicosrm/24-beamer-template>.
-
-</div>
-
-<div id="ref-shibbolethShibbolethConcepts2023" class="csl-entry">
-
-Shibboleth. 2023. „Shibboleth Concepts“. Confluence. 22. Juni 2023.
-<https://shibboleth.atlassian.net/wiki/spaces/CONCEPT/overview>.
-
-</div>
-
-<div id="ref-shibbolethOurMembers2024" class="csl-entry">
-
-———. 2024a. „Our Members“. Shibboleth Consortium. 2024.
-<https://www.shibboleth.net/about-us/members/>.
-
-</div>
-
-<div id="ref-shibbolethShibbolethConsortium2024" class="csl-entry">
-
-———. 2024b. „Shibboleth Consortium“. Shibboleth Consortium. 2024.
-<https://www.shibboleth.net/>.
-
-</div>
+<div id="refs">
 
 </div>
 
@@ -74,7 +37,7 @@ Shibboleth. 2023. „Shibboleth Concepts“. Confluence. 22. Juni 2023.
 
 ## Syntax
 
-Quellenangaben funktionieren mittels `[@citation-key]` (nicosrm 2024)
+Quellenangaben funktionieren mittels `[@citation-key]` (**template?**)
 und die Einbettung von Bildern so:
 
     ![Caption](../assets/placeholder.png)
@@ -86,7 +49,7 @@ und die Einbettung von Bildern so:
 
 ## Shibboleth allgemein
 
-(Shibboleth 2024b)
+(**shibbolethShibbolethConsortium2024?**)
 
 - seit Anfang der 2000er Jahre an Spitze der
   Identitätsmanagement-Software
@@ -104,10 +67,10 @@ und die Einbettung von Bildern so:
   - Metadata Aggregator (Verarbeitung von Metadaten bei Verwendung
     mehrerer Identity Providern)
 - Mitglieder: u.a. Stanford University, University of Oxford, DFN
-  Verein, Massachusetts Institute of Technology (Shibboleth 2024a)
-  (Auswahl)
+  Verein, Massachusetts Institute of Technology
+  (**shibbolethOurMembers2024?**) (Auswahl)
 
-(Cantor 2023)
+(**cantorConsortiumFAQShibboleth2023?**)
 
 - Open-Source-Softwareprojekt
 - entwickelt Software zur Unterstützung von verschiedenen Standards zur
@@ -152,7 +115,7 @@ und die Einbettung von Bildern so:
 
 ## Konzept
 
-(Shibboleth 2023)
+(**shibbolethShibbolethConcepts2023?**)
 
 - SAML als primäres Protokoll, welches durch IdP unterstützt wird
   - als einziges von SP unterstützt
@@ -201,13 +164,14 @@ TODO: selbst zeichnen
 
 ## Shibboleth Consortium Mitgliedschaften
 
-(Shibboleth 2024b)
+(**shibbolethShibbolethConsortium2024?**)
 
 - Finanzierung durch Mitgliedschaften
 - erlaubt Unterstützung und Pflege des Systems
 - verringertes Risiko für Organisationen, die Shibboleth verwenden
 - u.a. Stanford University, University of Oxford, DFN Verein,
-  Massachusetts Institute of Technology (Shibboleth 2024a) (Auswahl)
+  Massachusetts Institute of Technology (**shibbolethOurMembers2024?**)
+  (Auswahl)
 
 <br>
 

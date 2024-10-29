@@ -24,6 +24,7 @@ jobs:
         with:
           args: >-
             --shift-heading-level-by=-1
+            --bibliography slides/bibliography.bib
             --citeproc
             --to=gfm
             -o ${{ env.PREVIEW_PATH }}

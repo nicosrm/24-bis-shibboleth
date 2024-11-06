@@ -345,7 +345,7 @@ Grundlegende Interaktionen wie in dargestellt
   - Verwendung des vorher angehängten Encoders, meist in einer SAML
     Assertion
   - ggf. Signieren der Assertion mit Schlüssel des IdPs
-  - ggf. Verschlüsselung mittels Schlüssel des SPs $\Rightarrow$
+  - ggf. Verschlüsselung mittels Schlüssel des SPs $`\Rightarrow`$
     Sicherheit & Privatsphäre
 - Platzieren der Assertion (Referenz darauf auch *Artefact*) in Antwort
   - Weiterleitung durch Browser des Clients zurück an SP zum Endpunkt
@@ -381,7 +381,7 @@ Grundlegende Interaktionen wie in dargestellt
     cookie set in Step 2 above. If this cookie is missing (or if no
     relay state exists at all), the associated application’s homeURL
     property is substituted as a fall back.”
-- Ressource-Location final bestimmt $\Rightarrow$ Weiterleitung des
+- Ressource-Location final bestimmt $`\Rightarrow`$ Weiterleitung des
   Browsers dorthin durch SP
 - Cookie, welcher vom SP gesetzt wurde
   - “The SP will associate the browser with the newly created session by

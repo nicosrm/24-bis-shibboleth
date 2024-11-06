@@ -446,10 +446,25 @@ Grundlegende Interaktionen wie in dargestellt
     - Anfrage wird durchgeführt mit allen gecached Attributen, welche an
       Anfrage hängen
 
-### Metadaten
+### [Metadaten](https://shibboleth.atlassian.net/wiki/spaces/CONCEPT/pages/928645459)
 
-- TODO:
-  [Metadaten](https://shibboleth.atlassian.net/wiki/spaces/CONCEPT/pages/928645459)
+- Bereitstellung der Configuationsdaten in der Kommunikaton zwischen SP
+  und IdP
+- Typischerweise in XML
+- Basiert auf der SAML 2.0 Metadata specification standardized by OASIS
+- Wah. zu spezifisch für eine allgemeine Erklärung von Shibboleth
+
+### [Sessions](https://shibboleth.atlassian.net/wiki/spaces/CONCEPT/pages/928645433)
+
+- Der Prozess beinhaltet mehrere Sessions, zwischen user und service
+- In den meisten Fällen durch cookies realisiert
+- Zur Realisierung von Single Sign-On und damit einhergehender
+  vermeidung weiterer Authentisierungen
+- Jede Anwendung sollte eine eigene Session über den Browser haben
+- Sessions sind eigenständig und der Ablauf ist unabhäning von den
+  anderen
+- Sonderfall: Single-log-out kann ein Problem sein, wenn Sessions
+  miteinander verbunden werden
 
 ### Name Identifiers
 
@@ -463,12 +478,11 @@ Grundlegende Interaktionen wie in dargestellt
 ### Weiteres
 
 - TODO:
-  [Sessions](https://shibboleth.atlassian.net/wiki/spaces/CONCEPT/pages/928645433)
-- TODO:
   [Glossar](https://shibboleth.atlassian.net/wiki/spaces/CONCEPT/pages/928645488/Glossary)
   - hier auch hilfreiche Definition gegeben, falls noch fehlend
 - ggf. [weitere
   Konzepte](https://shibboleth.atlassian.net/wiki/spaces/CONCEPT/overview#More-Concepts)
+- TODO: Active-Directory als Vergleich zu Shibboleth
 
 ### Identity Provider 5
 

@@ -1,19 +1,7 @@
 #!/bin/bash
 
-# check if podman is installed
-if ! command -v podman &> /dev/null; then
-    echo "Error: Podman is not installed. Please install podman to use this script."
-    exit 1
-fi
-
-# if not on linux, start podman machine if not already running
-if ! [[ "$OSTYPE" == "linux-gnu"* ]]; then
-    if ! podman machine ls | grep -q "Currently running"; then
-        echo "Error: No podman machine is currently running."
-        echo "Starting Podman machine..."
-        podman machine start
-    fi
-fi
+# don't convert paths when using Windows
+export MSYS_NO_PATHCONV=1
 
 echo "Building markdown preview..."
 podman run --rm \

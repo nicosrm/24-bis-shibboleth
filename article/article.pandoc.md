@@ -122,8 +122,18 @@ und die Einbettung von Bildern so:
 
 ### Shibboleth Ziele
 
-- TODO: [https://shibboleth.atlassian.net/wiki/spaces/CONCEPT/pages/928645487/USGoalReq](https://shibboleth.atlassian.net/wiki/spaces/CONCEPT/pages/928645487/USGoalReq)
+[@shibbolethShibbolethConceptsUSGoalReq2018]
 
+- Bestehenden Authentifikationmechanismen können für webbasierte Ressourcen 
+  benutzt werden
+    - keine neuen Anmeldedaten pro Ressource
+    - keine Verwaltung von Anmeldedaten bei den Ressourcen notwendig
+- Benutzerinformationen können zentral verwaltet werden
+    - Ressourcen erhalten Änderungen bei der Anmeldung
+    - keine Dopplung/Kopie von Daten wird von der Ressourcen verwaltet
+- Bekanntgabe von Benutzerinformationen erfolgt nicht durch die Ressource
+    - Kontrolle liegt bei der Organisation oder dem/der Nutzer:in
+    - keine zusätzlichen Sicherheitsmaßnahmen auf Seitens der Ressource notwendig 
 
 ### SAML
 
@@ -289,10 +299,19 @@ Grundlegende Interaktionen wie in \autoref{fig:basic-interaction} dargestellt
 
 - TODO: [Metadaten](https://shibboleth.atlassian.net/wiki/spaces/CONCEPT/pages/928645459)
 
+#### Name Identifiers
+
+[@shibbolethShibbolethConceptsNameIdentifiers2020]
+
+- Dargestellt durch `<NameID>`-Element von SAML2
+    - nicht festgelegt was als *name identifier* verwendet wird
+    - erschwert Interoperabilität
+
+- TODO: weitere Informationen von der verlinkten Seite
+
 #### Weiteres
 
 - TODO: [Sessions](https://shibboleth.atlassian.net/wiki/spaces/CONCEPT/pages/928645433)
-- TODO: [Name Identifiers](https://shibboleth.atlassian.net/wiki/spaces/CONCEPT/pages/928645231)
 - TODO: [Glossar](https://shibboleth.atlassian.net/wiki/spaces/CONCEPT/pages/928645488/Glossary)
     - hier auch hilfreiche Definition gegeben, falls noch fehlend
 - ggf. [weitere Konzepte](https://shibboleth.atlassian.net/wiki/spaces/CONCEPT/overview#More-Concepts)

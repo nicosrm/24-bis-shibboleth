@@ -66,9 +66,19 @@ Verfügbar unter:
 
 </div>
 
-<div id="ref-shibbolethShibbolethConcepts2023" class="csl-entry">
+<div id="ref-shibbolethShibbolethConceptsUSGoalReq2018"
+class="csl-entry">
 
 <span class="csl-left-margin">\[5\]
+</span><span class="csl-right-inline">Shibboleth, „Shibboleth Concepts -
+USGoalReq“. Zugegriffen: 6. November 2024. \[Online\]. Verfügbar unter:
+<https://shibboleth.atlassian.net/wiki/spaces/CONCEPT/pages/928645487/USGoalReq></span>
+
+</div>
+
+<div id="ref-shibbolethShibbolethConcepts2023" class="csl-entry">
+
+<span class="csl-left-margin">\[6\]
 </span><span class="csl-right-inline">Shibboleth, „Shibboleth Concepts“.
 Zugegriffen: 29. Oktober 2024. \[Online\]. Verfügbar unter:
 <https://shibboleth.atlassian.net/wiki/spaces/CONCEPT/overview></span>
@@ -78,7 +88,7 @@ Zugegriffen: 29. Oktober 2024. \[Online\]. Verfügbar unter:
 <div id="ref-robinsDemystifyingShibbolethAdapting2024"
 class="csl-entry">
 
-<span class="csl-left-margin">\[6\]
+<span class="csl-left-margin">\[7\]
 </span><span class="csl-right-inline">S. Robins und B. Daigle,
 „Demystifying Shibboleth: Adapting to Web Browser Privacy Changes“,
 *Journal of Library Administration*, Bd. 64, Nr. 4, S. 449–472, Mai
@@ -90,11 +100,22 @@ class="csl-entry">
 <div id="ref-shibbolethFlowsAndConfigShibbolethConcepts2019"
 class="csl-entry">
 
-<span class="csl-left-margin">\[7\]
+<span class="csl-left-margin">\[8\]
 </span><span class="csl-right-inline">Shibboleth, „FlowsAndConfig -
 Shibboleth Concepts“. Zugegriffen: 6. November 2024. \[Online\].
 Verfügbar unter:
 <https://shibboleth.atlassian.net/wiki/spaces/CONCEPT/pages/928645290/FlowsAndConfig></span>
+
+</div>
+
+<div id="ref-shibbolethShibbolethConceptsNameIdentifiers2020"
+class="csl-entry">
+
+<span class="csl-left-margin">\[9\]
+</span><span class="csl-right-inline">Shibboleth, „Shibboleth Concepts -
+NameIdentifiers“. Zugegriffen: 6. November 2024. \[Online\]. Verfügbar
+unter:
+<https://shibboleth.atlassian.net/wiki/spaces/CONCEPT/pages/928645231/NameIdentifiers></span>
 
 </div>
 
@@ -182,14 +203,26 @@ Quellenangaben funktionieren mittels `[@citation-key]`
 
 ## Shibboleth Ziele
 
-- TODO:
-  <https://shibboleth.atlassian.net/wiki/spaces/CONCEPT/pages/928645487/USGoalReq>
+[\[5\]](#ref-shibbolethShibbolethConceptsUSGoalReq2018)
+
+- Bestehenden Authentifikationmechanismen können für webbasierte
+  Ressourcen benutzt werden
+  - keine neuen Anmeldedaten pro Ressource
+  - keine Verwaltung von Anmeldedaten bei den Ressourcen notwendig
+- Benutzerinformationen können zentral verwaltet werden
+  - Ressourcen erhalten Änderungen bei der Anmeldung
+  - keine Dopplung/Kopie von Daten wird von der Ressourcen verwaltet
+- Bekanntgabe von Benutzerinformationen erfolgt nicht durch die
+  Ressource
+  - Kontrolle liegt bei der Organisation oder dem/der Nutzer:in
+  - keine zusätzlichen Sicherheitsmaßnahmen auf Seitens der Ressource
+    notwendig
 
 ## SAML
 
 ## Konzept
 
-[\[5\]](#ref-shibbolethShibbolethConcepts2023)
+[\[6\]](#ref-shibbolethShibbolethConcepts2023)
 
 - SAML als primäres Protokoll, welches durch IdP unterstützt wird
   - als einziges von SP unterstützt
@@ -206,19 +239,19 @@ Quellenangaben funktionieren mittels `[@citation-key]`
     - Unterstützung des SP bei Ermittlung des IdP des Nutzers
     - Standort überall im Web möglich
     - nicht in allen Anwendungsfällen nötig
-- TODO: [\[6\]](#ref-robinsDemystifyingShibbolethAdapting2024)
+- TODO: [\[7\]](#ref-robinsDemystifyingShibbolethAdapting2024)
 
 ### Basic Interaction
 
-[\[5\]](#ref-shibbolethShibbolethConcepts2023)
+[\[6\]](#ref-shibbolethShibbolethConcepts2023)
 
 <figure>
 <img src="../assets/basic_interaction.drawio.svg"
-alt="Basic Interaction vgl. [5]" />
+alt="Basic Interaction vgl. [6]" />
 <figcaption aria-hidden="true">Basic Interaction <span class="citation"
 data-cites="shibbolethShibbolethConcepts2023">vgl. <a
 href="#ref-shibbolethShibbolethConcepts2023"
-role="doc-biblioref">[5]</a></span></figcaption>
+role="doc-biblioref">[6]</a></span></figcaption>
 </figure>
 
 Grundlegende Interaktionen wie in dargestellt
@@ -236,7 +269,7 @@ Grundlegende Interaktionen wie in dargestellt
 
 ### System Flow
 
-[\[7\]](#ref-shibbolethFlowsAndConfigShibbolethConcepts2019)
+[\[8\]](#ref-shibbolethFlowsAndConfigShibbolethConcepts2019)
 
 - Hauptkomponenten: IdP und SP
   - IdP: Bereitstellung von Informationen über Nutzenden an Services
@@ -249,7 +282,7 @@ Grundlegende Interaktionen wie in dargestellt
 
 #### Zugriff auf Geschützte Ressource
 
-[\[7\]](#ref-shibbolethFlowsAndConfigShibbolethConcepts2019)
+[\[8\]](#ref-shibbolethFlowsAndConfigShibbolethConcepts2019)
 
 - Zugriff auf geschützte Ressource
 - SP fängt Anfrage ab
@@ -264,7 +297,7 @@ Grundlegende Interaktionen wie in dargestellt
 
 #### SP bestimmt IdP und Sendet Authentifizierungsanfrage
 
-[\[7\]](#ref-shibbolethFlowsAndConfigShibbolethConcepts2019)
+[\[8\]](#ref-shibbolethFlowsAndConfigShibbolethConcepts2019)
 
 - Auswahl eines [Session
   Initiators](https://shibboleth.atlassian.net/wiki/spaces/SP3/pages/2065334685/SessionInitiator)
@@ -299,7 +332,7 @@ Grundlegende Interaktionen wie in dargestellt
 
 #### Nutzerauthentifizierung beim IdP
 
-[\[7\]](#ref-shibbolethFlowsAndConfigShibbolethConcepts2019)
+[\[8\]](#ref-shibbolethFlowsAndConfigShibbolethConcepts2019)
 
 - Ergebnis des vorherigen Schritts: Authentifizierungsanfrage vom SP an
   IdP
@@ -326,7 +359,7 @@ Grundlegende Interaktionen wie in dargestellt
 
 #### Antwort des IdP an SP
 
-[\[7\]](#ref-shibbolethFlowsAndConfigShibbolethConcepts2019)
+[\[8\]](#ref-shibbolethFlowsAndConfigShibbolethConcepts2019)
 
 - IdP verwendet Namen des *Principals*, SP, Protokoll und
   Binding/Profile zur Bestimmung, welche Information zum SP
@@ -354,7 +387,7 @@ Grundlegende Interaktionen wie in dargestellt
 
 #### Zurück zum SP
 
-[\[7\]](#ref-shibbolethFlowsAndConfigShibbolethConcepts2019)
+[\[8\]](#ref-shibbolethFlowsAndConfigShibbolethConcepts2019)
 
 - Browser liefert Antwort vom IdP an Endpunkt eines Assertion Consumer
   Services (ACS) im SP
@@ -390,7 +423,7 @@ Grundlegende Interaktionen wie in dargestellt
 
 #### Zurück zur geschützten Ressource
 
-[\[7\]](#ref-shibbolethFlowsAndConfigShibbolethConcepts2019)
+[\[8\]](#ref-shibbolethFlowsAndConfigShibbolethConcepts2019)
 
 - finaler Schritt
 - Weiterleitung des Browsers zur geschützten Ressource, auf welche in
@@ -418,12 +451,19 @@ Grundlegende Interaktionen wie in dargestellt
 - TODO:
   [Metadaten](https://shibboleth.atlassian.net/wiki/spaces/CONCEPT/pages/928645459)
 
+### Name Identifiers
+
+[\[9\]](#ref-shibbolethShibbolethConceptsNameIdentifiers2020)
+
+- Dargestellt durch `<NameID>`-Element von SAML2
+  - nicht festgelegt was als *name identifier* verwendet wird
+  - erschwert Interoperabilität
+- TODO: weitere Informationen von der verlinkten Seite
+
 ### Weiteres
 
 - TODO:
   [Sessions](https://shibboleth.atlassian.net/wiki/spaces/CONCEPT/pages/928645433)
-- TODO: [Name
-  Identifiers](https://shibboleth.atlassian.net/wiki/spaces/CONCEPT/pages/928645231)
 - TODO:
   [Glossar](https://shibboleth.atlassian.net/wiki/spaces/CONCEPT/pages/928645488/Glossary)
   - hier auch hilfreiche Definition gegeben, falls noch fehlend

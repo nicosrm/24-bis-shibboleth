@@ -166,10 +166,131 @@ Grundlegende Interaktionen wie in \autoref{fig:basic-interaction} dargestellt
 
 - TODO: weitere Inhalte auf verlinkter Seite
 
+#### System Flow
+
+[@shibbolethFlowsAndConfigShibbolethConcepts2019]
+
+- Hauptkomponenten: IdP und SP
+  - IdP: Bereitstellung von Informationen über Nutzenden an Services
+  - SP: Sammeln von Informationen über Nutzenden zum Schutz der Ressourcen
+- typisches Szenario
+  - Zugriff einer geschützten Resource über Webbrowser
+  - Authentifizierung beim IdP
+  - Navigation zurück zur Ressource im eingeloggten Zustand
+
+##### Zugriff auf Geschützte Ressource
+
+[@shibbolethFlowsAndConfigShibbolethConcepts2019]
+
+- Zugriff auf geschützte Ressource
+- SP fängt Anfrage ab
+- Definition des Pfad der zu schützenden Ressource in Web-Server-Konfiguration
+  - bspw. [`httpd.conf`](https://shibboleth.atlassian.net/wiki/spaces/SP3/pages/2065335062/Apache)
+  - oder [`shibboleth2.xml`](https://shibboleth.atlassian.net/wiki/spaces/SP3/pages/2063695926/SPConfig) in [`<RequestMap>`](https://shibboleth.atlassian.net/wiki/spaces/SP3/pages/2065334391/RequestMapper)
+
+##### SP bestimmt IdP und Sendet Authentifizierungsanfrage
+
+[@shibbolethFlowsAndConfigShibbolethConcepts2019]
+
+- Auswahl eines [Session Initiators](https://shibboleth.atlassian.net/wiki/spaces/SP3/pages/2065334685/SessionInitiator) durch SP
+  - basierend auf Projekt-Konfiguration
+- Session Initiator
+  - verantwortlich für Bestimmung des IdP des Nutzenden und dessen Protokoll
+- Provider kommunizieren Profile Preferences gegenseitig via Austausch von [SAML-Metadaten](#metadaten)
+
+<br>
+
+- Prozess der IdP Bestimmung: [*IdP Discovery*](https://shibboleth.atlassian.net/wiki/spaces/CONCEPT/pages/928645263/IdPDiscovery)
+- verschiedene Konfigurationsmöglichkeiten, Interaktionen, Cookies etc.
+- "A SessionInitiator might supply a text entry box, refer the user to a locally or remotely deployed discovery service (DS), or select a fixed IdP based on the resource requested."
+
+<br>
+
+- SP speichert URL der angeforderten Ressource mittels "Relay State" Mechanismus
+- konfiguriert über `relayState` Property im [`<SessionInitiator>`](https://shibboleth.atlassian.net/wiki/spaces/SP3/pages/2065334685/SessionInitiator) Element
+- Standard-Mechanismus verwendet nicht mehr Cookies, aber häufig noch in Legacy-Systemen
+  - Senden eines State-Management-Cookies mit URL der Ressource zusammen mit Anfrage an IdP
+
+##### Nutzerauthentifizierung beim IdP
+
+[@shibbolethFlowsAndConfigShibbolethConcepts2019]
+
+- Ergebnis des vorherigen Schritts: Authentifizierungsanfrage vom SP an IdP
+- Format abhängig vom Protokoll und Binding/Profil, welches vom SP ausgewählt wurde
+- Authentifizierungsanfrage über Client an Endpunkt des IdP (*Single Sign-On Service*)
+  - via GET oder POST
+- Untersuchung der Anfrage durch IdP
+- Entscheidung über Authentifizierungsmethode des Nutzenden basierend auf Protokoll für SP ([`relaying-party.xml`](https://shibboleth.atlassian.net/wiki/spaces/IDP30/pages/2494726167/RelyingPartyConfiguration))
+- Weiterleitung des Nutzenden an kompatiblen Login-Flow
+- Authentifizierung mittels konfigurierter Methode
+- schließlich Übergabe der Kontrolle an Profil-Implementierung inkl. ermitteltem Nutzername
+- Cookies vom IdP (set/read)
+  - IdP versucht während Auth.-Prozess meist Cookies zu lesen oder zu setzen (je nach Methode)
+  - IdP erstellt Session Cookie
+    - zum Tracking des Fortschritts durch die Anfrageschritte
+    - Erhaltung einer länger gültigen Verbindung für SSO-Zwecke
+  - ggf. weitere Cookies je nach Login-Handler
+
+##### Antwort des IdP an SP
+
+[@shibbolethFlowsAndConfigShibbolethConcepts2019]
+
+- IdP verwendet Namen des *Principals*, SP, Protokoll und Binding/Profile zur Bestimmung, welche Information zum SP zurückzuschicken ist und Art des Packaging
+- IdP sammelt zunächst Attribute für Nutzenden über [Attribut-Resolver](https://shibboleth.atlassian.net/wiki/spaces/IDP30/pages/2494726159/AttributeResolverConfiguration)
+- Sammeln von Nutzerdaten von allen Backend-Quellen (ggf. Umwandlung), Anhängen von Encodern an jedes Attribut
+- Weiterleitung der Attribute durch [Attribut-Filter](https://shibboleth.atlassian.net/wiki/spaces/IDP30/pages/2494726157/AttributeFilterConfiguration)
+  - ggf. Reduzierung der tatsächlich in Antwort verwendeten Attribute
+- Attribute meist abhängig von SP und *Principal* zum Datenschutz
+- resultierende Informations ggf. nur "jemand hat sich erfolgreich authentifiziert"
+- Packen der Nutzerdaten in geeignete Form für Antwort
+  - Verwendung des vorher angehängten Encoders, meist in einer SAML Assertion
+  - ggf. Signieren der Assertion mit Schlüssel des IdPs
+  - ggf. Verschlüsselung mittels Schlüssel des SPs $\Rightarrow$ Sicherheit & Privatsphäre
+- Platzieren der Assertion (Referenz darauf auch *Artefact*) in Antwort
+  - Weiterleitung durch Browser des Clients zurück an SP zum Endpunkt ([*Assertion Customer Service*](https://shibboleth.atlassian.net/wiki/spaces/CONCEPT/pages/958759025/AssertionConsumerService))
+
+##### Zurück zum SP
+
+[@shibbolethFlowsAndConfigShibbolethConcepts2019]
+
+- Browser liefert Antwort vom IdP an Endpunkt eines Assertion Consumer Services (ACS) im SP
+- ACS Implementierung
+  - Dekodierung der Nachricht
+  - ggf. Entschlüsselung der Assertion
+  - Durchführung von Security Checks
+- SP
+  - Extraktion der Attribute und anderer Informationen aus Nachricht
+  - Erstellung einer neuen User-Session
+  - Übersetzung der Attribute in cache-bare Form mittels [*Attribute Extractor*](https://shibboleth.atlassian.net/wiki/spaces/SP3/pages/2065334409/AttributeExtractor) vom SP
+  - Weiterleitung durch [*Attribute Filter*](https://shibboleth.atlassian.net/wiki/spaces/SP3/pages/2065334516/AttributeFilter)
+  - Caching in neuer Session mit anderen relevanten Infos
+- nach Erstellung der Session: Bestimmung der Zieladresse für Browser über *Relay State Information* vom IdP
+- Cookie, der vom SP gelesen wird
+  - "The 'relay state' information returned by the IdP, if any, will have been created by the SP and if using a cookie, will point to a specially named cookie that should accompany the authentication response supplied to the ACS endpoint in this step. This is the cookie set in Step 2 above. If this cookie is missing (or if no relay state exists at all), the associated application's homeURL property is substituted as a fall back."
+- Ressource-Location final bestimmt $\Rightarrow$ Weiterleitung des Browsers dorthin durch SP
+- Cookie, welcher vom SP gesetzt wurde
+  - "The SP will associate the browser with the newly created session by sending a cookie containing a session key to the client as part of the redirection to the resource."
+
+##### Zurück zur geschützten Ressource
+
+[@shibbolethFlowsAndConfigShibbolethConcepts2019]
+
+- finaler Schritt
+- Weiterleitung des Browsers zur geschützten Ressource, auf welche in Schritt 1 zugegriffen wurde
+- dieses Mal Zugriff im Kontext einer Session, welche im [Session Cache](https://shibboleth.atlassian.net/wiki/spaces/SP3/pages/2065334650/SessionCache) vom SP gespeichert wurde
+- Cookie, welche vom SP gelesen wurde
+  - "The cookie containing the session key set in the previous step is expected to accompany all subsequent requests for protected resources. This is why it's essential that the ACS endpoint and resource location share a virtual host; if they do not, the session cookie set in the previous step won't be returned by the browser, and looping typically results."
+- Annahme: Session wurde anerkannt und validiert vom SP
+  - alle anwendbare [Access Control](https://shibboleth.atlassian.net/wiki/spaces/SP3/pages/2065335430/AccessControl) Plugins werden durchgesetzt
+  - Annahme: Zugriff gewährt
+    - Anfrage wird durchgeführt mit allen gecached Attributen, welche an Anfrage hängen
+
+#### Metadaten
+
+- TODO: [Metadaten](https://shibboleth.atlassian.net/wiki/spaces/CONCEPT/pages/928645459)
+
 #### Weiteres
 
-- TODO: [System Flow](https://shibboleth.atlassian.net/wiki/spaces/CONCEPT/pages/928645290)
-- TODO: [Metadaten](https://shibboleth.atlassian.net/wiki/spaces/CONCEPT/pages/928645459)
 - TODO: [Sessions](https://shibboleth.atlassian.net/wiki/spaces/CONCEPT/pages/928645433)
 - TODO: [Name Identifiers](https://shibboleth.atlassian.net/wiki/spaces/CONCEPT/pages/928645231)
 - TODO: [Glossar](https://shibboleth.atlassian.net/wiki/spaces/CONCEPT/pages/928645488/Glossary)

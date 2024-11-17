@@ -405,6 +405,49 @@ zwei Möglichkeiten für Redirect
   - ggf. Probleme für Anwendungen, die mehrere Verbünde unterstützen
   - ähnliche UX wie DS, welche mit Ressource betrieben werden, mittels [SeamlessAccess](https://seamlessaccess.org/)
 
+#### IdP Installation [@shibbolethInstallationIdentityProvider2024]
+
+- Prüfung der [System Requirements](https://shibboleth.atlassian.net/wiki/spaces/IDP5/pages/3199511079)
+- Requirements
+  - TLS Key / Certificate für HTTP(S)
+  - gewünschte Entity-ID-URL für IdP
+  - 2nd/3d-level-DNS-Subdomain für *Scoped Attributes* (meist E-Mail-Domain der Organisation)
+  - Quellen der SAML Metadaten für SPs, welche von IdP unterstützt werden sollen
+- Prozess erstellt
+  - überschreibbaren IdP's Entity-ID
+  - separates, selbst-signiertes Key/Certificate-Paar für
+    - Message Signing und
+    - Verschlüsselung der Daten anderer Systeme zum Entschlüsseln durch IdP
+  - Secret Key and Key Version File zum Sichern der cookies und anderer produzierter Daten
+  - initiale Beispiel-Metadaten zur Beschreibung des IdPs
+    - Verwendung durch kooperierende SPs
+  - Standard-IdP-Konfigurationsdateien basierend auf o.g. Informationen
+- Installation auf Windows separat (hier nur nicht-Windows)
+
+<br>
+
+- IdP ist Standard-Java-Web-Anwendung basierend auf Jakarta Servlet 5.0 Spezifikation
+- sollte in kompatiblen Servlet-Container (Jetty (empfohlen) oder Tomcat) laufen
+- Schritte
+  - Vorbereitung eines Servlet Containers (Empfehlung: Jetty)
+  - Herunterladen und Entpacken des IdP Softwarepakets
+  - `bin/install.sh` ausführen
+    - ggf. Property File für [*Property Driven Installation*](https://shibboleth.atlassian.net/wiki/spaces/IDP5/pages/3199500711/PropertyDrivenInstallation) angeben
+    - verschiedene CLI-Argumente
+  - Deployment der IdP-WAR-Datei `war/idp.war` (siehe Servlet Container Preparation Notes)
+- Testen mittels `bin/status.sh`
+
+<br>
+typische nächste Schritte
+- [Konfigurationsseite](https://shibboleth.atlassian.net/wiki/spaces/IDP5/pages/3199501666/Configuration) anschauen
+- Konfiguration der [Authentifizierung](https://shibboleth.atlassian.net/wiki/spaces/IDP5/pages/3199505085)
+  - TODO: ggf. näher anschauen
+- Konfiguration der [*Attribute Resolution*](https://shibboleth.atlassian.net/wiki/spaces/IDP5/pages/3199502864/AttributeResolverConfiguration)
+- [Hello World](https://shibboleth.atlassian.net/wiki/spaces/IDP5/pages/3199510241) ausprobieren zum test der Konfigurationen
+- Laden der SAML-Metadaten für SPs
+- Herstellen einer [*Attribute Release Policy*](https://shibboleth.atlassian.net/wiki/spaces/IDP5/pages/3199501794)
+- Anpassung der [Login UI](https://shibboleth.atlassian.net/wiki/spaces/IDP5/pages/3199505587), Fehlerbehandlung etc.
+
 #### Service Provider V3
 
 - TODO: [https://shibboleth.atlassian.net/wiki/spaces/SP3/overview](https://shibboleth.atlassian.net/wiki/spaces/SP3/overview)

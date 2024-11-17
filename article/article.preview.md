@@ -229,7 +229,7 @@ Verfügbar unter:
 
 <div id="ref-switchIntroductionSWITCHaai2024" class="csl-entry">
 
-<span class="csl-left-margin">\[16\]
+<span class="csl-left-margin">\[21\]
 </span><span class="csl-right-inline">SWITCH, „Introduction - About -
 SWITCHaai“. Zugegriffen: 17. November 2024. \[Online\]. Verfügbar unter:
 <https://help.switch.ch/aai/about/introduction/></span>
@@ -238,7 +238,7 @@ SWITCHaai“. Zugegriffen: 17. November 2024. \[Online\]. Verfügbar unter:
 
 <div id="ref-switchSWITCHaai2024" class="csl-entry">
 
-<span class="csl-left-margin">\[17\]
+<span class="csl-left-margin">\[22\]
 </span><span class="csl-right-inline">SWITCH, „About - SWITCHaai“.
 Zugegriffen: 17. November 2024. \[Online\]. Verfügbar unter:
 <https://help.switch.ch/aai/about/></span>
@@ -846,7 +846,7 @@ Fehlerbehandlung etc.
 
 ### Switch AAI
 
-[\[16\]](#ref-switchIntroductionSWITCHaai2024)
+[\[21\]](#ref-switchIntroductionSWITCHaai2024)
 
 - AAI: *Authentication and Authorisation Infrastructure*
 - Ziel: Vereinfachung von inter-organisationellem Zugriff auf
@@ -862,14 +862,14 @@ Fehlerbehandlung etc.
 
 <figure>
 <img src="https://help.switch.ch/aai/about/aai-at-a-glance.png"
-alt="SWITCHaai: At a Glance [16]" />
+alt="SWITCHaai: At a Glance [21]" />
 <figcaption aria-hidden="true">SWITCHaai: At a Glance <span
 class="citation" data-cites="switchIntroductionSWITCHaai2024"><a
 href="#ref-switchIntroductionSWITCHaai2024"
-role="doc-biblioref">[16]</a></span></figcaption>
+role="doc-biblioref">[21]</a></span></figcaption>
 </figure>
 
-[\[17\]](#ref-switchSWITCHaai2024)
+[\[22\]](#ref-switchSWITCHaai2024)
 
 - ohne AAI: Registrierung bei jeder Ressource
   - jeweils Nutzername und Passwort

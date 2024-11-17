@@ -295,14 +295,18 @@ Grundlegende Interaktionen wie in \autoref{fig:basic-interaction} dargestellt
   - Annahme: Zugriff gewährt
     - Anfrage wird durchgeführt mit allen gecached Attributen, welche an Anfrage hängen
 
-#### [Metadaten](https://shibboleth.atlassian.net/wiki/spaces/CONCEPT/pages/928645459)
+#### Metadaten
+
+[@shibbolethMetadataConcepts]
 
 - Bereitstellung der Configuationsdaten in der Kommunikaton zwischen SP und IdP
 - Typischerweise in XML
 - Basiert auf der SAML 2.0 Metadata specification standardized by OASIS
 - Wah. zu spezifisch für eine allgemeine Erklärung von Shibboleth
 
-#### [Sessions](https://shibboleth.atlassian.net/wiki/spaces/CONCEPT/pages/928645433)
+#### Sessions
+
+[@shibbolethSessionsConcepts]
 
 - Der Prozess beinhaltet mehrere Sessions, zwischen user und service
 - In den meisten Fällen durch cookies realisiert

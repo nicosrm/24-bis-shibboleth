@@ -108,10 +108,28 @@ Verfügbar unter:
 
 </div>
 
+<div id="ref-shibbolethMetadataConcepts" class="csl-entry">
+
+<span class="csl-left-margin">\[9\]
+</span><span class="csl-right-inline">Shibboleth, „Metadata - Concepts“.
+Zugegriffen: 6. November 2024. \[Online\]. Verfügbar unter:
+<https://shibboleth.atlassian.net/wiki/spaces/CONCEPT/pages/928645459/Metadata></span>
+
+</div>
+
+<div id="ref-shibbolethSessionsConcepts" class="csl-entry">
+
+<span class="csl-left-margin">\[10\]
+</span><span class="csl-right-inline">Shibboleth, „Sessions - Concepts“.
+Zugegriffen: 17. November 2024. \[Online\]. Verfügbar unter:
+<https://shibboleth.atlassian.net/wiki/spaces/CONCEPT/pages/928645433/Sessions></span>
+
+</div>
+
 <div id="ref-shibbolethShibbolethConceptsNameIdentifiers2020"
 class="csl-entry">
 
-<span class="csl-left-margin">\[9\]
+<span class="csl-left-margin">\[11\]
 </span><span class="csl-right-inline">Shibboleth, „Shibboleth Concepts -
 NameIdentifiers“. Zugegriffen: 6. November 2024. \[Online\]. Verfügbar
 unter:
@@ -446,7 +464,9 @@ Grundlegende Interaktionen wie in dargestellt
     - Anfrage wird durchgeführt mit allen gecached Attributen, welche an
       Anfrage hängen
 
-### [Metadaten](https://shibboleth.atlassian.net/wiki/spaces/CONCEPT/pages/928645459)
+### Metadaten
+
+[\[9\]](#ref-shibbolethMetadataConcepts)
 
 - Bereitstellung der Configuationsdaten in der Kommunikaton zwischen SP
   und IdP
@@ -454,7 +474,9 @@ Grundlegende Interaktionen wie in dargestellt
 - Basiert auf der SAML 2.0 Metadata specification standardized by OASIS
 - Wah. zu spezifisch für eine allgemeine Erklärung von Shibboleth
 
-### [Sessions](https://shibboleth.atlassian.net/wiki/spaces/CONCEPT/pages/928645433)
+### Sessions
+
+[\[10\]](#ref-shibbolethSessionsConcepts)
 
 - Der Prozess beinhaltet mehrere Sessions, zwischen user und service
 - In den meisten Fällen durch cookies realisiert
@@ -468,7 +490,7 @@ Grundlegende Interaktionen wie in dargestellt
 
 ### Name Identifiers
 
-[\[9\]](#ref-shibbolethShibbolethConceptsNameIdentifiers2020)
+[\[11\]](#ref-shibbolethShibbolethConceptsNameIdentifiers2020)
 
 - Dargestellt durch `<NameID>`-Element von SAML2
   - nicht festgelegt was als *name identifier* verwendet wird

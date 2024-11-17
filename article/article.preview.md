@@ -137,6 +137,25 @@ unter:
 
 </div>
 
+<div id="ref-shibbolethEmbeddedDiscoveryService2021" class="csl-entry">
+
+<span class="csl-left-margin">\[12\]
+</span><span class="csl-right-inline">Shibboleth, „Embedded Discovery
+Service“. Zugegriffen: 17. November 2024. \[Online\]. Verfügbar unter:
+<https://shibboleth.atlassian.net/wiki/spaces/EDS10/overview></span>
+
+</div>
+
+<div id="ref-shibbolethEmbeddedDiscoveryService2011" class="csl-entry">
+
+<span class="csl-left-margin">\[13\]
+</span><span class="csl-right-inline">Shibboleth, „Embedded Discovery
+Service - Overview“. Zugegriffen: 17. November 2024. \[Online\].
+Verfügbar unter:
+<https://shibboleth.atlassian.net/wiki/spaces/EDS10/pages/2385870847/1.+Overview></span>
+
+</div>
+
 </div>
 
 ------------------------------------------------------------------------
@@ -516,7 +535,18 @@ Grundlegende Interaktionen wie in dargestellt
 
 ### Embedded Discovery Service
 
-- TODO: <https://shibboleth.atlassian.net/wiki/spaces/EDS10/overview>
+[\[12\]](#ref-shibbolethEmbeddedDiscoveryService2021) - Eigener
+discovery service beim SP durch Embedded Discovery Service (EDS)
+möglich - Kein redirect zu einer third-party discovery service Seite
+
+[\[13\]](#ref-shibbolethEmbeddedDiscoveryService2011) - Wird verwendet
+während des Single Sign-On (SSO) - Nutzer wählt IdP aus -\> startet
+SSO - Lösungen neben EDS - URI manuell eingeben - manche IdPs
+“hard-coden” - zentralisierte discovery, hat Probleme: - kann IdPs
+vorschlagen, die nicht mit dem SP zusammenhängen - anderes Aussehen und
+Handhabung - keine Möglichkeit IdPs bevorzugt darstellen - EDS bietet -
+nahtloser Übergang von SP -\> EDS -\> IdP - Einschränkung der
+angezeigten IdPs - Ordnung der IdPs konfigurieren
 
 ## Shibboleth Consortium Mitgliedschaften
 

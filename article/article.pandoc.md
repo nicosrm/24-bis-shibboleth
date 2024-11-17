@@ -343,7 +343,25 @@ Grundlegende Interaktionen wie in \autoref{fig:basic-interaction} dargestellt
 
 #### Embedded Discovery Service
 
-- TODO: [https://shibboleth.atlassian.net/wiki/spaces/EDS10/overview](https://shibboleth.atlassian.net/wiki/spaces/EDS10/overview)
+[@shibbolethEmbeddedDiscoveryService2021]
+- Eigener discovery service beim SP durch Embedded Discovery Service (EDS) möglich
+- Kein redirect zu einer third-party discovery service Seite
+
+[@shibbolethEmbeddedDiscoveryService2011]
+- Wird verwendet während des Single Sign-On (SSO)
+- Nutzer wählt IdP aus -> startet SSO
+- Lösungen neben EDS
+  - URI manuell eingeben
+  - manche IdPs "hard-coden"
+  - zentralisierte discovery, hat Probleme:
+    - kann IdPs vorschlagen, die nicht mit dem SP zusammenhängen
+    - anderes Aussehen und Handhabung
+    - keine Möglichkeit IdPs bevorzugt darstellen
+- EDS bietet
+  - nahtloser Übergang von SP -> EDS -> IdP
+  - Einschränkung der angezeigten IdPs
+  - Ordnung der IdPs konfigurieren
+
 
 ### Shibboleth Consortium Mitgliedschaften
 

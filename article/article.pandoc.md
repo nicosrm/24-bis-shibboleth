@@ -329,12 +329,40 @@ Grundlegende Interaktionen wie in \autoref{fig:basic-interaction} dargestellt
 - Shibboleth nutzt häufig Attributes mit *transient identifiers* (oder gar keinen)
   - meistens nicht bei kommerzieller Verwendung (verwendet name identifiers locker/unsachgemäß)
 
+
+#### OpenSAML
+
+[@shibbolethOpenSAML]
+
+- > OpenSAML is a set of open source Java libraries used in support of the Shibboleth Project's implementation 
+  > of the Security Assertion Markup Language (SAML). It is licensed under the Apache 2.0 license.
+- OpenSAML ist keine vollumfängliche Implementierung von SAML IDP oder SP
+
+#### Active-Directory vs Shibboleth
+
+[@overtsoftwareAzureADADFS2022]
+
+- Beides Identity Provider
+- ADFS (Active Directory Federation Services) eher für größere Unternehmen
+- Shibboleth vor allem im höheren Bildungskontext vertreten
+- Shibboleth Windows-unabhänig und decentralized open-source software
+- ADFS hat im vergleich zu Shibboleth weniger Schnittstellen implementiert wie LDAP oder SAML
+
+##### Azure AD vs AD
+[@sommergutWasSindUnterschiede2019]
+
+- Azure Active Directory ist Identitätsmanagement der Microsoft-Cloud
+- Active Directory ist das On-Promise Modell 
+
+[@chikMicrosoftEntraExpands2023] [@celestedgNewNameAzure2024]
+
+- Microsoft Azure Active Directory wurde zu Microsoft Entra ID umbenannt um verwirrung zu vermeiden
+
 #### Weiteres
 
 - TODO: [Glossar](https://shibboleth.atlassian.net/wiki/spaces/CONCEPT/pages/928645488/Glossary)
     - hier auch hilfreiche Definition gegeben, falls noch fehlend
 - ggf. [weitere Konzepte](https://shibboleth.atlassian.net/wiki/spaces/CONCEPT/overview#More-Concepts)
-- TODO: Active-Directory als Vergleich zu Shibboleth
 
 #### Identity Provider Discovery [@shibbolethIdPDiscoveryShibbolethConcepts2020]
 

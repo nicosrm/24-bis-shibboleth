@@ -725,3 +725,10 @@ Fehlerbehandlung etc.
 <br>
 
 - TODO: <https://www.shibboleth.net/membership/>
+
+## Alternativen zu Shibboleth
+
+- https://www.techrepublic.com/article/best-open-source-iam-tools/
+- https://alternativeto.net/software/shibboleth/
+- https://gist.github.com/bmaupin/6878fae9abcb63ef43f8ac9b9de8fafd
+- https://goauthentik.io/

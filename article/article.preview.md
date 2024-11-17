@@ -137,9 +137,20 @@ unter:
 
 </div>
 
-<div id="ref-shibbolethEmbeddedDiscoveryService2021" class="csl-entry">
+<div id="ref-shibbolethIdPDiscoveryShibbolethConcepts2020"
+class="csl-entry">
 
 <span class="csl-left-margin">\[12\]
+</span><span class="csl-right-inline">Shibboleth, „IdPDiscovery -
+Shibboleth Concepts“. Zugegriffen: 17. November 2024. \[Online\].
+Verfügbar unter:
+<https://shibboleth.atlassian.net/wiki/spaces/CONCEPT/pages/928645263></span>
+
+</div>
+
+<div id="ref-shibbolethEmbeddedDiscoveryService2021" class="csl-entry">
+
+<span class="csl-left-margin">\[13\]
 </span><span class="csl-right-inline">Shibboleth, „Embedded Discovery
 Service“. Zugegriffen: 17. November 2024. \[Online\]. Verfügbar unter:
 <https://shibboleth.atlassian.net/wiki/spaces/EDS10/overview></span>
@@ -148,7 +159,7 @@ Service“. Zugegriffen: 17. November 2024. \[Online\]. Verfügbar unter:
 
 <div id="ref-shibbolethEmbeddedDiscoveryService2011" class="csl-entry">
 
-<span class="csl-left-margin">\[13\]
+<span class="csl-left-margin">\[14\]
 </span><span class="csl-right-inline">Shibboleth, „Embedded Discovery
 Service - Overview“. Zugegriffen: 17. November 2024. \[Online\].
 Verfügbar unter:
@@ -525,9 +536,84 @@ Grundlegende Interaktionen wie in dargestellt
   Konzepte](https://shibboleth.atlassian.net/wiki/spaces/CONCEPT/overview#More-Concepts)
 - TODO: Active-Directory als Vergleich zu Shibboleth
 
-### Identity Provider 5
+### Identity Provider Discovery [\[12\]](#ref-shibbolethIdPDiscoveryShibbolethConcepts2020)
 
-- TODO: <https://shibboleth.atlassian.net/wiki/spaces/IDP5/overview>
+- Identifikation von Heim-IdP für Login bei Zugriff auf geschützte
+  Ressource –\> *IdP Discover*
+- viele verschiedene Wege
+- meistens Nutzenden direkt fragen, da diese:r am besten antworten kann
+- Möglichkeiten
+  - flache, statische Seite mit festen, bekannten möglichen IdPs (*Flat
+    Page Discovery*)
+  - dynamischer **Discovery Service**
+    - separate Anwendung zur Generierung der verschiedenen Optionen
+      basierend auf Metadaten
+- Anzeige der Optionen und Weiterleitung zu entsprechendem Heim
+
+<br>
+
+#### Flat Page Discovery [\[12\]](#ref-shibbolethIdPDiscoveryShibbolethConcepts2020)
+
+- meist ausreichend bei eingeschränkter, statischer Menge an IdPs
+- Verwendung von *SessionInitiator* vom SP
+
+##### von bekanntem Heim [\[12\]](#ref-shibbolethIdPDiscoveryShibbolethConcepts2020)
+
+- Nutzende kommen direkt von Quelle, die Home-IdP per Definition kennt
+- Quelle kann Nutzende direkt zur Ressource schicken
+  - bereits authentifiziert für jeweiligen SP
+  - oder bereits ausgewählten IdP für Nutzenden
+- bspw. Campus-Portale, auf Bibliotheksseiten oder spezifische URL-Pfade
+  für eine:n Kund:in
+
+zwei Möglichkeiten für Redirect - am besten Verwendung eines bekannten
+Session Initiators beim SP - kodierte Entity-ID für IdP an URL
+anhängen - Beispiel auf
+[Website](https://shibboleth.atlassian.net/wiki/spaces/CONCEPT/pages/928645263) -
+Untersuchung der Metadaten durch SP –\> Validierung (bekannt?) und
+Weiterleitung zu richtigen Endpoints bei IdP und SP - automatisches und
+direktes Absenden der AuthnRequest zu IdP - Nutzende landen nach
+Authentifizierung direkt bei Ressource - kann in jegliche Links
+platziert werden - optionale Angabe eines separaten `target`s zur
+Spezifizierung der Landing Page - in Anwendung / Application - bei sehr
+kleiner, bekannter Menge an IdPs - bspw. über Einbettung der
+verschiedenen Logos für jeden Provider mit Links zu jeweiligem Session
+Initiator - ähnlich zu anderer Möglichkeit, aber Verwendung eines
+speziellen Session Initiators für jeden IdP - verpflichtende
+Spezifizierung eines `target`s - Beispiel auf
+[Website](https://shibboleth.atlassian.net/wiki/spaces/CONCEPT/pages/928645263)
+
+#### Discovery Service [\[12\]](#ref-shibbolethIdPDiscoveryShibbolethConcepts2020)
+
+- *IdP Discovery Service* (DS)
+- Service zur Präsentation eines Standard-Interfaces zur Auswahl des
+  IdPs
+- hoch-anpassbare Darstellungsmöglichkeiten
+- nach Auswahl durch Nutzenden: Weiterleitung zu SP des Nutzenden
+- SP sendet AuthnRequest basierend auf Auswahl
+- meist direkte Weiterleitung zu DS
+  - moderne Implementierungen erlauben Einbettung des
+    Discovery-Interfaces in Seite
+    - [Embedded DS](#embedded-discovery-service)
+- Betreibung mit Ressource oder als zentraler, geteilter Service
+
+**Betreibung mit Ressource** - Präsentation der kleinstmöglichen Anzahl
+an Auswahlmöglichkeiten - Ressource kennt alle IdPs, die es akzeptiert
+und kennt mit welchen *Federation*s es kooperiert - v.a. bei Services
+mit mehreren Communities oder Teilmengen davon hilfreich - ggf. schlaues
+Vorschlagen von wahrscheinlicheren IdPs basierend auf Metadaten (bspw.
+IP-Adresse) - ggf. Branding der Ressource entsprechend DS - Nachteil:
+jede Ressource muss eigenen DS verwalten, ggf. Inkonsistenzen in UX -
+[weitere Infos zum
+Einreichten](https://shibboleth.atlassian.net/wiki/spaces/SHIB2/pages/2577072297/DiscoveryService)
+
+**zentraler Ansatz** - Umfragen: Konsistenz als wichtigstes Feature -
+Garantieren durch zentralen DS - erlaubt Persistenz über mehrere
+Anwendungen, die sich DS teilen - Nutzende müssen erheblich weniger ihr
+Home-IdP auswählen - meist im Verbund betrieben \[bspw. DFN\] - ggf.
+Probleme für Anwendungen, die mehrere Verbünde unterstützen - ähnliche
+UX wie DS, welche mit Ressource betrieben werden, mittels
+[SeamlessAccess](https://seamlessaccess.org/)
 
 ### Service Provider V3
 
@@ -535,11 +621,11 @@ Grundlegende Interaktionen wie in dargestellt
 
 ### Embedded Discovery Service
 
-[\[12\]](#ref-shibbolethEmbeddedDiscoveryService2021) - Eigener
+[\[13\]](#ref-shibbolethEmbeddedDiscoveryService2021) - Eigener
 discovery service beim SP durch Embedded Discovery Service (EDS)
 möglich - Kein redirect zu einer third-party discovery service Seite
 
-[\[13\]](#ref-shibbolethEmbeddedDiscoveryService2011) - Wird verwendet
+[\[14\]](#ref-shibbolethEmbeddedDiscoveryService2011) - Wird verwendet
 während des Single Sign-On (SSO) - Nutzer wählt IdP aus -\> startet
 SSO - Lösungen neben EDS - URI manuell eingeben - manche IdPs
 “hard-coden” - zentralisierte discovery, hat Probleme: - kann IdPs

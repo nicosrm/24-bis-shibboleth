@@ -227,6 +227,24 @@ Verfügbar unter:
 
 </div>
 
+<div id="ref-switchIntroductionSWITCHaai2024" class="csl-entry">
+
+<span class="csl-left-margin">\[16\]
+</span><span class="csl-right-inline">SWITCH, „Introduction - About -
+SWITCHaai“. Zugegriffen: 17. November 2024. \[Online\]. Verfügbar unter:
+<https://help.switch.ch/aai/about/introduction/></span>
+
+</div>
+
+<div id="ref-switchSWITCHaai2024" class="csl-entry">
+
+<span class="csl-left-margin">\[17\]
+</span><span class="csl-right-inline">SWITCH, „About - SWITCHaai“.
+Zugegriffen: 17. November 2024. \[Online\]. Verfügbar unter:
+<https://help.switch.ch/aai/about/></span>
+
+</div>
+
 </div>
 
 ------------------------------------------------------------------------
@@ -325,6 +343,8 @@ Quellenangaben funktionieren mittels `[@citation-key]`
   - Kontrolle liegt bei der Organisation oder dem/der Nutzer:in
   - keine zusätzlichen Sicherheitsmaßnahmen auf Seitens der Ressource
     notwendig
+- TODO: weitere, anschauliche Motivation von [Switch
+  AAI](https://help.switch.ch/aai/about/introduction/)
 
 ## SAML
 
@@ -819,7 +839,61 @@ Fehlerbehandlung etc.
 
 - TODO: <https://www.shibboleth.net/membership/>
 
-## Alternativen zu Shibboleth
+## Einsatz
+
+- TODO: [DFN](https://doku.tid.dfn.de/de:dfnaai:start)
+  - inkl. Erklärungen
+
+### Switch AAI
+
+[\[16\]](#ref-switchIntroductionSWITCHaai2024)
+
+- AAI: *Authentication and Authorisation Infrastructure*
+- Ziel: Vereinfachung von inter-organisationellem Zugriff auf
+  Web-Ressourcen
+- von den meisten Universitäten in der Schweiz eingesetzt
+- Konzept: *Federated Identity Management*
+- Vorteile
+  - einfache Anmeldung ohne Registrierung bei verschiedenen Services
+  - standardisierte Interfaces $`\to`$ einfache Integration weiterer
+    Organisationen
+  - standardisierte Authentifikationsmechanismen $`\to`$ nur ein
+    Passwort für viele Anwendungen
+
+<figure>
+<img src="https://help.switch.ch/aai/about/aai-at-a-glance.png"
+alt="SWITCHaai: At a Glance [16]" />
+<figcaption aria-hidden="true">SWITCHaai: At a Glance <span
+class="citation" data-cites="switchIntroductionSWITCHaai2024"><a
+href="#ref-switchIntroductionSWITCHaai2024"
+role="doc-biblioref">[16]</a></span></figcaption>
+</figure>
+
+[\[17\]](#ref-switchSWITCHaai2024)
+
+- ohne AAI: Registrierung bei jeder Ressource
+  - jeweils Nutzername und Passwort
+  - Administrator: Verwaltung und Implementierung
+- mit AAI: vereinfacht
+  - eine Registrierung bei Home-Organisation genügt, bspw. Institutionen
+    wie Universitäten, Bibliotheken etc.
+  - Authentifikation über Home-Organisation
+    - kann weitere Informationen bereitstellen
+    - Credentials nur einmal notwendig
+    - keine neue Registrierung und Verwaltung von Nutzenden notwendig
+  - Ressourcen-Administratoren definieren Access Rules basierend auf
+    erhaltenen Nutzerinformationen
+- *SWITCH*
+  - verwaltet zentrale AAI-Komponenten
+  - unterstützt Home-Organisations und Ressourcen
+
+#### AAI Demo
+
+- TODO: https://help.switch.ch/aai/demo/
+  - beschreibt Shibboleth-Login-Szenario auf drei verschiedenen Levels
+  - inkl. Live-Demo
+
+## TODO: Alternativen zu Shibboleth
 
 - https://www.techrepublic.com/article/best-open-source-iam-tools/
 - https://alternativeto.net/software/shibboleth/

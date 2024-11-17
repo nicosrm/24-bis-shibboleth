@@ -689,18 +689,27 @@ Fehlerbehandlung etc.
 
 ### Embedded Discovery Service
 
-[\[14\]](#ref-shibbolethEmbeddedDiscoveryService2021) - Eigener
-discovery service beim SP durch Embedded Discovery Service (EDS)
-möglich - Kein redirect zu einer third-party discovery service Seite
+[\[14\]](#ref-shibbolethEmbeddedDiscoveryService2021)
 
-[\[15\]](#ref-shibbolethEmbeddedDiscoveryService2011) - Wird verwendet
-während des Single Sign-On (SSO) - Nutzer wählt IdP aus -\> startet
-SSO - Lösungen neben EDS - URI manuell eingeben - manche IdPs
-“hard-coden” - zentralisierte discovery, hat Probleme: - kann IdPs
-vorschlagen, die nicht mit dem SP zusammenhängen - anderes Aussehen und
-Handhabung - keine Möglichkeit IdPs bevorzugt darstellen - EDS bietet -
-nahtloser Übergang von SP -\> EDS -\> IdP - Einschränkung der
-angezeigten IdPs - Ordnung der IdPs konfigurieren
+- Eigener discovery service beim SP durch Embedded Discovery Service
+  (EDS) möglich
+- Kein redirect zu einer third-party discovery service Seite
+
+[\[15\]](#ref-shibbolethEmbeddedDiscoveryService2011)
+
+- Wird verwendet während des Single Sign-On (SSO)
+- Nutzer wählt IdP aus -\> startet SSO
+- Lösungen neben EDS
+  - URI manuell eingeben
+  - manche IdPs “hard-coden”
+  - zentralisierte discovery, hat Probleme:
+    - kann IdPs vorschlagen, die nicht mit dem SP zusammenhängen
+    - anderes Aussehen und Handhabung
+    - keine Möglichkeit IdPs bevorzugt darstellen
+- EDS bietet
+  - nahtloser Übergang von SP -\> EDS -\> IdP
+  - Einschränkung der angezeigten IdPs
+  - Ordnung der IdPs konfigurieren
 
 ## Shibboleth Consortium Mitgliedschaften
 

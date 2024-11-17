@@ -455,10 +455,12 @@ typische nächste Schritte
 #### Embedded Discovery Service
 
 [@shibbolethEmbeddedDiscoveryService2021]
+
 - Eigener discovery service beim SP durch Embedded Discovery Service (EDS) möglich
 - Kein redirect zu einer third-party discovery service Seite
 
 [@shibbolethEmbeddedDiscoveryService2011]
+
 - Wird verwendet während des Single Sign-On (SSO)
 - Nutzer wählt IdP aus -> startet SSO
 - Lösungen neben EDS

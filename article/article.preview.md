@@ -137,10 +137,59 @@ unter:
 
 </div>
 
+<div id="ref-shibbolethOpenSAML" class="csl-entry">
+
+<span class="csl-left-margin">\[12\]
+</span><span class="csl-right-inline">Shibboleth, „OpenSAML“.
+Zugegriffen: 17. November 2024. \[Online\]. Verfügbar unter:
+<https://shibboleth.atlassian.net/wiki/spaces/OSAML/overview></span>
+
+</div>
+
+<div id="ref-overtsoftwareAzureADADFS2022" class="csl-entry">
+
+<span class="csl-left-margin">\[13\]
+</span><span class="csl-right-inline">Overt Software, „Azure AD/ADFS vs
+Shibboleth IDP“. Zugegriffen: 17. November 2024. \[Online\]. Verfügbar
+unter:
+<https://www.overtsoftware.com/azure-ad-adfs-vs-shibboleth-idp-which-is-better-for-your-organisation/></span>
+
+</div>
+
+<div id="ref-sommergutWasSindUnterschiede2019" class="csl-entry">
+
+<span class="csl-left-margin">\[14\]
+</span><span class="csl-right-inline">W. Sommergut, „Was Sind Die
+Unterschiede Zwischen Active Directory Und Azure AD? \| WindowsPro“.
+Zugegriffen: 17. November 2024. \[Online\]. Verfügbar unter:
+<https://www.windowspro.de/wolfgang-sommergut/was-sind-unterschiede-zwischen-active-directory-azure-ad></span>
+
+</div>
+
+<div id="ref-chikMicrosoftEntraExpands2023" class="csl-entry">
+
+<span class="csl-left-margin">\[15\]
+</span><span class="csl-right-inline">J. Chik, „Microsoft Entra Expands
+into Security Service Edge and Azure AD Becomes Microsoft Entra ID“.
+Zugegriffen: 17. November 2024. \[Online\]. Verfügbar unter:
+<https://www.microsoft.com/en-us/security/blog/2023/07/11/microsoft-entra-expands-into-security-service-edge-and-azure-ad-becomes-microsoft-entra-id/></span>
+
+</div>
+
+<div id="ref-celestedgNewNameAzure2024" class="csl-entry">
+
+<span class="csl-left-margin">\[16\]
+</span><span class="csl-right-inline">CelesteDG, „New Name for Azure
+Active Directory - Microsoft Entra“. Zugegriffen: 17. November 2024.
+\[Online\]. Verfügbar unter:
+<https://learn.microsoft.com/en-us/entra/fundamentals/new-name></span>
+
+</div>
+
 <div id="ref-shibbolethIdPDiscoveryShibbolethConcepts2020"
 class="csl-entry">
 
-<span class="csl-left-margin">\[12\]
+<span class="csl-left-margin">\[17\]
 </span><span class="csl-right-inline">Shibboleth, „IdPDiscovery -
 Shibboleth Concepts“. Zugegriffen: 17. November 2024. \[Online\].
 Verfügbar unter:
@@ -151,7 +200,7 @@ Verfügbar unter:
 <div id="ref-shibbolethInstallationIdentityProvider2024"
 class="csl-entry">
 
-<span class="csl-left-margin">\[13\]
+<span class="csl-left-margin">\[18\]
 </span><span class="csl-right-inline">Shibboleth, „Installation -
 Identity Provider 5“. Zugegriffen: 17. November 2024. \[Online\].
 Verfügbar unter:
@@ -161,7 +210,7 @@ Verfügbar unter:
 
 <div id="ref-shibbolethEmbeddedDiscoveryService2021" class="csl-entry">
 
-<span class="csl-left-margin">\[14\]
+<span class="csl-left-margin">\[19\]
 </span><span class="csl-right-inline">Shibboleth, „Embedded Discovery
 Service“. Zugegriffen: 17. November 2024. \[Online\]. Verfügbar unter:
 <https://shibboleth.atlassian.net/wiki/spaces/EDS10/overview></span>
@@ -170,7 +219,7 @@ Service“. Zugegriffen: 17. November 2024. \[Online\]. Verfügbar unter:
 
 <div id="ref-shibbolethEmbeddedDiscoveryService2011" class="csl-entry">
 
-<span class="csl-left-margin">\[15\]
+<span class="csl-left-margin">\[20\]
 </span><span class="csl-right-inline">Shibboleth, „Embedded Discovery
 Service - Overview“. Zugegriffen: 17. November 2024. \[Online\].
 Verfügbar unter:
@@ -547,6 +596,42 @@ Grundlegende Interaktionen wie in dargestellt
   - meistens nicht bei kommerzieller Verwendung (verwendet name
     identifiers locker/unsachgemäß)
 
+### OpenSAML
+
+[\[12\]](#ref-shibbolethOpenSAML)
+
+- > OpenSAML is a set of open source Java libraries used in support of
+  > the Shibboleth Project’s implementation of the Security Assertion
+  > Markup Language (SAML). It is licensed under the Apache 2.0 license.
+
+- OpenSAML ist keine vollumfängliche Implementierung von SAML IDP oder
+  SP
+
+### Active-Directory vs Shibboleth
+
+[\[13\]](#ref-overtsoftwareAzureADADFS2022)
+
+- Beides Identity Provider
+- ADFS (Active Directory Federation Services) eher für größere
+  Unternehmen
+- Shibboleth vor allem im höheren Bildungskontext vertreten
+- Shibboleth Windows-unabhänig und decentralized open-source software
+- ADFS hat im vergleich zu Shibboleth weniger Schnittstellen
+  implementiert wie LDAP oder SAML
+
+#### Azure AD vs AD
+
+[\[14\]](#ref-sommergutWasSindUnterschiede2019)
+
+- Azure Active Directory ist Identitätsmanagement der Microsoft-Cloud
+- Active Directory ist das On-Promise Modell
+
+[\[15\]](#ref-chikMicrosoftEntraExpands2023)
+[\[16\]](#ref-celestedgNewNameAzure2024)
+
+- Microsoft Azure Active Directory wurde zu Microsoft Entra ID umbenannt
+  um verwirrung zu vermeiden
+
 ### Weiteres
 
 - TODO:
@@ -554,9 +639,8 @@ Grundlegende Interaktionen wie in dargestellt
   - hier auch hilfreiche Definition gegeben, falls noch fehlend
 - ggf. [weitere
   Konzepte](https://shibboleth.atlassian.net/wiki/spaces/CONCEPT/overview#More-Concepts)
-- TODO: Active-Directory als Vergleich zu Shibboleth
 
-### Identity Provider Discovery [\[12\]](#ref-shibbolethIdPDiscoveryShibbolethConcepts2020)
+### Identity Provider Discovery [\[17\]](#ref-shibbolethIdPDiscoveryShibbolethConcepts2020)
 
 - Identifikation von Heim-IdP für Login bei Zugriff auf geschützte
   Ressource –\> *IdP Discover*
@@ -572,12 +656,12 @@ Grundlegende Interaktionen wie in dargestellt
 
 <br>
 
-#### Flat Page Discovery [\[12\]](#ref-shibbolethIdPDiscoveryShibbolethConcepts2020)
+#### Flat Page Discovery [\[17\]](#ref-shibbolethIdPDiscoveryShibbolethConcepts2020)
 
 - meist ausreichend bei eingeschränkter, statischer Menge an IdPs
 - Verwendung von *SessionInitiator* vom SP
 
-##### von bekanntem Heim [\[12\]](#ref-shibbolethIdPDiscoveryShibbolethConcepts2020)
+##### von bekanntem Heim [\[17\]](#ref-shibbolethIdPDiscoveryShibbolethConcepts2020)
 
 - Nutzende kommen direkt von Quelle, die Home-IdP per Definition kennt
 - Quelle kann Nutzende direkt zur Ressource schicken
@@ -603,7 +687,7 @@ speziellen Session Initiators für jeden IdP - verpflichtende
 Spezifizierung eines `target`s - Beispiel auf
 [Website](https://shibboleth.atlassian.net/wiki/spaces/CONCEPT/pages/928645263)
 
-#### Discovery Service [\[12\]](#ref-shibbolethIdPDiscoveryShibbolethConcepts2020)
+#### Discovery Service [\[17\]](#ref-shibbolethIdPDiscoveryShibbolethConcepts2020)
 
 - *IdP Discovery Service* (DS)
 - Service zur Präsentation eines Standard-Interfaces zur Auswahl des
@@ -635,7 +719,7 @@ Probleme für Anwendungen, die mehrere Verbünde unterstützen - ähnliche
 UX wie DS, welche mit Ressource betrieben werden, mittels
 [SeamlessAccess](https://seamlessaccess.org/)
 
-### IdP Installation [\[13\]](#ref-shibbolethInstallationIdentityProvider2024)
+### IdP Installation [\[18\]](#ref-shibbolethInstallationIdentityProvider2024)
 
 - Prüfung der [System
   Requirements](https://shibboleth.atlassian.net/wiki/spaces/IDP5/pages/3199511079)
@@ -698,13 +782,13 @@ Fehlerbehandlung etc.
 
 ### Embedded Discovery Service
 
-[\[14\]](#ref-shibbolethEmbeddedDiscoveryService2021)
+[\[19\]](#ref-shibbolethEmbeddedDiscoveryService2021)
 
 - Eigener discovery service beim SP durch Embedded Discovery Service
   (EDS) möglich
 - Kein redirect zu einer third-party discovery service Seite
 
-[\[15\]](#ref-shibbolethEmbeddedDiscoveryService2011)
+[\[20\]](#ref-shibbolethEmbeddedDiscoveryService2011)
 
 - Wird verwendet während des Single Sign-On (SSO)
 - Nutzer wählt IdP aus -\> startet SSO

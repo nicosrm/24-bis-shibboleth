@@ -533,10 +533,19 @@ Grundlegende Interaktionen wie in dargestellt
 
 [\[11\]](#ref-shibbolethShibbolethConceptsNameIdentifiers2020)
 
-- Dargestellt durch `<NameID>`-Element von SAML2
+- In SAML2 dargestellt durch `<NameID>`-Element
   - nicht festgelegt was als *name identifier* verwendet wird
   - erschwert Interoperabilität
-- TODO: weitere Informationen von der verlinkten Seite
+- Verwendet für spätere Kommunikation (Query, Logout Request)
+- “transient” identifiers sind üblich in Shibboleth
+- name identifier verbunden mit einem Format (für die Verarbeitung
+  während der Laufzeit)
+- Attributes können mehrere Werte besitzen -\> nicht als identifiers
+  nutzbar
+- Shibboleth nutzt häufig Attributes mit *transient identifiers* (oder
+  gar keinen)
+  - meistens nicht bei kommerzieller Verwendung (verwendet name
+    identifiers locker/unsachgemäß)
 
 ### Weiteres
 

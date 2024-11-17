@@ -227,9 +227,27 @@ Verfügbar unter:
 
 </div>
 
-<div id="ref-switchIntroductionSWITCHaai2024" class="csl-entry">
+<div id="ref-shibbolethMembership" class="csl-entry">
 
 <span class="csl-left-margin">\[21\]
+</span><span class="csl-right-inline">Shibboleth, „Membership“.
+Zugegriffen: 17. November 2024. \[Online\]. Verfügbar unter:
+<https://www.shibboleth.net/membership/></span>
+
+</div>
+
+<div id="ref-shibbolethConsortiumMembershipFees" class="csl-entry">
+
+<span class="csl-left-margin">\[22\]
+</span><span class="csl-right-inline">Shibboleth, „Consortium Membership
+Fees“. Zugegriffen: 17. November 2024. \[Online\]. Verfügbar unter:
+<https://www.shibboleth.net/membership/consortium-membership-fees/></span>
+
+</div>
+
+<div id="ref-switchIntroductionSWITCHaai2024" class="csl-entry">
+
+<span class="csl-left-margin">\[23\]
 </span><span class="csl-right-inline">SWITCH, „Introduction - About -
 SWITCHaai“. Zugegriffen: 17. November 2024. \[Online\]. Verfügbar unter:
 <https://help.switch.ch/aai/about/introduction/></span>
@@ -238,7 +256,7 @@ SWITCHaai“. Zugegriffen: 17. November 2024. \[Online\]. Verfügbar unter:
 
 <div id="ref-switchSWITCHaai2024" class="csl-entry">
 
-<span class="csl-left-margin">\[22\]
+<span class="csl-left-margin">\[24\]
 </span><span class="csl-right-inline">SWITCH, „About - SWITCHaai“.
 Zugegriffen: 17. November 2024. \[Online\]. Verfügbar unter:
 <https://help.switch.ch/aai/about/></span>
@@ -837,7 +855,17 @@ Fehlerbehandlung etc.
 
 <br>
 
-- TODO: <https://www.shibboleth.net/membership/>
+[\[21\]](#ref-shibbolethMembership)
+
+- Mitgliedschaft bringt exclusiven Support wie Slack-Channel
+- Unterstüzt die Weiterentwicklung
+- Partizipation durch Einbringen von eigenen Ideen und Vorschlägen für
+  die Weiterentwicklung
+
+[\[22\]](#ref-shibbolethConsortiumMembershipFees)
+
+- Als Consortium Mitglied bezahlt man basierend auf der Art und Größe
+  der Institution einen jährlichen Geldbetrag (Fee)
 
 ## Einsatz
 
@@ -846,7 +874,7 @@ Fehlerbehandlung etc.
 
 ### Switch AAI
 
-[\[21\]](#ref-switchIntroductionSWITCHaai2024)
+[\[23\]](#ref-switchIntroductionSWITCHaai2024)
 
 - AAI: *Authentication and Authorisation Infrastructure*
 - Ziel: Vereinfachung von inter-organisationellem Zugriff auf
@@ -862,14 +890,14 @@ Fehlerbehandlung etc.
 
 <figure>
 <img src="https://help.switch.ch/aai/about/aai-at-a-glance.png"
-alt="SWITCHaai: At a Glance [21]" />
+alt="SWITCHaai: At a Glance [23]" />
 <figcaption aria-hidden="true">SWITCHaai: At a Glance <span
 class="citation" data-cites="switchIntroductionSWITCHaai2024"><a
 href="#ref-switchIntroductionSWITCHaai2024"
-role="doc-biblioref">[21]</a></span></figcaption>
+role="doc-biblioref">[23]</a></span></figcaption>
 </figure>
 
-[\[22\]](#ref-switchSWITCHaai2024)
+[\[24\]](#ref-switchSWITCHaai2024)
 
 - ohne AAI: Registrierung bei jeder Ressource
   - jeweils Nutzername und Passwort

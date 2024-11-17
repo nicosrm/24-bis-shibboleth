@@ -519,7 +519,15 @@ typische nächste Schritte
 
 <br>
 
-- TODO: [https://www.shibboleth.net/membership/](https://www.shibboleth.net/membership/)
+[@shibbolethMembership]
+
+- Mitgliedschaft bringt exclusiven Support wie Slack-Channel
+- Unterstüzt die Weiterentwicklung
+- Partizipation durch Einbringen von eigenen Ideen und Vorschlägen für die Weiterentwicklung
+
+[@shibbolethConsortiumMembershipFees]
+
+- Als Consortium Mitglied bezahlt man basierend auf der Art und Größe der Institution einen jährlichen Geldbetrag (Fee)
 
 ### Einsatz
 

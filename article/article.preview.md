@@ -1012,9 +1012,8 @@ role="doc-biblioref">[25]</a></span></figcaption>
 
 #### AAI Demo
 
-- TODO: https://help.switch.ch/aai/demo/
-  - beschreibt Shibboleth-Login-Szenario auf drei verschiedenen Levels
-  - inkl. Live-Demo
+- beschreibt Shibboleth-Login-Szenario auf drei verschiedenen Levels
+- inkl. Live-Demo
 
 ##### Einfache Demo [\[27\]](#ref-switchSimpleDemoSwitchAAI2024)
 

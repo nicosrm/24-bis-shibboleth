@@ -490,7 +490,43 @@ typische nächste Schritte
 
 #### Service Provider V3
 
-- TODO: [https://shibboleth.atlassian.net/wiki/spaces/SP3/overview](https://shibboleth.atlassian.net/wiki/spaces/SP3/overview)
+[@shibbolethServiceProviderApplication2021]
+
+- Service Provider (SP) - System welches Authentifizierung von IdP entgegen nimmt
+- Keine Relation zwischen installierten(/physichen) SP und *logical* SP
+  - ein SP kann mehrere Web Servers beinhalten
+  - mit einer Installation können mehrere verschiedene SP bereitgestellt werden
+- *entityID* bezeichnet SP - normalerweise eine URL
+- Ein SP ist zuständig für einen *logical service* - IdP kann Ressourcen nur an unterschiedlichen SP unterscheiden
+
+
+##### Applications
+
+- SP kümmert sich um die Gruppierung von Ressourcen
+- Eine Gruppierung ist eine *Application* 
+  - eine *user session* ist mit einer Application verbunden
+  - zugriff auf andere Application -> unabhängige Verständigung mit IdP, andere *assertions*, unabhängige Attribute gecached
+    - könnte zu einem seperaten Login führen 
+  - normalerweise verbunden mit einem *logical* SP -> flexibler mit SP V3
+  - verwendet eine *handlerURL* 
+    - Prefix von Anfragen an SP *handlers* bspw. *Assertion Consumer Services* und *Session Initiators*
+- Keine technische Notwendigkeit zwei Ressourcen einer Application im selben Ordner oder sogar selben virtuel host zu haben
+
+##### Content Protection
+
+[@shibbolethServiceProviderProtectContent2021]
+
+###### Active
+
+- Abfangen von Anfragen an die Ressource um die Session auf eine valide Authentifizierung zu überprüfen
+- Anhängen von `requireSession` an die Ressource
+- Statische Zugangsbeschränkungen mit den Session-Informationen möglich
+
+###### Passive
+
+- Nutzen von *CGI* Variablen um Informationen über authetifizierte Sessions bereitzustellen
+- Unauthentifizierte Anfragen werden unverändert gelassen
+- Sinnvoll bei "Gast"-Nutzung und bei Verwendung verschiedener Authentifizierungmethoden
 
 #### Embedded Discovery Service
 

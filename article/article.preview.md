@@ -216,9 +216,31 @@ Verfügbar unter:
 
 </div>
 
-<div id="ref-shibbolethEmbeddedDiscoveryService2021" class="csl-entry">
+<div id="ref-shibbolethServiceProviderApplication2021"
+class="csl-entry">
 
 <span class="csl-left-margin">\[20\]
+</span><span class="csl-right-inline">Shibboleth, „Service Provider -
+Application Model“. Zugegriffen: 24. November 2024. \[Online\].
+Verfügbar unter:
+<https://shibboleth.atlassian.net/wiki/spaces/SP3/pages/2065334314/ApplicationModel></span>
+
+</div>
+
+<div id="ref-shibbolethServiceProviderProtectContent2021"
+class="csl-entry">
+
+<span class="csl-left-margin">\[21\]
+</span><span class="csl-right-inline">Shibboleth, „Service Provider -
+ProtectContent“. Zugegriffen: 24. November 2024. \[Online\]. Verfügbar
+unter:
+<https://shibboleth.atlassian.net/wiki/spaces/SP3/pages/2065335066/ProtectContent></span>
+
+</div>
+
+<div id="ref-shibbolethEmbeddedDiscoveryService2021" class="csl-entry">
+
+<span class="csl-left-margin">\[22\]
 </span><span class="csl-right-inline">Shibboleth, „Embedded Discovery
 Service“. Zugegriffen: 17. November 2024. \[Online\]. Verfügbar unter:
 <https://shibboleth.atlassian.net/wiki/spaces/EDS10/overview></span>
@@ -227,7 +249,7 @@ Service“. Zugegriffen: 17. November 2024. \[Online\]. Verfügbar unter:
 
 <div id="ref-shibbolethEmbeddedDiscoveryService2011" class="csl-entry">
 
-<span class="csl-left-margin">\[21\]
+<span class="csl-left-margin">\[23\]
 </span><span class="csl-right-inline">Shibboleth, „Embedded Discovery
 Service - Overview“. Zugegriffen: 17. November 2024. \[Online\].
 Verfügbar unter:
@@ -237,7 +259,7 @@ Verfügbar unter:
 
 <div id="ref-shibbolethMembership" class="csl-entry">
 
-<span class="csl-left-margin">\[22\]
+<span class="csl-left-margin">\[24\]
 </span><span class="csl-right-inline">Shibboleth, „Membership“.
 Zugegriffen: 17. November 2024. \[Online\]. Verfügbar unter:
 <https://www.shibboleth.net/membership/></span>
@@ -246,7 +268,7 @@ Zugegriffen: 17. November 2024. \[Online\]. Verfügbar unter:
 
 <div id="ref-shibbolethConsortiumMembershipFees" class="csl-entry">
 
-<span class="csl-left-margin">\[23\]
+<span class="csl-left-margin">\[25\]
 </span><span class="csl-right-inline">Shibboleth, „Consortium Membership
 Fees“. Zugegriffen: 17. November 2024. \[Online\]. Verfügbar unter:
 <https://www.shibboleth.net/membership/consortium-membership-fees/></span>
@@ -255,7 +277,7 @@ Fees“. Zugegriffen: 17. November 2024. \[Online\]. Verfügbar unter:
 
 <div id="ref-dfnDFNAAIDokumentationEinfuhrung" class="csl-entry">
 
-<span class="csl-left-margin">\[24\]
+<span class="csl-left-margin">\[26\]
 </span><span class="csl-right-inline">DFN, „DFN-AAIDokumentation
 Einführung“. Zugegriffen: 24. November 2024. \[Online\]. Verfügbar
 unter: <https://doku.tid.dfn.de/de:aai:about></span>
@@ -264,7 +286,7 @@ unter: <https://doku.tid.dfn.de/de:aai:about></span>
 
 <div id="ref-switchIntroductionSWITCHaai2024" class="csl-entry">
 
-<span class="csl-left-margin">\[25\]
+<span class="csl-left-margin">\[27\]
 </span><span class="csl-right-inline">SWITCH, „Introduction - About -
 SWITCHaai“. Zugegriffen: 17. November 2024. \[Online\]. Verfügbar unter:
 <https://help.switch.ch/aai/about/introduction/></span>
@@ -273,7 +295,7 @@ SWITCHaai“. Zugegriffen: 17. November 2024. \[Online\]. Verfügbar unter:
 
 <div id="ref-switchSWITCHaai2024" class="csl-entry">
 
-<span class="csl-left-margin">\[26\]
+<span class="csl-left-margin">\[28\]
 </span><span class="csl-right-inline">SWITCH, „About - SWITCHaai“.
 Zugegriffen: 17. November 2024. \[Online\]. Verfügbar unter:
 <https://help.switch.ch/aai/about/></span>
@@ -282,7 +304,7 @@ Zugegriffen: 17. November 2024. \[Online\]. Verfügbar unter:
 
 <div id="ref-switchSimpleDemoSwitchAAI2024" class="csl-entry">
 
-<span class="csl-left-margin">\[27\]
+<span class="csl-left-margin">\[29\]
 </span><span class="csl-right-inline">SWITCH, „Simple Demo - SwitchAAI“.
 Zugegriffen: 24. November 2024. \[Online\]. Verfügbar unter:
 <https://help.switch.ch/aai/demo/simple/></span>
@@ -291,7 +313,7 @@ Zugegriffen: 24. November 2024. \[Online\]. Verfügbar unter:
 
 <div id="ref-switchMediumDemoSwitchAAI2024" class="csl-entry">
 
-<span class="csl-left-margin">\[28\]
+<span class="csl-left-margin">\[30\]
 </span><span class="csl-right-inline">SWITCH, „Medium Demo - SwitchAAI“.
 Zugegriffen: 24. November 2024. \[Online\]. Verfügbar unter:
 <https://help.switch.ch/aai/demo/medium/></span>
@@ -300,7 +322,7 @@ Zugegriffen: 24. November 2024. \[Online\]. Verfügbar unter:
 
 <div id="ref-switchExpertDemoSWITCHaai2024a" class="csl-entry">
 
-<span class="csl-left-margin">\[29\]
+<span class="csl-left-margin">\[31\]
 </span><span class="csl-right-inline">SWITCH, „Expert Demo - SWITCHaai“.
 Zugegriffen: 24. November 2024. \[Online\]. Verfügbar unter:
 <https://help.switch.ch/aai/demo/expert/></span>
@@ -895,17 +917,62 @@ typische nächste Schritte
 
 ### Service Provider V3
 
-- TODO: <https://shibboleth.atlassian.net/wiki/spaces/SP3/overview>
+[\[20\]](#ref-shibbolethServiceProviderApplication2021)
+
+- Service Provider (SP) - System welches Authentifizierung von IdP
+  entgegen nimmt
+- Keine Relation zwischen installierten(/physichen) SP und *logical* SP
+  - ein SP kann mehrere Web Servers beinhalten
+  - mit einer Installation können mehrere verschiedene SP bereitgestellt
+    werden
+- *entityID* bezeichnet SP - normalerweise eine URL
+- Ein SP ist zuständig für einen *logical service* - IdP kann Ressourcen
+  nur an unterschiedlichen SP unterscheiden
+
+#### Applications
+
+- SP kümmert sich um die Gruppierung von Ressourcen
+- Eine Gruppierung ist eine *Application*
+  - eine *user session* ist mit einer Application verbunden
+  - zugriff auf andere Application -\> unabhängige Verständigung mit
+    IdP, andere *assertions*, unabhängige Attribute gecached
+    - könnte zu einem seperaten Login führen
+  - normalerweise verbunden mit einem *logical* SP -\> flexibler mit SP
+    V3
+  - verwendet eine *handlerURL*
+    - Prefix von Anfragen an SP *handlers* bspw. *Assertion Consumer
+      Services* und *Session Initiators*
+- Keine technische Notwendigkeit zwei Ressourcen einer Application im
+  selben Ordner oder sogar selben virtuel host zu haben
+
+#### Content Protection
+
+[\[21\]](#ref-shibbolethServiceProviderProtectContent2021)
+
+##### Active
+
+- Abfangen von Anfragen an die Ressource um die Session auf eine valide
+  Authentifizierung zu überprüfen
+- Anhängen von `requireSession` an die Ressource
+- Statische Zugangsbeschränkungen mit den Session-Informationen möglich
+
+##### Passive
+
+- Nutzen von *CGI* Variablen um Informationen über authetifizierte
+  Sessions bereitzustellen
+- Unauthentifizierte Anfragen werden unverändert gelassen
+- Sinnvoll bei “Gast”-Nutzung und bei Verwendung verschiedener
+  Authentifizierungmethoden
 
 ### Embedded Discovery Service
 
-[\[20\]](#ref-shibbolethEmbeddedDiscoveryService2021)
+[\[22\]](#ref-shibbolethEmbeddedDiscoveryService2021)
 
 - Eigener discovery service beim SP durch Embedded Discovery Service
   (EDS) möglich
 - Kein redirect zu einer third-party discovery service Seite
 
-[\[21\]](#ref-shibbolethEmbeddedDiscoveryService2011)
+[\[23\]](#ref-shibbolethEmbeddedDiscoveryService2011)
 
 - Wird verwendet während des Single Sign-On (SSO)
 - Nutzer wählt IdP aus -\> startet SSO
@@ -934,14 +1001,14 @@ typische nächste Schritte
 
 <br>
 
-[\[22\]](#ref-shibbolethMembership)
+[\[24\]](#ref-shibbolethMembership)
 
 - Mitgliedschaft bringt exclusiven Support wie Slack-Channel
 - Unterstüzt die Weiterentwicklung
 - Partizipation durch Einbringen von eigenen Ideen und Vorschlägen für
   die Weiterentwicklung
 
-[\[23\]](#ref-shibbolethConsortiumMembershipFees)
+[\[25\]](#ref-shibbolethConsortiumMembershipFees)
 
 - Als Consortium Mitglied bezahlt man basierend auf der Art und Größe
   der Institution einen jährlichen Geldbetrag (Fee)
@@ -950,7 +1017,7 @@ typische nächste Schritte
 
 ### DFN
 
-[\[24\]](#ref-dfnDFNAAIDokumentationEinfuhrung)
+[\[26\]](#ref-dfnDFNAAIDokumentationEinfuhrung)
 
 - DFN-AAI = Deutsches Forschungsnetz Authentication and Authorization
   Infrastructure
@@ -969,7 +1036,7 @@ typische nächste Schritte
 
 ### Switch AAI
 
-[\[25\]](#ref-switchIntroductionSWITCHaai2024)
+[\[27\]](#ref-switchIntroductionSWITCHaai2024)
 
 - AAI: *Authentication and Authorisation Infrastructure*
 - Ziel: Vereinfachung von inter-organisationellem Zugriff auf
@@ -985,14 +1052,14 @@ typische nächste Schritte
 
 <figure>
 <img src="https://help.switch.ch/aai/about/aai-at-a-glance.png"
-alt="SWITCHaai: At a Glance [25]" />
+alt="SWITCHaai: At a Glance [27]" />
 <figcaption aria-hidden="true">SWITCHaai: At a Glance <span
 class="citation" data-cites="switchIntroductionSWITCHaai2024"><a
 href="#ref-switchIntroductionSWITCHaai2024"
-role="doc-biblioref">[25]</a></span></figcaption>
+role="doc-biblioref">[27]</a></span></figcaption>
 </figure>
 
-[\[26\]](#ref-switchSWITCHaai2024)
+[\[28\]](#ref-switchSWITCHaai2024)
 
 - ohne AAI: Registrierung bei jeder Ressource
   - jeweils Nutzername und Passwort
@@ -1010,17 +1077,17 @@ role="doc-biblioref">[25]</a></span></figcaption>
   - verwaltet zentrale AAI-Komponenten
   - unterstützt Home-Organisations und Ressourcen
 
-#### Einfache Demo [\[27\]](#ref-switchSimpleDemoSwitchAAI2024)
+#### Einfache Demo [\[29\]](#ref-switchSimpleDemoSwitchAAI2024)
 
 - zunächst nur Nutzersicht
 
 <figure>
 <img src="https://help.switch.ch/aai/demo/resources/simple_complete.png"
-alt="Shibboleth Login Procedure [27]" />
+alt="Shibboleth Login Procedure [29]" />
 <figcaption aria-hidden="true">Shibboleth Login Procedure <span
 class="citation" data-cites="switchSimpleDemoSwitchAAI2024"><a
 href="#ref-switchSimpleDemoSwitchAAI2024"
-role="doc-biblioref">[27]</a></span></figcaption>
+role="doc-biblioref">[29]</a></span></figcaption>
 </figure>
 
 - Zugriff von Nutzer von “Uni B” auf geschützte Ressource “Medical
@@ -1060,7 +1127,7 @@ role="doc-biblioref">[27]</a></span></figcaption>
   - erst nach Schließen des Browsers oder bestimmter Zeit erneut
     notwendig
 
-#### Medium Demo [\[28\]](#ref-switchMediumDemoSwitchAAI2024)
+#### Medium Demo [\[30\]](#ref-switchMediumDemoSwitchAAI2024)
 
 - selbiges Szenario wie in Einfache Demo
 - Live Demo (ggf. für **Präsentation**?)
@@ -1071,12 +1138,12 @@ role="doc-biblioref">[27]</a></span></figcaption>
 
 <figure>
 <img src="https://help.switch.ch/aai/demo/resources/medium_complete.png"
-alt="Vollständiger Login-Prozess vom Shibboleth [28] (Schritt-für-Schritt-Bilder vorhanden)" />
+alt="Vollständiger Login-Prozess vom Shibboleth [30] (Schritt-für-Schritt-Bilder vorhanden)" />
 <figcaption aria-hidden="true">Vollständiger Login-Prozess vom
 Shibboleth <span class="citation"
 data-cites="switchMediumDemoSwitchAAI2024"><a
 href="#ref-switchMediumDemoSwitchAAI2024"
-role="doc-biblioref">[28]</a></span> (Schritt-für-Schritt-Bilder
+role="doc-biblioref">[30]</a></span> (Schritt-für-Schritt-Bilder
 vorhanden)</figcaption>
 </figure>
 
@@ -1122,18 +1189,18 @@ Phase 3: Authentifizierung des Nutzenden bei Home Org.
   - Autorisierung basierend auf Attributen durch Ressource
   - erfolgreich: Weiterleitung zu geschützter Ressource
 
-#### Experten Demo [\[29\]](#ref-switchExpertDemoSWITCHaai2024a)
+#### Experten Demo [\[31\]](#ref-switchExpertDemoSWITCHaai2024a)
 
 - inkl. Hintergrundprozesse und interagierende Komponenten
 - hier dekodiertes URL-Format
 
 <figure>
 <img src="https://help.switch.ch/aai/demo/resources/expert_complete.png"
-alt="Gesamter Login-Prozess [29] (Schritt-für-Schritt-Bilder vorhanden)" />
+alt="Gesamter Login-Prozess [31] (Schritt-für-Schritt-Bilder vorhanden)" />
 <figcaption aria-hidden="true">Gesamter Login-Prozess <span
 class="citation" data-cites="switchExpertDemoSWITCHaai2024a"><a
 href="#ref-switchExpertDemoSWITCHaai2024a"
-role="doc-biblioref">[29]</a></span> (Schritt-für-Schritt-Bilder
+role="doc-biblioref">[31]</a></span> (Schritt-für-Schritt-Bilder
 vorhanden)</figcaption>
 </figure>
 

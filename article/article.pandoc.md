@@ -395,6 +395,7 @@ Grundlegende Interaktionen wie in \autoref{fig:basic-interaction} dargestellt
 - bspw. Campus-Portale, auf Bibliotheksseiten oder spezifische URL-Pfade für eine:n Kund:in
 
 zwei Möglichkeiten für Redirect
+
 - am besten Verwendung eines bekannten Session Initiators beim SP
   - kodierte Entity-ID für IdP an URL anhängen
   - Beispiel auf [Website](https://shibboleth.atlassian.net/wiki/spaces/CONCEPT/pages/928645263)
@@ -423,6 +424,7 @@ zwei Möglichkeiten für Redirect
 - Betreibung mit Ressource oder als zentraler, geteilter Service
 
 **Betreibung mit Ressource**
+
 - Präsentation der kleinstmöglichen Anzahl an Auswahlmöglichkeiten
 - Ressource kennt alle IdPs, die es akzeptiert und kennt mit welchen *Federation*s es kooperiert
 - v.a. bei Services mit mehreren Communities oder Teilmengen davon hilfreich
@@ -432,6 +434,7 @@ zwei Möglichkeiten für Redirect
 - [weitere Infos zum Einreichten](https://shibboleth.atlassian.net/wiki/spaces/SHIB2/pages/2577072297/DiscoveryService)
 
 **zentraler Ansatz**
+
 - Umfragen: Konsistenz als wichtigstes Feature
 - Garantieren durch zentralen DS
 - erlaubt Persistenz über mehrere Anwendungen, die sich DS teilen
@@ -473,7 +476,9 @@ zwei Möglichkeiten für Redirect
 - Testen mittels `bin/status.sh`
 
 <br>
+
 typische nächste Schritte
+
 - [Konfigurationsseite](https://shibboleth.atlassian.net/wiki/spaces/IDP5/pages/3199501666/Configuration) anschauen
 - Konfiguration der [Authentifizierung](https://shibboleth.atlassian.net/wiki/spaces/IDP5/pages/3199505085)
   - TODO: ggf. näher anschauen

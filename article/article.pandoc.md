@@ -585,9 +585,8 @@ typische nächste Schritte
 
 ##### AAI Demo
 
-- TODO: https://help.switch.ch/aai/demo/
-  - beschreibt Shibboleth-Login-Szenario auf drei verschiedenen Levels
-  - inkl. Live-Demo
+- beschreibt Shibboleth-Login-Szenario auf drei verschiedenen Levels
+- inkl. Live-Demo
 
 ###### Einfache Demo [@switchSimpleDemoSwitchAAI2024]
 

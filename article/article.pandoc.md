@@ -177,6 +177,10 @@ Grundlegende Interaktionen wie in \autoref{fig:basic-interaction} dargestellt
 
 - TODO: weitere Inhalte auf verlinkter Seite
 
+![Ablauf [@michelsIdentityManagementUnd]](../assets/ablauf.png)
+
+![Ablauf-SSO [@michelsIdentityManagementUnd]](../assets/ablauf_SSO.png)
+
 #### System Flow
 
 [@shibbolethFlowsAndConfigShibbolethConcepts2019]
@@ -531,8 +535,18 @@ typische nächste Schritte
 
 ### Einsatz
 
-- TODO: [DFN](https://doku.tid.dfn.de/de:dfnaai:start)
-  - inkl. Erklärungen
+#### DFN
+
+[@dfnDFNAAIDokumentationEinfuhrung]
+
+- DFN-AAI = Deutsches Forschungsnetz Authentication and Authorization Infrastructure
+- IdPs sind die Heimatorganisationen (Bildungs- und Forschungseinrichtungen)
+- SP sind der teilnehmenden Dienstanbieter (Content-Provider, E-Learning-Plattformen, wissenschaftliche Dienste, etc.)
+- IdPs und SPs sind beim im DFN-AAI registriert
+- Attribute Authorities sind zusätzliche Instanzen
+  - projektspezifische Nutzerdaten hinterlegt, die nicht beim IdP gespeichert sind
+- Nutzung von SAML zur Kommunikation der Entities (IdP, SP, Attribute Authorities) untereinander
+- IdPs verpflichten sich die Metadaten aktuell zu halten damit SPs sich auf Berechtigung verlassen können
 
 #### Switch AAI
 

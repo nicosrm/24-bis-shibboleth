@@ -97,10 +97,18 @@ class="csl-entry">
 
 </div>
 
+<div id="ref-michelsIdentityManagementUnd" class="csl-entry">
+
+<span class="csl-left-margin">\[8\]
+</span><span class="csl-right-inline">T. Michels, „Identity Management
+und Shibboleth: Ein Überblick“.</span>
+
+</div>
+
 <div id="ref-shibbolethFlowsAndConfigShibbolethConcepts2019"
 class="csl-entry">
 
-<span class="csl-left-margin">\[8\]
+<span class="csl-left-margin">\[9\]
 </span><span class="csl-right-inline">Shibboleth, „FlowsAndConfig -
 Shibboleth Concepts“. Zugegriffen: 6. November 2024. \[Online\].
 Verfügbar unter:
@@ -110,7 +118,7 @@ Verfügbar unter:
 
 <div id="ref-shibbolethMetadataConcepts" class="csl-entry">
 
-<span class="csl-left-margin">\[9\]
+<span class="csl-left-margin">\[10\]
 </span><span class="csl-right-inline">Shibboleth, „Metadata - Concepts“.
 Zugegriffen: 6. November 2024. \[Online\]. Verfügbar unter:
 <https://shibboleth.atlassian.net/wiki/spaces/CONCEPT/pages/928645459/Metadata></span>
@@ -119,7 +127,7 @@ Zugegriffen: 6. November 2024. \[Online\]. Verfügbar unter:
 
 <div id="ref-shibbolethSessionsConcepts" class="csl-entry">
 
-<span class="csl-left-margin">\[10\]
+<span class="csl-left-margin">\[11\]
 </span><span class="csl-right-inline">Shibboleth, „Sessions - Concepts“.
 Zugegriffen: 17. November 2024. \[Online\]. Verfügbar unter:
 <https://shibboleth.atlassian.net/wiki/spaces/CONCEPT/pages/928645433/Sessions></span>
@@ -129,7 +137,7 @@ Zugegriffen: 17. November 2024. \[Online\]. Verfügbar unter:
 <div id="ref-shibbolethShibbolethConceptsNameIdentifiers2020"
 class="csl-entry">
 
-<span class="csl-left-margin">\[11\]
+<span class="csl-left-margin">\[12\]
 </span><span class="csl-right-inline">Shibboleth, „Shibboleth Concepts -
 NameIdentifiers“. Zugegriffen: 6. November 2024. \[Online\]. Verfügbar
 unter:
@@ -139,7 +147,7 @@ unter:
 
 <div id="ref-shibbolethOpenSAML" class="csl-entry">
 
-<span class="csl-left-margin">\[12\]
+<span class="csl-left-margin">\[13\]
 </span><span class="csl-right-inline">Shibboleth, „OpenSAML“.
 Zugegriffen: 17. November 2024. \[Online\]. Verfügbar unter:
 <https://shibboleth.atlassian.net/wiki/spaces/OSAML/overview></span>
@@ -148,7 +156,7 @@ Zugegriffen: 17. November 2024. \[Online\]. Verfügbar unter:
 
 <div id="ref-overtsoftwareAzureADADFS2022" class="csl-entry">
 
-<span class="csl-left-margin">\[13\]
+<span class="csl-left-margin">\[14\]
 </span><span class="csl-right-inline">Overt Software, „Azure AD/ADFS vs
 Shibboleth IDP“. Zugegriffen: 17. November 2024. \[Online\]. Verfügbar
 unter:
@@ -158,7 +166,7 @@ unter:
 
 <div id="ref-sommergutWasSindUnterschiede2019" class="csl-entry">
 
-<span class="csl-left-margin">\[14\]
+<span class="csl-left-margin">\[15\]
 </span><span class="csl-right-inline">W. Sommergut, „Was Sind Die
 Unterschiede Zwischen Active Directory Und Azure AD? \| WindowsPro“.
 Zugegriffen: 17. November 2024. \[Online\]. Verfügbar unter:
@@ -168,7 +176,7 @@ Zugegriffen: 17. November 2024. \[Online\]. Verfügbar unter:
 
 <div id="ref-chikMicrosoftEntraExpands2023" class="csl-entry">
 
-<span class="csl-left-margin">\[15\]
+<span class="csl-left-margin">\[16\]
 </span><span class="csl-right-inline">J. Chik, „Microsoft Entra Expands
 into Security Service Edge and Azure AD Becomes Microsoft Entra ID“.
 Zugegriffen: 17. November 2024. \[Online\]. Verfügbar unter:
@@ -178,7 +186,7 @@ Zugegriffen: 17. November 2024. \[Online\]. Verfügbar unter:
 
 <div id="ref-celestedgNewNameAzure2024" class="csl-entry">
 
-<span class="csl-left-margin">\[16\]
+<span class="csl-left-margin">\[17\]
 </span><span class="csl-right-inline">CelesteDG, „New Name for Azure
 Active Directory - Microsoft Entra“. Zugegriffen: 17. November 2024.
 \[Online\]. Verfügbar unter:
@@ -189,7 +197,7 @@ Active Directory - Microsoft Entra“. Zugegriffen: 17. November 2024.
 <div id="ref-shibbolethIdPDiscoveryShibbolethConcepts2020"
 class="csl-entry">
 
-<span class="csl-left-margin">\[17\]
+<span class="csl-left-margin">\[18\]
 </span><span class="csl-right-inline">Shibboleth, „IdPDiscovery -
 Shibboleth Concepts“. Zugegriffen: 17. November 2024. \[Online\].
 Verfügbar unter:
@@ -200,7 +208,7 @@ Verfügbar unter:
 <div id="ref-shibbolethInstallationIdentityProvider2024"
 class="csl-entry">
 
-<span class="csl-left-margin">\[18\]
+<span class="csl-left-margin">\[19\]
 </span><span class="csl-right-inline">Shibboleth, „Installation -
 Identity Provider 5“. Zugegriffen: 17. November 2024. \[Online\].
 Verfügbar unter:
@@ -210,7 +218,7 @@ Verfügbar unter:
 
 <div id="ref-shibbolethEmbeddedDiscoveryService2021" class="csl-entry">
 
-<span class="csl-left-margin">\[19\]
+<span class="csl-left-margin">\[20\]
 </span><span class="csl-right-inline">Shibboleth, „Embedded Discovery
 Service“. Zugegriffen: 17. November 2024. \[Online\]. Verfügbar unter:
 <https://shibboleth.atlassian.net/wiki/spaces/EDS10/overview></span>
@@ -219,7 +227,7 @@ Service“. Zugegriffen: 17. November 2024. \[Online\]. Verfügbar unter:
 
 <div id="ref-shibbolethEmbeddedDiscoveryService2011" class="csl-entry">
 
-<span class="csl-left-margin">\[20\]
+<span class="csl-left-margin">\[21\]
 </span><span class="csl-right-inline">Shibboleth, „Embedded Discovery
 Service - Overview“. Zugegriffen: 17. November 2024. \[Online\].
 Verfügbar unter:
@@ -229,7 +237,7 @@ Verfügbar unter:
 
 <div id="ref-shibbolethMembership" class="csl-entry">
 
-<span class="csl-left-margin">\[21\]
+<span class="csl-left-margin">\[22\]
 </span><span class="csl-right-inline">Shibboleth, „Membership“.
 Zugegriffen: 17. November 2024. \[Online\]. Verfügbar unter:
 <https://www.shibboleth.net/membership/></span>
@@ -238,16 +246,25 @@ Zugegriffen: 17. November 2024. \[Online\]. Verfügbar unter:
 
 <div id="ref-shibbolethConsortiumMembershipFees" class="csl-entry">
 
-<span class="csl-left-margin">\[22\]
+<span class="csl-left-margin">\[23\]
 </span><span class="csl-right-inline">Shibboleth, „Consortium Membership
 Fees“. Zugegriffen: 17. November 2024. \[Online\]. Verfügbar unter:
 <https://www.shibboleth.net/membership/consortium-membership-fees/></span>
 
 </div>
 
+<div id="ref-dfnDFNAAIDokumentationEinfuhrung" class="csl-entry">
+
+<span class="csl-left-margin">\[24\]
+</span><span class="csl-right-inline">DFN, „DFN-AAIDokumentation
+Einführung“. Zugegriffen: 24. November 2024. \[Online\]. Verfügbar
+unter: <https://doku.tid.dfn.de/de:aai:about></span>
+
+</div>
+
 <div id="ref-switchIntroductionSWITCHaai2024" class="csl-entry">
 
-<span class="csl-left-margin">\[23\]
+<span class="csl-left-margin">\[25\]
 </span><span class="csl-right-inline">SWITCH, „Introduction - About -
 SWITCHaai“. Zugegriffen: 17. November 2024. \[Online\]. Verfügbar unter:
 <https://help.switch.ch/aai/about/introduction/></span>
@@ -256,7 +273,7 @@ SWITCHaai“. Zugegriffen: 17. November 2024. \[Online\]. Verfügbar unter:
 
 <div id="ref-switchSWITCHaai2024" class="csl-entry">
 
-<span class="csl-left-margin">\[24\]
+<span class="csl-left-margin">\[26\]
 </span><span class="csl-right-inline">SWITCH, „About - SWITCHaai“.
 Zugegriffen: 17. November 2024. \[Online\]. Verfügbar unter:
 <https://help.switch.ch/aai/about/></span>
@@ -413,9 +430,25 @@ Grundlegende Interaktionen wie in dargestellt
 
 - TODO: weitere Inhalte auf verlinkter Seite
 
+<figure>
+<img src="../assets/ablauf.png" alt="Ablauf [8]" />
+<figcaption aria-hidden="true">Ablauf <span class="citation"
+data-cites="michelsIdentityManagementUnd"><a
+href="#ref-michelsIdentityManagementUnd"
+role="doc-biblioref">[8]</a></span></figcaption>
+</figure>
+
+<figure>
+<img src="../assets/ablauf_SSO.png" alt="Ablauf-SSO [8]" />
+<figcaption aria-hidden="true">Ablauf-SSO <span class="citation"
+data-cites="michelsIdentityManagementUnd"><a
+href="#ref-michelsIdentityManagementUnd"
+role="doc-biblioref">[8]</a></span></figcaption>
+</figure>
+
 ### System Flow
 
-[\[8\]](#ref-shibbolethFlowsAndConfigShibbolethConcepts2019)
+[\[9\]](#ref-shibbolethFlowsAndConfigShibbolethConcepts2019)
 
 - Hauptkomponenten: IdP und SP
   - IdP: Bereitstellung von Informationen über Nutzenden an Services
@@ -428,7 +461,7 @@ Grundlegende Interaktionen wie in dargestellt
 
 #### Zugriff auf Geschützte Ressource
 
-[\[8\]](#ref-shibbolethFlowsAndConfigShibbolethConcepts2019)
+[\[9\]](#ref-shibbolethFlowsAndConfigShibbolethConcepts2019)
 
 - Zugriff auf geschützte Ressource
 - SP fängt Anfrage ab
@@ -443,7 +476,7 @@ Grundlegende Interaktionen wie in dargestellt
 
 #### SP bestimmt IdP und Sendet Authentifizierungsanfrage
 
-[\[8\]](#ref-shibbolethFlowsAndConfigShibbolethConcepts2019)
+[\[9\]](#ref-shibbolethFlowsAndConfigShibbolethConcepts2019)
 
 - Auswahl eines [Session
   Initiators](https://shibboleth.atlassian.net/wiki/spaces/SP3/pages/2065334685/SessionInitiator)
@@ -478,7 +511,7 @@ Grundlegende Interaktionen wie in dargestellt
 
 #### Nutzerauthentifizierung beim IdP
 
-[\[8\]](#ref-shibbolethFlowsAndConfigShibbolethConcepts2019)
+[\[9\]](#ref-shibbolethFlowsAndConfigShibbolethConcepts2019)
 
 - Ergebnis des vorherigen Schritts: Authentifizierungsanfrage vom SP an
   IdP
@@ -505,7 +538,7 @@ Grundlegende Interaktionen wie in dargestellt
 
 #### Antwort des IdP an SP
 
-[\[8\]](#ref-shibbolethFlowsAndConfigShibbolethConcepts2019)
+[\[9\]](#ref-shibbolethFlowsAndConfigShibbolethConcepts2019)
 
 - IdP verwendet Namen des *Principals*, SP, Protokoll und
   Binding/Profile zur Bestimmung, welche Information zum SP
@@ -533,7 +566,7 @@ Grundlegende Interaktionen wie in dargestellt
 
 #### Zurück zum SP
 
-[\[8\]](#ref-shibbolethFlowsAndConfigShibbolethConcepts2019)
+[\[9\]](#ref-shibbolethFlowsAndConfigShibbolethConcepts2019)
 
 - Browser liefert Antwort vom IdP an Endpunkt eines Assertion Consumer
   Services (ACS) im SP
@@ -569,7 +602,7 @@ Grundlegende Interaktionen wie in dargestellt
 
 #### Zurück zur geschützten Ressource
 
-[\[8\]](#ref-shibbolethFlowsAndConfigShibbolethConcepts2019)
+[\[9\]](#ref-shibbolethFlowsAndConfigShibbolethConcepts2019)
 
 - finaler Schritt
 - Weiterleitung des Browsers zur geschützten Ressource, auf welche in
@@ -594,7 +627,7 @@ Grundlegende Interaktionen wie in dargestellt
 
 ### Metadaten
 
-[\[9\]](#ref-shibbolethMetadataConcepts)
+[\[10\]](#ref-shibbolethMetadataConcepts)
 
 - Bereitstellung der Configuationsdaten in der Kommunikaton zwischen SP
   und IdP
@@ -604,7 +637,7 @@ Grundlegende Interaktionen wie in dargestellt
 
 ### Sessions
 
-[\[10\]](#ref-shibbolethSessionsConcepts)
+[\[11\]](#ref-shibbolethSessionsConcepts)
 
 - Der Prozess beinhaltet mehrere Sessions, zwischen user und service
 - In den meisten Fällen durch cookies realisiert
@@ -618,7 +651,7 @@ Grundlegende Interaktionen wie in dargestellt
 
 ### Name Identifiers
 
-[\[11\]](#ref-shibbolethShibbolethConceptsNameIdentifiers2020)
+[\[12\]](#ref-shibbolethShibbolethConceptsNameIdentifiers2020)
 
 - In SAML2 dargestellt durch `<NameID>`-Element
   - nicht festgelegt was als *name identifier* verwendet wird
@@ -636,7 +669,7 @@ Grundlegende Interaktionen wie in dargestellt
 
 ### OpenSAML
 
-[\[12\]](#ref-shibbolethOpenSAML)
+[\[13\]](#ref-shibbolethOpenSAML)
 
 - > OpenSAML is a set of open source Java libraries used in support of
   > the Shibboleth Project’s implementation of the Security Assertion
@@ -647,7 +680,7 @@ Grundlegende Interaktionen wie in dargestellt
 
 ### Active-Directory vs Shibboleth
 
-[\[13\]](#ref-overtsoftwareAzureADADFS2022)
+[\[14\]](#ref-overtsoftwareAzureADADFS2022)
 
 - Beides Identity Provider
 - ADFS (Active Directory Federation Services) eher für größere
@@ -659,13 +692,13 @@ Grundlegende Interaktionen wie in dargestellt
 
 #### Azure AD vs AD
 
-[\[14\]](#ref-sommergutWasSindUnterschiede2019)
+[\[15\]](#ref-sommergutWasSindUnterschiede2019)
 
 - Azure Active Directory ist Identitätsmanagement der Microsoft-Cloud
 - Active Directory ist das On-Promise Modell
 
-[\[15\]](#ref-chikMicrosoftEntraExpands2023)
-[\[16\]](#ref-celestedgNewNameAzure2024)
+[\[16\]](#ref-chikMicrosoftEntraExpands2023)
+[\[17\]](#ref-celestedgNewNameAzure2024)
 
 - Microsoft Azure Active Directory wurde zu Microsoft Entra ID umbenannt
   um verwirrung zu vermeiden
@@ -678,7 +711,7 @@ Grundlegende Interaktionen wie in dargestellt
 - ggf. [weitere
   Konzepte](https://shibboleth.atlassian.net/wiki/spaces/CONCEPT/overview#More-Concepts)
 
-### Identity Provider Discovery [\[17\]](#ref-shibbolethIdPDiscoveryShibbolethConcepts2020)
+### Identity Provider Discovery [\[18\]](#ref-shibbolethIdPDiscoveryShibbolethConcepts2020)
 
 - Identifikation von Heim-IdP für Login bei Zugriff auf geschützte
   Ressource –\> *IdP Discover*
@@ -694,12 +727,12 @@ Grundlegende Interaktionen wie in dargestellt
 
 <br>
 
-#### Flat Page Discovery [\[17\]](#ref-shibbolethIdPDiscoveryShibbolethConcepts2020)
+#### Flat Page Discovery [\[18\]](#ref-shibbolethIdPDiscoveryShibbolethConcepts2020)
 
 - meist ausreichend bei eingeschränkter, statischer Menge an IdPs
 - Verwendung von *SessionInitiator* vom SP
 
-##### von bekanntem Heim [\[17\]](#ref-shibbolethIdPDiscoveryShibbolethConcepts2020)
+##### von bekanntem Heim [\[18\]](#ref-shibbolethIdPDiscoveryShibbolethConcepts2020)
 
 - Nutzende kommen direkt von Quelle, die Home-IdP per Definition kennt
 - Quelle kann Nutzende direkt zur Ressource schicken
@@ -725,7 +758,7 @@ speziellen Session Initiators für jeden IdP - verpflichtende
 Spezifizierung eines `target`s - Beispiel auf
 [Website](https://shibboleth.atlassian.net/wiki/spaces/CONCEPT/pages/928645263)
 
-#### Discovery Service [\[17\]](#ref-shibbolethIdPDiscoveryShibbolethConcepts2020)
+#### Discovery Service [\[18\]](#ref-shibbolethIdPDiscoveryShibbolethConcepts2020)
 
 - *IdP Discovery Service* (DS)
 - Service zur Präsentation eines Standard-Interfaces zur Auswahl des
@@ -757,7 +790,7 @@ Probleme für Anwendungen, die mehrere Verbünde unterstützen - ähnliche
 UX wie DS, welche mit Ressource betrieben werden, mittels
 [SeamlessAccess](https://seamlessaccess.org/)
 
-### IdP Installation [\[18\]](#ref-shibbolethInstallationIdentityProvider2024)
+### IdP Installation [\[19\]](#ref-shibbolethInstallationIdentityProvider2024)
 
 - Prüfung der [System
   Requirements](https://shibboleth.atlassian.net/wiki/spaces/IDP5/pages/3199511079)
@@ -820,13 +853,13 @@ Fehlerbehandlung etc.
 
 ### Embedded Discovery Service
 
-[\[19\]](#ref-shibbolethEmbeddedDiscoveryService2021)
+[\[20\]](#ref-shibbolethEmbeddedDiscoveryService2021)
 
 - Eigener discovery service beim SP durch Embedded Discovery Service
   (EDS) möglich
 - Kein redirect zu einer third-party discovery service Seite
 
-[\[20\]](#ref-shibbolethEmbeddedDiscoveryService2011)
+[\[21\]](#ref-shibbolethEmbeddedDiscoveryService2011)
 
 - Wird verwendet während des Single Sign-On (SSO)
 - Nutzer wählt IdP aus -\> startet SSO
@@ -855,26 +888,42 @@ Fehlerbehandlung etc.
 
 <br>
 
-[\[21\]](#ref-shibbolethMembership)
+[\[22\]](#ref-shibbolethMembership)
 
 - Mitgliedschaft bringt exclusiven Support wie Slack-Channel
 - Unterstüzt die Weiterentwicklung
 - Partizipation durch Einbringen von eigenen Ideen und Vorschlägen für
   die Weiterentwicklung
 
-[\[22\]](#ref-shibbolethConsortiumMembershipFees)
+[\[23\]](#ref-shibbolethConsortiumMembershipFees)
 
 - Als Consortium Mitglied bezahlt man basierend auf der Art und Größe
   der Institution einen jährlichen Geldbetrag (Fee)
 
 ## Einsatz
 
-- TODO: [DFN](https://doku.tid.dfn.de/de:dfnaai:start)
-  - inkl. Erklärungen
+### DFN
+
+[\[24\]](#ref-dfnDFNAAIDokumentationEinfuhrung)
+
+- DFN-AAI = Deutsches Forschungsnetz Authentication and Authorization
+  Infrastructure
+- IdPs sind die Heimatorganisationen (Bildungs- und
+  Forschungseinrichtungen)
+- SP sind der teilnehmenden Dienstanbieter (Content-Provider,
+  E-Learning-Plattformen, wissenschaftliche Dienste, etc.)
+- IdPs und SPs sind beim im DFN-AAI registriert
+- Attribute Authorities sind zusätzliche Instanzen
+  - projektspezifische Nutzerdaten hinterlegt, die nicht beim IdP
+    gespeichert sind
+- Nutzung von SAML zur Kommunikation der Entities (IdP, SP, Attribute
+  Authorities) untereinander
+- IdPs verpflichten sich die Metadaten aktuell zu halten damit SPs sich
+  auf Berechtigung verlassen können
 
 ### Switch AAI
 
-[\[23\]](#ref-switchIntroductionSWITCHaai2024)
+[\[25\]](#ref-switchIntroductionSWITCHaai2024)
 
 - AAI: *Authentication and Authorisation Infrastructure*
 - Ziel: Vereinfachung von inter-organisationellem Zugriff auf
@@ -890,14 +939,14 @@ Fehlerbehandlung etc.
 
 <figure>
 <img src="https://help.switch.ch/aai/about/aai-at-a-glance.png"
-alt="SWITCHaai: At a Glance [23]" />
+alt="SWITCHaai: At a Glance [25]" />
 <figcaption aria-hidden="true">SWITCHaai: At a Glance <span
 class="citation" data-cites="switchIntroductionSWITCHaai2024"><a
 href="#ref-switchIntroductionSWITCHaai2024"
-role="doc-biblioref">[23]</a></span></figcaption>
+role="doc-biblioref">[25]</a></span></figcaption>
 </figure>
 
-[\[24\]](#ref-switchSWITCHaai2024)
+[\[26\]](#ref-switchSWITCHaai2024)
 
 - ohne AAI: Registrierung bei jeder Ressource
   - jeweils Nutzername und Passwort

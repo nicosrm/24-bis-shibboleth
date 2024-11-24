@@ -589,6 +589,295 @@ typische nächste Schritte
   - beschreibt Shibboleth-Login-Szenario auf drei verschiedenen Levels
   - inkl. Live-Demo
 
+###### Einfache Demo [@switchSimpleDemoSwitchAAI2024]
+
+- zunächst nur Nutzersicht
+
+![Shibboleth Login Procedure [@switchSimpleDemoSwitchAAI2024]](https://help.switch.ch/aai/demo/resources/simple_complete.png)
+
+- Zugriff von Nutzer von "Uni B" auf geschützte Ressource "Medical Training 1",
+  gehostet auf `www.resource.ex`
+- Schritt 1: Verbindung Nutzer - Ressource und Weiterleitung
+  - Zugriff auf geschützte Ressource auf `www.resource.ex`
+  - aktive Shibboleth-Session $\to$ direkte Weiterleitung zur Ressource
+  - sonst Authentifizierung bei *Home Organisation* (Uni B)
+  - Ressource hat keine Information über Home Org. des Nutzers $\to$ Weiterleitung
+    zum *Discovery Service* (*Where Are You From service*, WAYF) (`www.wayf.ex`)
+- Schritt 2: Wahl der Home Org.
+  - Discovery Service $\to$ Liste von Home Organisationen
+  - Auswahl durch Nutzenden (hier Uni B) 
+  - Weiterleitung zur Ressource inkl. Authentifizierungsanfrage über Browser
+  - somit Weiterleitung zur Login-Seite der Home Org. `www.uni-b.ex`
+  - ggf. Überspringen der Auswahl der Home Org. wenn noch gespeichert
+- Schritt 3: Authentifizierung des Nutzenden bei Home Org.
+  - Login-Seite von Uni B
+  - normale Zugangsdaten von Home Org. (meist Nutzername und Passwort)
+  - korrekte Eingabe $\to$ Weiterleitung zu ursprünglich angeforderter Ressource
+    auf `www.resource.ex`
+- Schritt 4: Zugriff auf Ressource gewährt
+  - nach erfolgreicher Authentifizierung bei Home Org.
+  - Ressource entscheidet, ob Zugriff gewährt wird (*Autorisierung*)
+  - basierend auf von Home Org. übermittelte Nutzerinformationen
+  - Home Org. gibt nur zwingen notwendige Informationen Preis $\to$ Garantie des 
+    Datenschutzes
+- kein zusätzlicher Account notwendig sondern Authentifizierung mittels Home Org.
+- keine Preisgabe des Nutzernamens
+- Ende der Session
+  - nach Authentifizierung mittels Shibboleth: Zugriff auf alle 
+    Shibboleth-geschützten Ressourcen ohne erneute Authentifizierung
+  - erst nach Schließen des Browsers oder bestimmter Zeit erneut notwendig
+
+###### Medium Demo [@switchMediumDemoSwitchAAI2024]
+
+- selbiges Szenario wie in Einfache Demo
+- Live Demo (ggf. für **Präsentation**?)
+  - Ressource: `https://aai-demo.switch.ch/secure/`
+  - Discovery Service: `https://wayf-test.switch.ch`
+  - Home Org. Login: `https://aai-demo-idp.switch.ch`
+- Schutz via SSL
+
+![Vollständiger Login-Prozess vom Shibboleth [@switchMediumDemoSwitchAAI2024] (Schritt-für-Schritt-Bilder vorhanden)](https://help.switch.ch/aai/demo/resources/medium_complete.png)
+
+Phase 1: Verbindung Nutzer - Ressource und Weiterleitung
+
+- direkte Weiterleitung bei aktiver Shibboleth-Session
+- *oder* Weiterleitung zu Discovery Service (WAYF)
+- Schritt 1
+  - HTTP-Request an `aai-demo.switch.ch` für Webseite `/secure/`
+  - Antwort vom Web-Server: HTTP-Redirect an Discovery Service `wayf-test.swtch.ch`, 
+    da keine valide Shibboleth-Session vorhanden (noch keine Authentifizierung)
+- Schritt 2: Discovery Service sendet HTML Webseite mit Liste aller verfügbaren Home Org.
+
+Phase 2: Authentifizierungsanfrage
+
+- Live Demo: Auswahl von "AI Demo Home Organisation"
+- Schritt 3
+  - Absenden des Formulars zur Wahl der Home Org.
+  - Antwort vom Discovery Service: Weiterleitung zum *Session Initiator* der Ressource
+- Schritt 4
+  - Erstellung einer Authentifizierungsanfrage für gewählte Home Org. durch
+    Session Initiator
+  - Abschicken durch Nutzer-Browser zur Home Org.
+- Schritt 5
+  - Verwertung der Anfrage durch Home Org.
+  - Antwort: Login-Seite
+
+Phase 3: Authentifizierung des Nutzenden bei Home Org.
+
+- Live Demo: uname `demouser` / pw `demo`
+- je nach Home Org. unterschiedlich
+- Credentials: Nutzername & Passwort, Biometrie, Chip-Karte etc.
+- Schritt 6
+  - Nutzende stellen Credentials zur Verfügung
+  - Prüfung der Credentials
+  - Erstellung einer *Assertion* mit Nutzerattributen (verschlüsselt) entsprechend
+    den Attributfilter
+- Schritt 7
+  - Abschicken der Assertion via Browser zurück zur Ressource
+  - Autorisierung basierend auf Attributen durch Ressource
+  - erfolgreich: Weiterleitung zu geschützter Ressource
+
+###### Experten Demo [@switchExpertDemoSWITCHaai2024a]
+
+- inkl. Hintergrundprozesse und interagierende Komponenten
+- hier dekodiertes URL-Format
+
+![Gesamter Login-Prozess [@switchExpertDemoSWITCHaai2024a] (Schritt-für-Schritt-Bilder vorhanden)](https://help.switch.ch/aai/demo/resources/expert_complete.png)
+
+
+Phase 1: erster Zugriff auf Service Provider und IdP Discovery
+
+- Schritt 1: User $\Leftrightarrow$ Browser $\Leftrightarrow$ Service Provider
+  - Zugriff auf Service Provider unter `https://aai-demo.switch.ch/secure`
+    ```
+    GET https://aai-demo.switch.ch/secure
+    ```
+  - vom Shibboleth SP geschützt $\to$ Überprüfung, ob bereits Shibboleth-Session 
+    aktiv (d.h. bereits authentifiziert)
+  - nicht auth. $\to$ HTTP Redirect zum Discovery Service `wayf-test.switch.ch`
+  - braucht Informationen, wohin Nutzender schließlich geschickt werden muss
+    $\to$ Bereitstellung als `GET`-Parameter
+    ```
+    302 FOUND (REDIRECT)
+      Set-Cookie: _shibstate_64656661756c7468747470733a2f2...
+        value=https://aai-demo.switch.ch/secure
+        path=/
+
+      Location: https://wayf-test.switch.ch/SWITCHaai/WAYF
+      ?entityID=https://aai-demo.switch.ch/shibboleth
+      &return=https://aai-demo.switch.ch/Shibboleth.sso/Login?SAMLDS=1&target=ss:mem
+    ```
+- Schritt 2: Browser $\Leftrightarrow$ Discovery Service
+  - Abschicken einer neuen Anfrage an Discovery Service
+    ```
+    GET https://wayf-test.switch.ch/SWITCHaai/WAYF
+      ?entityID=https://aai-demo.switch.ch/shibboleth
+      &return=https://aai-demo.switch.ch/Shibboleth.sso/Login?SAMLDS=1&target=ss:mem
+    ```
+  - Antwort mit Website zur Auswahl des IdP
+    ```
+    200 OK
+      [WAYF DROPDOWN HTML PAGE] 
+    ```
+- Schritt 3: Nutzer $\Leftrightarrow$ Browser $\Leftrightarrow$ Discovery Service
+  - Discovery Service Seite: Nutzer schickt IdP-Auswahl ab
+    ```
+    POST https://wayf-test.switch.ch/aaitest/WAYF?entityID=https://aai-demo.switch.ch/shibboleth&return=https://aai-demo.switch.ch/Shibboleth.sso/Login?SAMLDS=1&target=ss:mem
+
+    POSTDATA
+      user_idp=https://aai-demo-idp.switch.ch/idp/shibboleth
+    ```
+  - Discovery Service sendet Redirect zur *Return-Destination* inkl. ausgewähltem IdP
+    ```
+    302 FOUND (REDIRECT)
+    Location: https://aai-demo.switch.ch/Shibboleth.sso/Login
+      ?SAMLDS=1
+      &target=ss:mem
+      &entityID=https://aai-demo-idp.switch.ch/idp/shibboleth
+    ```
+
+Phase 2: Session Initialisierung und Authentifizierungsanfrage
+
+- Schritt 4: Browser $\Leftrightarrow$ Service Provider
+  - Browser sendet folgende Request aufgrund von vorheriger Redirect-Response
+    ```
+    GET https://aai-demo.switch.ch/Shibboleth.sso/Login
+      ?SAMLDS=1
+      &target=ss:mem
+      &entityID=https://aai-demo-idp.switch.ch/idp/shibboleth
+    ```
+  - Session Initiator erstellt Authentifizierungsanfrage
+  - Absenden innerhalb einer *Auto-Submit-Post-Form*
+    ```
+    200 OK
+      [AUTHN REQUEST POST FORM HTML PAGE]
+    ```
+- Schritt 5: Browser $\Leftrightarrow$ IdP
+  - Browser postet Request automatisch mittels JS
+    ```
+    POST https://aai-demo-idp.switch.ch/idp/profile/SAML2/POST/SSO
+    POSTDATA
+      RelayState=ss:mem:23e3a3b1268acd89dc226bb1ce0d0c6ba7ecf773
+      SAMLRequest=PHNhbWxwOkF1dGhuUmVxdWVzdCB4bWxuczp...
+    ```
+  - Prüfen der Authentifizierungsanfrage vom IdP (Nutzer noch nicht auth.)
+  - Senden eines Redirects zum entsprechenden Login-Handler
+    - hier: Nutzername, Passwort
+    ```
+    302 MOVED TEMPORARILY (REDIRECT)
+      Set-Cookie: _idp_authn_lc_key
+        value=C22C16A197CB9606067A1A577EF5D996
+        Path=/idp
+        Secure
+
+      Location: https://aai-demo-idp.switch.ch:443/idp/AuthnEngine
+    ```
+- Schritt 6: Browser $\Leftrightarrow$ IdP
+  - Weiterleitung des Webbrowsers zum Nutzername / Passwort Login-Handlers
+    ```
+    GET https://aai-demo-idp.switch.ch/idp/AuthnEngine
+      Cookie: _idp_authn_lc_key
+        value=C22C16A197CB9606067A1A577EF5D996
+    ```
+  - Weiterleitung zu spezifischer Anmeldeseite durch IdP
+    ```
+    302 MOVED TEMPORARILY (REDIRECT)
+      Location: https://aai-demo-idp.switch.ch:443/idp/Authn/UserPassword
+    ```
+- Schritt 7: Browser $\Leftrightarrow$ IdP
+  - Senden einer `GET`-Request für Login-Seite durch Browser
+    ```
+    GET https://aai-demo-idp.switch.ch/idp/Authn/UserPassword    
+      Cookie: _idp_authn_lc_key
+        value=C22C16A197CB9606067A1A577EF5D996
+    ```
+  - Antwort vom Webserver mit Nutzername/Passwort-Seite
+    ```
+    200 OK
+      [USERNAME PASSWORD LOGIN FORM HTML PAGE]
+    ```
+
+Phase 3: Authentifizierung, Attribut-Statement und Zugriff
+
+- Schritt 8: Nutzer $\Leftrightarrow$ Browser $\Leftrightarrow$ IdP
+  - Eingabe der Credentials durch Nutzenden
+  - Abschicken an IdP
+  ```
+  POST https://aai-demo-idp.switch.ch/idp/Authn/UserPassword
+    POSTDATA
+      j_username=demouser
+      j_password=demo
+
+    Cookie: _idp_authn_lc_key
+      value=C22C16A197CB9606067A1A577EF5D996
+  ```
+  - Verifikation der Credentials durch Authentifizierungs-Engine des IdPs
+  - erfolgreich $\to$ Attribute-Resolving und -Filtering durch *Attribute Authority*
+  - Generierung einer HTML-Seite inkl. *SAML Assertion*
+    - beinhaltet Auth.-Statement und Attribute Statement mit Nutzerattributen
+    - daher "Attribut Push"
+  - Übertragung der Assertion mittels *Auto-Submit-Post-Form*
+  ```
+  200 OK
+  Set-Cookie: _idp_session
+    value=4m2ETlKYtvbNEmBzVNo3UHLuKSdo3HqTUqAmeZiar94=
+    Path=/idp
+    
+  [ASSERTION POST FORM HTML PAGE] 
+  ```
+- Schritt 9: Browser $\Leftrightarrow$ Service Provider
+  - direkt im Anschluss: Absenden der folgenden Anfrage durch Browser
+    ```
+    POST https://aai-demo.switch.ch/Shibboleth.sso/SAML2/POST
+      POSTDATA
+        RelayState=cookie
+        SAMLResponse=PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGl...
+
+      Cookie: _shibstate_64656661756c7468747470733a2f2...
+        value=https%3A%2F%2Faai-demo.switch.ch%2Fsecure
+    ```
+  - Verarbeitung der SAML Assertion inkl. Authentifizierungs- und 
+    Attribut-Statements durch SP
+  - SP: Absenden eines Redirects zur angefragten Ressource
+    - Lagerung der URL in `_shibstate` Cookie
+    ```
+    302 FOUND (REDIRECT)
+      Set-Cookie: _shibstate_64656661756c7468747470733a2f2...
+        value=
+        path=/
+
+      Set-Cookie: _shibsession_64656661756c7468747470733a2f2...
+        value=_0b6d4e89d2e9c4481738094f2a2c9de0
+        path=/
+
+      Location: https://aai-demo.switch.ch/secure
+    ```
+- Schritt 10: Browser $\Leftrightarrow$ Service Provider
+  - vgl. Schritt 1: erneute Anfrage der geschützten Ressource
+    (`https://aai-demo.switch.ch/secure`)
+    ```
+    GET https://aai-demo.switch.ch/secure
+      Cookie: _shibsession_64656661756c7468747470733a2f2...
+        value=_0b6d4e89d2e9c4481738094f2a2c9de0
+    ```
+  - Nutzer bereits authentifiziert
+  - Entscheidung über notwendige Rechte durch Apache Web-Server
+    - eingebettetes `mod_shib`-Modul: Untersuchung der Shibboleth-Access-Rules
+    - Matching mit Nutzer-Attributen
+    - Access-Rule in Demo:
+      ```
+      # content of secure/.htaccess
+      AuthType shibboleth
+      ShibRequireSession On
+      require valid-user 
+      ```
+  - SP gibt Inhalt der Seite zurück
+    ```
+    200 OK
+      [RESOURCE HTML PAGE]
+    ````
+- folgende Zugriffe an SP werden direkt gewährt (Timeout)
+
 ### TODO: Alternativen zu Shibboleth
 
 - https://www.techrepublic.com/article/best-open-source-iam-tools/

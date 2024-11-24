@@ -671,10 +671,9 @@ role="doc-biblioref">[8]</a></span></figcaption>
 
 [\[13\]](#ref-shibbolethOpenSAML)
 
-- > OpenSAML is a set of open source Java libraries used in support of
-  > the Shibboleth Project’s implementation of the Security Assertion
-  > Markup Language (SAML). It is licensed under the Apache 2.0 license.
-
+- “OpenSAML is a set of open source Java libraries used in support of
+  the Shibboleth Project’s implementation of the Security Assertion
+  Markup Language (SAML). It is licensed under the Apache 2.0 license.”
 - OpenSAML ist keine vollumfängliche Implementierung von SAML IDP oder
   SP
 

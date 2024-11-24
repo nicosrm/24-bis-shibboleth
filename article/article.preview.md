@@ -280,6 +280,33 @@ Zugegriffen: 17. November 2024. \[Online\]. Verfügbar unter:
 
 </div>
 
+<div id="ref-switchSimpleDemoSwitchAAI2024" class="csl-entry">
+
+<span class="csl-left-margin">\[25\]
+</span><span class="csl-right-inline">SWITCH, „Simple Demo - SwitchAAI“.
+Zugegriffen: 24. November 2024. \[Online\]. Verfügbar unter:
+<https://help.switch.ch/aai/demo/simple/></span>
+
+</div>
+
+<div id="ref-switchMediumDemoSwitchAAI2024" class="csl-entry">
+
+<span class="csl-left-margin">\[26\]
+</span><span class="csl-right-inline">SWITCH, „Medium Demo - SwitchAAI“.
+Zugegriffen: 24. November 2024. \[Online\]. Verfügbar unter:
+<https://help.switch.ch/aai/demo/medium/></span>
+
+</div>
+
+<div id="ref-switchExpertDemoSWITCHaai2024a" class="csl-entry">
+
+<span class="csl-left-margin">\[27\]
+</span><span class="csl-right-inline">SWITCH, „Expert Demo - SWITCHaai“.
+Zugegriffen: 24. November 2024. \[Online\]. Verfügbar unter:
+<https://help.switch.ch/aai/demo/expert/></span>
+
+</div>
+
 </div>
 
 ------------------------------------------------------------------------
@@ -740,22 +767,28 @@ role="doc-biblioref">[8]</a></span></figcaption>
 - bspw. Campus-Portale, auf Bibliotheksseiten oder spezifische URL-Pfade
   für eine:n Kund:in
 
-zwei Möglichkeiten für Redirect - am besten Verwendung eines bekannten
-Session Initiators beim SP - kodierte Entity-ID für IdP an URL
-anhängen - Beispiel auf
-[Website](https://shibboleth.atlassian.net/wiki/spaces/CONCEPT/pages/928645263) -
-Untersuchung der Metadaten durch SP –\> Validierung (bekannt?) und
-Weiterleitung zu richtigen Endpoints bei IdP und SP - automatisches und
-direktes Absenden der AuthnRequest zu IdP - Nutzende landen nach
-Authentifizierung direkt bei Ressource - kann in jegliche Links
-platziert werden - optionale Angabe eines separaten `target`s zur
-Spezifizierung der Landing Page - in Anwendung / Application - bei sehr
-kleiner, bekannter Menge an IdPs - bspw. über Einbettung der
-verschiedenen Logos für jeden Provider mit Links zu jeweiligem Session
-Initiator - ähnlich zu anderer Möglichkeit, aber Verwendung eines
-speziellen Session Initiators für jeden IdP - verpflichtende
-Spezifizierung eines `target`s - Beispiel auf
-[Website](https://shibboleth.atlassian.net/wiki/spaces/CONCEPT/pages/928645263)
+zwei Möglichkeiten für Redirect
+
+- am besten Verwendung eines bekannten Session Initiators beim SP
+  - kodierte Entity-ID für IdP an URL anhängen
+  - Beispiel auf
+    [Website](https://shibboleth.atlassian.net/wiki/spaces/CONCEPT/pages/928645263)
+  - Untersuchung der Metadaten durch SP –\> Validierung (bekannt?) und
+    Weiterleitung zu richtigen Endpoints bei IdP und SP
+  - automatisches und direktes Absenden der AuthnRequest zu IdP
+  - Nutzende landen nach Authentifizierung direkt bei Ressource
+  - kann in jegliche Links platziert werden
+  - optionale Angabe eines separaten `target`s zur Spezifizierung der
+    Landing Page
+- in Anwendung / Application
+  - bei sehr kleiner, bekannter Menge an IdPs
+  - bspw. über Einbettung der verschiedenen Logos für jeden Provider mit
+    Links zu jeweiligem Session Initiator
+  - ähnlich zu anderer Möglichkeit, aber Verwendung eines speziellen
+    Session Initiators für jeden IdP
+  - verpflichtende Spezifizierung eines `target`s
+  - Beispiel auf
+    [Website](https://shibboleth.atlassian.net/wiki/spaces/CONCEPT/pages/928645263)
 
 #### Discovery Service [\[18\]](#ref-shibbolethIdPDiscoveryShibbolethConcepts2020)
 
@@ -771,23 +804,31 @@ Spezifizierung eines `target`s - Beispiel auf
     - [Embedded DS](#embedded-discovery-service)
 - Betreibung mit Ressource oder als zentraler, geteilter Service
 
-**Betreibung mit Ressource** - Präsentation der kleinstmöglichen Anzahl
-an Auswahlmöglichkeiten - Ressource kennt alle IdPs, die es akzeptiert
-und kennt mit welchen *Federation*s es kooperiert - v.a. bei Services
-mit mehreren Communities oder Teilmengen davon hilfreich - ggf. schlaues
-Vorschlagen von wahrscheinlicheren IdPs basierend auf Metadaten (bspw.
-IP-Adresse) - ggf. Branding der Ressource entsprechend DS - Nachteil:
-jede Ressource muss eigenen DS verwalten, ggf. Inkonsistenzen in UX -
-[weitere Infos zum
-Einreichten](https://shibboleth.atlassian.net/wiki/spaces/SHIB2/pages/2577072297/DiscoveryService)
+**Betreibung mit Ressource**
 
-**zentraler Ansatz** - Umfragen: Konsistenz als wichtigstes Feature -
-Garantieren durch zentralen DS - erlaubt Persistenz über mehrere
-Anwendungen, die sich DS teilen - Nutzende müssen erheblich weniger ihr
-Home-IdP auswählen - meist im Verbund betrieben \[bspw. DFN\] - ggf.
-Probleme für Anwendungen, die mehrere Verbünde unterstützen - ähnliche
-UX wie DS, welche mit Ressource betrieben werden, mittels
-[SeamlessAccess](https://seamlessaccess.org/)
+- Präsentation der kleinstmöglichen Anzahl an Auswahlmöglichkeiten
+- Ressource kennt alle IdPs, die es akzeptiert und kennt mit welchen
+  *Federation*s es kooperiert
+- v.a. bei Services mit mehreren Communities oder Teilmengen davon
+  hilfreich
+- ggf. schlaues Vorschlagen von wahrscheinlicheren IdPs basierend auf
+  Metadaten (bspw. IP-Adresse)
+- ggf. Branding der Ressource entsprechend DS
+- Nachteil: jede Ressource muss eigenen DS verwalten, ggf.
+  Inkonsistenzen in UX
+- [weitere Infos zum
+  Einreichten](https://shibboleth.atlassian.net/wiki/spaces/SHIB2/pages/2577072297/DiscoveryService)
+
+**zentraler Ansatz**
+
+- Umfragen: Konsistenz als wichtigstes Feature
+- Garantieren durch zentralen DS
+- erlaubt Persistenz über mehrere Anwendungen, die sich DS teilen
+  - Nutzende müssen erheblich weniger ihr Home-IdP auswählen
+- meist im Verbund betrieben \[bspw. DFN\]
+  - ggf. Probleme für Anwendungen, die mehrere Verbünde unterstützen
+  - ähnliche UX wie DS, welche mit Ressource betrieben werden, mittels
+    [SeamlessAccess](https://seamlessaccess.org/)
 
 ### IdP Installation [\[19\]](#ref-shibbolethInstallationIdentityProvider2024)
 
@@ -831,20 +872,26 @@ UX wie DS, welche mit Ressource betrieben werden, mittels
     Preparation Notes)
 - Testen mittels `bin/status.sh`
 
-<br> typische nächste Schritte -
-[Konfigurationsseite](https://shibboleth.atlassian.net/wiki/spaces/IDP5/pages/3199501666/Configuration)
-anschauen - Konfiguration der
-[Authentifizierung](https://shibboleth.atlassian.net/wiki/spaces/IDP5/pages/3199505085) -
-TODO: ggf. näher anschauen - Konfiguration der [*Attribute
-Resolution*](https://shibboleth.atlassian.net/wiki/spaces/IDP5/pages/3199502864/AttributeResolverConfiguration) -
-[Hello
-World](https://shibboleth.atlassian.net/wiki/spaces/IDP5/pages/3199510241)
-ausprobieren zum test der Konfigurationen - Laden der SAML-Metadaten für
-SPs - Herstellen einer [*Attribute Release
-Policy*](https://shibboleth.atlassian.net/wiki/spaces/IDP5/pages/3199501794) -
-Anpassung der [Login
-UI](https://shibboleth.atlassian.net/wiki/spaces/IDP5/pages/3199505587),
-Fehlerbehandlung etc.
+<br>
+
+typische nächste Schritte
+
+- [Konfigurationsseite](https://shibboleth.atlassian.net/wiki/spaces/IDP5/pages/3199501666/Configuration)
+  anschauen
+- Konfiguration der
+  [Authentifizierung](https://shibboleth.atlassian.net/wiki/spaces/IDP5/pages/3199505085)
+  - TODO: ggf. näher anschauen
+- Konfiguration der [*Attribute
+  Resolution*](https://shibboleth.atlassian.net/wiki/spaces/IDP5/pages/3199502864/AttributeResolverConfiguration)
+- [Hello
+  World](https://shibboleth.atlassian.net/wiki/spaces/IDP5/pages/3199510241)
+  ausprobieren zum test der Konfigurationen
+- Laden der SAML-Metadaten für SPs
+- Herstellen einer [*Attribute Release
+  Policy*](https://shibboleth.atlassian.net/wiki/spaces/IDP5/pages/3199501794)
+- Anpassung der [Login
+  UI](https://shibboleth.atlassian.net/wiki/spaces/IDP5/pages/3199505587),
+  Fehlerbehandlung etc.
 
 ### Service Provider V3
 

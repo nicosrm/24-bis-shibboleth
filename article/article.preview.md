@@ -1010,12 +1010,7 @@ role="doc-biblioref">[25]</a></span></figcaption>
   - verwaltet zentrale AAI-Komponenten
   - unterstützt Home-Organisations und Ressourcen
 
-#### AAI Demo
-
-- beschreibt Shibboleth-Login-Szenario auf drei verschiedenen Levels
-- inkl. Live-Demo
-
-##### Einfache Demo [\[27\]](#ref-switchSimpleDemoSwitchAAI2024)
+#### Einfache Demo [\[27\]](#ref-switchSimpleDemoSwitchAAI2024)
 
 - zunächst nur Nutzersicht
 
@@ -1065,7 +1060,7 @@ role="doc-biblioref">[27]</a></span></figcaption>
   - erst nach Schließen des Browsers oder bestimmter Zeit erneut
     notwendig
 
-##### Medium Demo [\[28\]](#ref-switchMediumDemoSwitchAAI2024)
+#### Medium Demo [\[28\]](#ref-switchMediumDemoSwitchAAI2024)
 
 - selbiges Szenario wie in Einfache Demo
 - Live Demo (ggf. für **Präsentation**?)
@@ -1127,7 +1122,7 @@ Phase 3: Authentifizierung des Nutzenden bei Home Org.
   - Autorisierung basierend auf Attributen durch Ressource
   - erfolgreich: Weiterleitung zu geschützter Ressource
 
-##### Experten Demo [\[29\]](#ref-switchExpertDemoSWITCHaai2024a)
+#### Experten Demo [\[29\]](#ref-switchExpertDemoSWITCHaai2024a)
 
 - inkl. Hintergrundprozesse und interagierende Komponenten
 - hier dekodiertes URL-Format

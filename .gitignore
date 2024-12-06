@@ -7,6 +7,8 @@
 main.pdf
 article/24_bis_shibboleth_article.pdf
 
+.idea/
+
 
 # ------------------------------------------------------------------------------
 # github/gitignore/TeX.gitignore

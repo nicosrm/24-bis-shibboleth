@@ -1,13 +1,30 @@
 # Einführung
 
 - allgemeine Worte zu Shibboleth
-- Motivation
-- grundlegende Begrifflichkeiten
+- Motivation, Ziele
+- Anwendungsgebiete / Zielgruppe, Mitglieder Consortium
+- Vorstellung der Gliederung des Artikels
 
-# Funktionsweise
+# Grundlegende Begriffe
 
-- Konzept
-- verschiedene Komponenten
+- Überblick über einzelne Komponenten
+  - Identity Provider
+  - Service Provider
+  - Discovery Service
+- grundlegendes Konzept / vereinfachter Prozessablauf (*Basic
+  Interaction*)
+
+# Prozessablauf im Detail
+
+- detaillierter Ablauf des Prozesses
+- vgl. Abschnitt [System Flow](#system-flow) und
+  [SwitchAAI](#switch-aai) Erklärung
+- am konkreten Beispiel (vgl. SwitchAAI)
+- Erläuterung BPMN
+  - weiter aufteilen
+  - Bereitstellung von großem Gesamt-Diagramm
+- ggf. genauere Erläuterung von [IdP
+  Discovery](#identity-provider-discovery-shibbolethidpdiscoveryshibbolethconcepts2020)
 
 <figure>
 <img src="../assets/bis_bpmn.drawio.svg"
@@ -19,20 +36,21 @@ href="#ref-switchExpertDemoSWITCHaai2024a"
 role="doc-biblioref">[1]</a></span>)</figcaption>
 </figure>
 
-[DrawIO](https://viewer.diagrams.net/?tags=%7B%7D&lightbox=1&highlight=0000ff&edit=_blank&layers=1&nav=1&title=bis_bpmn.drawio#R%3Cmxfile%3E%3Cdiagram%20name%3D%22Page-1%22%20id%3D%2278sKbAdPxCWYyD5-eGmq%22%3E7V1rc6M4uv41rpr9YBfizsd0MrMzp9KzqaRnd%2BZ8OYVtYnNimwzg3H79SoAwSMII20LYVtdMd8AgE%2FRenvc%2BMm7XH%2F%2BM%2Fdfl92gerEa6Nv8YGXcjXTcdV4P%2FoDOf%2BRnDNIozizic5%2BcqJ57CryA%2FCfDZbTgPkuJcfiqNolUavtZPzqLNJpiltXN%2BHEfv9cueo9W8duLVXwS1x0Annmb%2BKqAu%2B084T5f5WVd3dud%2FDcLFEn8zsL38k7WPLy4WTpb%2BPHqvnDJ%2BHhm3cRSl%2BU%2Frj9tghd5e%2Fb380vBp%2BWBxsEl5bvifH3f65vvff%2F7Hfnq8eX3748f%2F%2FfhjXKzy5q%2B2xS%2F8GCRJtI1nQfHU6Sd%2BFcl7uF75G3j0bZmuV%2FAkgD%2FOluFqfu9%2FRlv0FEnqz17w0bc4SOCGPuBHBMSp7z6iEw2tF8XhV7RJ%2FVVxAq4TpwU16PUrntBXFJe9L8M0eHr1Z%2Bi6d0iC8NzKnwarb%2FCaRRxtN%2FPbaBXF8NN58OxvV2m2dhy9lLtpwDPFSwjiNPhofLug3DNI7UG0DtL4E16Cb3CKbS4IfaxjQn%2FfkY1pYH5YVmhGx7f6Ba0uytV32wl%2FKHa0w%2B4a1O4%2BBfFbiPZWe4ijN8haMec279mQYi%2Bew9WK8bKL1X6pfLqJstU7bpTOu1HNhN64ezprr%2Bxe9wpLlMpmPcSjW2P07fZ5u1nAT26j6CWEshB%2B%2BfZ5pNvZO3qGW4DkWs4C8OzfWyRQvt1CHg7R7mq%2FB%2B%2B70%2FCnRf4vlEfhNIHMHkYbvBh88Hw9fBFBGq9RuEmzX9z6Bv%2FTJro10m%2B17H8LXnCbnWSdc%2BiTAB3hFeonWecci7UkYHw3eU5nnGQuyfhujXhI%2BB%2Bky6X%2Fit7I%2BmOBtN5k%2BrreTFI%2FeWmQSDFUTE%2FFW8xIPZijVXJmAhohTxFPhZsgLo6Dj1d%2FMy94bBatVv5rEk6ztdAZ9LXf%2Ffglu96fQpbxkRZsZ67DWcnYz0puXRACi2ItoDM4yxUmBGkdx0vYJHXuo20eSi6vpYi5kW7bqLSZIBd%2BGrz7n3qdvNCGhxDe3CP6eIiSMEX8b9xNozSN1jyEg1e4WYULdGcaIRr3i6MZpB1Ei99egziEG5jRZbyM1tNt8rA79Q0ChBWk8tsStmm7kzsVkXyup9Fqd7x4%2F%2FGZ%2FabBx2y1TcK3QCAlm7ZVo2SGQrcYhGwJI2SaboM5BKvFYRSny2gRbfzVz7uz30p5k7%2Fg8pr7CG1bRhL%2FH6TpZ6Ha%2FW0a1QkGvsH488%2Fi%2FuzgL3QAKbA4vPuofnj3WT2q7Hh2klMqoV%2FrgJ2EryZHru1aFqKZRbB3wQbAEAcrP83ormponHqrTVPuVu9296%2Fa5nbYalJMrMP5fMUF%2B0TTAFYIrTRg6UfSQHHrA9IuFbniERrSJCRG%2FmDFXQQllY9xBHFZDIWYA8B5%2BIbB30uAJDF8qJfsV90hxMo1jNueIKqEIjtIl%2BMnClzWbmXQd6aU6jRJ6ZVGusosS3%2BHjOo6%2Fe4oTFR4F4rVRxVnQQtN5ozcqGK0CajrmELEH0ph%2BJLo%2BTkJxBCPewCaAmYOZYp%2FW%2FCUa7GvZiMqfHXxbwumwk9CXc2LqoK3bMOlQyq4VeFrErRCKj95zQ%2Bew4%2FM7NhhLGjSb%2BZ%2BPK%2FirDXk2cwjJgxVAXdYqMr0FKo6VqNiodCqUXP4JQtVWTolux6DeYjMc16LULk6BuLqSAJ0pTw3RxnHKN0ctBzr188BnLMXZMFHmP5ZEkOYVpaCR7uV0MFn5WBwApHbxACuJ8TGsJy6lh0Dzauvkf8OlJFBreRo3sSr%2FHFr61pWr6YLYKFPygaBxLVNvxA13IQbxH5%2BqgyZIw0Z0KC5i%2BXHEFp79pHWC17Lduu3iLNmPIO5fYJlpnTx5Oqc4sl1ZeI1%2FJjK1lS25mG2pmnV1aBHB6N6NTbx91%2BbvOG1D70Gd1lP8oZGFz%2FHSQrvzAPwN9t0CV9I%2BBx%2BhUEMzyVjf%2FMcIxpW5uN5mY9DiJQDi8gZcmWbkJ7JA68RG0zGj8Hf2yBJOUGx4odh84NsdwpwzKHxgtcOPtFb4ko5PL091uZkJ91TrPdpMt6nLcw9pWntL5TJH3M%2F9fFLrkBeypBuxMStpneOgTFbWQehp0N4wmtw%2FkjcJFayFKUBHiEc%2B3xK%2FbSDO%2BXm%2Bz2hMqYxeX2LEoHvlzCHTulUQbgZk8AIJ58SKavPdBYrSpj8xV%2BHK8Rp9axLKbRDZLRi%2Fmewv8agLDIV4YSUxWHMV22hYDWN3qtmEHrRhYkDiKQ2qLxQfvGokjteOYafFvfZo3oiMzqe%2B8kyM65AcfDgp5CWNtkZXTPzBW5QKcFu07NFiHN1Mw27svHPw3Rl7xc9WMwc6c%2BjlJGueRPSx8frjoaKrH0x0V5oW0qoRbQZ3x6ssG020RxJIIZFZFoCw%2BKijpNtqGPL2NDLSgIoqIOHjpxj0wAa6MghM%2BtIOhIuGGxKyf07iP14GoRp7kNCOAi5kpIEIRUUVNLCzctqUriXJuMR0ty2v868stnf6KM0jcPpNh1noGsdIOiiTOzzMrGH4HIybAIXMhzifWct0HVPu6Qc7WuLwLS%2FWQTIz5oGiF%2BaKxQVCwybBWR7mSgFIZ%2F8XZbL9VzcTIZtEwqX8T69Xh0YOLtUeZlIGmvO3WBUvwLXzqRKjxtHQyeWGylIx3kd7KioYO3mhaJu35%2FaQy1wH838tHKD8mEJpUxgT1yHQZy9ihTvIq39dnvO9XjtOe9Yv8CRooMO1SBbKorDJI%2FTw89%2BegxmyzR4rZTU%2F0PhxzPDj0MwoVynHfL0CyFxpFI5r44Qdh6v80rXrCOFXYNjGxC2Sc%2Bp1Tpv6A%2BJUW689BbFS8jewZUnT7cE68baRAOgnlmPWzMdm0xt4sAbsa745GoUPOtAURr%2BLMSfbEL4SYVwQpLQ2tH3SQjy4pFeB%2BHXoBx7Qnoey0jkA3Gql8s193IBGuGpkl12XHCSKm6QTc8nKG7Ivdolfc%2F8zSwDML0RM6v4tGdqpt2u%2FwyS2TK3ttOvTMGrwM25Gt6yAze6NjSrm6Z3ouqUjDmcR%2FPUPe06GX7jun95BJVq9oeHUvppwmoy8h7ZTViBMNlIQ9ZDKKW9%2F2qv7VQbfCBd26mKe%2Bu6FKeYMFMO56e1mnLH2mcNzimrzli4u0BfeVUKK18KVmYVAi8CiEr84xBzQwQKJyoQrlXZPadonXCDC0m1rCe3tqijZ5X3pODz4eRPim9DNnrG%2BuPKtLPNWwfvSHWz2nQd%2FJ1fLYTPRdQ6E0%2F2YhXOlpmA%2Bm3%2BoNKSz0029RNT3y%2BfXHdo8okVC1WA81IA5yk6z%2BynaIfociobcTo0%2FaockY7aGwuFVu1tS%2B2aJaeWTf7u8FYxOlJ7DDm0K%2BNmm7z7y2xuWjbdB8IohaIUiupu5WmDg1F0AtDNFBnDmbkwL2ZZJYvgHZkSN%2BZylWJDQnHAmXGAdB8HOXhKOvUDw71KTQwMk1MVA0NqP%2FjyQZWZp8y8g4SObhCdK2TbeQVH1XtYhpsF3LTSb3ezWQcrKGL8TNkqNXtWanYIQFM3ncGpWroE7OFfTz9Kmr9TxH6GxC4bU%2Br20AJnZTtA5cg7BqDyToEs5Iq8ylYpFsRJ50DK322X129rimlvpmuEFBl7hHhoSJ%2B6iWP%2Fs3JZoa4av8hwiS8qsmSbeumVXSGZl8Mf8gc4bSoX3g1lcymb67BcLhc3JhmIzaVrtM2lSFqRdAeS9gbmRtDBZQ1G4sUKpUZsr4QFukxkWD5oReb873YRh8%2FPWUwF%2Fb1QBVgXYwkPwe1jDi6%2BqAOgrOGjZZ7Gaw0XQkeezNMVzroQnEWUTMNF1uHGT4PjqtJa5JdOlE3LRlmM8OOvcGl45l%2Fxwt%2BESdFqkCDxMyklba9HbK417aU6lLX%2F7OJQU5gGwyq0QgK%2FzdGMuRQ9%2BEMcvYVZAIOLBE5RI8q7J8cxqrG%2F7yN3%2FaihidoYgDsaXIgFhAmtFQ5w9wICcnsBHdQKSIGBIYIBYcNhrRZ9QAxJl40HgHZZqdvcMgdo3CNoNKnZ24DRtekBt5QtklpRugFqP7ubkKl8LcrX0lk4Da4mDjDbOfLRtmq%2Bd%2BHN9%2FYTs042LJOvaekSZ0azUKJRj9a9Q2lrP1I02iZLx%2BSdpKzyP7qjC%2B589CYPwtEZIK410Sp%2F6rgTWN7Eq%2FzBI5H66q6Df6G2Pr14KpOa%2BH0BKKeHln5tSoHI4yj9c%2FIgDlY4V2eAmbw5csCUWtxcPqhy%2Byi3z4Fyxx5YbwZgXVayTQepw9sPCVjHArMjpQ5tLvwbUv5z%2BFKE6FRp1fkjokH4fXRncH4fkyO9tSqvgtU0eq%2BKKjRerhBDgPCiQBCKQo2jSrS5cgw%2FLe6zR%2FXwJjqe%2B8kyE4CgOHjwU6iJNtkZNHwkW%2BAmjqP3USWKCRchztVFafARpsj4BRMNFIdFeo9THO7MX3TwWTkYoPFrNtBblZ6wd%2BZYM9dyCCJsmNtO3%2BkAtoPoxBUS1PfgUgyxNQ%2FWtcZ1LG6zwmog054UvEUr%2BCB%2BjlaLOAhnS%2BbuXeCYKmt%2FAtUY2i%2BWbhwnK8TPnSqpTgUqVKCiI%2FryLLYekmYb2tfqkcLjDzlUh9waXfygtdE30AIpR88GmT2ia7%2F%2B%2BH4%2FfgrCrBQj3LysJvDfp5vv98hwTBLEZIxsT2U1KquxVW4ZQBua1WjRHTmegvSr0vntt%2FkDZIds%2FnoxlF11j1bUfwj1697QqN%2FmCqnmLWo4MwV%2BqhgkQelrzOeYq4jsBfCS9IisYQ7O92jvdzVeMPz1eOGvLTU0Uq48jBSl8rOLTVE6ersPc5yS3VWL1PlGhy55vW5qe28wLHPvDWI8szr2DHXLA5wGUAuj18Wb5LdNl6io6zn8glZhl0y%2Fy3MytlXpjbWJZ%2BHxnpgWRqcITxg6a1Hx%2FkhdV%2BPrLiVnRcCo544eydIjKK03jG4OSeOfa1Iyd2isEB%2FyAB7t3yzS3rXrC5EVxL83RFZXM%2BPBx8tKxXhtRlY5FrSdBw25RhZ%2BUIUgzh5ByMp6JTvVy8cRRseyE%2B1riyj%2BNfiChlQyW1YzLpM8rJbfPY3byrCUZ1R5RrtxjzE0z6hOq4T7aBFuxr%2FC17rqtWdM%2F41h8C5otAxjN4oBAkcPSHGACkNPJWG1mzA6d9eGnHukpWgoB4yCT3xkv0fyECXsjGLFfjPDdI4GSGjvuHqxNb64w5NJW14o8MhUbEbXryJ7vf5KbXGvlKPSgclgcz%2F18WuuMBPl5Gjktla3SM5dGFtZBymDw%2FiiISe4tksMwhe4S1y9G56CNE8qglf%2BhPrx%2FP4PfvuAWu0%2BmhWVXgeaGPDFExL4lJ4whA8wbZSIjOjf90y39EOFOb%2F463CFWPAW6vsws6l%2BD94lERX2ohGmKkMwsGStKY7k6GS2vaDvQkqg8M9%2FVX7O3OyI4yvlT4aT%2B%2BT7rIDqglMbpkyKKIEChIlC0iR3RRTZbBu49YVENwVhuBx%2Fjtdhmq7yrOa84LXijdlQ3hjlZTkrL0s%2FuZytQBuQvaKku1pwfKSDo1K5Jq%2BEacS7JlsZhvRNDoBhpDS0OI%2BxDB1wC3d4spBQ8lIEztsVQfmV5bsidOWKaCKzAbkidIYrInM1jLHrQXkBDthPvA7hBWCoNcDYbUPcbisvwIFegPNI3uNXzaV4Plw1i3A%2BHO5tMIgKOlJknqr%2FCvk9Rg9J%2FgAnrO7l2x2DTFfR7OXHMtwwNFtFYa6C52oYjNSnpdzGEj7ORVSzgN%2FDxu6OjUkpgZ86ekMR%2Bw6Sw2xm%2BJKPy5KaTl2PzoPb8fQlDv8hdxebo1N12WwDXIJtdHLuDb9b0WpZSXizYTqduBnYloHdCh8yI8bCmTN59WfhZvFY4AxLtM3fkAdT0RpYqtXSXOyTKBK3RiLFXPReWvcw5mEpUc0tqmvo7ChRPbA6Sm5RjV21HBndx6YkNWEwohPHuDRSOstqk8iQ0MmVhMeAOPw6SlY35Y72I6tJGiFmB4iT1QZtDd%2BFySyC7xD99k%2FBW8gYNH0xwyv7mFDJyDFjD6gEwtLMsEXZuMtxh20%2BowGVDT3Fug6oFLcx1iHTmFRO6zXltJr7wx4mUREku9ehTVM0nXFChtGZ03Lp9L0w2cXgVcT9rCPu%2FaSptPCONbROSZiXzzjkXjZer1q0pX07gKbrGAu1mqFYN7daofax00zZNoFNuAvxnNsWC%2FRUloFNm403U5QoU5mQCnnyOZ%2Bbupii9z7K%2BkGqBpDnJo3F5z%2B1SGLHGpokds5eEsuXoDa3BG3IIegn88nhyNJRRpgywva4fAwizUW2FYblYoWkd5nNSjkr5dyJuk2yYl%2B2dnYltyu9CO3s8GY%2FuccG2Y5zkdKijN58FUy%2B3LwfwEnPOMGhlZ6PHn7LttctIu6Dp5J1Dhk7RstCgiPGPJOXrj5gbDUIRSm5PURVqbhwMWNMjhLGAoVxn%2FLT0jnlpyXI30nk3JDZy7zik1ynnO3Ul%2FhU%2BTYc4lNqug0hPnGz1x7kpyo%2BkdiCglsSNiSAC6j2sBoaUnUWemSjCZ0PM3at%2FaC%2BR%2Buh9sPm4RqFOi43n5iXcW1eE9A5yfwVmjuIMNb4UAwD2YosZu7ZCHQ43C5Xj2LshgRDGSgGuL2hGIfVu03JY%2BWSowiFNwDsNDT3Ojat3iDF6MEC2bRbVhItjzkw0NXLY6fBsyuliGMM7N5K7lyO3shKIp8OIfcpRLHF1R6n08UIUbuhoKWzDHUIDgE9Y1qXo9ri6mWo2%2B78EChDx%2BSIht5CG65yzcnK0%2BaWhByto07klwM2JasIZc4t9UjxWYqhE7vm6C8CJsEoAnxzHkfypEIeyhYce7y2oHdsMnADe7ik6%2Frwrs5my0qCcYzH4X%2B5ehzjtfcLF4pjdFIWG30hGWDqSiYrmczVacXjFMrAFBMx0e2DG6s4pB0qupGKyeFkuXqxWwifYcRExrrVX9crk8O70E%2F%2F5P39SXSHapSMkZG8cUAmR2LhlXVKLghqv7nb8y6xUtuoPg3FyAS4M8GGezZTveOyms8kkH4aOjMzZACrM7O4%2BUyM1iEKtqo0HxaliAGjhk1oRqrxEy84Nagajr7Bqt1FoV4tWG1q3SElgYdM2RSIVRn1wRR1qJL3ayl5328vGI5WRwq7FvvSxubiXDcFFRRU2A8VuKucgSsIVHhkUjCV9sCLKkxApRj1nEEBeBKNFKxoysSRASsMovpNJKrgiQVfTgrFyeRYLxkNpka6%2FQDZn4NbDpEB0LHB2dS8a04D%2FU3Y%2FyA0qUEHyhXRCV8c2%2B3xbCNoOsbG7bMKNDE57rqlk%2FDcIpLmuENqttu21KlGSJEthSBQs%2FY%2FG3UHnkLVjJbc%2FXeIkh3K89IOkQoJKy09w7GcGm0AsruqOJhkc7RXGUKc0KTGVY1Io7%2Ff8JPVxfa4jhhhkyNc2h7ZLMciFex7ClIi1NcaH8wbxP92x31DHKTbGHUk%2FuPxXgUURRJb8zgN3B2gp0G%2BgMP%2BHIJkBQbpEtKxQ7OVcS1hL69LUul1SNeCoAYkXnXAqlI5Xlg%2BZsJyXBGVXAkbk%2FFDHKXRS4SenPO%2BH7mhpCSySALF3WXqUobRttVgUC8Zqj7h7G2eXp6X4yA80%2FZHhSroxSsJSCtjbJDduLgLrSwi50JUDyTqi8a6phPMIcKxYKgibwb%2FqqAng1KKKzkG24vp5Ug1w6V6gfOn%2BRstKwkOeeoGRyxA%2BfMMqWXj9ZAnlaMqzpmn88y6HoLNSc8h1hhwEKfh92PMdJpMfCUmJ8cc4p5NToP2qtST9ZWFdsB%2BNiThM3iSlYRvCNttxqhgGmReoIk28TyvihYnlnFNYWwsitvD2EZ%2FKStUd1zjcBRJjrDhRJGdA9vkTFEsmMWahjwV30NAIQZlF%2BAIgTwU0qms90pQCEcRb88ohFldSwcWb77fPwbJa7RJ%2BEOLyTKcQk2RBqr8sA8a2lNvyCIpcfWGDodhf4FQB0w0jcjXs40rco5hScJREaD1BnUMR%2FMmRt0WMI2JZni7Pwc2IDMcg8zqs4leNCcCP1TVI7ZdhIIf90w8MMD26vug23wSUJhSdZX%2FhU1MAwI%2BzJoKQcH4zklYCiGJoLV68L4tWn8A5cHDOIrSqhhGvP09mgfoiv8C%3C%2Fdiagram%3E%3C%2Fmxfile%3E)
+# Einsatz von Shibboleth
 
-# Einsatz
+*entfällt ggf., je nach Zeit*
 
 - Einbindung von Shibboleth in existierendes System
 - Voraussetzungen etc.
-- Demo: ggf. anhand von <https://informatik.htwk-leipzig.de/seminar/>
-  - theoretisch oder wenn noch Zeit praktisch
-- Preisgestaltung (Mitgliedschaften)
+- Preisgestaltung
+  ([Mitgliedschaften](#shibboleth-consortium-mitgliedschaften))
 
 # Diskussion
 
-- Bewertung / Einschätzung von Shibboleth
-- Alternativen / Konkurrenz
+- Bewertung und Einschätzung von Shibboleth
+- Alternativen
+  - Azure Active Directory
+  - TODO: weiter suchen
 - Zukunft
 
 # Zusammenfassung
@@ -50,18 +68,9 @@ Zugegriffen: 24. November 2024. \[Online\]. Verfügbar unter:
 
 </div>
 
-<div id="ref-template" class="csl-entry">
-
-<span class="csl-left-margin">\[2\]
-</span><span class="csl-right-inline">nicosrm, *24-beamer-template*. (8.
-September 2024). Zugegriffen: 8. September 2024. \[Online\]. Verfügbar
-unter: <https://github.com/nicosrm/24-beamer-template></span>
-
-</div>
-
 <div id="ref-shibbolethShibbolethConsortium2024" class="csl-entry">
 
-<span class="csl-left-margin">\[3\]
+<span class="csl-left-margin">\[2\]
 </span><span class="csl-right-inline">Shibboleth, „Shibboleth
 Consortium“. Zugegriffen: 29. Oktober 2024. \[Online\]. Verfügbar unter:
 <https://www.shibboleth.net/></span>
@@ -70,7 +79,7 @@ Consortium“. Zugegriffen: 29. Oktober 2024. \[Online\]. Verfügbar unter:
 
 <div id="ref-shibbolethOurMembers2024" class="csl-entry">
 
-<span class="csl-left-margin">\[4\]
+<span class="csl-left-margin">\[3\]
 </span><span class="csl-right-inline">Shibboleth, „Our Members“.
 Zugegriffen: 29. Oktober 2024. \[Online\]. Verfügbar unter:
 <https://www.shibboleth.net/about-us/members/></span>
@@ -79,7 +88,7 @@ Zugegriffen: 29. Oktober 2024. \[Online\]. Verfügbar unter:
 
 <div id="ref-cantorConsortiumFAQShibboleth2023" class="csl-entry">
 
-<span class="csl-left-margin">\[5\]
+<span class="csl-left-margin">\[4\]
 </span><span class="csl-right-inline">S. Cantor, „Consortium FAQ -
 Shibboleth Consortium“. Zugegriffen: 29. Oktober 2024. \[Online\].
 Verfügbar unter:
@@ -90,7 +99,7 @@ Verfügbar unter:
 <div id="ref-shibbolethShibbolethConceptsUSGoalReq2018"
 class="csl-entry">
 
-<span class="csl-left-margin">\[6\]
+<span class="csl-left-margin">\[5\]
 </span><span class="csl-right-inline">Shibboleth, „Shibboleth Concepts -
 USGoalReq“. Zugegriffen: 6. November 2024. \[Online\]. Verfügbar unter:
 <https://shibboleth.atlassian.net/wiki/spaces/CONCEPT/pages/928645487/USGoalReq></span>
@@ -99,7 +108,7 @@ USGoalReq“. Zugegriffen: 6. November 2024. \[Online\]. Verfügbar unter:
 
 <div id="ref-shibbolethShibbolethConcepts2023" class="csl-entry">
 
-<span class="csl-left-margin">\[7\]
+<span class="csl-left-margin">\[6\]
 </span><span class="csl-right-inline">Shibboleth, „Shibboleth Concepts“.
 Zugegriffen: 29. Oktober 2024. \[Online\]. Verfügbar unter:
 <https://shibboleth.atlassian.net/wiki/spaces/CONCEPT/overview></span>
@@ -109,7 +118,7 @@ Zugegriffen: 29. Oktober 2024. \[Online\]. Verfügbar unter:
 <div id="ref-robinsDemystifyingShibbolethAdapting2024"
 class="csl-entry">
 
-<span class="csl-left-margin">\[8\]
+<span class="csl-left-margin">\[7\]
 </span><span class="csl-right-inline">S. Robins und B. Daigle,
 „Demystifying Shibboleth: Adapting to Web Browser Privacy Changes“,
 *Journal of Library Administration*, Bd. 64, Nr. 4, S. 449–472, Mai
@@ -120,7 +129,7 @@ class="csl-entry">
 
 <div id="ref-michelsIdentityManagementUnd" class="csl-entry">
 
-<span class="csl-left-margin">\[9\]
+<span class="csl-left-margin">\[8\]
 </span><span class="csl-right-inline">T. Michels, „Identity Management
 und Shibboleth: Ein Überblick“.</span>
 
@@ -129,7 +138,7 @@ und Shibboleth: Ein Überblick“.</span>
 <div id="ref-shibbolethFlowsAndConfigShibbolethConcepts2019"
 class="csl-entry">
 
-<span class="csl-left-margin">\[10\]
+<span class="csl-left-margin">\[9\]
 </span><span class="csl-right-inline">Shibboleth, „FlowsAndConfig -
 Shibboleth Concepts“. Zugegriffen: 6. November 2024. \[Online\].
 Verfügbar unter:
@@ -139,7 +148,7 @@ Verfügbar unter:
 
 <div id="ref-shibbolethMetadataConcepts" class="csl-entry">
 
-<span class="csl-left-margin">\[11\]
+<span class="csl-left-margin">\[10\]
 </span><span class="csl-right-inline">Shibboleth, „Metadata - Concepts“.
 Zugegriffen: 6. November 2024. \[Online\]. Verfügbar unter:
 <https://shibboleth.atlassian.net/wiki/spaces/CONCEPT/pages/928645459/Metadata></span>
@@ -148,7 +157,7 @@ Zugegriffen: 6. November 2024. \[Online\]. Verfügbar unter:
 
 <div id="ref-shibbolethSessionsConcepts" class="csl-entry">
 
-<span class="csl-left-margin">\[12\]
+<span class="csl-left-margin">\[11\]
 </span><span class="csl-right-inline">Shibboleth, „Sessions - Concepts“.
 Zugegriffen: 17. November 2024. \[Online\]. Verfügbar unter:
 <https://shibboleth.atlassian.net/wiki/spaces/CONCEPT/pages/928645433/Sessions></span>
@@ -158,7 +167,7 @@ Zugegriffen: 17. November 2024. \[Online\]. Verfügbar unter:
 <div id="ref-shibbolethShibbolethConceptsNameIdentifiers2020"
 class="csl-entry">
 
-<span class="csl-left-margin">\[13\]
+<span class="csl-left-margin">\[12\]
 </span><span class="csl-right-inline">Shibboleth, „Shibboleth Concepts -
 NameIdentifiers“. Zugegriffen: 6. November 2024. \[Online\]. Verfügbar
 unter:
@@ -168,7 +177,7 @@ unter:
 
 <div id="ref-shibbolethOpenSAML" class="csl-entry">
 
-<span class="csl-left-margin">\[14\]
+<span class="csl-left-margin">\[13\]
 </span><span class="csl-right-inline">Shibboleth, „OpenSAML“.
 Zugegriffen: 17. November 2024. \[Online\]. Verfügbar unter:
 <https://shibboleth.atlassian.net/wiki/spaces/OSAML/overview></span>
@@ -177,7 +186,7 @@ Zugegriffen: 17. November 2024. \[Online\]. Verfügbar unter:
 
 <div id="ref-overtsoftwareAzureADADFS2022" class="csl-entry">
 
-<span class="csl-left-margin">\[15\]
+<span class="csl-left-margin">\[14\]
 </span><span class="csl-right-inline">Overt Software, „Azure AD/ADFS vs
 Shibboleth IDP“. Zugegriffen: 17. November 2024. \[Online\]. Verfügbar
 unter:
@@ -187,7 +196,7 @@ unter:
 
 <div id="ref-sommergutWasSindUnterschiede2019" class="csl-entry">
 
-<span class="csl-left-margin">\[16\]
+<span class="csl-left-margin">\[15\]
 </span><span class="csl-right-inline">W. Sommergut, „Was Sind Die
 Unterschiede Zwischen Active Directory Und Azure AD? \| WindowsPro“.
 Zugegriffen: 17. November 2024. \[Online\]. Verfügbar unter:
@@ -197,7 +206,7 @@ Zugegriffen: 17. November 2024. \[Online\]. Verfügbar unter:
 
 <div id="ref-chikMicrosoftEntraExpands2023" class="csl-entry">
 
-<span class="csl-left-margin">\[17\]
+<span class="csl-left-margin">\[16\]
 </span><span class="csl-right-inline">J. Chik, „Microsoft Entra Expands
 into Security Service Edge and Azure AD Becomes Microsoft Entra ID“.
 Zugegriffen: 17. November 2024. \[Online\]. Verfügbar unter:
@@ -207,7 +216,7 @@ Zugegriffen: 17. November 2024. \[Online\]. Verfügbar unter:
 
 <div id="ref-celestedgNewNameAzure2024" class="csl-entry">
 
-<span class="csl-left-margin">\[18\]
+<span class="csl-left-margin">\[17\]
 </span><span class="csl-right-inline">CelesteDG, „New Name for Azure
 Active Directory - Microsoft Entra“. Zugegriffen: 17. November 2024.
 \[Online\]. Verfügbar unter:
@@ -218,7 +227,7 @@ Active Directory - Microsoft Entra“. Zugegriffen: 17. November 2024.
 <div id="ref-shibbolethIdPDiscoveryShibbolethConcepts2020"
 class="csl-entry">
 
-<span class="csl-left-margin">\[19\]
+<span class="csl-left-margin">\[18\]
 </span><span class="csl-right-inline">Shibboleth, „IdPDiscovery -
 Shibboleth Concepts“. Zugegriffen: 17. November 2024. \[Online\].
 Verfügbar unter:
@@ -229,7 +238,7 @@ Verfügbar unter:
 <div id="ref-shibbolethInstallationIdentityProvider2024"
 class="csl-entry">
 
-<span class="csl-left-margin">\[20\]
+<span class="csl-left-margin">\[19\]
 </span><span class="csl-right-inline">Shibboleth, „Installation -
 Identity Provider 5“. Zugegriffen: 17. November 2024. \[Online\].
 Verfügbar unter:
@@ -240,7 +249,7 @@ Verfügbar unter:
 <div id="ref-shibbolethServiceProviderApplication2021"
 class="csl-entry">
 
-<span class="csl-left-margin">\[21\]
+<span class="csl-left-margin">\[20\]
 </span><span class="csl-right-inline">Shibboleth, „Service Provider -
 Application Model“. Zugegriffen: 24. November 2024. \[Online\].
 Verfügbar unter:
@@ -251,7 +260,7 @@ Verfügbar unter:
 <div id="ref-shibbolethServiceProviderProtectContent2021"
 class="csl-entry">
 
-<span class="csl-left-margin">\[22\]
+<span class="csl-left-margin">\[21\]
 </span><span class="csl-right-inline">Shibboleth, „Service Provider -
 ProtectContent“. Zugegriffen: 24. November 2024. \[Online\]. Verfügbar
 unter:
@@ -261,7 +270,7 @@ unter:
 
 <div id="ref-shibbolethEmbeddedDiscoveryService2021" class="csl-entry">
 
-<span class="csl-left-margin">\[23\]
+<span class="csl-left-margin">\[22\]
 </span><span class="csl-right-inline">Shibboleth, „Embedded Discovery
 Service“. Zugegriffen: 17. November 2024. \[Online\]. Verfügbar unter:
 <https://shibboleth.atlassian.net/wiki/spaces/EDS10/overview></span>
@@ -270,7 +279,7 @@ Service“. Zugegriffen: 17. November 2024. \[Online\]. Verfügbar unter:
 
 <div id="ref-shibbolethEmbeddedDiscoveryService2011" class="csl-entry">
 
-<span class="csl-left-margin">\[24\]
+<span class="csl-left-margin">\[23\]
 </span><span class="csl-right-inline">Shibboleth, „Embedded Discovery
 Service - Overview“. Zugegriffen: 17. November 2024. \[Online\].
 Verfügbar unter:
@@ -280,7 +289,7 @@ Verfügbar unter:
 
 <div id="ref-shibbolethMembership" class="csl-entry">
 
-<span class="csl-left-margin">\[25\]
+<span class="csl-left-margin">\[24\]
 </span><span class="csl-right-inline">Shibboleth, „Membership“.
 Zugegriffen: 17. November 2024. \[Online\]. Verfügbar unter:
 <https://www.shibboleth.net/membership/></span>
@@ -289,7 +298,7 @@ Zugegriffen: 17. November 2024. \[Online\]. Verfügbar unter:
 
 <div id="ref-shibbolethConsortiumMembershipFees" class="csl-entry">
 
-<span class="csl-left-margin">\[26\]
+<span class="csl-left-margin">\[25\]
 </span><span class="csl-right-inline">Shibboleth, „Consortium Membership
 Fees“. Zugegriffen: 17. November 2024. \[Online\]. Verfügbar unter:
 <https://www.shibboleth.net/membership/consortium-membership-fees/></span>
@@ -298,7 +307,7 @@ Fees“. Zugegriffen: 17. November 2024. \[Online\]. Verfügbar unter:
 
 <div id="ref-dfnDFNAAIDokumentationEinfuhrung" class="csl-entry">
 
-<span class="csl-left-margin">\[27\]
+<span class="csl-left-margin">\[26\]
 </span><span class="csl-right-inline">DFN, „DFN-AAIDokumentation
 Einführung“. Zugegriffen: 24. November 2024. \[Online\]. Verfügbar
 unter: <https://doku.tid.dfn.de/de:aai:about></span>
@@ -307,7 +316,7 @@ unter: <https://doku.tid.dfn.de/de:aai:about></span>
 
 <div id="ref-switchIntroductionSWITCHaai2024" class="csl-entry">
 
-<span class="csl-left-margin">\[28\]
+<span class="csl-left-margin">\[27\]
 </span><span class="csl-right-inline">SWITCH, „Introduction - About -
 SWITCHaai“. Zugegriffen: 17. November 2024. \[Online\]. Verfügbar unter:
 <https://help.switch.ch/aai/about/introduction/></span>
@@ -316,7 +325,7 @@ SWITCHaai“. Zugegriffen: 17. November 2024. \[Online\]. Verfügbar unter:
 
 <div id="ref-switchSWITCHaai2024" class="csl-entry">
 
-<span class="csl-left-margin">\[29\]
+<span class="csl-left-margin">\[28\]
 </span><span class="csl-right-inline">SWITCH, „About - SWITCHaai“.
 Zugegriffen: 17. November 2024. \[Online\]. Verfügbar unter:
 <https://help.switch.ch/aai/about/></span>
@@ -325,7 +334,7 @@ Zugegriffen: 17. November 2024. \[Online\]. Verfügbar unter:
 
 <div id="ref-switchSimpleDemoSwitchAAI2024" class="csl-entry">
 
-<span class="csl-left-margin">\[30\]
+<span class="csl-left-margin">\[29\]
 </span><span class="csl-right-inline">SWITCH, „Simple Demo - SwitchAAI“.
 Zugegriffen: 24. November 2024. \[Online\]. Verfügbar unter:
 <https://help.switch.ch/aai/demo/simple/></span>
@@ -334,7 +343,7 @@ Zugegriffen: 24. November 2024. \[Online\]. Verfügbar unter:
 
 <div id="ref-switchMediumDemoSwitchAAI2024" class="csl-entry">
 
-<span class="csl-left-margin">\[31\]
+<span class="csl-left-margin">\[30\]
 </span><span class="csl-right-inline">SWITCH, „Medium Demo - SwitchAAI“.
 Zugegriffen: 24. November 2024. \[Online\]. Verfügbar unter:
 <https://help.switch.ch/aai/demo/medium/></span>
@@ -347,21 +356,9 @@ Zugegriffen: 24. November 2024. \[Online\]. Verfügbar unter:
 
 # Notizen
 
-## Syntax
-
-Quellenangaben funktionieren mittels `[@citation-key]`
-[\[2\]](#ref-template) und die Einbettung von Bildern so:
-
-    ![Caption](../assets/placeholder.png)
-
-<figure>
-<img src="../assets/placeholder.png" alt="Caption" />
-<figcaption aria-hidden="true">Caption</figcaption>
-</figure>
-
 ## Shibboleth allgemein
 
-[\[3\]](#ref-shibbolethShibbolethConsortium2024)
+[\[2\]](#ref-shibbolethShibbolethConsortium2024)
 
 - seit Anfang der 2000er Jahre an Spitze der
   Identitätsmanagement-Software
@@ -380,9 +377,9 @@ Quellenangaben funktionieren mittels `[@citation-key]`
     mehrerer Identity Providern)
 - Mitglieder: u.a. Stanford University, University of Oxford, DFN
   Verein, Massachusetts Institute of Technology
-  [\[4\]](#ref-shibbolethOurMembers2024) (Auswahl)
+  [\[3\]](#ref-shibbolethOurMembers2024) (Auswahl)
 
-[\[5\]](#ref-cantorConsortiumFAQShibboleth2023)
+[\[4\]](#ref-cantorConsortiumFAQShibboleth2023)
 
 - Open-Source-Softwareprojekt
 - entwickelt Software zur Unterstützung von verschiedenen Standards zur
@@ -425,7 +422,7 @@ Quellenangaben funktionieren mittels `[@citation-key]`
 
 ## Shibboleth Ziele
 
-[\[6\]](#ref-shibbolethShibbolethConceptsUSGoalReq2018)
+[\[5\]](#ref-shibbolethShibbolethConceptsUSGoalReq2018)
 
 - Bestehenden Authentifikationmechanismen können für webbasierte
   Ressourcen benutzt werden
@@ -446,7 +443,7 @@ Quellenangaben funktionieren mittels `[@citation-key]`
 
 ## Konzept
 
-[\[7\]](#ref-shibbolethShibbolethConcepts2023)
+[\[6\]](#ref-shibbolethShibbolethConcepts2023)
 
 - SAML als primäres Protokoll, welches durch IdP unterstützt wird
   - als einziges von SP unterstützt
@@ -463,19 +460,19 @@ Quellenangaben funktionieren mittels `[@citation-key]`
     - Unterstützung des SP bei Ermittlung des IdP des Nutzers
     - Standort überall im Web möglich
     - nicht in allen Anwendungsfällen nötig
-- TODO: [\[8\]](#ref-robinsDemystifyingShibbolethAdapting2024)
+- TODO: [\[7\]](#ref-robinsDemystifyingShibbolethAdapting2024)
 
 ### Basic Interaction
 
-[\[7\]](#ref-shibbolethShibbolethConcepts2023)
+[\[6\]](#ref-shibbolethShibbolethConcepts2023)
 
 <figure>
 <img src="../assets/basic_interaction.drawio.svg"
-alt="Basic Interaction vgl. [7]" />
+alt="Basic Interaction vgl. [6]" />
 <figcaption aria-hidden="true">Basic Interaction <span class="citation"
 data-cites="shibbolethShibbolethConcepts2023">vgl. <a
 href="#ref-shibbolethShibbolethConcepts2023"
-role="doc-biblioref">[7]</a></span></figcaption>
+role="doc-biblioref">[6]</a></span></figcaption>
 </figure>
 
 Grundlegende Interaktionen wie in dargestellt
@@ -492,24 +489,24 @@ Grundlegende Interaktionen wie in dargestellt
 - TODO: weitere Inhalte auf verlinkter Seite
 
 <figure>
-<img src="../assets/ablauf.png" alt="Ablauf [9]" />
+<img src="../assets/ablauf.png" alt="Ablauf [8]" />
 <figcaption aria-hidden="true">Ablauf <span class="citation"
 data-cites="michelsIdentityManagementUnd"><a
 href="#ref-michelsIdentityManagementUnd"
-role="doc-biblioref">[9]</a></span></figcaption>
+role="doc-biblioref">[8]</a></span></figcaption>
 </figure>
 
 <figure>
-<img src="../assets/ablauf_SSO.png" alt="Ablauf-SSO [9]" />
+<img src="../assets/ablauf_SSO.png" alt="Ablauf-SSO [8]" />
 <figcaption aria-hidden="true">Ablauf-SSO <span class="citation"
 data-cites="michelsIdentityManagementUnd"><a
 href="#ref-michelsIdentityManagementUnd"
-role="doc-biblioref">[9]</a></span></figcaption>
+role="doc-biblioref">[8]</a></span></figcaption>
 </figure>
 
 ### System Flow
 
-[\[10\]](#ref-shibbolethFlowsAndConfigShibbolethConcepts2019)
+[\[9\]](#ref-shibbolethFlowsAndConfigShibbolethConcepts2019)
 
 - Hauptkomponenten: IdP und SP
   - IdP: Bereitstellung von Informationen über Nutzenden an Services
@@ -522,7 +519,7 @@ role="doc-biblioref">[9]</a></span></figcaption>
 
 #### Zugriff auf Geschützte Ressource
 
-[\[10\]](#ref-shibbolethFlowsAndConfigShibbolethConcepts2019)
+[\[9\]](#ref-shibbolethFlowsAndConfigShibbolethConcepts2019)
 
 - Zugriff auf geschützte Ressource
 - SP fängt Anfrage ab
@@ -537,7 +534,7 @@ role="doc-biblioref">[9]</a></span></figcaption>
 
 #### SP bestimmt IdP und Sendet Authentifizierungsanfrage
 
-[\[10\]](#ref-shibbolethFlowsAndConfigShibbolethConcepts2019)
+[\[9\]](#ref-shibbolethFlowsAndConfigShibbolethConcepts2019)
 
 - Auswahl eines [Session
   Initiators](https://shibboleth.atlassian.net/wiki/spaces/SP3/pages/2065334685/SessionInitiator)
@@ -572,7 +569,7 @@ role="doc-biblioref">[9]</a></span></figcaption>
 
 #### Nutzerauthentifizierung beim IdP
 
-[\[10\]](#ref-shibbolethFlowsAndConfigShibbolethConcepts2019)
+[\[9\]](#ref-shibbolethFlowsAndConfigShibbolethConcepts2019)
 
 - Ergebnis des vorherigen Schritts: Authentifizierungsanfrage vom SP an
   IdP
@@ -599,7 +596,7 @@ role="doc-biblioref">[9]</a></span></figcaption>
 
 #### Antwort des IdP an SP
 
-[\[10\]](#ref-shibbolethFlowsAndConfigShibbolethConcepts2019)
+[\[9\]](#ref-shibbolethFlowsAndConfigShibbolethConcepts2019)
 
 - IdP verwendet Namen des *Principals*, SP, Protokoll und
   Binding/Profile zur Bestimmung, welche Information zum SP
@@ -627,7 +624,7 @@ role="doc-biblioref">[9]</a></span></figcaption>
 
 #### Zurück zum SP
 
-[\[10\]](#ref-shibbolethFlowsAndConfigShibbolethConcepts2019)
+[\[9\]](#ref-shibbolethFlowsAndConfigShibbolethConcepts2019)
 
 - Browser liefert Antwort vom IdP an Endpunkt eines Assertion Consumer
   Services (ACS) im SP
@@ -663,7 +660,7 @@ role="doc-biblioref">[9]</a></span></figcaption>
 
 #### Zurück zur geschützten Ressource
 
-[\[10\]](#ref-shibbolethFlowsAndConfigShibbolethConcepts2019)
+[\[9\]](#ref-shibbolethFlowsAndConfigShibbolethConcepts2019)
 
 - finaler Schritt
 - Weiterleitung des Browsers zur geschützten Ressource, auf welche in
@@ -688,7 +685,7 @@ role="doc-biblioref">[9]</a></span></figcaption>
 
 ### Metadaten
 
-[\[11\]](#ref-shibbolethMetadataConcepts)
+[\[10\]](#ref-shibbolethMetadataConcepts)
 
 - Bereitstellung der Configuationsdaten in der Kommunikaton zwischen SP
   und IdP
@@ -698,7 +695,7 @@ role="doc-biblioref">[9]</a></span></figcaption>
 
 ### Sessions
 
-[\[12\]](#ref-shibbolethSessionsConcepts)
+[\[11\]](#ref-shibbolethSessionsConcepts)
 
 - Der Prozess beinhaltet mehrere Sessions, zwischen user und service
 - In den meisten Fällen durch cookies realisiert
@@ -712,7 +709,7 @@ role="doc-biblioref">[9]</a></span></figcaption>
 
 ### Name Identifiers
 
-[\[13\]](#ref-shibbolethShibbolethConceptsNameIdentifiers2020)
+[\[12\]](#ref-shibbolethShibbolethConceptsNameIdentifiers2020)
 
 - In SAML2 dargestellt durch `<NameID>`-Element
   - nicht festgelegt was als *name identifier* verwendet wird
@@ -730,7 +727,7 @@ role="doc-biblioref">[9]</a></span></figcaption>
 
 ### OpenSAML
 
-[\[14\]](#ref-shibbolethOpenSAML)
+[\[13\]](#ref-shibbolethOpenSAML)
 
 - “OpenSAML is a set of open source Java libraries used in support of
   the Shibboleth Project’s implementation of the Security Assertion
@@ -740,7 +737,7 @@ role="doc-biblioref">[9]</a></span></figcaption>
 
 ### Active-Directory vs Shibboleth
 
-[\[15\]](#ref-overtsoftwareAzureADADFS2022)
+[\[14\]](#ref-overtsoftwareAzureADADFS2022)
 
 - Beides Identity Provider
 - ADFS (Active Directory Federation Services) eher für größere
@@ -752,13 +749,13 @@ role="doc-biblioref">[9]</a></span></figcaption>
 
 #### Azure AD vs AD
 
-[\[16\]](#ref-sommergutWasSindUnterschiede2019)
+[\[15\]](#ref-sommergutWasSindUnterschiede2019)
 
 - Azure Active Directory ist Identitätsmanagement der Microsoft-Cloud
 - Active Directory ist das On-Promise Modell
 
-[\[17\]](#ref-chikMicrosoftEntraExpands2023)
-[\[18\]](#ref-celestedgNewNameAzure2024)
+[\[16\]](#ref-chikMicrosoftEntraExpands2023)
+[\[17\]](#ref-celestedgNewNameAzure2024)
 
 - Microsoft Azure Active Directory wurde zu Microsoft Entra ID umbenannt
   um verwirrung zu vermeiden
@@ -771,7 +768,7 @@ role="doc-biblioref">[9]</a></span></figcaption>
 - ggf. [weitere
   Konzepte](https://shibboleth.atlassian.net/wiki/spaces/CONCEPT/overview#More-Concepts)
 
-### Identity Provider Discovery [\[19\]](#ref-shibbolethIdPDiscoveryShibbolethConcepts2020)
+### Identity Provider Discovery [\[18\]](#ref-shibbolethIdPDiscoveryShibbolethConcepts2020)
 
 - Identifikation von Heim-IdP für Login bei Zugriff auf geschützte
   Ressource –\> *IdP Discover*
@@ -787,12 +784,12 @@ role="doc-biblioref">[9]</a></span></figcaption>
 
 <br>
 
-#### Flat Page Discovery [\[19\]](#ref-shibbolethIdPDiscoveryShibbolethConcepts2020)
+#### Flat Page Discovery [\[18\]](#ref-shibbolethIdPDiscoveryShibbolethConcepts2020)
 
 - meist ausreichend bei eingeschränkter, statischer Menge an IdPs
 - Verwendung von *SessionInitiator* vom SP
 
-##### von bekanntem Heim [\[19\]](#ref-shibbolethIdPDiscoveryShibbolethConcepts2020)
+##### von bekanntem Heim [\[18\]](#ref-shibbolethIdPDiscoveryShibbolethConcepts2020)
 
 - Nutzende kommen direkt von Quelle, die Home-IdP per Definition kennt
 - Quelle kann Nutzende direkt zur Ressource schicken
@@ -824,7 +821,7 @@ zwei Möglichkeiten für Redirect
   - Beispiel auf
     [Website](https://shibboleth.atlassian.net/wiki/spaces/CONCEPT/pages/928645263)
 
-#### Discovery Service [\[19\]](#ref-shibbolethIdPDiscoveryShibbolethConcepts2020)
+#### Discovery Service [\[18\]](#ref-shibbolethIdPDiscoveryShibbolethConcepts2020)
 
 - *IdP Discovery Service* (DS)
 - Service zur Präsentation eines Standard-Interfaces zur Auswahl des
@@ -864,7 +861,7 @@ zwei Möglichkeiten für Redirect
   - ähnliche UX wie DS, welche mit Ressource betrieben werden, mittels
     [SeamlessAccess](https://seamlessaccess.org/)
 
-### IdP Installation [\[20\]](#ref-shibbolethInstallationIdentityProvider2024)
+### IdP Installation [\[19\]](#ref-shibbolethInstallationIdentityProvider2024)
 
 - Prüfung der [System
   Requirements](https://shibboleth.atlassian.net/wiki/spaces/IDP5/pages/3199511079)
@@ -929,7 +926,7 @@ typische nächste Schritte
 
 ### Service Provider V3
 
-[\[21\]](#ref-shibbolethServiceProviderApplication2021)
+[\[20\]](#ref-shibbolethServiceProviderApplication2021)
 
 - Service Provider (SP) - System welches Authentifizierung von IdP
   entgegen nimmt
@@ -959,7 +956,7 @@ typische nächste Schritte
 
 #### Content Protection
 
-[\[22\]](#ref-shibbolethServiceProviderProtectContent2021)
+[\[21\]](#ref-shibbolethServiceProviderProtectContent2021)
 
 ##### Active
 
@@ -978,13 +975,13 @@ typische nächste Schritte
 
 ### Embedded Discovery Service
 
-[\[23\]](#ref-shibbolethEmbeddedDiscoveryService2021)
+[\[22\]](#ref-shibbolethEmbeddedDiscoveryService2021)
 
 - Eigener discovery service beim SP durch Embedded Discovery Service
   (EDS) möglich
 - Kein redirect zu einer third-party discovery service Seite
 
-[\[24\]](#ref-shibbolethEmbeddedDiscoveryService2011)
+[\[23\]](#ref-shibbolethEmbeddedDiscoveryService2011)
 
 - Wird verwendet während des Single Sign-On (SSO)
 - Nutzer wählt IdP aus -\> startet SSO
@@ -1002,25 +999,25 @@ typische nächste Schritte
 
 ## Shibboleth Consortium Mitgliedschaften
 
-[\[3\]](#ref-shibbolethShibbolethConsortium2024)
+[\[2\]](#ref-shibbolethShibbolethConsortium2024)
 
 - Finanzierung durch Mitgliedschaften
 - erlaubt Unterstützung und Pflege des Systems
 - verringertes Risiko für Organisationen, die Shibboleth verwenden
 - u.a. Stanford University, University of Oxford, DFN Verein,
   Massachusetts Institute of Technology
-  [\[4\]](#ref-shibbolethOurMembers2024) (Auswahl)
+  [\[3\]](#ref-shibbolethOurMembers2024) (Auswahl)
 
 <br>
 
-[\[25\]](#ref-shibbolethMembership)
+[\[24\]](#ref-shibbolethMembership)
 
 - Mitgliedschaft bringt exclusiven Support wie Slack-Channel
 - Unterstüzt die Weiterentwicklung
 - Partizipation durch Einbringen von eigenen Ideen und Vorschlägen für
   die Weiterentwicklung
 
-[\[26\]](#ref-shibbolethConsortiumMembershipFees)
+[\[25\]](#ref-shibbolethConsortiumMembershipFees)
 
 - Als Consortium Mitglied bezahlt man basierend auf der Art und Größe
   der Institution einen jährlichen Geldbetrag (Fee)
@@ -1029,7 +1026,7 @@ typische nächste Schritte
 
 ### DFN
 
-[\[27\]](#ref-dfnDFNAAIDokumentationEinfuhrung)
+[\[26\]](#ref-dfnDFNAAIDokumentationEinfuhrung)
 
 - DFN-AAI = Deutsches Forschungsnetz Authentication and Authorization
   Infrastructure
@@ -1048,7 +1045,7 @@ typische nächste Schritte
 
 ### Switch AAI
 
-[\[28\]](#ref-switchIntroductionSWITCHaai2024)
+[\[27\]](#ref-switchIntroductionSWITCHaai2024)
 
 - AAI: *Authentication and Authorisation Infrastructure*
 - Ziel: Vereinfachung von inter-organisationellem Zugriff auf
@@ -1064,14 +1061,14 @@ typische nächste Schritte
 
 <figure>
 <img src="https://help.switch.ch/aai/about/aai-at-a-glance.png"
-alt="SWITCHaai: At a Glance [28]" />
+alt="SWITCHaai: At a Glance [27]" />
 <figcaption aria-hidden="true">SWITCHaai: At a Glance <span
 class="citation" data-cites="switchIntroductionSWITCHaai2024"><a
 href="#ref-switchIntroductionSWITCHaai2024"
-role="doc-biblioref">[28]</a></span></figcaption>
+role="doc-biblioref">[27]</a></span></figcaption>
 </figure>
 
-[\[29\]](#ref-switchSWITCHaai2024)
+[\[28\]](#ref-switchSWITCHaai2024)
 
 - ohne AAI: Registrierung bei jeder Ressource
   - jeweils Nutzername und Passwort
@@ -1089,17 +1086,17 @@ role="doc-biblioref">[28]</a></span></figcaption>
   - verwaltet zentrale AAI-Komponenten
   - unterstützt Home-Organisations und Ressourcen
 
-#### Einfache Demo [\[30\]](#ref-switchSimpleDemoSwitchAAI2024)
+#### Einfache Demo [\[29\]](#ref-switchSimpleDemoSwitchAAI2024)
 
 - zunächst nur Nutzersicht
 
 <figure>
 <img src="https://help.switch.ch/aai/demo/resources/simple_complete.png"
-alt="Shibboleth Login Procedure [30]" />
+alt="Shibboleth Login Procedure [29]" />
 <figcaption aria-hidden="true">Shibboleth Login Procedure <span
 class="citation" data-cites="switchSimpleDemoSwitchAAI2024"><a
 href="#ref-switchSimpleDemoSwitchAAI2024"
-role="doc-biblioref">[30]</a></span></figcaption>
+role="doc-biblioref">[29]</a></span></figcaption>
 </figure>
 
 - Zugriff von Nutzer von “Uni B” auf geschützte Ressource “Medical
@@ -1139,7 +1136,7 @@ role="doc-biblioref">[30]</a></span></figcaption>
   - erst nach Schließen des Browsers oder bestimmter Zeit erneut
     notwendig
 
-#### Medium Demo [\[31\]](#ref-switchMediumDemoSwitchAAI2024)
+#### Medium Demo [\[30\]](#ref-switchMediumDemoSwitchAAI2024)
 
 - selbiges Szenario wie in Einfache Demo
 - Live Demo (ggf. für **Präsentation**?)
@@ -1150,12 +1147,12 @@ role="doc-biblioref">[30]</a></span></figcaption>
 
 <figure>
 <img src="https://help.switch.ch/aai/demo/resources/medium_complete.png"
-alt="Vollständiger Login-Prozess vom Shibboleth [31] (Schritt-für-Schritt-Bilder vorhanden)" />
+alt="Vollständiger Login-Prozess vom Shibboleth [30] (Schritt-für-Schritt-Bilder vorhanden)" />
 <figcaption aria-hidden="true">Vollständiger Login-Prozess vom
 Shibboleth <span class="citation"
 data-cites="switchMediumDemoSwitchAAI2024"><a
 href="#ref-switchMediumDemoSwitchAAI2024"
-role="doc-biblioref">[31]</a></span> (Schritt-für-Schritt-Bilder
+role="doc-biblioref">[30]</a></span> (Schritt-für-Schritt-Bilder
 vorhanden)</figcaption>
 </figure>
 

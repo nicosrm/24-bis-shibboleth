@@ -7,6 +7,8 @@ on:
 env:
   INPUT_PATH: article/article.pandoc.md
   PREVIEW_PATH: article/article.preview.md
+  BIB_PATH: slides/bibliography.bib
+  CSL_PATH: article/ieee.csl
 
 # make sure that GITHUB_TOKEN has permissions
 permissions:
@@ -24,7 +26,8 @@ jobs:
         with:
           args: >-
             --shift-heading-level-by=-1
-            --bibliography slides/bibliography.bib
+            --bibliography ${{ env.BIB_PATH }}
+            --csl ${{ env.CSL_PATH }}
             --citeproc
             --to=gfm
             -o ${{ env.PREVIEW_PATH }}

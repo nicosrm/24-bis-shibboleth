@@ -51,30 +51,41 @@ erklärt. Dabei soll das dort eingeführte Szenario verfolgt werden. Der
 Prozess erfolgt in drei übergeordneten Phasen:
 
 1.  Erster Zugriff auf den Service Provider und Identity Provider
-    Discovery
-2.  Session Initialisierung und Authentifizierungsanfrage
-3.  Authentifizierung, Autorisierung und Ressourcenzugriff
+    Discovery (siehe )
+2.  Session Initialisierung und Authentifizierungsanfrage (siehe )
+3.  Authentifizierung, Autorisierung und Ressourcenzugriff (siehe )
     [\[1\]](#ref-switchExpertDemoSWITCHaai2024a),
     [\[2\]](#ref-shibbolethFlowsAndConfigShibbolethConcepts2019).
 
-Die einzelnen Phasen werden im Folgenden genauer erläutert. Weiterhin
-können sie im *Business Process Model and Notation* Diagram, welches in
-dargestellt ist, eingesehen werden.
+Die einzelnen Phasen werden im Folgenden genauer erläutert und als
+*Business Process Model and Notation* (BPMN) Diagrammen dargestellt. Die
+erste Phase ist dabei in grün, die zweite in orange und die dritte in
+lila markiert. Ein BPMN-Diagramm, welches alle drei Phasen enthält, kann
+[online](https://raw.githubusercontent.com/nicosrm/24-bis-shibboleth/refs/heads/main/assets/bis_bpmn.drawio.pdf)[^1]
+eingesehen werden.
+
+## Phase 1: Identity Provider Discovery
+
+Im folgenden Abschnitt wird die erste Phase des Login-Prozesses mittels
+Shibboleth erläutert. Dabei handelt es sich um den ersten Zugriff einer
+Benutzerin oder eines Benutzers auf eine geschützte Ressource, d.h. auf
+den Service Provider. Dabei ist diese Person noch *nicht* beim
+jeweiligen Identity Provider angemeldet, sodass die *Identity Provider
+Discovery* stattfinden muss. Der Prozess ist als BPMN-Diagramm in
+dargestellt.
 
 <figure>
-<img src="../assets/bis_bpmn.drawio.svg"
-alt="Login-Prozess mittels Shibboleth (Diagramm nach Prozess-Beschreibung aus [1]) " />
-<figcaption aria-hidden="true">Login-Prozess mittels Shibboleth
-(Diagramm nach Prozess-Beschreibung aus <span class="citation"
-data-cites="switchExpertDemoSWITCHaai2024a"><a
+<img src="../assets/bis_bpmn_phase_1.drawio.svg"
+alt="BPMN-Diagramm zu Phase 1 des Login-Prozesses mittels Shibboleth (nach Beschreibung aus [1]) " />
+<figcaption aria-hidden="true">BPMN-Diagramm zu Phase 1 des
+Login-Prozesses mittels Shibboleth (nach Beschreibung aus <span
+class="citation" data-cites="switchExpertDemoSWITCHaai2024a"><a
 href="#ref-switchExpertDemoSWITCHaai2024a"
 role="doc-biblioref">[1]</a></span>) </figcaption>
 </figure>
 
-## Phase 1: Identity Provider Discovery
-
-Im ersten Schritt greift die Benutzerin erstmalig auf die geschützte
-Ressource zu. Dabei wird folgende `GET`-Request gestellt:
+Zunächst greift die Benutzerin erstmalig auf die geschützte Ressource
+zu. Dabei wird folgende `GET`-Request gestellt:
 
     GET https://www.pool.example/resource-b
 
@@ -135,6 +146,20 @@ Provider der Home Organisation weitergeleitet
 
 ## Phase 2: Session Initialisierung und Authentifizierungsanfrage
 
+In Phase 2 wird die Session initialisiert und eine
+Authentifizierungsanfrage gestellt. Der Prozess ist als BPMN-Diagramm in
+dargestellt.
+
+<figure>
+<img src="../assets/bis_bpmn_phase_2.drawio.svg"
+alt="BPMN-Diagramm zu Phase 2 des Login-Prozesses mittels Shibboleth (nach Beschreibung aus [1]) " />
+<figcaption aria-hidden="true">BPMN-Diagramm zu Phase 2 des
+Login-Prozesses mittels Shibboleth (nach Beschreibung aus <span
+class="citation" data-cites="switchExpertDemoSWITCHaai2024a"><a
+href="#ref-switchExpertDemoSWITCHaai2024a"
+role="doc-biblioref">[1]</a></span>) </figcaption>
+</figure>
+
 Aufgrund des vorherigen Redirects zum Identity Provider der Home
 Organisation der Benutzerin, sendet der Browser nun eine `GET`-Request
 an den IdP. Der *Session Initiator* erstellt weiterhin eine
@@ -190,6 +215,20 @@ tatsächlichen, spezifischen Anmeldeseite weitergeleitet
         value=C22C16A197CB9606067A1A577EF5D996
 
 ## Phase 3: Ressourcenzugriff
+
+In der letzten Phase kommt es schließlich zum Ressourcenzugriff. Der
+Ablauf wird im folgenden beschrieben und ist als BPMN-Diagramm in
+dargestellt.
+
+<figure>
+<img src="../assets/bis_bpmn_phase_3.drawio.svg"
+alt="BPMN-Diagramm zu Phase 3 des Login-Prozesses mittels Shibboleth (nach Beschreibung aus [1]) " />
+<figcaption aria-hidden="true">BPMN-Diagramm zu Phase 3 des
+Login-Prozesses mittels Shibboleth (nach Beschreibung aus <span
+class="citation" data-cites="switchExpertDemoSWITCHaai2024a"><a
+href="#ref-switchExpertDemoSWITCHaai2024a"
+role="doc-biblioref">[1]</a></span>) </figcaption>
+</figure>
 
 Auf der Anmeldeseite des Identity Providers gibt die Benutzerin
 anschließend ihre Anmeldedaten ein. Diese werden mittels `POST`-Request
@@ -1680,3 +1719,5 @@ Phase 3: Authentifizierung, Attribut-Statement und Zugriff
 - https://alternativeto.net/software/shibboleth/
 - https://gist.github.com/bmaupin/6878fae9abcb63ef43f8ac9b9de8fafd
 - https://goauthentik.io/
+
+[^1]: <https://raw.githubusercontent.com/nicosrm/24-bis-shibboleth/refs/heads/main/assets/bis_bpmn.drawio.pdf>

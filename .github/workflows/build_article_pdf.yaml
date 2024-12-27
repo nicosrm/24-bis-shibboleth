@@ -2,9 +2,6 @@ name: build article pdf
 on:
   push:
   workflow_call:
-  pull_request:
-    branches:
-      - main
 
 env:
   INPUT_PATH: article/article.pandoc.md

@@ -68,9 +68,9 @@ Im ersten Schritt greift die Benutzerin erstmalig auf die geschützte Ressource 
 GET https://www.pool.example/resource-b
 ```
 
-Da die angefragte Ressource über das Shibboleth-System, insbesondere den Service Provider, geschützt ist, wird die Anfrage vom Service Provider geprüft. Dabei wird kontrolliert, ob bereits eine aktive Shibboleth-Session vorliegt, d.h. ob die Nutzerin bereits authentifiziert ist. Diese Information wäre im `_idp_session`-Cookie enthalten. Falls dieser aktuell und gültig ist, wird die Benutzerin schlussendlich an die Ressource weitergeleitet. Dieses Szenario wird in [Abschnitt zu Phase 3](#phase-3-ressourcenzugriff) genauer erläutert [@switchExpertDemoSWITCHaai2024a; @shibbolethFlowsAndConfigShibbolethConcepts2019].
+Da die angefragte Ressource über das Shibboleth-System, insbesondere den Service Provider, geschützt ist, wird die Anfrage vom Service Provider geprüft. Dabei wird kontrolliert, ob bereits eine aktive Shibboleth-Session vorliegt, d.h. ob die Nutzerin bereits authentifiziert ist. Diese Information wäre im `_shibsession`-Cookie enthalten. Falls dieser aktuell und gültig ist, wird die Benutzerin schlussendlich an die Ressource weitergeleitet. Dieses Szenario wird in [Abschnitt zu Phase 3](#phase-3-ressourcenzugriff) genauer erläutert [@switchExpertDemoSWITCHaai2024a; @shibbolethFlowsAndConfigShibbolethConcepts2019].
 
-Falls jedoch noch keine aktive Shibboleth-Session vorliegt, wird die Benutzerin zum Discovery Service weitergeleitet. Da die Information, wo die Benutzenden nach Auswahl der Home Organisation geschickt werden sollen, nicht verloren gehen darf, wird der `_shibstate`-Cookie gesetzt und Parameter mitgesendet. In neueren Shibboleth-Versionen wird dies mittels *Relay State*-Mechanismen gespeichert [@switchExpertDemoSWITCHaai2024a; @shibbolethFlowsAndConfigShibbolethConcepts2019].
+Falls jedoch noch keine aktive Shibboleth-Session vorliegt, wird die Benutzerin zum Discovery Service weitergeleitet. Da die Information, wohin die Benutzenden nach Auswahl der Home Organisation geschickt werden sollen, nicht verloren gehen darf, wird der `_shibstate`-Cookie gesetzt und Parameter mitgesendet. In neueren Shibboleth-Versionen wird dies mittels *Relay State*-Mechanismen gespeichert [@switchExpertDemoSWITCHaai2024a; @shibbolethFlowsAndConfigShibbolethConcepts2019].
 <!-- TODO: ggf. Relay-State erklären -->
 
 ```
@@ -88,7 +88,7 @@ GET https://discovery.pool.example/WAYF
   &return=https://pool.example/Shibboleth.sso/Login?SAMLDS=1&target=ss:mem
 ```
 
-Der Discovery Service ermittelt nun die Liste der verfügbaren bzw. unterstützten Identity Provider, welche im folgenden der Nutzerin präsentiert werden. Diese wählt ihren zutreffenden Information Provider aus – in diesem Szenario entsprechend `idp.uni-a.example`. Daher wird die Nutzerin im Anschluss an den ausgewählten Identity Provider der Home Organisation weitergeleitet [@switchExpertDemoSWITCHaai2024a].
+Der Discovery Service ermittelt nun die Liste der verfügbaren bzw. unterstützten Identity Provider, welche im folgenden der Nutzerin präsentiert werden. Diese wählt ihren zutreffenden Identity Provider aus – in diesem Szenario entsprechend Universität A (`idp.uni-a.example`). Daher wird die Nutzerin im Anschluss an den ausgewählten Identity Provider der Home Organisation weitergeleitet [@switchExpertDemoSWITCHaai2024a].
 
 ```
 POST https://discovery.pool.example/WAYF

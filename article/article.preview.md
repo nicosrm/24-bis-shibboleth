@@ -82,7 +82,7 @@ Da die angefragte Ressource über das Shibboleth-System, insbesondere den
 Service Provider, geschützt ist, wird die Anfrage vom Service Provider
 geprüft. Dabei wird kontrolliert, ob bereits eine aktive
 Shibboleth-Session vorliegt, d.h. ob die Nutzerin bereits
-authentifiziert ist. Diese Information wäre im `_idp_session`-Cookie
+authentifiziert ist. Diese Information wäre im `_shibsession`-Cookie
 enthalten. Falls dieser aktuell und gültig ist, wird die Benutzerin
 schlussendlich an die Ressource weitergeleitet. Dieses Szenario wird in
 [Abschnitt zu Phase 3](#phase-3-ressourcenzugriff) genauer erläutert
@@ -90,11 +90,11 @@ schlussendlich an die Ressource weitergeleitet. Dieses Szenario wird in
 [\[2\]](#ref-shibbolethFlowsAndConfigShibbolethConcepts2019).
 
 Falls jedoch noch keine aktive Shibboleth-Session vorliegt, wird die
-Benutzerin zum Discovery Service weitergeleitet. Da die Information, wo
-die Benutzenden nach Auswahl der Home Organisation geschickt werden
-sollen, nicht verloren gehen darf, wird der `_shibstate`-Cookie gesetzt
-und Parameter mitgesendet. In neueren Shibboleth-Versionen wird dies
-mittels *Relay State*-Mechanismen gespeichert
+Benutzerin zum Discovery Service weitergeleitet. Da die Information,
+wohin die Benutzenden nach Auswahl der Home Organisation geschickt
+werden sollen, nicht verloren gehen darf, wird der `_shibstate`-Cookie
+gesetzt und Parameter mitgesendet. In neueren Shibboleth-Versionen wird
+dies mittels *Relay State*-Mechanismen gespeichert
 [\[1\]](#ref-switchExpertDemoSWITCHaai2024a),
 [\[2\]](#ref-shibbolethFlowsAndConfigShibbolethConcepts2019).
 <!-- TODO: ggf. Relay-State erklären -->
@@ -114,10 +114,10 @@ mittels *Relay State*-Mechanismen gespeichert
 
 Der Discovery Service ermittelt nun die Liste der verfügbaren bzw.
 unterstützten Identity Provider, welche im folgenden der Nutzerin
-präsentiert werden. Diese wählt ihren zutreffenden Information Provider
-aus – in diesem Szenario entsprechend `idp.uni-a.example`. Daher wird
-die Nutzerin im Anschluss an den ausgewählten Identity Provider der Home
-Organisation weitergeleitet
+präsentiert werden. Diese wählt ihren zutreffenden Identity Provider aus
+– in diesem Szenario entsprechend Universität A (`idp.uni-a.example`).
+Daher wird die Nutzerin im Anschluss an den ausgewählten Identity
+Provider der Home Organisation weitergeleitet
 [\[1\]](#ref-switchExpertDemoSWITCHaai2024a).
 
     POST https://discovery.pool.example/WAYF

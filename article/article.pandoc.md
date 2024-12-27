@@ -9,6 +9,14 @@ papersize: a4
 geometry: margin=3cm
 colorlinks: true
 link-citations: true
+header-includes: |
+  \definecolor{codegray}{rgb}{0.5,0.5,0.5}
+  \definecolor{backcolour}{rgb}{0.95,0.95,0.95}
+  \lstset{backgroundcolor=\color{backcolour},
+          frame=single, rulecolor=\color{codegray},
+          numbers=left, numberstyle=\tiny\color{codegray},
+          breaklines=true, basicstyle=\ttfamily\small,
+          aboveskip=1.5em}
 ---
 
 # Shibboleth

@@ -21,4 +21,5 @@ podman run --rm \
     --bibliography slides/bibliography.bib \
     --csl article/ieee.csl \
     --citeproc \
+    --listings \
     -o article/24_bis_shibboleth_article.pdf

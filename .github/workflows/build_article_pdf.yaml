@@ -34,6 +34,7 @@ jobs:
             --bibliography ${{ env.BIB_PATH }}
             --csl ${{ env.CSL_PATH }}
             --citeproc
+            --listings
             ${{ env.INPUT_PATH }}
             -o ${{ env.OUTPUT_PATH }}
       

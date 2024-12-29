@@ -29,21 +29,9 @@ Organisation unter `idp.uni-a.example` erreichbar.
 
 <!-- Ressource:          pool.example/resource-b     https://aai-demo.switch.ch/secure/ -->
 
-<!-- Disovery Service:   discovery.pool.example      https://wayf-test.switch.ch -->
+<!-- Discovery Service:  discovery.pool.example     https://wayf-test.switch.ch -->
 
 # Prozessablauf im Detail
-
-<!-- - detaillierter Ablauf des Prozesses -->
-
-<!-- - vgl. Abschnitt [System Flow](#system-flow) und [SwitchAAI](#switch-aai) Erklärung -->
-
-<!-- - am konkreten Beispiel (vgl. SwitchAAI) -->
-
-<!-- - Erläuterung BPMN
-  - weiter aufteilen
-  - Bereitstellung von großem Gesamt-Diagramm -->
-
-<!-- - ggf. genauere Erläuterung von [IdP Discovery](#identity-provider-discovery-shibbolethidpdiscoveryshibbolethconcepts2020) -->
 
 In diesem Abschnitt wird der vereinfachte Prozessablauf, welcher in
 [Abschnitt 2](#grundlegende-begriffe) dargestellt wurde, vertiefend

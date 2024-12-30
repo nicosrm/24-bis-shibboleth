@@ -42,25 +42,40 @@ header-includes: |
 
 ## Grundlegende Begriffe {#sec:grundlegende-begriffe}
 
-- Überblick über einzelne Komponenten
-  - Identity Provider
-  - Service Provider
-  - Discovery Service
-- grundlegendes Konzept / vereinfachter Prozessablauf (*Basic Interaction*)
+Im folgenden Abschnitt werden verschiedene theoretische Grundlagen gelegt und zentrale Begriffe erläutert. Zunächst werden die zentralen Komponenten sowie der grundlegende Prozessablauf des Shibboleth-Systems erläutert. Anschließend wird ein Beispiel-Szenario skizziert, auf welchem die Erklärung in @sec:prozessablauf basiert.
 
-### Szenario
 
-In den weiterführenden Abschnitten soll das folgende Szenario genauer beleuchtet werden. Eine Benutzerin der Universität A (`uni-a.example`) möchte auf eine geschützte "Ressource B" zugreifen. Diese wird auf der Seite `pool.example/resource-b` angeboten. Der Discovery Service ist dabei unter `discovery.pool.example` und der Identity Provider der Home Organisation unter `idp.uni-a.example` erreichbar.
+### Komponenten
+
+Das Shibboleth-System verwendet insgesamt drei Hautkomponenten während des Login-Prozesses:
+
+1. *Identity Provider* (IdP) sind für die Authentifizierung der Benutzer:innen zuständig. Sie geben die Informationen über diese an den jeweiligen Service Provider weiter. IdPs werden dabei in der Home-Organisation der jeweiligen Benutzer:innen verwaltet, d.h. dort, wo das entsprechende Benutzerkonto befindet, wie beispielsweise Bildungs- und Forschungseinrichtungen [@shibbolethShibbolethConcepts2023; @dfnDFNAAIDokumentationEinfuhrung].
+
+2. *Service Provider* (SP) dienen dem Schutz der eigentlich angefragten geschützten Online-Ressourcen und werden innerhalb der sogenannten *Ressource Organisation* verwaltet. Sie prüfen die Authentifizierung vom IdP, autorisieren die Benutzer:innen basierend auf den erhaltenen Informationen und stellen schließlich den Zugriff auf die angefragte Ressource bereit [@shibbolethShibbolethConcepts2023; @shibbolethServiceProviderApplication2021; @shibbolethServiceProviderProtectContent2021]. Service Provider können beispielsweise Content-Provider, E-Learning-Plattformen, oder Bibliotheken sein [@dfnDFNAAIDokumentationEinfuhrung].
+
+3. *Discovery Services* (DS) unterstützen Service Provider bei der Ermittlung des der Identity Provider der Benutzer:innen, da die Ressource keine Information darüber die Home-Organisation der Benutzer:innen hat. Sie stellen einen Service zur Präsentation eines Standard-Interfaces dar, mit welchem die Benutzer:innen ihre Home-Organisation (und damit IdP) auswählen können. Somit stellen sie einen *Where Are You From Service* (WAYF) dar. DS können mit der Ressource oder als zentraler, geteilter Service betrieben werden [@shibbolethShibbolethConcepts2023; @shibbolethIdPDiscoveryShibbolethConcepts2020; @switchSimpleDemoSwitchAAI2024].
+
+
+### Grundlegender Ablauf
+
+Der grundlegende Ablauf zum Zugriff auf eine geschützte Ressource verläuft wie folgt: Zunächst fragt ein:e Benutzer:in den Zugriff auf eine bestimmte geschützte Ressource bei einem Service Provider an. Dieser leitet zum Discovery Service weiter, mit welchem der zuständige Identity Provider des oder der Benutzer:in ermittelt wird. Anschließend generiert der SP eine Authentifizierungsanfrage und sendet diese an den ermittelten IdP. Bei diesem findet die Authentifizierung statt. Der SP verifiziert die Authentifizierungsantwort vom IdP und sendet eine Anfrage an die Ressource, welche den ursprünglich angefragten Inhalt zurückgibt [@shibbolethShibbolethConcepts2023; @switchExpertDemoSWITCHaai2024a; @michelsIdentityManagementUnd]. Der Ablauf ist in @fig:grundlegender-ablauf skizziert.
+
+![Grundlegender Ablauf [@shibbolethShibbolethConcepts2023; @switchExpertDemoSWITCHaai2024a; @michelsIdentityManagementUnd]](../assets/basic_interaction_article.drawio.svg){#fig:grundlegender-ablauf}
+
+
+### Szenario {#sec:szenario}
+
+In den weiterführenden Abschnitten soll das folgende Szenario genauer beleuchtet werden. Eine Benutzerin der Universität A (`uni-a.example`) möchte auf eine geschützte "Ressource B" zugreifen. Diese wird auf der Seite `pool.example/resource-b` angeboten. Der Discovery Service ist dabei unter `discovery.pool.example` und der Identity Provider der Home Organisation (hier Universität A) unter `idp.uni-a.example` erreichbar.
 
 <!-- Universität A:      uni-a.example -->
 <!-- IdP:                idp.uni-a.example           https://aai-demo-idp.switch.ch -->
 <!-- Ressource:          pool.example/resource-b     https://aai-demo.switch.ch/secure/ -->
-<!-- Discovery Service:  discovery.pool.example     https://wayf-test.switch.ch -->
+<!-- Discovery Service:  discovery.pool.example      https://wayf-test.switch.ch -->
 
 
-## Prozessablauf im Detail
+## Prozessablauf im Detail {#sec:prozessablauf}
 
-In diesem Abschnitt wird der vereinfachte Prozessablauf, welcher in @sec:grundlegende-begriffe dargestellt wurde, vertiefend erklärt. Dabei soll das dort eingeführte Szenario verfolgt werden. Der Prozess erfolgt in drei übergeordneten Phasen:
+In diesem Abschnitt wird der vereinfachte Prozessablauf, welcher in @sec:szenario dargestellt wurde, vertiefend erklärt. Dabei soll das dort eingeführte Szenario verfolgt werden. Der Prozess erfolgt in drei übergeordneten Phasen:
 
 1. Erster Zugriff auf den Service Provider und Identity Provider Discovery (siehe @fig:phase1-idp-discovery)
 2. Session Initialisierung und Authentifizierungsanfrage (siehe @fig:phase2-session-auth)

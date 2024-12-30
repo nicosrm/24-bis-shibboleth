@@ -1,0 +1,86 @@
+<mxfile host="app.diagrams.net" agent="Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/18.2 Safari/605.1.15" version="26.0.2">
+  <diagram name="Page-1" id="Bj4j7PhieP12v-T_J614">
+    <mxGraphModel dx="1020" dy="679" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="904QTcyrx7t9pC00jkhB-3" value="Discovery Service" style="sketch=0;outlineConnect=0;fontColor=#232F3E;gradientColor=none;fillColor=#000000;strokeColor=none;dashed=0;verticalLabelPosition=bottom;verticalAlign=top;align=center;html=1;fontSize=12;fontStyle=0;aspect=fixed;pointerEvents=1;shape=mxgraph.aws4.traditional_server;fontFamily=Computer Modern Serif;fontSource=https%3A%2F%2Fcdn.jsdelivr.net%2Fgh%2Fbitmaks%2Fcm-web-fonts%40latest%2Ffont%2FSerif%2Fcmunrm.woff;" parent="1" vertex="1">
+          <mxGeometry x="355" y="252" width="45" height="78" as="geometry" />
+        </mxCell>
+        <mxCell id="904QTcyrx7t9pC00jkhB-9" value="Benutzer" style="sketch=0;outlineConnect=0;fontColor=#232F3E;gradientColor=none;fillColor=#000000;strokeColor=none;dashed=0;verticalLabelPosition=top;verticalAlign=bottom;align=center;html=1;fontSize=12;fontStyle=0;aspect=fixed;pointerEvents=1;shape=mxgraph.aws4.user;labelPosition=center;fontFamily=Computer Modern Serif;fontSource=https%3A%2F%2Fcdn.jsdelivr.net%2Fgh%2Fbitmaks%2Fcm-web-fonts%40latest%2Ffont%2FSerif%2Fcmunrm.woff;" parent="1" vertex="1">
+          <mxGeometry x="500" y="341" width="78" height="78" as="geometry" />
+        </mxCell>
+        <mxCell id="904QTcyrx7t9pC00jkhB-8" value="geschützte Ressource" style="sketch=0;pointerEvents=1;shadow=0;dashed=0;html=1;strokeColor=none;fillColor=#000000;labelPosition=center;verticalLabelPosition=bottom;verticalAlign=top;outlineConnect=0;align=center;shape=mxgraph.office.concepts.file_key;fontFamily=Computer Modern Serif;fontSource=https%3A%2F%2Fcdn.jsdelivr.net%2Fgh%2Fbitmaks%2Fcm-web-fonts%40latest%2Ffont%2FSerif%2Fcmunrm.woff;" parent="1" vertex="1">
+          <mxGeometry x="400" y="500" width="63.4" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="904QTcyrx7t9pC00jkhB-33" value="Service Provider" style="ellipse;shape=cloud;whiteSpace=wrap;html=1;strokeWidth=3;fillColor=none;labelPosition=center;verticalLabelPosition=bottom;align=center;verticalAlign=top;fontFamily=Computer Modern Serif;fontSource=https%3A%2F%2Fcdn.jsdelivr.net%2Fgh%2Fbitmaks%2Fcm-web-fonts%40latest%2Ffont%2FSerif%2Fcmunrm.woff;" parent="1" vertex="1">
+          <mxGeometry x="320" y="470" width="216.6" height="160" as="geometry" />
+        </mxCell>
+        <mxCell id="904QTcyrx7t9pC00jkhB-39" value="" style="curved=1;endArrow=classic;html=1;rounded=0;fontFamily=Computer Modern Serif;fontSource=https%3A%2F%2Fcdn.jsdelivr.net%2Fgh%2Fbitmaks%2Fcm-web-fonts%40latest%2Ffont%2FSerif%2Fcmunrm.woff;" parent="1" edge="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="510" y="420" as="sourcePoint" />
+            <mxPoint x="400" y="360" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="480" y="530" />
+              <mxPoint x="430" y="410" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="904QTcyrx7t9pC00jkhB-40" value="&lt;div&gt;&lt;b&gt;1.&lt;/b&gt; Anfrage &amp;amp;&lt;/div&gt;&lt;div&gt;IdP-Discovery&lt;br&gt;&lt;/div&gt;" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];fontFamily=Computer Modern Serif;fontSource=https%3A%2F%2Fcdn.jsdelivr.net%2Fgh%2Fbitmaks%2Fcm-web-fonts%40latest%2Ffont%2FSerif%2Fcmunrm.woff;" parent="904QTcyrx7t9pC00jkhB-39" vertex="1" connectable="0">
+          <mxGeometry x="-0.7648" y="-3" relative="1" as="geometry">
+            <mxPoint x="-26" y="-3" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="904QTcyrx7t9pC00jkhB-41" value="" style="curved=1;endArrow=classic;html=1;rounded=0;entryX=0.96;entryY=0.7;entryDx=0;entryDy=0;entryPerimeter=0;fontFamily=Computer Modern Serif;fontSource=https%3A%2F%2Fcdn.jsdelivr.net%2Fgh%2Fbitmaks%2Fcm-web-fonts%40latest%2Ffont%2FSerif%2Fcmunrm.woff;" parent="1" target="904QTcyrx7t9pC00jkhB-43" edge="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="370" y="360" as="sourcePoint" />
+            <mxPoint x="240" y="430" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="420" y="500" />
+              <mxPoint x="300" y="490" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="904QTcyrx7t9pC00jkhB-42" value="&lt;div&gt;&lt;b&gt;2.&lt;/b&gt; Auswahl IdP &amp;amp;&lt;/div&gt;Authentifizierungsanfrage" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];labelBackgroundColor=default;fontFamily=Computer Modern Serif;fontSource=https%3A%2F%2Fcdn.jsdelivr.net%2Fgh%2Fbitmaks%2Fcm-web-fonts%40latest%2Ffont%2FSerif%2Fcmunrm.woff;" parent="904QTcyrx7t9pC00jkhB-41" vertex="1" connectable="0">
+          <mxGeometry x="0.7516" y="-4" relative="1" as="geometry">
+            <mxPoint x="58" y="3" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="904QTcyrx7t9pC00jkhB-43" value="Home Organisation" style="ellipse;shape=cloud;whiteSpace=wrap;html=1;strokeWidth=3;fillColor=none;labelPosition=center;verticalLabelPosition=top;align=center;verticalAlign=bottom;fontFamily=Computer Modern Serif;fontSource=https%3A%2F%2Fcdn.jsdelivr.net%2Fgh%2Fbitmaks%2Fcm-web-fonts%40latest%2Ffont%2FSerif%2Fcmunrm.woff;" parent="1" vertex="1">
+          <mxGeometry x="60" y="290" width="196.6" height="180" as="geometry" />
+        </mxCell>
+        <mxCell id="904QTcyrx7t9pC00jkhB-44" value="Identity Provider" style="sketch=0;outlineConnect=0;fontColor=#232F3E;gradientColor=none;fillColor=#000000;strokeColor=none;dashed=0;verticalLabelPosition=bottom;verticalAlign=top;align=center;html=1;fontSize=12;fontStyle=0;aspect=fixed;pointerEvents=1;shape=mxgraph.aws4.traditional_server;fontFamily=Computer Modern Serif;fontSource=https%3A%2F%2Fcdn.jsdelivr.net%2Fgh%2Fbitmaks%2Fcm-web-fonts%40latest%2Ffont%2FSerif%2Fcmunrm.woff;" parent="1" vertex="1">
+          <mxGeometry x="135.8" y="331" width="45" height="78" as="geometry" />
+        </mxCell>
+        <mxCell id="904QTcyrx7t9pC00jkhB-45" value="" style="curved=1;endArrow=classic;html=1;rounded=0;exitX=0.55;exitY=0.95;exitDx=0;exitDy=0;exitPerimeter=0;entryX=0.07;entryY=0.4;entryDx=0;entryDy=0;entryPerimeter=0;fontFamily=Computer Modern Serif;fontSource=https%3A%2F%2Fcdn.jsdelivr.net%2Fgh%2Fbitmaks%2Fcm-web-fonts%40latest%2Ffont%2FSerif%2Fcmunrm.woff;" parent="1" source="904QTcyrx7t9pC00jkhB-43" target="904QTcyrx7t9pC00jkhB-33" edge="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="170" y="600" as="sourcePoint" />
+            <mxPoint x="220" y="550" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="210" y="520" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="904QTcyrx7t9pC00jkhB-46" value="&lt;div&gt;&lt;b&gt;3.&lt;/b&gt; Antwort Auth.-Anfrage&lt;/div&gt;&lt;div&gt;&amp;amp; Benutzerinformationen&lt;br&gt;&lt;/div&gt;" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];fontFamily=Computer Modern Serif;fontSource=https%3A%2F%2Fcdn.jsdelivr.net%2Fgh%2Fbitmaks%2Fcm-web-fonts%40latest%2Ffont%2FSerif%2Fcmunrm.woff;" parent="904QTcyrx7t9pC00jkhB-45" vertex="1" connectable="0">
+          <mxGeometry x="-0.1579" y="15" relative="1" as="geometry">
+            <mxPoint x="17" y="4" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="904QTcyrx7t9pC00jkhB-47" value="" style="curved=1;endArrow=classic;html=1;rounded=0;exitX=0.875;exitY=0.5;exitDx=0;exitDy=0;exitPerimeter=0;fontFamily=Computer Modern Serif;fontSource=https%3A%2F%2Fcdn.jsdelivr.net%2Fgh%2Fbitmaks%2Fcm-web-fonts%40latest%2Ffont%2FSerif%2Fcmunrm.woff;" parent="1" source="904QTcyrx7t9pC00jkhB-33" target="904QTcyrx7t9pC00jkhB-9" edge="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="640" y="500" as="sourcePoint" />
+            <mxPoint x="550" y="430" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="560" y="540" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="904QTcyrx7t9pC00jkhB-48" value="&lt;div&gt;&lt;b&gt;4.&lt;/b&gt; Zugriff geschützte&lt;/div&gt;&lt;div&gt;Ressource&lt;/div&gt;" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];fontFamily=Computer Modern Serif;fontSource=https%3A%2F%2Fcdn.jsdelivr.net%2Fgh%2Fbitmaks%2Fcm-web-fonts%40latest%2Ffont%2FSerif%2Fcmunrm.woff;" parent="904QTcyrx7t9pC00jkhB-47" vertex="1" connectable="0">
+          <mxGeometry x="0.0988" y="5" relative="1" as="geometry">
+            <mxPoint x="18" y="-3" as="offset" />
+          </mxGeometry>
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

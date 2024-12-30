@@ -85,7 +85,7 @@ Zunächst greift die Benutzerin erstmalig auf die geschützte Ressource zu. Dabe
 GET https://www.pool.example/resource-b
 ```
 
-Da die angefragte Ressource über das Shibboleth-System, insbesondere den Service Provider, geschützt ist, wird die Anfrage vom Service Provider geprüft. Dabei wird kontrolliert, ob bereits eine aktive Shibboleth-Session vorliegt, d.h. ob die Nutzerin bereits authentifiziert ist. Diese Information wäre im `_shibsession`-Cookie enthalten. Falls dieser aktuell und gültig ist, wird die Benutzerin schlussendlich an die Ressource weitergeleitet. Dieses Szenario wird in [Abschnitt zu Phase 3](#phase-3-ressourcenzugriff) genauer erläutert [@switchExpertDemoSWITCHaai2024a; @shibbolethFlowsAndConfigShibbolethConcepts2019].
+Da die angefragte Ressource über das Shibboleth-System, insbesondere den Service Provider, geschützt ist, wird die Anfrage vom Service Provider geprüft. Dabei wird kontrolliert, ob bereits eine aktive Shibboleth-Session vorliegt, d.h. ob die Nutzerin bereits authentifiziert ist. Diese Information wäre im `_shibsession`-Cookie enthalten. Falls dieser aktuell und gültig ist, wird die Benutzerin schlussendlich an die Ressource weitergeleitet. Dieses Szenario wird in @sec:phase-3-ressourcenzugriff genauer erläutert [@switchExpertDemoSWITCHaai2024a; @shibbolethFlowsAndConfigShibbolethConcepts2019].
 
 Falls jedoch noch keine aktive Shibboleth-Session vorliegt, wird die Benutzerin zum Discovery Service weitergeleitet. Da die Information, wohin die Benutzenden nach Auswahl der Home Organisation geschickt werden sollen, nicht verloren gehen darf, wird der `_shibstate`-Cookie gesetzt und Parameter mitgesendet. In neueren Shibboleth-Versionen wird dies mittels *Relay State*-Mechanismen gespeichert [@switchExpertDemoSWITCHaai2024a; @shibbolethFlowsAndConfigShibbolethConcepts2019].
 <!-- TODO: ggf. Relay-State erklären -->
@@ -143,7 +143,7 @@ POST https://idp.uni-a.example/profile/SAML2/POST/SSO
     SAMLRequest=PHNhbWxwOkF1dGhuUmVxdWVzdCB4bWxuczp...
 ```
 
-Der IdP prüft anschließend die Authentifizierungsanfrage. Wenn diese gültig ist, wird zunächst festgestellt, ob die Nutzerin bereits authentifiziert ist. Dies wird anhand des `_idp_session`-Cookies überprüft. Falls dem nicht so ist, wird eine geeignete Authentifizierungsmethode für die Benutzerin, basierend auf dem Protokoll des Service Providers, ausgewählt. Die Benutzerin wird anschließend an einen kompatiblen Login-Handler weitergeleitet [@switchExpertDemoSWITCHaai2024a; @shibbolethFlowsAndConfigShibbolethConcepts2019]. Dieses Szenario wird in [Phase 3](#phase-3-ressourcenzugriff) genauer beschrieben.
+Der IdP prüft anschließend die Authentifizierungsanfrage. Wenn diese gültig ist, wird zunächst festgestellt, ob die Nutzerin bereits authentifiziert ist. Dies wird anhand des `_idp_session`-Cookies überprüft. Falls dem nicht so ist, wird eine geeignete Authentifizierungsmethode für die Benutzerin, basierend auf dem Protokoll des Service Providers, ausgewählt. Die Benutzerin wird anschließend an einen kompatiblen Login-Handler weitergeleitet [@switchExpertDemoSWITCHaai2024a; @shibbolethFlowsAndConfigShibbolethConcepts2019]. Dieses Szenario wird in @sec:phase-3-ressourcenzugriff genauer beschrieben.
 
 In diesem Beispiel soll ein Nutzername und Passwort zur Authentifizierung verwendet werden. Bei diesem Redirect wird vom IdP  ein AuthN-Cookie gesetzt, welcher Informationen zur Ressource und einen Authentifizierungstoken enthält. Anschließend wird die Nutzerin zur tatsächlichen, spezifischen Anmeldeseite weitergeleitet [@switchExpertDemoSWITCHaai2024a].
 
@@ -169,7 +169,7 @@ GET https://idp.uni-a.example/Authn/UserPassword
 ```
 
 
-### Phase 3: Ressourcenzugriff
+### Phase 3: Ressourcenzugriff {#sec:phase-3-ressourcenzugriff}
 
 In der letzten Phase kommt es schließlich zum Ressourcenzugriff. Der Ablauf wird im folgenden beschrieben und ist als BPMN-Diagramm in @fig:phase3-ressourcen-zugriff dargestellt.
 

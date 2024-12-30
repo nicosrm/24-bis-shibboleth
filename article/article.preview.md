@@ -88,7 +88,7 @@ Shibboleth-Session vorliegt, d.h. ob die Nutzerin bereits
 authentifiziert ist. Diese Information wäre im `_shibsession`-Cookie
 enthalten. Falls dieser aktuell und gültig ist, wird die Benutzerin
 schlussendlich an die Ressource weitergeleitet. Dieses Szenario wird in
-[Abschnitt zu Phase 3](#phase-3-ressourcenzugriff) genauer erläutert
+[Abschnitt 1.3.3](#sec:phase-3-ressourcenzugriff) genauer erläutert
 [\[1\]](#ref-switchExpertDemoSWITCHaai2024a),
 [\[2\]](#ref-shibbolethFlowsAndConfigShibbolethConcepts2019).
 
@@ -177,8 +177,8 @@ Protokoll des Service Providers, ausgewählt. Die Benutzerin wird
 anschließend an einen kompatiblen Login-Handler weitergeleitet
 [\[1\]](#ref-switchExpertDemoSWITCHaai2024a),
 [\[2\]](#ref-shibbolethFlowsAndConfigShibbolethConcepts2019). Dieses
-Szenario wird in [Phase 3](#phase-3-ressourcenzugriff) genauer
-beschrieben.
+Szenario wird in [Abschnitt 1.3.3](#sec:phase-3-ressourcenzugriff)
+genauer beschrieben.
 
 In diesem Beispiel soll ein Nutzername und Passwort zur
 Authentifizierung verwendet werden. Bei diesem Redirect wird vom IdP ein

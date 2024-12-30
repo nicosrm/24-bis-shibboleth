@@ -26,5 +26,6 @@ podman run --rm \
     --number-sections \
     -F pandoc-crossref \
     --citeproc \
+    --listings \
     -o article/24_bis_shibboleth_article.pdf \
     article/article.pandoc.md

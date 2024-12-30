@@ -27,7 +27,7 @@ jobs:
           args: >-
             --bibliography ${{ env.BIB_PATH }}
             --csl ${{ env.CSL_PATH }}
-            --metadata numberSections=true
+            --metadata numberSections
             -F pandoc-crossref
             --citeproc
             --to=gfm

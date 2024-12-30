@@ -10,8 +10,6 @@ geometry: margin=3cm
 colorlinks: true
 link-citations: true
 listings: true
-linkReferences: true
-nameInLink: true
 sectionsDepth: -1
 secPrefix:
   - "Abschnitt"

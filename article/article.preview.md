@@ -36,17 +36,16 @@ Organisation unter `idp.uni-a.example` erreichbar.
 ## 1.3 Prozessablauf im Detail
 
 In diesem Abschnitt wird der vereinfachte Prozessablauf, welcher in
-[Abschnitt 1.2](#sec:grundlegende-begriffe) dargestellt wurde,
-vertiefend erklärt. Dabei soll das dort eingeführte Szenario verfolgt
-werden. Der Prozess erfolgt in drei übergeordneten Phasen:
+Abschnitt 1.2 dargestellt wurde, vertiefend erklärt. Dabei soll das dort
+eingeführte Szenario verfolgt werden. Der Prozess erfolgt in drei
+übergeordneten Phasen:
 
 1.  Erster Zugriff auf den Service Provider und Identity Provider
-    Discovery (siehe [Abbildung 1](#fig:phase1-idp-discovery))
+    Discovery (siehe Abbildung 1)
 2.  Session Initialisierung und Authentifizierungsanfrage (siehe
-    [Abbildung 2](#fig:phase2-session-auth))
+    Abbildung 2)
 3.  Authentifizierung, Autorisierung und Ressourcenzugriff (siehe
-    [Abbildung 3](#fig:phase3-ressourcen-zugriff))
-    [\[1\]](#ref-switchExpertDemoSWITCHaai2024a),
+    Abbildung 3) [\[1\]](#ref-switchExpertDemoSWITCHaai2024a),
     [\[2\]](#ref-shibbolethFlowsAndConfigShibbolethConcepts2019).
 
 Die einzelnen Phasen werden im Folgenden genauer erläutert und als
@@ -64,7 +63,7 @@ Benutzerin oder eines Benutzers auf eine geschützte Ressource, d.h. auf
 den Service Provider. Dabei ist diese Person noch *nicht* beim
 jeweiligen Identity Provider angemeldet, sodass die *Identity Provider
 Discovery* stattfinden muss. Der Prozess ist als BPMN-Diagramm in
-[Abbildung 1](#fig:phase1-idp-discovery) dargestellt.
+Abbildung 1 dargestellt.
 
 <figure id="fig:phase1-idp-discovery">
 <img src="../assets/bis_bpmn_phase_1.drawio.svg"
@@ -88,7 +87,7 @@ Shibboleth-Session vorliegt, d.h. ob die Nutzerin bereits
 authentifiziert ist. Diese Information wäre im `_shibsession`-Cookie
 enthalten. Falls dieser aktuell und gültig ist, wird die Benutzerin
 schlussendlich an die Ressource weitergeleitet. Dieses Szenario wird in
-[Abschnitt 1.3.3](#sec:phase-3-ressourcenzugriff) genauer erläutert
+Abschnitt 1.3.3 genauer erläutert
 [\[1\]](#ref-switchExpertDemoSWITCHaai2024a),
 [\[2\]](#ref-shibbolethFlowsAndConfigShibbolethConcepts2019).
 
@@ -140,7 +139,7 @@ Provider der Home Organisation weitergeleitet
 
 In Phase 2 wird die Session initialisiert und eine
 Authentifizierungsanfrage gestellt. Der Prozess ist als BPMN-Diagramm in
-[Abbildung 2](#fig:phase2-session-auth) dargestellt.
+Abbildung 2 dargestellt.
 
 <figure id="fig:phase2-session-auth">
 <img src="../assets/bis_bpmn_phase_2.drawio.svg"
@@ -177,8 +176,7 @@ Protokoll des Service Providers, ausgewählt. Die Benutzerin wird
 anschließend an einen kompatiblen Login-Handler weitergeleitet
 [\[1\]](#ref-switchExpertDemoSWITCHaai2024a),
 [\[2\]](#ref-shibbolethFlowsAndConfigShibbolethConcepts2019). Dieses
-Szenario wird in [Abschnitt 1.3.3](#sec:phase-3-ressourcenzugriff)
-genauer beschrieben.
+Szenario wird in Abschnitt 1.3.3 genauer beschrieben.
 
 In diesem Beispiel soll ein Nutzername und Passwort zur
 Authentifizierung verwendet werden. Bei diesem Redirect wird vom IdP ein
@@ -210,7 +208,7 @@ tatsächlichen, spezifischen Anmeldeseite weitergeleitet
 
 In der letzten Phase kommt es schließlich zum Ressourcenzugriff. Der
 Ablauf wird im folgenden beschrieben und ist als BPMN-Diagramm in
-[Abbildung 3](#fig:phase3-ressourcen-zugriff) dargestellt.
+Abbildung 3 dargestellt.
 
 <figure id="fig:phase3-ressourcen-zugriff">
 <img src="../assets/bis_bpmn_phase_3.drawio.svg"
@@ -753,8 +751,7 @@ href="#ref-shibbolethShibbolethConcepts2023"
 role="doc-biblioref">[7]</a></span></figcaption>
 </figure>
 
-Grundlegende Interaktionen wie in [Abbildung 4](#fig:basic-interaction)
-dargestellt
+Grundlegende Interaktionen wie in Abbildung 4 dargestellt
 
 1.  SP erkennt Nutzer, der versucht, auf eingeschränkte Inhalte
     zuzugreifen

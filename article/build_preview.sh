@@ -8,7 +8,7 @@ podman run --rm \
     -v "$(pwd):/data" pandoc/latex:latest-ubuntu \
     --bibliography slides/bibliography.bib \
     --csl article/ieee.csl \
-    --metadata numberSections=true \
+    --metadata numberSections \
     -F pandoc-crossref \
     --citeproc \
     --to=gfm \
@@ -22,6 +22,7 @@ podman run --rm \
     --resource-path article \
     --bibliography slides/bibliography.bib \
     --csl article/ieee.csl \
+    --metadata linkReferences \
     --number-sections \
     -F pandoc-crossref \
     --citeproc \

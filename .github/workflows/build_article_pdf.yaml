@@ -30,6 +30,7 @@ jobs:
             --resource-path ${{ env.RESOURCE_PATH }}
             --bibliography ${{ env.BIB_PATH }}
             --csl ${{ env.CSL_PATH }}
+            --metadata linkReferences
             --number-sections
             -F pandoc-crossref
             --citeproc

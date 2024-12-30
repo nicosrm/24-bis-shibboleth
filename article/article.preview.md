@@ -9,13 +9,6 @@
 
 ## 1.2 Grundlegende Begriffe
 
-<!--
-- Überblick über einzelne Komponenten
-  - Identity Provider
-  - Service Provider
-  - Discovery Service
-- grundlegendes Konzept / vereinfachter Prozessablauf (*Basic Interaction*) -->
-
 Im folgenden Abschnitt werden verschiedene theoretische Grundlagen
 gelegt und zentrale Begriffe erläutert. Zunächst werden die zentralen
 Komponenten sowie der grundlegende Prozessablauf des Shibboleth-Systems

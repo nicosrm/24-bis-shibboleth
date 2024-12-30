@@ -5,21 +5,25 @@ export MSYS_NO_PATHCONV=1
 
 echo "Building markdown preview..."
 podman run --rm \
-    -v "$(pwd):/data" pandoc/latex:latest-ubuntu article/article.pandoc.md \
-    --shift-heading-level-by=-1 \
+    -v "$(pwd):/data" pandoc/latex:latest-ubuntu \
     --bibliography slides/bibliography.bib \
     --csl article/ieee.csl \
+    --metadata numberSections=true \
+    -F pandoc-crossref \
     --citeproc \
     --to=gfm \
-    -o article/article.preview.md
+    -o article/article.preview.md \
+    article/article.pandoc.md
 
 echo "Building pdf..."
 podman run --rm \
-    -v "$(pwd):/data" pandoc/latex:latest-ubuntu article/article.pandoc.md \
+    -v "$(pwd):/data" pandoc/latex:latest-ubuntu \
     --shift-heading-level-by=-1 \
     --resource-path article \
     --bibliography slides/bibliography.bib \
     --csl article/ieee.csl \
+    --number-sections \
+    -F pandoc-crossref \
     --citeproc \
-    --listings \
-    -o article/24_bis_shibboleth_article.pdf
+    -o article/24_bis_shibboleth_article.pdf \
+    article/article.pandoc.md

@@ -30,10 +30,12 @@ jobs:
             --resource-path ${{ env.RESOURCE_PATH }}
             --bibliography ${{ env.BIB_PATH }}
             --csl ${{ env.CSL_PATH }}
+            --number-sections
+            -F pandoc-crossref
             --citeproc
             --listings
-            ${{ env.INPUT_PATH }}
             -o ${{ env.OUTPUT_PATH }}
+            ${{ env.INPUT_PATH }}
       
       - name: Upload as artifact
         uses: actions/upload-artifact@v4

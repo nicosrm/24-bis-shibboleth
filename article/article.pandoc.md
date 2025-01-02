@@ -266,11 +266,29 @@ Erneut wird der `_shibsession`-Cookie überprüft, wodurch diesmal eine aktive S
 
 ## Diskussion
 
-- Bewertung und Einschätzung von Shibboleth
-- Alternativen
-  - Azure Active Directory
-  - TODO: weiter suchen
-- Zukunft
+Im Folgenden wird auf die Vorteile und Nachteile von Shibboleth eingegangen.
+
+Shibboleth ist seit 2000 in Verwendung, weshalb es ein etabliertes Single Sign-On (SSO) System ist [@shibbolethShibbolethConsortium2024]. Grundsätzlich fallen als Open Source Software keine Kosten an. Das Shibboleth Consortium bietet allerdings kostenpflichtige Mitgliedschaften an, die das Projekt finanzieren und den Mitgliedern Hilfestellungen (Support) und weitere Partizipationsmöglichkeiten bieten [@shibbolethShibbolethConsortium2024], [@shibbolethMembership]. Dabei wird ein jährliche Betrag erhoben, der auf der Art und Größe der Institution basiert [@shibbolethConsortiumMembershipFees]. Größere Mitglieder sind u.a. der DNF Verein, die Stanford University, die University of Oxford oder das Massachusetts Institute of Technology [@shibbolethOurMembers2024]. Shibboleth unterstützt verschiedene Standardprotokolle wie beispielsweise SAML, OpenID Connect, LDAP [@cantorConsortiumFAQShibboleth2023], [@overtsoftwareAzureADADFS2022]. Zudem ist es Windows unabhängig und dezentral [@overtsoftwareAzureADADFS2022].
+
+Shibboleth eignet sich nicht besonders für Unternehmen, welche hauptsächlich interne Zugriffsverwaltung und Authentifizierung benötigen, sondern unterstützt mehr den Austausch von Authentifizierungsdaten zwischen verschiedenen, teils externen Organisationen (föderierte Identitäten). Außerdem ist eine eigenverantwortliche Administration benötigt [@cantorConsortiumFAQShibboleth2023].
+
+### Alternativen
+
+Im weiterführenden Abschnitt werden Alternativen zu Shibboleth kurz beleuchtet.
+
+Bei Active Directory (AD) handelt es sich um ein on-promise Identitätsmanagementsystem [@sommergutWasSindUnterschiede2019], welches sich besonders gut für Windows-Umgebungen eignet. Die Einrichtung und Verwaltung ist jedoch komplex und es wird kein Web-basiertes SSO angeboten.
+
+Eine Alternative mit SSO ist Azure Active Directory bzw. Mircosoft Entra ID [@chikMicrosoftEntraExpands2023], [@celestedgNewNameAzure2024], welche im Vergleich zu AD Cloud-basiert ist und Mircosoft Abhängigkeiten besitzt [@sommergutWasSindUnterschiede2019]. Dadurch eignet sich Mircosoft Entra ID besonders für Unternehmen, die vollständig in Microsoft 365 und Azure integriert sind.
+
+Darüber hinaus gibt es weitere kostenpflichtige Alternativen wie Okta, OneLogin oder Ping Identity, welche ebenfalls Cloud basierte Lösungen sind und den Fokus auf unterschiedliche Aspekte wie Sicherheit oder Benutzerfeundlichkeit legen [@oktaSecureSingleSignOn], [@oneloginErweiterteAuthentifizierung], [@pingidentityFunktionenPingIdentityPlattform].
+
+### Zukunft
+
+Shibboleth wird fortlaufend weiterentwickelt. In dem folgenden Abschnitt wird ein kurzer Einblick in die Agenda der nahen Zukuft gegeben.
+
+Bis 2027 soll die passwortlose Authentifikation ermöglicht werden, sodass Nutzer:innen beispielsweise mit FIDO, WebAuthn und Passkeys vom Login-Handler (?) authentifiziert werden. Zudem sollen verifizierte Anmeldedaten hinzugefügt werden.
+Verbessert werden soll die Produkt Dokumentation und Konfiguration des IdPs und dessen Endnutzer (?) und Administrative UI. In den OP und RP Plugins soll die Unterstützung für OpenID integriert werden.
+Außerdem soll ein Redesigned SP, V4, ... [...link].
 
 
 ## Zusammenfassung

@@ -1,6 +1,6 @@
 <mxfile host="app.diagrams.net" agent="Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:133.0) Gecko/20100101 Firefox/133.0" version="26.0.2">
   <diagram name="Page-1" id="78sKbAdPxCWYyD5-eGmq">
-    <mxGraphModel dx="1440" dy="4144" grid="0" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="0" pageScale="1" pageWidth="827" pageHeight="1169" background="none" math="0" shadow="0">
+    <mxGraphModel dx="2225" dy="4658" grid="0" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="0" pageScale="1" pageWidth="827" pageHeight="1169" background="none" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
@@ -961,7 +961,7 @@
         <mxCell id="mQIjWDaoDwh8q7IW5GbV-409" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fontFamily=CMU Serif;fontSource=https%3A%2F%2Fcdn.jsdelivr.net%2Fgh%2Fbitmaks%2Fcm-web-fonts%40latest%2Ffont%2FSerif%2Fcmunrm.woff;" parent="mQIjWDaoDwh8q7IW5GbV-299" source="mQIjWDaoDwh8q7IW5GbV-304" target="mQIjWDaoDwh8q7IW5GbV-408" edge="1">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="mQIjWDaoDwh8q7IW5GbV-410" value="&lt;div&gt;Benutzer:in bereits&lt;/div&gt;&lt;div&gt;authentifiziert&lt;br&gt;&lt;/div&gt;" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];labelBackgroundColor=none;fontFamily=CMU Serif;fontSource=https%3A%2F%2Fcdn.jsdelivr.net%2Fgh%2Fbitmaks%2Fcm-web-fonts%40latest%2Ffont%2FSerif%2Fcmunrm.woff;" parent="mQIjWDaoDwh8q7IW5GbV-409" vertex="1" connectable="0">
+        <mxCell id="mQIjWDaoDwh8q7IW5GbV-410" value="&lt;div&gt;Benutzer:in ist&lt;/div&gt;&lt;div&gt;authentifiziert&lt;br&gt;&lt;/div&gt;" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];labelBackgroundColor=none;fontFamily=CMU Serif;fontSource=https%3A%2F%2Fcdn.jsdelivr.net%2Fgh%2Fbitmaks%2Fcm-web-fonts%40latest%2Ffont%2FSerif%2Fcmunrm.woff;" parent="mQIjWDaoDwh8q7IW5GbV-409" vertex="1" connectable="0">
           <mxGeometry x="0.1282" relative="1" as="geometry">
             <mxPoint x="-13" as="offset" />
           </mxGeometry>
@@ -969,7 +969,7 @@
         <mxCell id="mQIjWDaoDwh8q7IW5GbV-304" value="" style="points=[[0.25,0.25,0],[0.5,0,0],[0.75,0.25,0],[1,0.5,0],[0.75,0.75,0],[0.5,1,0],[0.25,0.75,0],[0,0.5,0]];shape=mxgraph.bpmn.gateway2;html=1;verticalLabelPosition=bottom;labelBackgroundColor=none;verticalAlign=top;align=center;perimeter=rhombusPerimeter;outlineConnect=0;outline=none;symbol=none;gwType=exclusive;fillColor=#ffe6cc;strokeColor=#d79b00;fontFamily=CMU Serif;fontSource=https%3A%2F%2Fcdn.jsdelivr.net%2Fgh%2Fbitmaks%2Fcm-web-fonts%40latest%2Ffont%2FSerif%2Fcmunrm.woff;" parent="mQIjWDaoDwh8q7IW5GbV-299" vertex="1">
           <mxGeometry x="626" y="30" width="50" height="50" as="geometry" />
         </mxCell>
-        <mxCell id="mQIjWDaoDwh8q7IW5GbV-305" value="&lt;div&gt;&lt;span style=&quot;background-color: light-dark(#ffffff, var(--ge-dark-color, #121212));&quot;&gt;Benutzer:in &lt;i&gt;nicht&lt;/i&gt;&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;background-color: light-dark(#ffffff, var(--ge-dark-color, #121212));&quot;&gt;angemeldet&lt;/span&gt;&lt;/div&gt;" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;entryPerimeter=0;labelBackgroundColor=none;fontFamily=CMU Serif;fontSource=https%3A%2F%2Fcdn.jsdelivr.net%2Fgh%2Fbitmaks%2Fcm-web-fonts%40latest%2Ffont%2FSerif%2Fcmunrm.woff;" parent="mQIjWDaoDwh8q7IW5GbV-299" source="mQIjWDaoDwh8q7IW5GbV-304" target="mQIjWDaoDwh8q7IW5GbV-306" edge="1">
+        <mxCell id="mQIjWDaoDwh8q7IW5GbV-305" value="&lt;div&gt;&lt;span style=&quot;background-color: light-dark(#ffffff, var(--ge-dark-color, #121212));&quot;&gt;Benutzer:in ist&lt;br&gt;&lt;i&gt;nicht &lt;/i&gt;&lt;/span&gt;&lt;span style=&quot;background-color: light-dark(#ffffff, var(--ge-dark-color, #121212));&quot;&gt;authentifiziert&lt;/span&gt;&lt;/div&gt;" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;entryPerimeter=0;labelBackgroundColor=none;fontFamily=CMU Serif;fontSource=https%3A%2F%2Fcdn.jsdelivr.net%2Fgh%2Fbitmaks%2Fcm-web-fonts%40latest%2Ffont%2FSerif%2Fcmunrm.woff;" parent="mQIjWDaoDwh8q7IW5GbV-299" source="mQIjWDaoDwh8q7IW5GbV-304" target="mQIjWDaoDwh8q7IW5GbV-306" edge="1">
           <mxGeometry relative="1" as="geometry">
             <mxPoint x="651.0000000000005" y="139.99999999999977" as="targetPoint" />
           </mxGeometry>

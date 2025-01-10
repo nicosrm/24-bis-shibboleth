@@ -2,9 +2,6 @@ name: build article pdf
 on:
   push:
   workflow_call:
-  pull_request:
-    branches:
-      - main
 
 env:
   INPUT_PATH: article/article.pandoc.md
@@ -33,9 +30,13 @@ jobs:
             --resource-path ${{ env.RESOURCE_PATH }}
             --bibliography ${{ env.BIB_PATH }}
             --csl ${{ env.CSL_PATH }}
+            --metadata linkReferences
+            --number-sections
+            -F pandoc-crossref
             --citeproc
-            ${{ env.INPUT_PATH }}
+            --listings
             -o ${{ env.OUTPUT_PATH }}
+            ${{ env.INPUT_PATH }}
       
       - name: Upload as artifact
         uses: actions/upload-artifact@v4

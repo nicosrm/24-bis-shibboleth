@@ -3,12 +3,31 @@ author: Johannes Merkel, Ines Rohrbach, Nico Schramm
 title: Shibboleth
 subtitle: Single Sign-On Login System
 subject: BIS Projekt
-# TODO: add `date: <date>`
+date: 24. Januar 2024
 lang: de-DE
 papersize: a4
 geometry: margin=3cm
 colorlinks: true
 link-citations: true
+listings: true
+sectionsDepth: -1
+secPrefix:
+  - "Abschnitt"
+  - "Abschnitte"
+figureTitle: "Abbildung"
+figPrefix:
+  - "Abbildung"
+  - "Abbildungen"
+header-includes: |
+  \definecolor{codegray}{rgb}{0.5,0.5,0.5}
+  \definecolor{backcolour}{rgb}{0.95,0.95,0.95}
+  \lstset{backgroundcolor=\color{backcolour},
+          frame=single, rulecolor=\color{codegray},
+          numbers=left, numberstyle=\tiny\color{codegray},
+          breaklines=true, basicstyle=\ttfamily\small,
+          aboveskip=1.5em}
+  \usepackage{float} \makeatletter\def\fps@figure{H}\makeatother
+  \usepackage{caption} \captionsetup{format=hang}
 ---
 
 # Shibboleth
@@ -21,7 +40,7 @@ link-citations: true
 - Vorstellung der Gliederung des Artikels
 
 
-## Grundlegende Begriffe
+## Grundlegende Begriffe {#sec:grundlegende-begriffe}
 
 - Überblick über einzelne Komponenten
   - Identity Provider
@@ -29,18 +48,191 @@ link-citations: true
   - Discovery Service
 - grundlegendes Konzept / vereinfachter Prozessablauf (*Basic Interaction*)
 
+### Szenario
+
+In den weiterführenden Abschnitten soll das folgende Szenario genauer beleuchtet werden. Eine Benutzerin der Universität A (`uni-a.example`) möchte auf eine geschützte "Ressource B" zugreifen. Diese wird auf der Seite `pool.example/resource-b` angeboten. Der Discovery Service ist dabei unter `discovery.pool.example` und der Identity Provider der Home Organisation unter `idp.uni-a.example` erreichbar.
+
+<!-- Universität A:      uni-a.example -->
+<!-- IdP:                idp.uni-a.example           https://aai-demo-idp.switch.ch -->
+<!-- Ressource:          pool.example/resource-b     https://aai-demo.switch.ch/secure/ -->
+<!-- Discovery Service:  discovery.pool.example     https://wayf-test.switch.ch -->
+
 
 ## Prozessablauf im Detail
 
-- detaillierter Ablauf des Prozesses
-- vgl. Abschnitt [System Flow](#system-flow) und [SwitchAAI](#switch-aai) Erklärung
-- am konkreten Beispiel (vgl. SwitchAAI)
-- Erläuterung BPMN
-  - weiter aufteilen
-  - Bereitstellung von großem Gesamt-Diagramm
-- ggf. genauere Erläuterung von [IdP Discovery](#identity-provider-discovery-shibbolethidpdiscoveryshibbolethconcepts2020)
+In diesem Abschnitt wird der vereinfachte Prozessablauf, welcher in @sec:grundlegende-begriffe dargestellt wurde, vertiefend erklärt. Dabei soll das dort eingeführte Szenario verfolgt werden. Der Prozess erfolgt in drei übergeordneten Phasen:
 
-![Login-Prozess mittels Shibboleth (Diagramm nach Prozess-Beschreibung aus [@switchExpertDemoSWITCHaai2024a])](../assets/bis_bpmn.drawio.svg)
+1. Erster Zugriff auf den Service Provider und Identity Provider Discovery (siehe @fig:phase1-idp-discovery)
+2. Session Initialisierung und Authentifizierungsanfrage (siehe @fig:phase2-session-auth)
+3. Authentifizierung, Autorisierung und Ressourcenzugriff (siehe @fig:phase3-ressourcen-zugriff) [@switchExpertDemoSWITCHaai2024a; @shibbolethFlowsAndConfigShibbolethConcepts2019].
+
+Die einzelnen Phasen werden im Folgenden genauer erläutert und als *Business Process Model and Notation* (BPMN) Diagrammen dargestellt. Die erste Phase ist dabei in grün, die zweite in orange und die dritte in lila markiert. Ein BPMN-Diagramm, welches alle drei Phasen enthält, kann [online](https://raw.githubusercontent.com/nicosrm/24-bis-shibboleth/refs/heads/main/assets/bis_bpmn.drawio.pdf)[^online-bpmn-ref] eingesehen werden.
+
+[^online-bpmn-ref]: [https://raw.githubusercontent.com/nicosrm/24-bis-shibboleth/refs/heads/main/assets/bis_bpmn.drawio.pdf](https://raw.githubusercontent.com/nicosrm/24-bis-shibboleth/refs/heads/main/assets/bis_bpmn.drawio.pdf)
+
+
+### Phase 1: Identity Provider Discovery
+
+Im folgenden Abschnitt wird die erste Phase des Login-Prozesses mittels Shibboleth erläutert. Dabei handelt es sich um den ersten Zugriff einer Benutzerin oder eines Benutzers auf eine geschützte Ressource, d.h. auf den Service Provider. Dabei ist diese Person noch *nicht* beim jeweiligen Identity Provider angemeldet, sodass die *Identity Provider Discovery* stattfinden muss. Der Prozess ist als BPMN-Diagramm in @fig:phase1-idp-discovery dargestellt.
+
+![BPMN-Diagramm zu Phase 1 des Login-Prozesses mittels Shibboleth (nach Beschreibung aus [@switchExpertDemoSWITCHaai2024a])](../assets/bis_bpmn_phase_1.drawio.svg){#fig:phase1-idp-discovery}
+
+Zunächst greift die Benutzerin erstmalig auf die geschützte Ressource zu. Dabei wird folgende `GET`-Request gestellt:
+
+```
+GET https://www.pool.example/resource-b
+```
+
+Da die angefragte Ressource über das Shibboleth-System, insbesondere den Service Provider, geschützt ist, wird die Anfrage vom Service Provider geprüft. Dabei wird kontrolliert, ob bereits eine aktive Shibboleth-Session vorliegt, d.h. ob die Nutzerin bereits authentifiziert ist. Diese Information wäre im `_shibsession`-Cookie enthalten. Falls dieser aktuell und gültig ist, wird die Benutzerin schlussendlich an die Ressource weitergeleitet. Dieses Szenario wird in @sec:phase-3-ressourcenzugriff genauer erläutert [@switchExpertDemoSWITCHaai2024a; @shibbolethFlowsAndConfigShibbolethConcepts2019].
+
+Falls jedoch noch keine aktive Shibboleth-Session vorliegt, wird die Benutzerin zum Discovery Service weitergeleitet. Da die Information, wohin die Benutzenden nach Auswahl der Home Organisation geschickt werden sollen, nicht verloren gehen darf, wird der `_shibstate`-Cookie gesetzt und Parameter mitgesendet. In neueren Shibboleth-Versionen wird dies mittels *Relay State*-Mechanismen gespeichert [@switchExpertDemoSWITCHaai2024a; @shibbolethFlowsAndConfigShibbolethConcepts2019].
+<!-- TODO: ggf. Relay-State erklären -->
+
+```
+302 FOUND (REDIRECT)
+  Set-Cookie: _shibstate_64656661756c7468747470733a2f2...
+    value=https://pool.example/resource-b
+    path=/
+
+  Location: https://discovery.pool.example/WAYF
+  ?entityID=https://pool.example/shibboleth
+  &return=https://pool.example/Shibboleth.sso/Login?SAMLDS=1&target=ss:mem
+
+GET https://discovery.pool.example/WAYF
+  ?entityID=https://pool.example/shibboleth
+  &return=https://pool.example/Shibboleth.sso/Login?SAMLDS=1&target=ss:mem
+```
+
+Der Discovery Service ermittelt nun die Liste der verfügbaren bzw. unterstützten Identity Provider, welche im folgenden der Nutzerin präsentiert werden. Diese wählt ihren zutreffenden Identity Provider aus – in diesem Szenario entsprechend Universität A (`idp.uni-a.example`). Daher wird die Nutzerin im Anschluss an den ausgewählten Identity Provider der Home Organisation weitergeleitet [@switchExpertDemoSWITCHaai2024a].
+
+```
+POST https://discovery.pool.example/WAYF
+  ?entityID=https://pool.example/shibboleth
+  &return=https://pool.example/Shibboleth.sso/Login?SAMLDS=1&target=ss:mem
+
+POSTDATA
+  user_idp=https://idp.uni-a.example/shibboleth
+
+302 FOUND (REDIRECT)
+Location: https://pool.example/shibboleth/Login
+  ?SAMLDS=1
+  &target=ss:mem
+  &entityID=https://idp.uni-a.example/shibboleth
+```
+
+
+### Phase 2: Session Initialisierung und Authentifizierungsanfrage
+
+In Phase 2 wird die Session initialisiert und eine Authentifizierungsanfrage gestellt. Der Prozess ist als BPMN-Diagramm in @fig:phase2-session-auth dargestellt.
+
+![BPMN-Diagramm zu Phase 2 des Login-Prozesses mittels Shibboleth (nach Beschreibung aus [@switchExpertDemoSWITCHaai2024a])](../assets/bis_bpmn_phase_2.drawio.svg){#fig:phase2-session-auth}
+
+Aufgrund des vorherigen Redirects zum Identity Provider der Home Organisation der Benutzerin, sendet der Browser nun eine `GET`-Request an den IdP. Der *Session Initiator* erstellt weiterhin eine Authentifizierungsanfrage (AuthN), welche automatisch mittels JavaScript abgesendet wird [@switchExpertDemoSWITCHaai2024a].
+
+```
+GET https://pool.example/shibboleth/Login
+  ?SAMLDS=1
+  &target=ss:mem
+  &entityID=https://idp.uni-a.example/shibboleth
+
+POST https://idp.uni-a.example/profile/SAML2/POST/SSO
+  POSTDATA
+    RelayState=ss:mem:23e3a3b1268acd89dc226bb1ce0d0c6ba7ecf773
+    SAMLRequest=PHNhbWxwOkF1dGhuUmVxdWVzdCB4bWxuczp...
+```
+
+Der IdP prüft anschließend die Authentifizierungsanfrage. Wenn diese gültig ist, wird zunächst festgestellt, ob die Nutzerin bereits authentifiziert ist. Dies wird anhand des `_idp_session`-Cookies überprüft. Falls dem nicht so ist, wird eine geeignete Authentifizierungsmethode für die Benutzerin, basierend auf dem Protokoll des Service Providers, ausgewählt. Die Benutzerin wird anschließend an einen kompatiblen Login-Handler weitergeleitet [@switchExpertDemoSWITCHaai2024a; @shibbolethFlowsAndConfigShibbolethConcepts2019]. Dieses Szenario wird in @sec:phase-3-ressourcenzugriff genauer beschrieben.
+
+In diesem Beispiel soll ein Nutzername und Passwort zur Authentifizierung verwendet werden. Bei diesem Redirect wird vom IdP  ein AuthN-Cookie gesetzt, welcher Informationen zur Ressource und einen Authentifizierungstoken enthält. Anschließend wird die Nutzerin zur tatsächlichen, spezifischen Anmeldeseite weitergeleitet [@switchExpertDemoSWITCHaai2024a].
+
+```
+302 MOVED TEMPORARILY (REDIRECT)
+  Set-Cookie: _idp_authn_lc_key
+    value=C22C16A197CB9606067A1A577EF5D996
+    Path=/idp
+    Secure
+
+  Location: https://idp.uni-a.example:443/AuthnEngine
+
+GET https://idp.uni-a.example/AuthnEngine
+  Cookie: _idp_authn_lc_key
+    value=C22C16A197CB9606067A1A577EF5D996
+
+302 MOVED TEMPORARILY (REDIRECT)
+  Location: https://idp.uni-a.example:443/Authn/UserPassword
+
+GET https://idp.uni-a.example/Authn/UserPassword
+  Cookie: _idp_authn_lc_key
+    value=C22C16A197CB9606067A1A577EF5D996
+```
+
+
+### Phase 3: Ressourcenzugriff {#sec:phase-3-ressourcenzugriff}
+
+In der letzten Phase kommt es schließlich zum Ressourcenzugriff. Der Ablauf wird im folgenden beschrieben und ist als BPMN-Diagramm in @fig:phase3-ressourcen-zugriff dargestellt.
+
+![BPMN-Diagramm zu Phase 3 des Login-Prozesses mittels Shibboleth (nach Beschreibung aus [@switchExpertDemoSWITCHaai2024a])](../assets/bis_bpmn_phase_3.drawio.svg){#fig:phase3-ressourcen-zugriff}
+
+Auf der Anmeldeseite des Identity Providers gibt die Benutzerin anschließend ihre Anmeldedaten ein. Diese werden mittels `POST`-Request an den IdP geschickt, welche den AuthN-Cookie enthält [@switchExpertDemoSWITCHaai2024a].
+
+```
+POST https://idp.uni-a.example/Authn/UserPassword
+  POSTDATA
+    j_username=demouser
+    j_password=demo
+
+  Cookie: _idp_authn_lc_key
+    value=C22C16A197CB9606067A1A577EF5D996
+```
+
+Nach erfolgreicher Verifikation der Anmeldedaten durch den IdP, findet das *Attribute Resolving* und *Filtering* statt. Die erhaltenen Daten werden basierend auf den Protokollen und der Konfiguration des Service Providers durch einen Attribut-Filter auf die unbedingt notwendigen Daten reduziert, um ein Maß von Datenschutz zu gewährleisten. Anschließend wird eine HTML-Seite generiert, welche eine *SAML Assertion* beinhaltet. Letztere umfasst das Authentifizierungsstatement sowie das *Attribute-Statement*, welches die Nutzerattribute enthält. Die Daten werden in eine geeignete Form transformiert und ggf. verschlüsselt sowie signiert. Die Assertion wird daraufhin automatisch abgesendet. Zudem wird nun der `_idp_session`-Cookie gesetzt, der bei einer erneuten Authentifizierung durch denselben IdP ausgewertet wird. Direkt im Anschluss sendet der Browser eine `POST`-Request an den Service Provider, die sowohl die *SAML-Response* als auch den `_shibstate`-Cookie enthält [@switchExpertDemoSWITCHaai2024a; @shibbolethFlowsAndConfigShibbolethConcepts2019].
+
+```
+200 OK
+Set-Cookie: _idp_session
+  value=4m2ETlKYtvbNEmBzVNo3UHLuKSdo3HqTUqAmeZiar94=
+  Path=/idp
+
+[ASSERTION POST FORM HTML PAGE] 
+
+POST https://uni-a.example/Shibboleth.sso/SAML2/POST
+  POSTDATA
+    RelayState=cookie
+    SAMLResponse=PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGl...
+
+  Cookie: _shibstate_64656661756c7468747470733a2f2...
+    value=https://pool.example/resource-b
+```
+
+Anschließend verarbeitet der Service Provider die SAML-Assertion sowie die Authentifizierungs- und Attribut-Statements. Dabei werden die Attribute sowie andere Informationen aus der Nachricht extrahiert und eine neue User-Session erstellt. Schließlich wird die Nutzerin zur angefragten Ressource weitergeleitet, wobei ein Verweis auf die Ressource im `_shibstate`-Cookie bzw. Relay-State hinterlegt wird. Weiterhin wird der `_shibsession`-Cookie gesetzt, wodurch ein erneuter Zugriff auf den Service Provider (innerhalb einer bestimmten Zeit) direkt als authentifiziert gilt [@switchExpertDemoSWITCHaai2024a; @shibbolethFlowsAndConfigShibbolethConcepts2019].
+
+```
+302 FOUND (REDIRECT)
+  Set-Cookie: _shibstate_64656661756c7468747470733a2f2...
+    value=
+    path=/
+
+  Set-Cookie: _shibsession_64656661756c7468747470733a2f2...
+    value=_0b6d4e89d2e9c4481738094f2a2c9de0
+    path=/
+
+  Location: https://pool.example/resource-b
+```
+
+Schlussendlich findet eine erneute Anfrage an die geschützte Ressource (`pool.example/resource-b`) durch den Browser statt, welcher den `_shibsession`-Cookie enthält. [@switchExpertDemoSWITCHaai2024a, @shibbolethFlowsAndConfigShibbolethConcepts2019].
+
+```
+GET https://pool.example/resource-b
+  Cookie: _shibsession_64656661756c7468747470733a2f2...
+    value=_0b6d4e89d2e9c4481738094f2a2c9de0
+```
+
+Erneut wird der `_shibsession`-Cookie überprüft, wodurch diesmal eine aktive Shibboleth-Session erkannt wird. Somit kann die Autorisierung stattfinden, d.h. die Überprüfung, ob die Benutzerin über die notwendigen Rechte zum Zugriff auf die gewünschte Ressource verfügt. Die Rechte werden über alle anwendbaren *Access-Control*-Plugins, bspw. *Shibboleth Access Rules*, ermittelt, wobei unter anderem die Benutzer-Attribute abgeglichen werden. Da die Benutzerin in dem Fall über die notwendigen Rechte verfügt, wird der Zugriff schlussendlich auf die initial angefragte, geschützte Ressource gewährt [@switchExpertDemoSWITCHaai2024a].
+
+```
+200 OK
+  [RESOURCE HTML PAGE]
+```
 
 
 ## Einsatz von Shibboleth
@@ -178,9 +370,9 @@ link-citations: true
 
 [@shibbolethShibbolethConcepts2023]
 
-![Basic Interaction [vgl. @shibbolethShibbolethConcepts2023]\label{fig:basic-interaction}](../assets/basic_interaction.drawio.svg)
+![Basic Interaction [vgl. @shibbolethShibbolethConcepts2023]](../assets/basic_interaction.drawio.svg){#fig:basic-interaction}
 
-Grundlegende Interaktionen wie in \autoref{fig:basic-interaction} dargestellt
+Grundlegende Interaktionen wie in @fig:basic-interaction dargestellt
 
 1. SP erkennt Nutzer, der versucht, auf eingeschränkte Inhalte zuzugreifen
 2. SP generiert Authentifizierungsanfrage, Senden der Anfrage und des Nutzers
@@ -230,7 +422,7 @@ Grundlegende Interaktionen wie in \autoref{fig:basic-interaction} dargestellt
 
 <br>
 
-- Prozess der IdP Bestimmung: [*IdP Discovery*](https://shibboleth.atlassian.net/wiki/spaces/CONCEPT/pages/928645263/IdPDiscovery)
+- Prozess der IdP Bestimmung: [*IdP Discovery*](#identity-provider-discovery-shibbolethidpdiscoveryshibbolethconcepts2020)
 - verschiedene Konfigurationsmöglichkeiten, Interaktionen, Cookies etc.
 - "A SessionInitiator might supply a text entry box, refer the user to a locally or remotely deployed discovery service (DS), or select a fixed IdP based on the resource requested."
 

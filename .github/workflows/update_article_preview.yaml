@@ -25,9 +25,10 @@ jobs:
         uses: docker://pandoc/core:latest
         with:
           args: >-
-            --shift-heading-level-by=-1
             --bibliography ${{ env.BIB_PATH }}
             --csl ${{ env.CSL_PATH }}
+            --metadata numberSections
+            -F pandoc-crossref
             --citeproc
             --to=gfm
             -o ${{ env.PREVIEW_PATH }}

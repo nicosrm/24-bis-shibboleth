@@ -691,7 +691,8 @@ Zugegriffen: 24. November 2024. \[Online\]. Verfügbar unter:
 
 <span class="csl-left-margin">\[13\]
 </span><span class="csl-right-inline">T. Michels, „Identity Management
-und Shibboleth: Ein Überblick“.</span>
+und Shibboleth: Ein Überblick“, März 2019, Verfügbar unter:
+<https://download.aai.dfn.de/praesentationen/zki_ak_vd_2019_01/einfuehrung_idp_michels.pdf></span>
 
 </div>
 

@@ -43,13 +43,13 @@ des Login-Prozesses:
     [\[2\]](#ref-dfnDFNAAIDokumentationEinfuhrung).
 
 3.  *Discovery Services* (DS) unterstützen Service Provider bei der
-    Ermittlung des der Identity Provider der Benutzer:innen, da die
-    Ressource keine Information darüber die Home-Organisation der
-    Benutzer:innen hat. Sie stellen einen Service zur Präsentation eines
-    Standard-Interfaces dar, mit welchem die Benutzer:innen ihre
-    Home-Organisation (und damit IdP) auswählen können. Somit stellen
-    sie einen *Where Are You From Service* (WAYF) dar. DS können mit der
-    Ressource oder als zentraler, geteilter Service betrieben werden
+    Ermittlung des Identity Providers der Benutzer:innen, da die
+    Ressource keine Information über die Home-Organisation hat. Sie
+    stellen einen Service zur Präsentation eines Standard-Interfaces
+    dar, mit welchem die Benutzer:innen ihre Home-Organisation (und
+    damit IdP) auswählen können. Somit stellen sie einen *Where Are You
+    From Service* (WAYF) dar. DS können mit der Ressource verbunden oder
+    als zentraler, geteilter Service betrieben werden
     [\[1\]](#ref-shibbolethShibbolethConcepts2023),
     [\[5\]](#ref-shibbolethIdPDiscoveryShibbolethConcepts2020),
     [\[6\]](#ref-switchSimpleDemoSwitchAAI2024).

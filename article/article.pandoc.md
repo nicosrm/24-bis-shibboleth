@@ -34,11 +34,12 @@ header-includes: |
 
 ## Einführung
 
-- allgemeine Worte zu Shibboleth
-- Motivation, Ziele
-- Anwendungsgebiete / Zielgruppe, Mitglieder Consortium
-- Vorstellung der Gliederung des Artikels
+**Einleitenden Satz hier einfügen**
+An dieser Stelle kommt Shibboleth ins Spiel. Shibboleth ist ein Open-Source-Softwareprojekt für Web-basiertes Single-Sign-On (SSO) und Identitätsmanagement [@cantorConsortiumFAQShibboleth2023]. Zur Anwendung kommt es vor allem für die effiziente Anmeldung bei föderierten Systemen, wie z.B. akademischen Institutionen [@shibbolethShibbolethConsortium2024], [@cantorConsortiumFAQShibboleth2023]. Der Zugang zu geschützten Ressourcen wird dabei durch den Identity Provider als zentrale Komponente von Shibboleth verwaltet. Shibboleth ist ein komplexes System und muss für die Nutzung selbst aufgesetzt werden [@cantorConsortiumFAQShibboleth2023].
 
+Akademische Institutionen profitieren sehr von der Nutzung von Shibboleth. An der HTWK Leipzig ermöglicht Shibboleth beispielsweise ein sicheres Identitätsmanagement und den Login mit nur einem Passwort und Benutzernamen bei verschiedenen Web-Diensten. So ist es möglich, sich u.a. bei Opal, der HTWK Webseite, AutoTool, den GitLab Instanzen, der Bibliothek oder wissenschaftliche Ressourcen wie IEEE und Springer mit ein und den selben Logindaten anzumelden. Die Anmeldung wird über den HTWK eigenen Identiy Provider durchgeführt und macht die Nutzung der Services durch Studierende und Mitarbeitende sehr viel einfacher. Auch das Identitätsmanagement wird dadurch für die Administratoren einfacher und sicherer.
+
+In diesem Artikel wird ein Überblick über Shibboleth gegeben. Es werden grundlegende Begriffe erklärt, der Prozessablauf im Detail an einem Beispielszenario gezeigt und Vor- und Nachteile im Vergleich mit ähnlichen Softwarelösungen beschrieben.
 
 ## Grundlegende Begriffe {#sec:grundlegende-begriffe}
 

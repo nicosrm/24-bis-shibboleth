@@ -284,11 +284,15 @@ Darüber hinaus gibt es weitere kostenpflichtige Alternativen wie Okta, OneLogin
 
 ### Zukunft
 
-Shibboleth wird fortlaufend weiterentwickelt. In dem folgenden Abschnitt wird ein kurzer Einblick in die Agenda der nahen Zukuft gegeben.
+Shibboleth wird fortlaufend weiterentwickelt. In dem folgenden Abschnitt wird ein kurzer Einblick in die Agenda der nahen Zukunft gegeben.
 
-Bis 2027 soll die passwortlose Authentifikation ermöglicht werden, sodass Nutzer:innen beispielsweise mit FIDO, WebAuthn und Passkeys vom Login-Handler (?) authentifiziert werden. Zudem sollen verifizierte Anmeldedaten hinzugefügt werden.
-Verbessert werden soll die Produkt Dokumentation und Konfiguration des IdPs und dessen Endnutzer (?) und Administrative UI. In den OP und RP Plugins soll die Unterstützung für OpenID integriert werden.
-Außerdem soll ein Redesigned SP, V4, ... [...link].
+Bis 2027 soll die passwortlose Authentifikation ermöglicht werden, sodass Nutzer:innen beispielsweise mit FIDO, WebAuthn und Passkeys vom Login-Handler authentifiziert werden. Zudem sollen Digital Wallets und verifizierte Anmeldedaten angegangen werden, wobei die Hauptrolle darin gesehen wird, ein Aussteller dieser zu werden oder sie zu verifizieren.
+
+Verbessert werden soll die Produktdokumentation und Konfiguration des IdPs, um den Fokus mehr auf Konzepte, einleitendes Material und Beispiele zu legen.
+Dies geht einher mit der Neukonzeption des SP, welcher zukünftig als Plugin für den IdP eingeführt werden soll.
+
+Zudem soll die OpenID Federation unterstützt werden, was für mehr Harmony zwischen den SAML und OpenID Metadaten sorgen soll.
+Außerdem sollen weitere UI Komponenten zum IdP hinzugefügt werden, welche unter anderem Management von Login Aktivitäten und passwortlosen Authentifikation behandeln [@shibbolethDevelopmentCenterProject2024].
 
 
 ## Zusammenfassung

@@ -72,15 +72,15 @@ Abbildung 1 skizziert.
 
 <figure id="fig:grundlegender-ablauf">
 <img src="../assets/basic_interaction_article.drawio.svg"
-alt="Abbildung 1: Grundlegender Ablauf [1], [7], [8]" />
-<figcaption aria-hidden="true">Abbildung 1: Grundlegender Ablauf <span
-class="citation"
+alt="Abbildung 1: Grundlegender Ablauf (nach Beschreibungen aus [1], [7], [8])" />
+<figcaption aria-hidden="true">Abbildung 1: Grundlegender Ablauf (nach
+Beschreibungen aus <span class="citation"
 data-cites="shibbolethShibbolethConcepts2023 switchExpertDemoSWITCHaai2024a michelsIdentityManagementUnd"><a
 href="#ref-shibbolethShibbolethConcepts2023"
 role="doc-biblioref">[1]</a>, <a
 href="#ref-switchExpertDemoSWITCHaai2024a" role="doc-biblioref">[7]</a>,
 <a href="#ref-michelsIdentityManagementUnd"
-role="doc-biblioref">[8]</a></span></figcaption>
+role="doc-biblioref">[8]</a></span>)</figcaption>
 </figure>
 
 ### 1.2.3 Szenario

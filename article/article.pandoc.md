@@ -60,7 +60,7 @@ Das Shibboleth-System verwendet insgesamt drei Hautkomponenten während des Logi
 
 Der grundlegende Ablauf zum Zugriff auf eine geschützte Ressource verläuft wie folgt: Zunächst fragt ein:e Benutzer:in den Zugriff auf eine bestimmte geschützte Ressource bei einem Service Provider an. Dieser leitet zum Discovery Service weiter, mit welchem der zuständige Identity Provider des oder der Benutzer:in ermittelt wird. Anschließend generiert der SP eine Authentifizierungsanfrage und sendet diese an den ermittelten IdP. Bei diesem findet die Authentifizierung statt. Der SP verifiziert die Authentifizierungsantwort vom IdP und sendet eine Anfrage an die Ressource, welche den ursprünglich angefragten Inhalt zurückgibt [@shibbolethShibbolethConcepts2023; @switchExpertDemoSWITCHaai2024a; @michelsIdentityManagementUnd]. Der Ablauf ist in @fig:grundlegender-ablauf skizziert.
 
-![Grundlegender Ablauf [@shibbolethShibbolethConcepts2023; @switchExpertDemoSWITCHaai2024a; @michelsIdentityManagementUnd]](../assets/basic_interaction_article.drawio.svg){#fig:grundlegender-ablauf}
+![Grundlegender Ablauf (nach Beschreibungen aus [ @shibbolethShibbolethConcepts2023; @switchExpertDemoSWITCHaai2024a; @michelsIdentityManagementUnd])](../assets/basic_interaction_article.drawio.svg){#fig:grundlegender-ablauf}
 
 
 ### Szenario {#sec:szenario}

@@ -516,6 +516,25 @@ passwortlosen Authentifikation befassen
 
 ## 1.6 Zusammenfassung
 
+Shibboleth ist ein sich weiterentwickelndes Web-basiertes SSO und
+Identitätsmanagementsystem, bestehend aus drei Komponenten: dem Identity
+Provider, dem Service Provider und dem Discovery Service.
+
+Zuständig für die Verwaltung der geschützten Ressourcen ist der SP,
+welcher bei einer Zugriffsanfrage nach einer aktiven Session und
+Autorisierung prüft. Besteht keine aktive Session, stellt der DS zur
+Ermittlung des zuständigen IdPs der oder dem Benutzer:in eine Auswahl
+von Home-Organisations. Der ausgewählte IdP authentifiziert anschließend
+die oder den Benutzer:in und schickt erneut eine Zugriffsanfrage an den
+SP.
+
+Dieses Verfahren ermöglicht den Austausch von Authentifizierungsdaten
+auch zwischen verschiedenen externen Organisationen und wird dadurch vor
+allem von akademischen Institutionen eingesetzt. Als Open Source
+Software fallen keine Kosten an, es gibt aber die Möglichkeit einer
+kostenpflichtigen Mitgliedschaft, welche unter anderem Support für die
+ansonsten eigenverantwortliche Administration anbietet.
+
 ## 1.7 Literatur
 
 <div id="refs" class="references csl-bib-body" entry-spacing="0">

@@ -266,33 +266,25 @@ Erneut wird der `_shibsession`-Cookie überprüft, wodurch diesmal eine aktive S
 
 ## Diskussion
 
-Im Folgenden wird auf die Vorteile und Nachteile von Shibboleth eingegangen.
+Im folgenden Abschnitt wird Shibboleth diskutiert. Dabei wird auf die Vorteile und Nachteile eingegangen und verschiedene Alternativen beleuchtet. Abschließend wird ein kurzer Einblick in die Agenda der nahen Zukunft gegeben.
 
-Shibboleth ist seit 2000 in Verwendung, weshalb es ein etabliertes SSO-System ist [@shibbolethShibbolethConsortium2024]. Grundsätzlich fallen als Open Source Software keine Kosten an. Das Shibboleth Consortium bietet allerdings kostenpflichtige Mitgliedschaften an, die das Projekt finanzieren und den Mitgliedern Hilfestellungen (Support) und weitere Partizipationsmöglichkeiten bieten [@shibbolethShibbolethConsortium2024], [@shibbolethMembership]. Dabei wird ein jährliche Betrag erhoben, der auf der Art und Größe der Institution basiert [@shibbolethConsortiumMembershipFees]. Größere Mitglieder sind u.a. der DNF Verein, die Stanford University, die University of Oxford oder das Massachusetts Institute of Technology [@shibbolethOurMembers2024]. Shibboleth unterstützt verschiedene Standardprotokolle wie beispielsweise SAML, OpenID Connect, LDAP [@cantorConsortiumFAQShibboleth2023], [@overtsoftwareAzureADADFS2022]. Zudem ist es Windows unabhängig und dezentral [@overtsoftwareAzureADADFS2022].
+Shibboleth ist seit 2000 in Verwendung und hat sich seitdem zu einem etablierten SSO-System entwickelt [@shibbolethShibbolethConsortium2024]. Grundsätzlich fallen als Open Source Software keine Kosten an. Das *Shibboleth Consortium* bietet allerdings kostenpflichtige Mitgliedschaften an, die das Projekt finanzieren und den Mitgliedern Hilfestellungen (*Support*) sowie weitere Partizipationsmöglichkeiten bieten [@shibbolethShibbolethConsortium2024; @shibbolethMembership]. Dabei wird ein jährlicher Beitrag erhoben, der auf der Art und Größe der Institution basiert [@shibbolethConsortiumMembershipFees]. Größere Mitglieder sind unter anderem der Verein zur Förderung eines Deutschen Forschungsnetzes (DFN-Verein), die Stanford University, die University of Oxford oder das Massachusetts Institute of Technology (MIT) [@shibbolethOurMembers2024]. Shibboleth unterstützt verschiedene Standardprotokolle wie beispielsweise SAML, OpenID Connect und LDAP [@cantorConsortiumFAQShibboleth2023; @overtsoftwareAzureADADFS2022]. Außerdem ist es Windows-unabhängig und dezentral [@overtsoftwareAzureADADFS2022].
 
-Shibboleth eignet sich nicht besonders für Unternehmen, welche hauptsächlich interne Zugriffsverwaltung und Authentifizierung benötigen, sondern unterstützt mehr den Austausch von Authentifizierungsdaten zwischen verschiedenen, teils externen Organisationen (föderierte Identitäten). Außerdem ist eine eigenverantwortliche Administration benötigt [@cantorConsortiumFAQShibboleth2023].
+Shibboleth ist nicht für Unternehmen gedacht, welche hauptsächlich interne Zugriffsverwaltung und Authentifizierung benötigen. Vielmehr unterstützt es den Austausch von Authentifizierungsdaten zwischen verschiedenen, teils externen Organisationen (föderierte Identitäten). Weiterhin ist eine eigenverantwortliche Administration notwendig [@cantorConsortiumFAQShibboleth2023].
 
-### Alternativen
 
-Im weiterführenden Abschnitt werden Alternativen zu Shibboleth kurz beleuchtet.
+Eine Alternative zu Shibboleth ist *Active Directory* (AD), bei der es sich um ein On-Premise Identitätsmanagementsystem handelt[@sommergutWasSindUnterschiede2019], welches sich besonders gut für Windows-Umgebungen eignet. Die Einrichtung und Verwaltung ist jedoch komplex und es wird kein Web-basiertes SSO angeboten.
 
-Bei Active Directory (AD) handelt es sich um ein on-promise Identitätsmanagementsystem [@sommergutWasSindUnterschiede2019], welches sich besonders gut für Windows-Umgebungen eignet. Die Einrichtung und Verwaltung ist jedoch komplex und es wird kein Web-basiertes SSO angeboten.
+Ein alternatives Identitätsmanagementsystem mit SSO ist *Azure Active Directory* (AAD) bzw. *Microsoft Entra ID* [@chikMicrosoftEntraExpands2023; @celestedgNewNameAzure2024], welches im Vergleich zu AD Cloud-basiert ist und Microsoft Abhängigkeiten besitzt [@sommergutWasSindUnterschiede2019]. Dadurch eignet sich Microsoft Entra ID besonders für Unternehmen, die vollständig in Microsoft 365 und Azure integriert sind.
 
-Eine Alternative mit SSO ist Azure Active Directory bzw. Mircosoft Entra ID [@chikMicrosoftEntraExpands2023], [@celestedgNewNameAzure2024], welche im Vergleich zu AD Cloud-basiert ist und Mircosoft Abhängigkeiten besitzt [@sommergutWasSindUnterschiede2019]. Dadurch eignet sich Mircosoft Entra ID besonders für Unternehmen, die vollständig in Microsoft 365 und Azure integriert sind.
+Darüber hinaus gibt es weitere kostenpflichtige Alternativen wie *Okta*, *OneLogin* oder *Ping Identity*, welche ebenfalls Cloud-basierte Lösungen sind und den Fokus auf unterschiedliche Aspekte wie Sicherheit oder Benutzerfreundlichkeit legen [@oktaSecureSingleSignOn; @oneloginErweiterteAuthentifizierung; @pingidentityFunktionenPingIdentityPlattform].
 
-Darüber hinaus gibt es weitere kostenpflichtige Alternativen wie Okta, OneLogin oder Ping Identity, welche ebenfalls Cloud basierte Lösungen sind und den Fokus auf unterschiedliche Aspekte wie Sicherheit oder Benutzerfeundlichkeit legen [@oktaSecureSingleSignOn], [@oneloginErweiterteAuthentifizierung], [@pingidentityFunktionenPingIdentityPlattform].
 
-### Zukunft
+Die Agenda von Shibboleth sieht vor, bis 2027 die passwortlose Authentifikation zu ermöglichen, sodass Nutzer:innen beispielsweise mit FIDO, WebAuthn und Passkeys vom Login-Handler authentifiziert werden können. Zudem sollen *Digital Wallets* und verifizierte Anmeldedaten angegangen werden, wobei die Hauptrolle darin gesehen wird, ein Aussteller dieser zu werden oder sie zu verifizieren.
 
-Shibboleth wird fortlaufend weiterentwickelt. In dem folgenden Abschnitt wird ein kurzer Einblick in die Agenda der nahen Zukunft gegeben.
+Verbessert werden soll die Produktdokumentation und Konfiguration der IdPs, um einen Fokus auf Konzepte, einleitendes Material und Beispiele zu legen. Dies geht einher mit der Neukonzeption der SPs, welche zukünftig als Plugin für IdPs eingeführt werden soll.
 
-Bis 2027 soll die passwortlose Authentifikation ermöglicht werden, sodass Nutzer:innen beispielsweise mit FIDO, WebAuthn und Passkeys vom Login-Handler authentifiziert werden. Zudem sollen Digital Wallets und verifizierte Anmeldedaten angegangen werden, wobei die Hauptrolle darin gesehen wird, ein Aussteller dieser zu werden oder sie zu verifizieren.
-
-Verbessert werden soll die Produktdokumentation und Konfiguration des IdPs, um den Fokus mehr auf Konzepte, einleitendes Material und Beispiele zu legen.
-Dies geht einher mit der Neukonzeption des SP, welcher zukünftig als Plugin für den IdP eingeführt werden soll.
-
-Zudem soll die OpenID Federation unterstützt werden, was für mehr Harmonie zwischen den SAML und OpenID Metadaten sorgen soll.
-Außerdem sollen weitere UI Komponenten zum IdP hinzugefügt werden, welche unter anderem Management von Login Aktivitäten und passwortloser Authentifikation behandeln [@shibbolethDevelopmentCenterProject2024].
+Zudem soll die *OpenID Federation* unterstützt werden, wodurch die Harmonie zwischen den SAML und OpenID Metadaten verstärkt werden soll. Außerdem sollen weitere UI-Komponenten zum IdP hinzugefügt werden, welche unter anderem das Management von Login-Aktivitäten sowie eine passwortlose Authentifikation behandeln [@shibbolethDevelopmentCenterProject2024].
 
 
 ## Zusammenfassung

@@ -1,6 +1,4 @@
-# 1 Shibboleth
-
-## 1.1 Einführung
+# Einführung
 
 Heutzutage ist der Zugriff auf eine Vielzahl von Online-Diensten und
 -Ressourcen erforderlich. Vor allem in föderierten Systemen sind
@@ -49,15 +47,16 @@ Beispielszenarios. Weiterhin werden die Vor- und Nachteile im Vergleich
 zu ähnlichen Softwarelösungen diskutiert. Abschließend wird ein Fazit
 gezogen.
 
-## 1.2 Grundlegende Begriffe
+# Grundlegende Begriffe
 
 Im folgenden Abschnitt werden verschiedene theoretische Grundlagen
 gelegt und zentrale Begriffe erläutert. Zunächst werden die zentralen
 Komponenten sowie der grundlegende Prozessablauf des Shibboleth-Systems
 erläutert. Anschließend wird ein Beispiel-Szenario skizziert, auf
-welchem die Erklärung in Abschnitt 1.3 basiert.
+welchem die Erklärung in
+[**sec:prozessablauf?**](#ref-sec:prozessablauf) basiert.
 
-### 1.2.1 Komponenten
+## Komponenten
 
 Das Shibboleth-System verwendet insgesamt drei Hautkomponenten während
 des Login-Prozesses:
@@ -96,7 +95,7 @@ des Login-Prozesses:
     [\[10\]](#ref-shibbolethIdPDiscoveryShibbolethConcepts2020),
     [\[11\]](#ref-switchSimpleDemoSwitchAAI2024).
 
-### 1.2.2 Grundlegender Ablauf
+## Grundlegender Ablauf
 
 Der grundlegende Ablauf zum Zugriff auf eine geschützte Ressource
 verläuft wie folgt: Zunächst fragt ein:e Benutzer:in den Zugriff auf
@@ -110,13 +109,14 @@ Anfrage an die Ressource, welche den ursprünglich angefragten Inhalt
 zurückgibt [\[6\]](#ref-shibbolethShibbolethConcepts2023),
 [\[12\]](#ref-switchExpertDemoSWITCHaai2024a),
 [\[13\]](#ref-michelsIdentityManagementUnd). Der Ablauf ist in
-Abbildung 1 skizziert.
+[**fig:grundlegender-ablauf?**](#ref-fig:grundlegender-ablauf)
+skizziert.
 
 <figure id="fig:grundlegender-ablauf">
 <img src="../assets/basic_interaction_article.drawio.svg"
-alt="Abbildung 1: Grundlegender Ablauf (nach Beschreibungen aus [6], [12], [13])" />
-<figcaption aria-hidden="true">Abbildung 1: Grundlegender Ablauf (nach
-Beschreibungen aus <span class="citation"
+alt="Grundlegender Ablauf (nach Beschreibungen aus [6], [12], [13])" />
+<figcaption aria-hidden="true">Grundlegender Ablauf (nach Beschreibungen
+aus <span class="citation"
 data-cites="shibbolethShibbolethConcepts2023 switchExpertDemoSWITCHaai2024a michelsIdentityManagementUnd"><a
 href="#ref-shibbolethShibbolethConcepts2023"
 role="doc-biblioref">[6]</a>, <a
@@ -126,7 +126,7 @@ href="#ref-michelsIdentityManagementUnd"
 role="doc-biblioref">[13]</a></span>)</figcaption>
 </figure>
 
-### 1.2.3 Szenario
+## Szenario
 
 In den weiterführenden Abschnitten soll das folgende Szenario genauer
 beleuchtet werden. Eine Benutzerin der Universität A (`uni-a.example`)
@@ -143,19 +143,21 @@ Organisation (hier Universität A) unter `idp.uni-a.example` erreichbar.
 
 <!-- Discovery Service:  discovery.pool.example      https://wayf-test.switch.ch -->
 
-## 1.3 Prozessablauf im Detail
+# Prozessablauf im Detail
 
 In diesem Abschnitt wird der vereinfachte Prozessablauf, welcher in
-Abschnitt 1.2.3 dargestellt wurde, vertiefend erklärt. Dabei soll das
-dort eingeführte Szenario verfolgt werden. Der Prozess erfolgt in drei
-übergeordneten Phasen:
+[**sec:szenario?**](#ref-sec:szenario) dargestellt wurde, vertiefend
+erklärt. Dabei soll das dort eingeführte Szenario verfolgt werden. Der
+Prozess erfolgt in drei übergeordneten Phasen:
 
 1.  Erster Zugriff auf den Service Provider und Identity Provider
-    Discovery (siehe Abbildung 2)
+    Discovery (siehe
+    [**fig:phase1-idp-discovery?**](#ref-fig:phase1-idp-discovery))
 2.  Session Initialisierung und Authentifizierungsanfrage (siehe
-    Abbildung 3)
+    [**fig:phase2-session-auth?**](#ref-fig:phase2-session-auth))
 3.  Authentifizierung, Autorisierung und Ressourcenzugriff (siehe
-    Abbildung 4) [\[12\]](#ref-switchExpertDemoSWITCHaai2024a),
+    [**fig:phase3-ressourcen-zugriff?**](#ref-fig:phase3-ressourcen-zugriff))
+    [\[12\]](#ref-switchExpertDemoSWITCHaai2024a),
     [\[14\]](#ref-shibbolethFlowsAndConfigShibbolethConcepts2019).
 
 Die einzelnen Phasen werden im Folgenden genauer erläutert und als
@@ -165,7 +167,7 @@ lila markiert. Ein BPMN-Diagramm, welches alle drei Phasen enthält, kann
 [online](https://raw.githubusercontent.com/nicosrm/24-bis-shibboleth/refs/heads/main/assets/bis_bpmn.drawio.pdf)[^1]
 eingesehen werden.
 
-### 1.3.1 Phase 1: Identity Provider Discovery
+## Phase 1: Identity Provider Discovery
 
 Im folgenden Abschnitt wird die erste Phase des Login-Prozesses mittels
 Shibboleth erläutert. Dabei handelt es sich um den ersten Zugriff einer
@@ -173,12 +175,13 @@ Benutzerin oder eines Benutzers auf eine geschützte Ressource, d.h. auf
 den Service Provider. Dabei ist diese Person noch *nicht* beim
 jeweiligen Identity Provider angemeldet, sodass die *Identity Provider
 Discovery* stattfinden muss. Der Prozess ist als BPMN-Diagramm in
-Abbildung 2 dargestellt.
+[**fig:phase1-idp-discovery?**](#ref-fig:phase1-idp-discovery)
+dargestellt.
 
 <figure id="fig:phase1-idp-discovery">
 <img src="../assets/bis_bpmn_phase_1.drawio.svg"
-alt="Abbildung 2: BPMN-Diagramm zu Phase 1 des Login-Prozesses mittels Shibboleth (nach Beschreibung aus [12])" />
-<figcaption aria-hidden="true">Abbildung 2: BPMN-Diagramm zu Phase 1 des
+alt="BPMN-Diagramm zu Phase 1 des Login-Prozesses mittels Shibboleth (nach Beschreibung aus [12])" />
+<figcaption aria-hidden="true">BPMN-Diagramm zu Phase 1 des
 Login-Prozesses mittels Shibboleth (nach Beschreibung aus <span
 class="citation" data-cites="switchExpertDemoSWITCHaai2024a"><a
 href="#ref-switchExpertDemoSWITCHaai2024a"
@@ -197,8 +200,8 @@ Shibboleth-Session vorliegt, d.h. ob die Nutzerin bereits
 authentifiziert ist. Diese Information wäre im `_shibsession`-Cookie
 enthalten. Falls dieser aktuell und gültig ist, wird die Benutzerin
 schlussendlich an die Ressource weitergeleitet. Dieses Szenario wird in
-Abschnitt 1.3.3 genauer erläutert
-[\[12\]](#ref-switchExpertDemoSWITCHaai2024a),
+[**sec:phase-3-ressourcenzugriff?**](#ref-sec:phase-3-ressourcenzugriff)
+genauer erläutert [\[12\]](#ref-switchExpertDemoSWITCHaai2024a),
 [\[14\]](#ref-shibbolethFlowsAndConfigShibbolethConcepts2019).
 
 Falls jedoch noch keine aktive Shibboleth-Session vorliegt, wird die
@@ -245,16 +248,17 @@ Provider der Home Organisation weitergeleitet
       &target=ss:mem
       &entityID=https://idp.uni-a.example/shibboleth
 
-### 1.3.2 Phase 2: Session Initialisierung und Authentifizierungsanfrage
+## Phase 2: Session Initialisierung und Authentifizierungsanfrage
 
 In Phase 2 wird die Session initialisiert und eine
 Authentifizierungsanfrage gestellt. Der Prozess ist als BPMN-Diagramm in
-Abbildung 3 dargestellt.
+[**fig:phase2-session-auth?**](#ref-fig:phase2-session-auth)
+dargestellt.
 
 <figure id="fig:phase2-session-auth">
 <img src="../assets/bis_bpmn_phase_2.drawio.svg"
-alt="Abbildung 3: BPMN-Diagramm zu Phase 2 des Login-Prozesses mittels Shibboleth (nach Beschreibung aus [12])" />
-<figcaption aria-hidden="true">Abbildung 3: BPMN-Diagramm zu Phase 2 des
+alt="BPMN-Diagramm zu Phase 2 des Login-Prozesses mittels Shibboleth (nach Beschreibung aus [12])" />
+<figcaption aria-hidden="true">BPMN-Diagramm zu Phase 2 des
 Login-Prozesses mittels Shibboleth (nach Beschreibung aus <span
 class="citation" data-cites="switchExpertDemoSWITCHaai2024a"><a
 href="#ref-switchExpertDemoSWITCHaai2024a"
@@ -286,7 +290,9 @@ Protokoll des Service Providers, ausgewählt. Die Benutzerin wird
 anschließend an einen kompatiblen Login-Handler weitergeleitet
 [\[12\]](#ref-switchExpertDemoSWITCHaai2024a),
 [\[14\]](#ref-shibbolethFlowsAndConfigShibbolethConcepts2019). Dieses
-Szenario wird in Abschnitt 1.3.3 genauer beschrieben.
+Szenario wird in
+[**sec:phase-3-ressourcenzugriff?**](#ref-sec:phase-3-ressourcenzugriff)
+genauer beschrieben.
 
 In diesem Beispiel soll ein Nutzername und Passwort zur
 Authentifizierung verwendet werden. Bei diesem Redirect wird vom IdP ein
@@ -314,16 +320,17 @@ tatsächlichen, spezifischen Anmeldeseite weitergeleitet
       Cookie: _idp_authn_lc_key
         value=C22C16A197CB9606067A1A577EF5D996
 
-### 1.3.3 Phase 3: Ressourcenzugriff
+## Phase 3: Ressourcenzugriff
 
 In der letzten Phase kommt es schließlich zum Ressourcenzugriff. Der
 Ablauf wird im folgenden beschrieben und ist als BPMN-Diagramm in
-Abbildung 4 dargestellt.
+[**fig:phase3-ressourcen-zugriff?**](#ref-fig:phase3-ressourcen-zugriff)
+dargestellt.
 
 <figure id="fig:phase3-ressourcen-zugriff">
 <img src="../assets/bis_bpmn_phase_3.drawio.svg"
-alt="Abbildung 4: BPMN-Diagramm zu Phase 3 des Login-Prozesses mittels Shibboleth (nach Beschreibung aus [12])" />
-<figcaption aria-hidden="true">Abbildung 4: BPMN-Diagramm zu Phase 3 des
+alt="BPMN-Diagramm zu Phase 3 des Login-Prozesses mittels Shibboleth (nach Beschreibung aus [12])" />
+<figcaption aria-hidden="true">BPMN-Diagramm zu Phase 3 des
 Login-Prozesses mittels Shibboleth (nach Beschreibung aus <span
 class="citation" data-cites="switchExpertDemoSWITCHaai2024a"><a
 href="#ref-switchExpertDemoSWITCHaai2024a"
@@ -422,7 +429,7 @@ die initial angefragte, geschützte Ressource gewährt
     200 OK
       [RESOURCE HTML PAGE]
 
-## 1.4 Einsatz von Shibboleth
+# Einsatz von Shibboleth
 
 *entfällt ggf., je nach Zeit*
 
@@ -431,17 +438,86 @@ die initial angefragte, geschützte Ressource gewährt
 - Preisgestaltung
   ([Mitgliedschaften](#shibboleth-consortium-mitgliedschaften))
 
-## 1.5 Diskussion
+# Diskussion
 
-- Bewertung und Einschätzung von Shibboleth
-- Alternativen
-  - Azure Active Directory
-  - TODO: weiter suchen
-- Zukunft
+Im folgenden Abschnitt wird Shibboleth diskutiert. Dabei wird auf die
+Vorteile und Nachteile eingegangen und verschiedene Alternativen
+beleuchtet. Abschließend wird ein kurzer Einblick in die Agenda der
+nahen Zukunft gegeben.
 
-## 1.6 Zusammenfassung
+Shibboleth ist seit 2000 in Verwendung und hat sich seitdem zu einem
+etablierten SSO-System entwickelt
+[\[2\]](#ref-shibbolethShibbolethConsortium2024). Grundsätzlich fallen
+als Open Source Software keine Kosten an. Das *Shibboleth Consortium*
+bietet allerdings kostenpflichtige Mitgliedschaften an, die das Projekt
+finanzieren und den Mitgliedern Hilfestellungen (*Support*) sowie
+weitere Partizipationsmöglichkeiten bieten
+[\[2\]](#ref-shibbolethShibbolethConsortium2024),
+[\[15\]](#ref-shibbolethMembership). Dabei wird ein jährlicher Beitrag
+erhoben, der auf der Art und Größe der Institution basiert
+[\[16\]](#ref-shibbolethConsortiumMembershipFees). Größere Mitglieder
+sind unter anderem der Verein zur Förderung eines Deutschen
+Forschungsnetzes (DFN-Verein), die Stanford University, die University
+of Oxford oder das Massachusetts Institute of Technology (MIT)
+[\[4\]](#ref-shibbolethOurMembers2024). Shibboleth unterstützt
+verschiedene Standardprotokolle wie beispielsweise SAML, OpenID Connect
+und LDAP [\[3\]](#ref-cantorConsortiumFAQShibboleth2023),
+[\[17\]](#ref-overtsoftwareAzureADADFS2022). Außerdem ist es
+Windows-unabhängig und dezentral
+[\[17\]](#ref-overtsoftwareAzureADADFS2022).
 
-## 1.7 Literatur
+Shibboleth ist nicht für Unternehmen gedacht, welche hauptsächlich
+interne Zugriffsverwaltung und Authentifizierung benötigen. Vielmehr
+unterstützt es den Austausch von Authentifizierungsdaten zwischen
+verschiedenen, teils externen Organisationen (föderierte Identitäten).
+Weiterhin ist eine eigenverantwortliche Administration notwendig
+[\[3\]](#ref-cantorConsortiumFAQShibboleth2023).
+
+Eine Alternative zu Shibboleth ist *Active Directory* (AD), bei der es
+sich um ein On-Premise Identitätsmanagementsystem
+handelt[\[18\]](#ref-sommergutWasSindUnterschiede2019), welches sich
+besonders gut für Windows-Umgebungen eignet. Die Einrichtung und
+Verwaltung ist jedoch komplex und es wird kein Web-basiertes SSO
+angeboten.
+
+Ein alternatives Identitätsmanagementsystem mit SSO ist *Azure Active
+Directory* (AAD) bzw. *Microsoft Entra ID*
+[\[19\]](#ref-chikMicrosoftEntraExpands2023),
+[\[20\]](#ref-celestedgNewNameAzure2024), welches im Vergleich zu AD
+Cloud-basiert ist und Microsoft Abhängigkeiten besitzt
+[\[18\]](#ref-sommergutWasSindUnterschiede2019). Dadurch eignet sich
+Microsoft Entra ID besonders für Unternehmen, die vollständig in
+Microsoft 365 und Azure integriert sind.
+
+Darüber hinaus gibt es weitere kostenpflichtige Alternativen wie *Okta*,
+*OneLogin* oder *Ping Identity*, welche ebenfalls Cloud-basierte
+Lösungen sind und den Fokus auf unterschiedliche Aspekte wie Sicherheit
+oder Benutzerfreundlichkeit legen [\[21\]](#ref-oktaSecureSingleSignOn),
+[\[22\]](#ref-oneloginErweiterteAuthentifizierung),
+[\[23\]](#ref-pingidentityFunktionenPingIdentityPlattform).
+
+Die Agenda von Shibboleth sieht vor, bis 2027 die passwortlose
+Authentifikation zu ermöglichen, sodass Nutzer:innen beispielsweise mit
+FIDO, WebAuthn und Passkeys vom Login-Handler authentifiziert werden
+können. Zudem sollen *Digital Wallets* und verifizierte Anmeldedaten
+angegangen werden, wobei die Hauptrolle darin gesehen wird, ein
+Aussteller dieser zu werden oder sie zu verifizieren.
+
+Verbessert werden soll die Produktdokumentation und Konfiguration der
+IdPs, um einen Fokus auf Konzepte, einleitendes Material und Beispiele
+zu legen. Dies geht einher mit der Neukonzeption der SPs, welche
+zukünftig als Plugin für IdPs eingeführt werden soll.
+
+Zudem soll die *OpenID Federation* unterstützt werden, wodurch die
+Harmonie zwischen den SAML und OpenID Metadaten verstärkt werden soll.
+Außerdem sollen weitere UI-Komponenten zum IdP hinzugefügt werden,
+welche unter anderem das Management von Login-Aktivitäten sowie eine
+passwortlose Authentifikation behandeln
+[\[24\]](#ref-shibbolethDevelopmentCenterProject2024).
+
+# Zusammenfassung
+
+# Literatur
 
 <div id="refs" class="references csl-bib-body" entry-spacing="0">
 
@@ -581,10 +657,107 @@ Verfügbar unter:
 
 </div>
 
+<div id="ref-shibbolethMembership" class="csl-entry">
+
+<span class="csl-left-margin">\[15\]
+</span><span class="csl-right-inline">Shibboleth, „Membership“.
+Zugegriffen: 17. November 2024. \[Online\]. Verfügbar unter:
+<https://www.shibboleth.net/membership/></span>
+
+</div>
+
+<div id="ref-shibbolethConsortiumMembershipFees" class="csl-entry">
+
+<span class="csl-left-margin">\[16\]
+</span><span class="csl-right-inline">Shibboleth, „Consortium Membership
+Fees“. Zugegriffen: 17. November 2024. \[Online\]. Verfügbar unter:
+<https://www.shibboleth.net/membership/consortium-membership-fees/></span>
+
+</div>
+
+<div id="ref-overtsoftwareAzureADADFS2022" class="csl-entry">
+
+<span class="csl-left-margin">\[17\]
+</span><span class="csl-right-inline">Overt Software, „Azure AD/ADFS vs
+Shibboleth IDP“. Zugegriffen: 17. November 2024. \[Online\]. Verfügbar
+unter:
+<https://www.overtsoftware.com/azure-ad-adfs-vs-shibboleth-idp-which-is-better-for-your-organisation/></span>
+
+</div>
+
+<div id="ref-sommergutWasSindUnterschiede2019" class="csl-entry">
+
+<span class="csl-left-margin">\[18\]
+</span><span class="csl-right-inline">W. Sommergut, „Was Sind Die
+Unterschiede Zwischen Active Directory Und Azure AD? \| WindowsPro“.
+Zugegriffen: 17. November 2024. \[Online\]. Verfügbar unter:
+<https://www.windowspro.de/wolfgang-sommergut/was-sind-unterschiede-zwischen-active-directory-azure-ad></span>
+
+</div>
+
+<div id="ref-chikMicrosoftEntraExpands2023" class="csl-entry">
+
+<span class="csl-left-margin">\[19\]
+</span><span class="csl-right-inline">J. Chik, „Microsoft Entra Expands
+into Security Service Edge and Azure AD Becomes Microsoft Entra ID“.
+Zugegriffen: 17. November 2024. \[Online\]. Verfügbar unter:
+<https://www.microsoft.com/en-us/security/blog/2023/07/11/microsoft-entra-expands-into-security-service-edge-and-azure-ad-becomes-microsoft-entra-id/></span>
+
+</div>
+
+<div id="ref-celestedgNewNameAzure2024" class="csl-entry">
+
+<span class="csl-left-margin">\[20\]
+</span><span class="csl-right-inline">CelesteDG, „New Name for Azure
+Active Directory - Microsoft Entra“. Zugegriffen: 17. November 2024.
+\[Online\]. Verfügbar unter:
+<https://learn.microsoft.com/en-us/entra/fundamentals/new-name></span>
+
+</div>
+
+<div id="ref-oktaSecureSingleSignOn" class="csl-entry">
+
+<span class="csl-left-margin">\[21\]
+</span><span class="csl-right-inline">Okta, „Secure Single Sign-On
+Solutions“. Zugegriffen: 2. Januar 2025. \[Online\]. Verfügbar unter:
+<https://www.okta.com/de-de/products/single-sign-on-customer-identity/></span>
+
+</div>
+
+<div id="ref-oneloginErweiterteAuthentifizierung" class="csl-entry">
+
+<span class="csl-left-margin">\[22\]
+</span><span class="csl-right-inline">OneLogin, „Erweiterte
+Authentifizierung“. Zugegriffen: 2. Januar 2025. \[Online\]. Verfügbar
+unter: <https://www.oneidentity.com/></span>
+
+</div>
+
+<div id="ref-pingidentityFunktionenPingIdentityPlattform"
+class="csl-entry">
+
+<span class="csl-left-margin">\[23\]
+</span><span class="csl-right-inline">Ping Identity, „Funktionen der
+Ping Identity-Plattform“. Zugegriffen: 2. Januar 2025. \[Online\].
+Verfügbar unter:
+<https://www.pingidentity.com/de/platform/capabilities.html></span>
+
+</div>
+
+<div id="ref-shibbolethDevelopmentCenterProject2024" class="csl-entry">
+
+<span class="csl-left-margin">\[24\]
+</span><span class="csl-right-inline">Shibboleth, „Development Center -
+Project Roadmap“. Zugegriffen: 12. Januar 2025. \[Online\]. Verfügbar
+unter:
+<https://shibboleth.atlassian.net/wiki/spaces/DEV/pages/3503423489/Project+Roadmap></span>
+
+</div>
+
 <div id="ref-shibbolethShibbolethConceptsUSGoalReq2018"
 class="csl-entry">
 
-<span class="csl-left-margin">\[15\]
+<span class="csl-left-margin">\[25\]
 </span><span class="csl-right-inline">Shibboleth, „Shibboleth Concepts -
 USGoalReq“. Zugegriffen: 6. November 2024. \[Online\]. Verfügbar unter:
 <https://shibboleth.atlassian.net/wiki/spaces/CONCEPT/pages/928645487/USGoalReq></span>
@@ -594,7 +767,7 @@ USGoalReq“. Zugegriffen: 6. November 2024. \[Online\]. Verfügbar unter:
 <div id="ref-robinsDemystifyingShibbolethAdapting2024"
 class="csl-entry">
 
-<span class="csl-left-margin">\[16\]
+<span class="csl-left-margin">\[26\]
 </span><span class="csl-right-inline">S. Robins und B. Daigle,
 „Demystifying Shibboleth: Adapting to Web Browser Privacy Changes“,
 *Journal of Library Administration*, Bd. 64, Nr. 4, S. 449–472, Mai
@@ -605,7 +778,7 @@ class="csl-entry">
 
 <div id="ref-shibbolethMetadataConcepts" class="csl-entry">
 
-<span class="csl-left-margin">\[17\]
+<span class="csl-left-margin">\[27\]
 </span><span class="csl-right-inline">Shibboleth, „Metadata - Concepts“.
 Zugegriffen: 6. November 2024. \[Online\]. Verfügbar unter:
 <https://shibboleth.atlassian.net/wiki/spaces/CONCEPT/pages/928645459/Metadata></span>
@@ -614,7 +787,7 @@ Zugegriffen: 6. November 2024. \[Online\]. Verfügbar unter:
 
 <div id="ref-shibbolethSessionsConcepts" class="csl-entry">
 
-<span class="csl-left-margin">\[18\]
+<span class="csl-left-margin">\[28\]
 </span><span class="csl-right-inline">Shibboleth, „Sessions - Concepts“.
 Zugegriffen: 17. November 2024. \[Online\]. Verfügbar unter:
 <https://shibboleth.atlassian.net/wiki/spaces/CONCEPT/pages/928645433/Sessions></span>
@@ -624,7 +797,7 @@ Zugegriffen: 17. November 2024. \[Online\]. Verfügbar unter:
 <div id="ref-shibbolethShibbolethConceptsNameIdentifiers2020"
 class="csl-entry">
 
-<span class="csl-left-margin">\[19\]
+<span class="csl-left-margin">\[29\]
 </span><span class="csl-right-inline">Shibboleth, „Shibboleth Concepts -
 NameIdentifiers“. Zugegriffen: 6. November 2024. \[Online\]. Verfügbar
 unter:
@@ -634,57 +807,17 @@ unter:
 
 <div id="ref-shibbolethOpenSAML" class="csl-entry">
 
-<span class="csl-left-margin">\[20\]
+<span class="csl-left-margin">\[30\]
 </span><span class="csl-right-inline">Shibboleth, „OpenSAML“.
 Zugegriffen: 17. November 2024. \[Online\]. Verfügbar unter:
 <https://shibboleth.atlassian.net/wiki/spaces/OSAML/overview></span>
 
 </div>
 
-<div id="ref-overtsoftwareAzureADADFS2022" class="csl-entry">
-
-<span class="csl-left-margin">\[21\]
-</span><span class="csl-right-inline">Overt Software, „Azure AD/ADFS vs
-Shibboleth IDP“. Zugegriffen: 17. November 2024. \[Online\]. Verfügbar
-unter:
-<https://www.overtsoftware.com/azure-ad-adfs-vs-shibboleth-idp-which-is-better-for-your-organisation/></span>
-
-</div>
-
-<div id="ref-sommergutWasSindUnterschiede2019" class="csl-entry">
-
-<span class="csl-left-margin">\[22\]
-</span><span class="csl-right-inline">W. Sommergut, „Was Sind Die
-Unterschiede Zwischen Active Directory Und Azure AD? \| WindowsPro“.
-Zugegriffen: 17. November 2024. \[Online\]. Verfügbar unter:
-<https://www.windowspro.de/wolfgang-sommergut/was-sind-unterschiede-zwischen-active-directory-azure-ad></span>
-
-</div>
-
-<div id="ref-chikMicrosoftEntraExpands2023" class="csl-entry">
-
-<span class="csl-left-margin">\[23\]
-</span><span class="csl-right-inline">J. Chik, „Microsoft Entra Expands
-into Security Service Edge and Azure AD Becomes Microsoft Entra ID“.
-Zugegriffen: 17. November 2024. \[Online\]. Verfügbar unter:
-<https://www.microsoft.com/en-us/security/blog/2023/07/11/microsoft-entra-expands-into-security-service-edge-and-azure-ad-becomes-microsoft-entra-id/></span>
-
-</div>
-
-<div id="ref-celestedgNewNameAzure2024" class="csl-entry">
-
-<span class="csl-left-margin">\[24\]
-</span><span class="csl-right-inline">CelesteDG, „New Name for Azure
-Active Directory - Microsoft Entra“. Zugegriffen: 17. November 2024.
-\[Online\]. Verfügbar unter:
-<https://learn.microsoft.com/en-us/entra/fundamentals/new-name></span>
-
-</div>
-
 <div id="ref-shibbolethInstallationIdentityProvider2024"
 class="csl-entry">
 
-<span class="csl-left-margin">\[25\]
+<span class="csl-left-margin">\[31\]
 </span><span class="csl-right-inline">Shibboleth, „Installation -
 Identity Provider 5“. Zugegriffen: 17. November 2024. \[Online\].
 Verfügbar unter:
@@ -694,7 +827,7 @@ Verfügbar unter:
 
 <div id="ref-shibbolethEmbeddedDiscoveryService2021" class="csl-entry">
 
-<span class="csl-left-margin">\[26\]
+<span class="csl-left-margin">\[32\]
 </span><span class="csl-right-inline">Shibboleth, „Embedded Discovery
 Service“. Zugegriffen: 17. November 2024. \[Online\]. Verfügbar unter:
 <https://shibboleth.atlassian.net/wiki/spaces/EDS10/overview></span>
@@ -703,7 +836,7 @@ Service“. Zugegriffen: 17. November 2024. \[Online\]. Verfügbar unter:
 
 <div id="ref-shibbolethEmbeddedDiscoveryService2011" class="csl-entry">
 
-<span class="csl-left-margin">\[27\]
+<span class="csl-left-margin">\[33\]
 </span><span class="csl-right-inline">Shibboleth, „Embedded Discovery
 Service - Overview“. Zugegriffen: 17. November 2024. \[Online\].
 Verfügbar unter:
@@ -711,27 +844,9 @@ Verfügbar unter:
 
 </div>
 
-<div id="ref-shibbolethMembership" class="csl-entry">
-
-<span class="csl-left-margin">\[28\]
-</span><span class="csl-right-inline">Shibboleth, „Membership“.
-Zugegriffen: 17. November 2024. \[Online\]. Verfügbar unter:
-<https://www.shibboleth.net/membership/></span>
-
-</div>
-
-<div id="ref-shibbolethConsortiumMembershipFees" class="csl-entry">
-
-<span class="csl-left-margin">\[29\]
-</span><span class="csl-right-inline">Shibboleth, „Consortium Membership
-Fees“. Zugegriffen: 17. November 2024. \[Online\]. Verfügbar unter:
-<https://www.shibboleth.net/membership/consortium-membership-fees/></span>
-
-</div>
-
 <div id="ref-switchSWITCHaai2024" class="csl-entry">
 
-<span class="csl-left-margin">\[30\]
+<span class="csl-left-margin">\[34\]
 </span><span class="csl-right-inline">SWITCH, „About - SWITCHaai“.
 Zugegriffen: 17. November 2024. \[Online\]. Verfügbar unter:
 <https://help.switch.ch/aai/about/></span>
@@ -740,7 +855,7 @@ Zugegriffen: 17. November 2024. \[Online\]. Verfügbar unter:
 
 <div id="ref-switchMediumDemoSwitchAAI2024" class="csl-entry">
 
-<span class="csl-left-margin">\[31\]
+<span class="csl-left-margin">\[35\]
 </span><span class="csl-right-inline">SWITCH, „Medium Demo - SwitchAAI“.
 Zugegriffen: 24. November 2024. \[Online\]. Verfügbar unter:
 <https://help.switch.ch/aai/demo/medium/></span>
@@ -751,9 +866,9 @@ Zugegriffen: 24. November 2024. \[Online\]. Verfügbar unter:
 
 ------------------------------------------------------------------------
 
-## 1.8 Notizen
+# Notizen
 
-### 1.8.1 Shibboleth allgemein
+## Shibboleth allgemein
 
 [\[2\]](#ref-shibbolethShibbolethConsortium2024)
 
@@ -817,9 +932,9 @@ Zugegriffen: 24. November 2024. \[Online\]. Verfügbar unter:
   - stellt keine Instanz zu Verfügung oder Ähnliches
   - keine Voraussetzung für Verwendung der Software
 
-### 1.8.2 Shibboleth Ziele
+## Shibboleth Ziele
 
-[\[15\]](#ref-shibbolethShibbolethConceptsUSGoalReq2018)
+[\[25\]](#ref-shibbolethShibbolethConceptsUSGoalReq2018)
 
 - Bestehenden Authentifikationmechanismen können für webbasierte
   Ressourcen benutzt werden
@@ -836,9 +951,9 @@ Zugegriffen: 24. November 2024. \[Online\]. Verfügbar unter:
 - TODO: weitere, anschauliche Motivation von [Switch
   AAI](https://help.switch.ch/aai/about/introduction/)
 
-### 1.8.3 SAML
+## SAML
 
-### 1.8.4 Konzept
+## Konzept
 
 [\[6\]](#ref-shibbolethShibbolethConcepts2023)
 
@@ -857,22 +972,23 @@ Zugegriffen: 24. November 2024. \[Online\]. Verfügbar unter:
     - Unterstützung des SP bei Ermittlung des IdP des Nutzers
     - Standort überall im Web möglich
     - nicht in allen Anwendungsfällen nötig
-- TODO: [\[16\]](#ref-robinsDemystifyingShibbolethAdapting2024)
+- TODO: [\[26\]](#ref-robinsDemystifyingShibbolethAdapting2024)
 
-#### 1.8.4.1 Basic Interaction
+### Basic Interaction
 
 [\[6\]](#ref-shibbolethShibbolethConcepts2023)
 
 <figure id="fig:basic-interaction">
 <img src="../assets/basic_interaction.drawio.svg"
-alt="Abbildung 5: Basic Interaction vgl. [6]" />
-<figcaption aria-hidden="true">Abbildung 5: Basic Interaction <span
-class="citation" data-cites="shibbolethShibbolethConcepts2023">vgl. <a
+alt="Basic Interaction vgl. [6]" />
+<figcaption aria-hidden="true">Basic Interaction <span class="citation"
+data-cites="shibbolethShibbolethConcepts2023">vgl. <a
 href="#ref-shibbolethShibbolethConcepts2023"
 role="doc-biblioref">[6]</a></span></figcaption>
 </figure>
 
-Grundlegende Interaktionen wie in Abbildung 5 dargestellt
+Grundlegende Interaktionen wie in
+[**fig:basic-interaction?**](#ref-fig:basic-interaction) dargestellt
 
 1.  SP erkennt Nutzer, der versucht, auf eingeschränkte Inhalte
     zuzugreifen
@@ -901,7 +1017,7 @@ href="#ref-michelsIdentityManagementUnd"
 role="doc-biblioref">[13]</a></span></figcaption>
 </figure>
 
-#### 1.8.4.2 System Flow
+### System Flow
 
 [\[14\]](#ref-shibbolethFlowsAndConfigShibbolethConcepts2019)
 
@@ -914,7 +1030,7 @@ role="doc-biblioref">[13]</a></span></figcaption>
   - Authentifizierung beim IdP
   - Navigation zurück zur Ressource im eingeloggten Zustand
 
-##### 1.8.4.2.1 Zugriff auf Geschützte Ressource
+#### Zugriff auf Geschützte Ressource
 
 [\[14\]](#ref-shibbolethFlowsAndConfigShibbolethConcepts2019)
 
@@ -929,7 +1045,7 @@ role="doc-biblioref">[13]</a></span></figcaption>
     in
     [`<RequestMap>`](https://shibboleth.atlassian.net/wiki/spaces/SP3/pages/2065334391/RequestMapper)
 
-##### 1.8.4.2.2 SP bestimmt IdP und Sendet Authentifizierungsanfrage
+#### SP bestimmt IdP und Sendet Authentifizierungsanfrage
 
 [\[14\]](#ref-shibbolethFlowsAndConfigShibbolethConcepts2019)
 
@@ -964,7 +1080,7 @@ role="doc-biblioref">[13]</a></span></figcaption>
   - Senden eines State-Management-Cookies mit URL der Ressource zusammen
     mit Anfrage an IdP
 
-##### 1.8.4.2.3 Nutzerauthentifizierung beim IdP
+#### Nutzerauthentifizierung beim IdP
 
 [\[14\]](#ref-shibbolethFlowsAndConfigShibbolethConcepts2019)
 
@@ -991,7 +1107,7 @@ role="doc-biblioref">[13]</a></span></figcaption>
     - Erhaltung einer länger gültigen Verbindung für SSO-Zwecke
   - ggf. weitere Cookies je nach Login-Handler
 
-##### 1.8.4.2.4 Antwort des IdP an SP
+#### Antwort des IdP an SP
 
 [\[14\]](#ref-shibbolethFlowsAndConfigShibbolethConcepts2019)
 
@@ -1019,7 +1135,7 @@ role="doc-biblioref">[13]</a></span></figcaption>
     ([*Assertion Customer
     Service*](https://shibboleth.atlassian.net/wiki/spaces/CONCEPT/pages/958759025/AssertionConsumerService))
 
-##### 1.8.4.2.5 Zurück zum SP
+#### Zurück zum SP
 
 [\[14\]](#ref-shibbolethFlowsAndConfigShibbolethConcepts2019)
 
@@ -1055,7 +1171,7 @@ role="doc-biblioref">[13]</a></span></figcaption>
     sending a cookie containing a session key to the client as part of
     the redirection to the resource.”
 
-##### 1.8.4.2.6 Zurück zur geschützten Ressource
+#### Zurück zur geschützten Ressource
 
 [\[14\]](#ref-shibbolethFlowsAndConfigShibbolethConcepts2019)
 
@@ -1080,9 +1196,9 @@ role="doc-biblioref">[13]</a></span></figcaption>
     - Anfrage wird durchgeführt mit allen gecached Attributen, welche an
       Anfrage hängen
 
-#### 1.8.4.3 Metadaten
+### Metadaten
 
-[\[17\]](#ref-shibbolethMetadataConcepts)
+[\[27\]](#ref-shibbolethMetadataConcepts)
 
 - Bereitstellung der Configuationsdaten in der Kommunikaton zwischen SP
   und IdP
@@ -1090,9 +1206,9 @@ role="doc-biblioref">[13]</a></span></figcaption>
 - Basiert auf der SAML 2.0 Metadata specification standardized by OASIS
 - Wah. zu spezifisch für eine allgemeine Erklärung von Shibboleth
 
-#### 1.8.4.4 Sessions
+### Sessions
 
-[\[18\]](#ref-shibbolethSessionsConcepts)
+[\[28\]](#ref-shibbolethSessionsConcepts)
 
 - Der Prozess beinhaltet mehrere Sessions, zwischen user und service
 - In den meisten Fällen durch cookies realisiert
@@ -1104,9 +1220,9 @@ role="doc-biblioref">[13]</a></span></figcaption>
 - Sonderfall: Single-log-out kann ein Problem sein, wenn Sessions
   miteinander verbunden werden
 
-#### 1.8.4.5 Name Identifiers
+### Name Identifiers
 
-[\[19\]](#ref-shibbolethShibbolethConceptsNameIdentifiers2020)
+[\[29\]](#ref-shibbolethShibbolethConceptsNameIdentifiers2020)
 
 - In SAML2 dargestellt durch `<NameID>`-Element
   - nicht festgelegt was als *name identifier* verwendet wird
@@ -1122,9 +1238,9 @@ role="doc-biblioref">[13]</a></span></figcaption>
   - meistens nicht bei kommerzieller Verwendung (verwendet name
     identifiers locker/unsachgemäß)
 
-#### 1.8.4.6 OpenSAML
+### OpenSAML
 
-[\[20\]](#ref-shibbolethOpenSAML)
+[\[30\]](#ref-shibbolethOpenSAML)
 
 - “OpenSAML is a set of open source Java libraries used in support of
   the Shibboleth Project’s implementation of the Security Assertion
@@ -1132,9 +1248,9 @@ role="doc-biblioref">[13]</a></span></figcaption>
 - OpenSAML ist keine vollumfängliche Implementierung von SAML IDP oder
   SP
 
-#### 1.8.4.7 Active-Directory vs Shibboleth
+### Active-Directory vs Shibboleth
 
-[\[21\]](#ref-overtsoftwareAzureADADFS2022)
+[\[17\]](#ref-overtsoftwareAzureADADFS2022)
 
 - Beides Identity Provider
 - ADFS (Active Directory Federation Services) eher für größere
@@ -1144,20 +1260,20 @@ role="doc-biblioref">[13]</a></span></figcaption>
 - ADFS hat im vergleich zu Shibboleth weniger Schnittstellen
   implementiert wie LDAP oder SAML
 
-##### 1.8.4.7.1 Azure AD vs AD
+#### Azure AD vs AD
 
-[\[22\]](#ref-sommergutWasSindUnterschiede2019)
+[\[18\]](#ref-sommergutWasSindUnterschiede2019)
 
 - Azure Active Directory ist Identitätsmanagement der Microsoft-Cloud
 - Active Directory ist das On-Promise Modell
 
-[\[23\]](#ref-chikMicrosoftEntraExpands2023)
-[\[24\]](#ref-celestedgNewNameAzure2024)
+[\[19\]](#ref-chikMicrosoftEntraExpands2023)
+[\[20\]](#ref-celestedgNewNameAzure2024)
 
 - Microsoft Azure Active Directory wurde zu Microsoft Entra ID umbenannt
   um verwirrung zu vermeiden
 
-#### 1.8.4.8 Weiteres
+### Weiteres
 
 - TODO:
   [Glossar](https://shibboleth.atlassian.net/wiki/spaces/CONCEPT/pages/928645488/Glossary)
@@ -1165,7 +1281,7 @@ role="doc-biblioref">[13]</a></span></figcaption>
 - ggf. [weitere
   Konzepte](https://shibboleth.atlassian.net/wiki/spaces/CONCEPT/overview#More-Concepts)
 
-#### 1.8.4.9 Identity Provider Discovery [\[10\]](#ref-shibbolethIdPDiscoveryShibbolethConcepts2020)
+### Identity Provider Discovery [\[10\]](#ref-shibbolethIdPDiscoveryShibbolethConcepts2020)
 
 - Identifikation von Heim-IdP für Login bei Zugriff auf geschützte
   Ressource –\> *IdP Discover*
@@ -1181,12 +1297,12 @@ role="doc-biblioref">[13]</a></span></figcaption>
 
 <br>
 
-##### 1.8.4.9.1 Flat Page Discovery [\[10\]](#ref-shibbolethIdPDiscoveryShibbolethConcepts2020)
+#### Flat Page Discovery [\[10\]](#ref-shibbolethIdPDiscoveryShibbolethConcepts2020)
 
 - meist ausreichend bei eingeschränkter, statischer Menge an IdPs
 - Verwendung von *SessionInitiator* vom SP
 
-###### 1.8.4.9.1.1 von bekanntem Heim [\[10\]](#ref-shibbolethIdPDiscoveryShibbolethConcepts2020)
+##### von bekanntem Heim [\[10\]](#ref-shibbolethIdPDiscoveryShibbolethConcepts2020)
 
 - Nutzende kommen direkt von Quelle, die Home-IdP per Definition kennt
 - Quelle kann Nutzende direkt zur Ressource schicken
@@ -1218,7 +1334,7 @@ zwei Möglichkeiten für Redirect
   - Beispiel auf
     [Website](https://shibboleth.atlassian.net/wiki/spaces/CONCEPT/pages/928645263)
 
-##### 1.8.4.9.2 Discovery Service [\[10\]](#ref-shibbolethIdPDiscoveryShibbolethConcepts2020)
+#### Discovery Service [\[10\]](#ref-shibbolethIdPDiscoveryShibbolethConcepts2020)
 
 - *IdP Discovery Service* (DS)
 - Service zur Präsentation eines Standard-Interfaces zur Auswahl des
@@ -1258,7 +1374,7 @@ zwei Möglichkeiten für Redirect
   - ähnliche UX wie DS, welche mit Ressource betrieben werden, mittels
     [SeamlessAccess](https://seamlessaccess.org/)
 
-#### 1.8.4.10 IdP Installation [\[25\]](#ref-shibbolethInstallationIdentityProvider2024)
+### IdP Installation [\[31\]](#ref-shibbolethInstallationIdentityProvider2024)
 
 - Prüfung der [System
   Requirements](https://shibboleth.atlassian.net/wiki/spaces/IDP5/pages/3199511079)
@@ -1321,7 +1437,7 @@ typische nächste Schritte
   UI](https://shibboleth.atlassian.net/wiki/spaces/IDP5/pages/3199505587),
   Fehlerbehandlung etc.
 
-#### 1.8.4.11 Service Provider V3
+### Service Provider V3
 
 [\[8\]](#ref-shibbolethServiceProviderApplication2021)
 
@@ -1335,7 +1451,7 @@ typische nächste Schritte
 - Ein SP ist zuständig für einen *logical service* - IdP kann Ressourcen
   nur an unterschiedlichen SP unterscheiden
 
-##### 1.8.4.11.1 Applications
+#### Applications
 
 - SP kümmert sich um die Gruppierung von Ressourcen
 - Eine Gruppierung ist eine *Application*
@@ -1351,18 +1467,18 @@ typische nächste Schritte
 - Keine technische Notwendigkeit zwei Ressourcen einer Application im
   selben Ordner oder sogar selben virtuel host zu haben
 
-##### 1.8.4.11.2 Content Protection
+#### Content Protection
 
 [\[9\]](#ref-shibbolethServiceProviderProtectContent2021)
 
-###### 1.8.4.11.2.1 Active
+##### Active
 
 - Abfangen von Anfragen an die Ressource um die Session auf eine valide
   Authentifizierung zu überprüfen
 - Anhängen von `requireSession` an die Ressource
 - Statische Zugangsbeschränkungen mit den Session-Informationen möglich
 
-###### 1.8.4.11.2.2 Passive
+##### Passive
 
 - Nutzen von *CGI* Variablen um Informationen über authetifizierte
   Sessions bereitzustellen
@@ -1370,15 +1486,15 @@ typische nächste Schritte
 - Sinnvoll bei “Gast”-Nutzung und bei Verwendung verschiedener
   Authentifizierungmethoden
 
-#### 1.8.4.12 Embedded Discovery Service
+### Embedded Discovery Service
 
-[\[26\]](#ref-shibbolethEmbeddedDiscoveryService2021)
+[\[32\]](#ref-shibbolethEmbeddedDiscoveryService2021)
 
 - Eigener discovery service beim SP durch Embedded Discovery Service
   (EDS) möglich
 - Kein redirect zu einer third-party discovery service Seite
 
-[\[27\]](#ref-shibbolethEmbeddedDiscoveryService2011)
+[\[33\]](#ref-shibbolethEmbeddedDiscoveryService2011)
 
 - Wird verwendet während des Single Sign-On (SSO)
 - Nutzer wählt IdP aus -\> startet SSO
@@ -1394,7 +1510,7 @@ typische nächste Schritte
   - Einschränkung der angezeigten IdPs
   - Ordnung der IdPs konfigurieren
 
-### 1.8.5 Shibboleth Consortium Mitgliedschaften
+## Shibboleth Consortium Mitgliedschaften
 
 [\[2\]](#ref-shibbolethShibbolethConsortium2024)
 
@@ -1407,21 +1523,21 @@ typische nächste Schritte
 
 <br>
 
-[\[28\]](#ref-shibbolethMembership)
+[\[15\]](#ref-shibbolethMembership)
 
 - Mitgliedschaft bringt exclusiven Support wie Slack-Channel
 - Unterstüzt die Weiterentwicklung
 - Partizipation durch Einbringen von eigenen Ideen und Vorschlägen für
   die Weiterentwicklung
 
-[\[29\]](#ref-shibbolethConsortiumMembershipFees)
+[\[16\]](#ref-shibbolethConsortiumMembershipFees)
 
 - Als Consortium Mitglied bezahlt man basierend auf der Art und Größe
   der Institution einen jährlichen Geldbetrag (Fee)
 
-### 1.8.6 Einsatz
+## Einsatz
 
-#### 1.8.6.1 DFN
+### DFN
 
 [\[7\]](#ref-dfnDFNAAIDokumentationEinfuhrung)
 
@@ -1440,7 +1556,7 @@ typische nächste Schritte
 - IdPs verpflichten sich die Metadaten aktuell zu halten damit SPs sich
   auf Berechtigung verlassen können
 
-#### 1.8.6.2 Switch AAI
+### Switch AAI
 
 [\[1\]](#ref-switchIntroductionSWITCHaai2024)
 
@@ -1465,7 +1581,7 @@ href="#ref-switchIntroductionSWITCHaai2024"
 role="doc-biblioref">[1]</a></span></figcaption>
 </figure>
 
-[\[30\]](#ref-switchSWITCHaai2024)
+[\[34\]](#ref-switchSWITCHaai2024)
 
 - ohne AAI: Registrierung bei jeder Ressource
   - jeweils Nutzername und Passwort
@@ -1483,7 +1599,7 @@ role="doc-biblioref">[1]</a></span></figcaption>
   - verwaltet zentrale AAI-Komponenten
   - unterstützt Home-Organisations und Ressourcen
 
-##### 1.8.6.2.1 Einfache Demo [\[11\]](#ref-switchSimpleDemoSwitchAAI2024)
+#### Einfache Demo [\[11\]](#ref-switchSimpleDemoSwitchAAI2024)
 
 - zunächst nur Nutzersicht
 
@@ -1533,7 +1649,7 @@ role="doc-biblioref">[11]</a></span></figcaption>
   - erst nach Schließen des Browsers oder bestimmter Zeit erneut
     notwendig
 
-##### 1.8.6.2.2 Medium Demo [\[31\]](#ref-switchMediumDemoSwitchAAI2024)
+#### Medium Demo [\[35\]](#ref-switchMediumDemoSwitchAAI2024)
 
 - selbiges Szenario wie in Einfache Demo
 - Live Demo (ggf. für **Präsentation**?)
@@ -1544,12 +1660,12 @@ role="doc-biblioref">[11]</a></span></figcaption>
 
 <figure>
 <img src="https://help.switch.ch/aai/demo/resources/medium_complete.png"
-alt="Vollständiger Login-Prozess vom Shibboleth [31] (Schritt-für-Schritt-Bilder vorhanden)" />
+alt="Vollständiger Login-Prozess vom Shibboleth [35] (Schritt-für-Schritt-Bilder vorhanden)" />
 <figcaption aria-hidden="true">Vollständiger Login-Prozess vom
 Shibboleth <span class="citation"
 data-cites="switchMediumDemoSwitchAAI2024"><a
 href="#ref-switchMediumDemoSwitchAAI2024"
-role="doc-biblioref">[31]</a></span> (Schritt-für-Schritt-Bilder
+role="doc-biblioref">[35]</a></span> (Schritt-für-Schritt-Bilder
 vorhanden)</figcaption>
 </figure>
 
@@ -1595,7 +1711,7 @@ Phase 3: Authentifizierung des Nutzenden bei Home Org.
   - Autorisierung basierend auf Attributen durch Ressource
   - erfolgreich: Weiterleitung zu geschützter Ressource
 
-##### 1.8.6.2.3 Experten Demo [\[12\]](#ref-switchExpertDemoSWITCHaai2024a)
+#### Experten Demo [\[12\]](#ref-switchExpertDemoSWITCHaai2024a)
 
 - inkl. Hintergrundprozesse und interagierende Komponenten
 - hier dekodiertes URL-Format
@@ -1824,7 +1940,7 @@ Phase 3: Authentifizierung, Attribut-Statement und Zugriff
           [RESOURCE HTML PAGE]
 - folgende Zugriffe an SP werden direkt gewährt (Timeout)
 
-### 1.8.7 TODO: Alternativen zu Shibboleth
+## TODO: Alternativen zu Shibboleth
 
 - https://www.techrepublic.com/article/best-open-source-iam-tools/
 - https://alternativeto.net/software/shibboleth/

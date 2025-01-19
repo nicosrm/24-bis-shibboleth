@@ -466,6 +466,8 @@ verschiedenen, teils externen Organisationen (föderierte Identitäten).
 Weiterhin ist eine eigenverantwortliche Administration notwendig
 [\[3\]](#ref-cantorConsortiumFAQShibboleth2023).
 
+### 1.5.1 Alternativen
+
 Eine Alternative zu Shibboleth ist *Active Directory* (AD), bei der es
 sich um ein On-Premise Identitätsmanagementsystem
 handelt[\[18\]](#ref-sommergutWasSindUnterschiede2019), welches sich
@@ -489,23 +491,27 @@ oder Benutzerfreundlichkeit legen [\[21\]](#ref-oktaSecureSingleSignOn),
 [\[22\]](#ref-oneloginErweiterteAuthentifizierung),
 [\[23\]](#ref-pingidentityFunktionenPingIdentityPlattform).
 
+### 1.5.2 Zukunft
+
 Die Agenda von Shibboleth sieht vor, bis 2027 die passwortlose
 Authentifikation zu ermöglichen, sodass Nutzer:innen beispielsweise mit
 FIDO, WebAuthn und Passkeys vom Login-Handler authentifiziert werden
 können. Zudem sollen *Digital Wallets* und verifizierte Anmeldedaten
 angegangen werden, wobei die Hauptrolle darin gesehen wird, ein
-Aussteller dieser zu werden oder sie zu verifizieren.
+Aussteller dieser zu werden oder sie zu verifizieren
+[\[24\]](#ref-shibbolethDevelopmentCenterProject2024).
 
 Verbessert werden soll die Produktdokumentation und Konfiguration der
 IdPs, um einen Fokus auf Konzepte, einleitendes Material und Beispiele
 zu legen. Dies geht einher mit der Neukonzeption der SPs, welche
-zukünftig als Plugin für IdPs eingeführt werden soll.
+zukünftig als Plugin für IdPs eingeführt werden sollen
+[\[24\]](#ref-shibbolethDevelopmentCenterProject2024).
 
-Zudem soll die *OpenID Federation* unterstützt werden, wodurch die
-Harmonie zwischen den SAML und OpenID Metadaten verstärkt werden soll.
-Außerdem sollen weitere UI-Komponenten zum IdP hinzugefügt werden,
-welche unter anderem das Management von Login-Aktivitäten sowie eine
-passwortlose Authentifikation behandeln
+Darüber hinaus soll die *OpenID Federation* unterstützt werden, um die
+Harmonie zwischen den SAML und OpenID Metadaten zu verstärken. Außerdem
+sollen weitere UI-Komponenten zum IdP hinzugefügt werden, welche sich
+unter anderem mit dem Management von Login-Aktivitäten sowie einer
+passwortlosen Authentifikation befassen
 [\[24\]](#ref-shibbolethDevelopmentCenterProject2024).
 
 ## 1.6 Zusammenfassung

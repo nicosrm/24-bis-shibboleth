@@ -272,6 +272,7 @@ Shibboleth ist seit 2000 in Verwendung und hat sich seitdem zu einem etablierten
 
 Shibboleth ist nicht für Unternehmen gedacht, welche hauptsächlich interne Zugriffsverwaltung und Authentifizierung benötigen. Vielmehr unterstützt es den Austausch von Authentifizierungsdaten zwischen verschiedenen, teils externen Organisationen (föderierte Identitäten). Weiterhin ist eine eigenverantwortliche Administration notwendig [@cantorConsortiumFAQShibboleth2023].
 
+### Alternativen
 
 Eine Alternative zu Shibboleth ist *Active Directory* (AD), bei der es sich um ein On-Premise Identitätsmanagementsystem handelt[@sommergutWasSindUnterschiede2019], welches sich besonders gut für Windows-Umgebungen eignet. Die Einrichtung und Verwaltung ist jedoch komplex und es wird kein Web-basiertes SSO angeboten.
 
@@ -279,12 +280,13 @@ Ein alternatives Identitätsmanagementsystem mit SSO ist *Azure Active Directory
 
 Darüber hinaus gibt es weitere kostenpflichtige Alternativen wie *Okta*, *OneLogin* oder *Ping Identity*, welche ebenfalls Cloud-basierte Lösungen sind und den Fokus auf unterschiedliche Aspekte wie Sicherheit oder Benutzerfreundlichkeit legen [@oktaSecureSingleSignOn; @oneloginErweiterteAuthentifizierung; @pingidentityFunktionenPingIdentityPlattform].
 
+### Zukunft
 
-Die Agenda von Shibboleth sieht vor, bis 2027 die passwortlose Authentifikation zu ermöglichen, sodass Nutzer:innen beispielsweise mit FIDO, WebAuthn und Passkeys vom Login-Handler authentifiziert werden können. Zudem sollen *Digital Wallets* und verifizierte Anmeldedaten angegangen werden, wobei die Hauptrolle darin gesehen wird, ein Aussteller dieser zu werden oder sie zu verifizieren.
+Die Agenda von Shibboleth sieht vor, bis 2027 die passwortlose Authentifikation zu ermöglichen, sodass Nutzer:innen beispielsweise mit FIDO, WebAuthn und Passkeys vom Login-Handler authentifiziert werden können. Zudem sollen *Digital Wallets* und verifizierte Anmeldedaten angegangen werden, wobei die Hauptrolle darin gesehen wird, ein Aussteller dieser zu werden oder sie zu verifizieren [@shibbolethDevelopmentCenterProject2024].
 
-Verbessert werden soll die Produktdokumentation und Konfiguration der IdPs, um einen Fokus auf Konzepte, einleitendes Material und Beispiele zu legen. Dies geht einher mit der Neukonzeption der SPs, welche zukünftig als Plugin für IdPs eingeführt werden soll.
+Verbessert werden soll die Produktdokumentation und Konfiguration der IdPs, um einen Fokus auf Konzepte, einleitendes Material und Beispiele zu legen. Dies geht einher mit der Neukonzeption der SPs, welche zukünftig als Plugin für IdPs eingeführt werden sollen [@shibbolethDevelopmentCenterProject2024].
 
-Zudem soll die *OpenID Federation* unterstützt werden, wodurch die Harmonie zwischen den SAML und OpenID Metadaten verstärkt werden soll. Außerdem sollen weitere UI-Komponenten zum IdP hinzugefügt werden, welche unter anderem das Management von Login-Aktivitäten sowie eine passwortlose Authentifikation behandeln [@shibbolethDevelopmentCenterProject2024].
+Darüber hinaus soll die *OpenID Federation* unterstützt werden, um die Harmonie zwischen den SAML und OpenID Metadaten zu verstärken. Außerdem sollen weitere UI-Komponenten zum IdP hinzugefügt werden, welche sich unter anderem mit dem Management von Login-Aktivitäten sowie einer passwortlosen Authentifikation befassen [@shibbolethDevelopmentCenterProject2024].
 
 
 ## Zusammenfassung

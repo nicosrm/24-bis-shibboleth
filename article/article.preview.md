@@ -433,11 +433,86 @@ die initial angefragte, geschützte Ressource gewährt
 
 ## 1.5 Diskussion
 
-- Bewertung und Einschätzung von Shibboleth
-- Alternativen
-  - Azure Active Directory
-  - TODO: weiter suchen
-- Zukunft
+Im folgenden Abschnitt wird Shibboleth diskutiert. Dabei wird auf die
+Vorteile und Nachteile eingegangen und verschiedene Alternativen
+beleuchtet. Abschließend wird ein kurzer Einblick in die Agenda der
+nahen Zukunft gegeben.
+
+Shibboleth ist seit 2000 in Verwendung und hat sich seitdem zu einem
+etablierten SSO-System entwickelt
+[\[2\]](#ref-shibbolethShibbolethConsortium2024). Grundsätzlich fallen
+als Open Source Software keine Kosten an. Das *Shibboleth Consortium*
+bietet allerdings kostenpflichtige Mitgliedschaften an, die das Projekt
+finanzieren und den Mitgliedern Hilfestellungen (*Support*) sowie
+weitere Partizipationsmöglichkeiten bieten
+[\[2\]](#ref-shibbolethShibbolethConsortium2024),
+[\[15\]](#ref-shibbolethMembership). Dabei wird ein jährlicher Beitrag
+erhoben, der auf der Art und Größe der Institution basiert
+[\[16\]](#ref-shibbolethConsortiumMembershipFees). Größere Mitglieder
+sind unter anderem der Verein zur Förderung eines Deutschen
+Forschungsnetzes (DFN-Verein), die Stanford University, die University
+of Oxford oder das Massachusetts Institute of Technology (MIT)
+[\[4\]](#ref-shibbolethOurMembers2024). Shibboleth unterstützt
+verschiedene Standardprotokolle wie beispielsweise SAML, OpenID Connect
+und LDAP [\[3\]](#ref-cantorConsortiumFAQShibboleth2023),
+[\[17\]](#ref-overtsoftwareAzureADADFS2022). Außerdem ist es
+Windows-unabhängig und dezentral
+[\[17\]](#ref-overtsoftwareAzureADADFS2022).
+
+Shibboleth ist nicht für Unternehmen gedacht, welche hauptsächlich
+interne Zugriffsverwaltung und Authentifizierung benötigen. Vielmehr
+unterstützt es den Austausch von Authentifizierungsdaten zwischen
+verschiedenen, teils externen Organisationen (föderierte Identitäten).
+Weiterhin ist eine eigenverantwortliche Administration notwendig
+[\[3\]](#ref-cantorConsortiumFAQShibboleth2023).
+
+### 1.5.1 Alternativen
+
+Eine Alternative zu Shibboleth ist *Active Directory* (AD), bei der es
+sich um ein On-Premise Identitätsmanagementsystem
+handelt[\[18\]](#ref-sommergutWasSindUnterschiede2019), welches sich
+besonders gut für Windows-Umgebungen eignet. Die Einrichtung und
+Verwaltung ist jedoch komplex und es wird kein Web-basiertes SSO
+angeboten.
+
+Ein alternatives Identitätsmanagementsystem mit SSO ist *Azure Active
+Directory* (AAD) bzw. *Microsoft Entra ID*
+[\[19\]](#ref-chikMicrosoftEntraExpands2023),
+[\[20\]](#ref-celestedgNewNameAzure2024), welches im Vergleich zu AD
+Cloud-basiert ist und Microsoft Abhängigkeiten besitzt
+[\[18\]](#ref-sommergutWasSindUnterschiede2019). Dadurch eignet sich
+Microsoft Entra ID besonders für Unternehmen, die vollständig in
+Microsoft 365 und Azure integriert sind.
+
+Darüber hinaus gibt es weitere kostenpflichtige Alternativen wie *Okta*,
+*OneLogin* oder *Ping Identity*, welche ebenfalls Cloud-basierte
+Lösungen sind und den Fokus auf unterschiedliche Aspekte wie Sicherheit
+oder Benutzerfreundlichkeit legen [\[21\]](#ref-oktaSecureSingleSignOn),
+[\[22\]](#ref-oneloginErweiterteAuthentifizierung),
+[\[23\]](#ref-pingidentityFunktionenPingIdentityPlattform).
+
+### 1.5.2 Zukunft
+
+Die Agenda von Shibboleth sieht vor, bis 2027 die passwortlose
+Authentifikation zu ermöglichen, sodass Nutzer:innen beispielsweise mit
+FIDO, WebAuthn und Passkeys vom Login-Handler authentifiziert werden
+können. Zudem sollen *Digital Wallets* und verifizierte Anmeldedaten
+angegangen werden, wobei die Hauptrolle darin gesehen wird, ein
+Aussteller dieser zu werden oder sie zu verifizieren
+[\[24\]](#ref-shibbolethDevelopmentCenterProject2024).
+
+Verbessert werden soll die Produktdokumentation und Konfiguration der
+IdPs, um einen Fokus auf Konzepte, einleitendes Material und Beispiele
+zu legen. Dies geht einher mit der Neukonzeption der SPs, welche
+zukünftig als Plugin für IdPs eingeführt werden sollen
+[\[24\]](#ref-shibbolethDevelopmentCenterProject2024).
+
+Darüber hinaus soll die *OpenID Federation* unterstützt werden, um die
+Harmonie zwischen den SAML und OpenID Metadaten zu verstärken. Außerdem
+sollen weitere UI-Komponenten zum IdP hinzugefügt werden, welche sich
+unter anderem mit dem Management von Login-Aktivitäten sowie einer
+passwortlosen Authentifikation befassen
+[\[24\]](#ref-shibbolethDevelopmentCenterProject2024).
 
 ## 1.6 Zusammenfassung
 
@@ -581,10 +656,107 @@ Verfügbar unter:
 
 </div>
 
+<div id="ref-shibbolethMembership" class="csl-entry">
+
+<span class="csl-left-margin">\[15\]
+</span><span class="csl-right-inline">Shibboleth, „Membership“.
+Zugegriffen: 17. November 2024. \[Online\]. Verfügbar unter:
+<https://www.shibboleth.net/membership/></span>
+
+</div>
+
+<div id="ref-shibbolethConsortiumMembershipFees" class="csl-entry">
+
+<span class="csl-left-margin">\[16\]
+</span><span class="csl-right-inline">Shibboleth, „Consortium Membership
+Fees“. Zugegriffen: 17. November 2024. \[Online\]. Verfügbar unter:
+<https://www.shibboleth.net/membership/consortium-membership-fees/></span>
+
+</div>
+
+<div id="ref-overtsoftwareAzureADADFS2022" class="csl-entry">
+
+<span class="csl-left-margin">\[17\]
+</span><span class="csl-right-inline">Overt Software, „Azure AD/ADFS vs
+Shibboleth IDP“. Zugegriffen: 17. November 2024. \[Online\]. Verfügbar
+unter:
+<https://www.overtsoftware.com/azure-ad-adfs-vs-shibboleth-idp-which-is-better-for-your-organisation/></span>
+
+</div>
+
+<div id="ref-sommergutWasSindUnterschiede2019" class="csl-entry">
+
+<span class="csl-left-margin">\[18\]
+</span><span class="csl-right-inline">W. Sommergut, „Was Sind Die
+Unterschiede Zwischen Active Directory Und Azure AD? \| WindowsPro“.
+Zugegriffen: 17. November 2024. \[Online\]. Verfügbar unter:
+<https://www.windowspro.de/wolfgang-sommergut/was-sind-unterschiede-zwischen-active-directory-azure-ad></span>
+
+</div>
+
+<div id="ref-chikMicrosoftEntraExpands2023" class="csl-entry">
+
+<span class="csl-left-margin">\[19\]
+</span><span class="csl-right-inline">J. Chik, „Microsoft Entra Expands
+into Security Service Edge and Azure AD Becomes Microsoft Entra ID“.
+Zugegriffen: 17. November 2024. \[Online\]. Verfügbar unter:
+<https://www.microsoft.com/en-us/security/blog/2023/07/11/microsoft-entra-expands-into-security-service-edge-and-azure-ad-becomes-microsoft-entra-id/></span>
+
+</div>
+
+<div id="ref-celestedgNewNameAzure2024" class="csl-entry">
+
+<span class="csl-left-margin">\[20\]
+</span><span class="csl-right-inline">CelesteDG, „New Name for Azure
+Active Directory - Microsoft Entra“. Zugegriffen: 17. November 2024.
+\[Online\]. Verfügbar unter:
+<https://learn.microsoft.com/en-us/entra/fundamentals/new-name></span>
+
+</div>
+
+<div id="ref-oktaSecureSingleSignOn" class="csl-entry">
+
+<span class="csl-left-margin">\[21\]
+</span><span class="csl-right-inline">Okta, „Secure Single Sign-On
+Solutions“. Zugegriffen: 2. Januar 2025. \[Online\]. Verfügbar unter:
+<https://www.okta.com/de-de/products/single-sign-on-customer-identity/></span>
+
+</div>
+
+<div id="ref-oneloginErweiterteAuthentifizierung" class="csl-entry">
+
+<span class="csl-left-margin">\[22\]
+</span><span class="csl-right-inline">OneLogin, „Erweiterte
+Authentifizierung“. Zugegriffen: 2. Januar 2025. \[Online\]. Verfügbar
+unter: <https://www.oneidentity.com/></span>
+
+</div>
+
+<div id="ref-pingidentityFunktionenPingIdentityPlattform"
+class="csl-entry">
+
+<span class="csl-left-margin">\[23\]
+</span><span class="csl-right-inline">Ping Identity, „Funktionen der
+Ping Identity-Plattform“. Zugegriffen: 2. Januar 2025. \[Online\].
+Verfügbar unter:
+<https://www.pingidentity.com/de/platform/capabilities.html></span>
+
+</div>
+
+<div id="ref-shibbolethDevelopmentCenterProject2024" class="csl-entry">
+
+<span class="csl-left-margin">\[24\]
+</span><span class="csl-right-inline">Shibboleth, „Development Center -
+Project Roadmap“. Zugegriffen: 12. Januar 2025. \[Online\]. Verfügbar
+unter:
+<https://shibboleth.atlassian.net/wiki/spaces/DEV/pages/3503423489/Project+Roadmap></span>
+
+</div>
+
 <div id="ref-shibbolethShibbolethConceptsUSGoalReq2018"
 class="csl-entry">
 
-<span class="csl-left-margin">\[15\]
+<span class="csl-left-margin">\[25\]
 </span><span class="csl-right-inline">Shibboleth, „Shibboleth Concepts -
 USGoalReq“. Zugegriffen: 6. November 2024. \[Online\]. Verfügbar unter:
 <https://shibboleth.atlassian.net/wiki/spaces/CONCEPT/pages/928645487/USGoalReq></span>
@@ -594,7 +766,7 @@ USGoalReq“. Zugegriffen: 6. November 2024. \[Online\]. Verfügbar unter:
 <div id="ref-robinsDemystifyingShibbolethAdapting2024"
 class="csl-entry">
 
-<span class="csl-left-margin">\[16\]
+<span class="csl-left-margin">\[26\]
 </span><span class="csl-right-inline">S. Robins und B. Daigle,
 „Demystifying Shibboleth: Adapting to Web Browser Privacy Changes“,
 *Journal of Library Administration*, Bd. 64, Nr. 4, S. 449–472, Mai
@@ -605,7 +777,7 @@ class="csl-entry">
 
 <div id="ref-shibbolethMetadataConcepts" class="csl-entry">
 
-<span class="csl-left-margin">\[17\]
+<span class="csl-left-margin">\[27\]
 </span><span class="csl-right-inline">Shibboleth, „Metadata - Concepts“.
 Zugegriffen: 6. November 2024. \[Online\]. Verfügbar unter:
 <https://shibboleth.atlassian.net/wiki/spaces/CONCEPT/pages/928645459/Metadata></span>
@@ -614,7 +786,7 @@ Zugegriffen: 6. November 2024. \[Online\]. Verfügbar unter:
 
 <div id="ref-shibbolethSessionsConcepts" class="csl-entry">
 
-<span class="csl-left-margin">\[18\]
+<span class="csl-left-margin">\[28\]
 </span><span class="csl-right-inline">Shibboleth, „Sessions - Concepts“.
 Zugegriffen: 17. November 2024. \[Online\]. Verfügbar unter:
 <https://shibboleth.atlassian.net/wiki/spaces/CONCEPT/pages/928645433/Sessions></span>
@@ -624,7 +796,7 @@ Zugegriffen: 17. November 2024. \[Online\]. Verfügbar unter:
 <div id="ref-shibbolethShibbolethConceptsNameIdentifiers2020"
 class="csl-entry">
 
-<span class="csl-left-margin">\[19\]
+<span class="csl-left-margin">\[29\]
 </span><span class="csl-right-inline">Shibboleth, „Shibboleth Concepts -
 NameIdentifiers“. Zugegriffen: 6. November 2024. \[Online\]. Verfügbar
 unter:
@@ -634,57 +806,17 @@ unter:
 
 <div id="ref-shibbolethOpenSAML" class="csl-entry">
 
-<span class="csl-left-margin">\[20\]
+<span class="csl-left-margin">\[30\]
 </span><span class="csl-right-inline">Shibboleth, „OpenSAML“.
 Zugegriffen: 17. November 2024. \[Online\]. Verfügbar unter:
 <https://shibboleth.atlassian.net/wiki/spaces/OSAML/overview></span>
 
 </div>
 
-<div id="ref-overtsoftwareAzureADADFS2022" class="csl-entry">
-
-<span class="csl-left-margin">\[21\]
-</span><span class="csl-right-inline">Overt Software, „Azure AD/ADFS vs
-Shibboleth IDP“. Zugegriffen: 17. November 2024. \[Online\]. Verfügbar
-unter:
-<https://www.overtsoftware.com/azure-ad-adfs-vs-shibboleth-idp-which-is-better-for-your-organisation/></span>
-
-</div>
-
-<div id="ref-sommergutWasSindUnterschiede2019" class="csl-entry">
-
-<span class="csl-left-margin">\[22\]
-</span><span class="csl-right-inline">W. Sommergut, „Was Sind Die
-Unterschiede Zwischen Active Directory Und Azure AD? \| WindowsPro“.
-Zugegriffen: 17. November 2024. \[Online\]. Verfügbar unter:
-<https://www.windowspro.de/wolfgang-sommergut/was-sind-unterschiede-zwischen-active-directory-azure-ad></span>
-
-</div>
-
-<div id="ref-chikMicrosoftEntraExpands2023" class="csl-entry">
-
-<span class="csl-left-margin">\[23\]
-</span><span class="csl-right-inline">J. Chik, „Microsoft Entra Expands
-into Security Service Edge and Azure AD Becomes Microsoft Entra ID“.
-Zugegriffen: 17. November 2024. \[Online\]. Verfügbar unter:
-<https://www.microsoft.com/en-us/security/blog/2023/07/11/microsoft-entra-expands-into-security-service-edge-and-azure-ad-becomes-microsoft-entra-id/></span>
-
-</div>
-
-<div id="ref-celestedgNewNameAzure2024" class="csl-entry">
-
-<span class="csl-left-margin">\[24\]
-</span><span class="csl-right-inline">CelesteDG, „New Name for Azure
-Active Directory - Microsoft Entra“. Zugegriffen: 17. November 2024.
-\[Online\]. Verfügbar unter:
-<https://learn.microsoft.com/en-us/entra/fundamentals/new-name></span>
-
-</div>
-
 <div id="ref-shibbolethInstallationIdentityProvider2024"
 class="csl-entry">
 
-<span class="csl-left-margin">\[25\]
+<span class="csl-left-margin">\[31\]
 </span><span class="csl-right-inline">Shibboleth, „Installation -
 Identity Provider 5“. Zugegriffen: 17. November 2024. \[Online\].
 Verfügbar unter:
@@ -694,7 +826,7 @@ Verfügbar unter:
 
 <div id="ref-shibbolethEmbeddedDiscoveryService2021" class="csl-entry">
 
-<span class="csl-left-margin">\[26\]
+<span class="csl-left-margin">\[32\]
 </span><span class="csl-right-inline">Shibboleth, „Embedded Discovery
 Service“. Zugegriffen: 17. November 2024. \[Online\]. Verfügbar unter:
 <https://shibboleth.atlassian.net/wiki/spaces/EDS10/overview></span>
@@ -703,7 +835,7 @@ Service“. Zugegriffen: 17. November 2024. \[Online\]. Verfügbar unter:
 
 <div id="ref-shibbolethEmbeddedDiscoveryService2011" class="csl-entry">
 
-<span class="csl-left-margin">\[27\]
+<span class="csl-left-margin">\[33\]
 </span><span class="csl-right-inline">Shibboleth, „Embedded Discovery
 Service - Overview“. Zugegriffen: 17. November 2024. \[Online\].
 Verfügbar unter:
@@ -711,27 +843,9 @@ Verfügbar unter:
 
 </div>
 
-<div id="ref-shibbolethMembership" class="csl-entry">
-
-<span class="csl-left-margin">\[28\]
-</span><span class="csl-right-inline">Shibboleth, „Membership“.
-Zugegriffen: 17. November 2024. \[Online\]. Verfügbar unter:
-<https://www.shibboleth.net/membership/></span>
-
-</div>
-
-<div id="ref-shibbolethConsortiumMembershipFees" class="csl-entry">
-
-<span class="csl-left-margin">\[29\]
-</span><span class="csl-right-inline">Shibboleth, „Consortium Membership
-Fees“. Zugegriffen: 17. November 2024. \[Online\]. Verfügbar unter:
-<https://www.shibboleth.net/membership/consortium-membership-fees/></span>
-
-</div>
-
 <div id="ref-switchSWITCHaai2024" class="csl-entry">
 
-<span class="csl-left-margin">\[30\]
+<span class="csl-left-margin">\[34\]
 </span><span class="csl-right-inline">SWITCH, „About - SWITCHaai“.
 Zugegriffen: 17. November 2024. \[Online\]. Verfügbar unter:
 <https://help.switch.ch/aai/about/></span>
@@ -740,7 +854,7 @@ Zugegriffen: 17. November 2024. \[Online\]. Verfügbar unter:
 
 <div id="ref-switchMediumDemoSwitchAAI2024" class="csl-entry">
 
-<span class="csl-left-margin">\[31\]
+<span class="csl-left-margin">\[35\]
 </span><span class="csl-right-inline">SWITCH, „Medium Demo - SwitchAAI“.
 Zugegriffen: 24. November 2024. \[Online\]. Verfügbar unter:
 <https://help.switch.ch/aai/demo/medium/></span>
@@ -819,7 +933,7 @@ Zugegriffen: 24. November 2024. \[Online\]. Verfügbar unter:
 
 ### 1.8.2 Shibboleth Ziele
 
-[\[15\]](#ref-shibbolethShibbolethConceptsUSGoalReq2018)
+[\[25\]](#ref-shibbolethShibbolethConceptsUSGoalReq2018)
 
 - Bestehenden Authentifikationmechanismen können für webbasierte
   Ressourcen benutzt werden
@@ -857,7 +971,7 @@ Zugegriffen: 24. November 2024. \[Online\]. Verfügbar unter:
     - Unterstützung des SP bei Ermittlung des IdP des Nutzers
     - Standort überall im Web möglich
     - nicht in allen Anwendungsfällen nötig
-- TODO: [\[16\]](#ref-robinsDemystifyingShibbolethAdapting2024)
+- TODO: [\[26\]](#ref-robinsDemystifyingShibbolethAdapting2024)
 
 #### 1.8.4.1 Basic Interaction
 
@@ -1082,7 +1196,7 @@ role="doc-biblioref">[13]</a></span></figcaption>
 
 #### 1.8.4.3 Metadaten
 
-[\[17\]](#ref-shibbolethMetadataConcepts)
+[\[27\]](#ref-shibbolethMetadataConcepts)
 
 - Bereitstellung der Configuationsdaten in der Kommunikaton zwischen SP
   und IdP
@@ -1092,7 +1206,7 @@ role="doc-biblioref">[13]</a></span></figcaption>
 
 #### 1.8.4.4 Sessions
 
-[\[18\]](#ref-shibbolethSessionsConcepts)
+[\[28\]](#ref-shibbolethSessionsConcepts)
 
 - Der Prozess beinhaltet mehrere Sessions, zwischen user und service
 - In den meisten Fällen durch cookies realisiert
@@ -1106,7 +1220,7 @@ role="doc-biblioref">[13]</a></span></figcaption>
 
 #### 1.8.4.5 Name Identifiers
 
-[\[19\]](#ref-shibbolethShibbolethConceptsNameIdentifiers2020)
+[\[29\]](#ref-shibbolethShibbolethConceptsNameIdentifiers2020)
 
 - In SAML2 dargestellt durch `<NameID>`-Element
   - nicht festgelegt was als *name identifier* verwendet wird
@@ -1124,7 +1238,7 @@ role="doc-biblioref">[13]</a></span></figcaption>
 
 #### 1.8.4.6 OpenSAML
 
-[\[20\]](#ref-shibbolethOpenSAML)
+[\[30\]](#ref-shibbolethOpenSAML)
 
 - “OpenSAML is a set of open source Java libraries used in support of
   the Shibboleth Project’s implementation of the Security Assertion
@@ -1134,7 +1248,7 @@ role="doc-biblioref">[13]</a></span></figcaption>
 
 #### 1.8.4.7 Active-Directory vs Shibboleth
 
-[\[21\]](#ref-overtsoftwareAzureADADFS2022)
+[\[17\]](#ref-overtsoftwareAzureADADFS2022)
 
 - Beides Identity Provider
 - ADFS (Active Directory Federation Services) eher für größere
@@ -1146,13 +1260,13 @@ role="doc-biblioref">[13]</a></span></figcaption>
 
 ##### 1.8.4.7.1 Azure AD vs AD
 
-[\[22\]](#ref-sommergutWasSindUnterschiede2019)
+[\[18\]](#ref-sommergutWasSindUnterschiede2019)
 
 - Azure Active Directory ist Identitätsmanagement der Microsoft-Cloud
 - Active Directory ist das On-Promise Modell
 
-[\[23\]](#ref-chikMicrosoftEntraExpands2023)
-[\[24\]](#ref-celestedgNewNameAzure2024)
+[\[19\]](#ref-chikMicrosoftEntraExpands2023)
+[\[20\]](#ref-celestedgNewNameAzure2024)
 
 - Microsoft Azure Active Directory wurde zu Microsoft Entra ID umbenannt
   um verwirrung zu vermeiden
@@ -1258,7 +1372,7 @@ zwei Möglichkeiten für Redirect
   - ähnliche UX wie DS, welche mit Ressource betrieben werden, mittels
     [SeamlessAccess](https://seamlessaccess.org/)
 
-#### 1.8.4.10 IdP Installation [\[25\]](#ref-shibbolethInstallationIdentityProvider2024)
+#### 1.8.4.10 IdP Installation [\[31\]](#ref-shibbolethInstallationIdentityProvider2024)
 
 - Prüfung der [System
   Requirements](https://shibboleth.atlassian.net/wiki/spaces/IDP5/pages/3199511079)
@@ -1372,13 +1486,13 @@ typische nächste Schritte
 
 #### 1.8.4.12 Embedded Discovery Service
 
-[\[26\]](#ref-shibbolethEmbeddedDiscoveryService2021)
+[\[32\]](#ref-shibbolethEmbeddedDiscoveryService2021)
 
 - Eigener discovery service beim SP durch Embedded Discovery Service
   (EDS) möglich
 - Kein redirect zu einer third-party discovery service Seite
 
-[\[27\]](#ref-shibbolethEmbeddedDiscoveryService2011)
+[\[33\]](#ref-shibbolethEmbeddedDiscoveryService2011)
 
 - Wird verwendet während des Single Sign-On (SSO)
 - Nutzer wählt IdP aus -\> startet SSO
@@ -1407,14 +1521,14 @@ typische nächste Schritte
 
 <br>
 
-[\[28\]](#ref-shibbolethMembership)
+[\[15\]](#ref-shibbolethMembership)
 
 - Mitgliedschaft bringt exclusiven Support wie Slack-Channel
 - Unterstüzt die Weiterentwicklung
 - Partizipation durch Einbringen von eigenen Ideen und Vorschlägen für
   die Weiterentwicklung
 
-[\[29\]](#ref-shibbolethConsortiumMembershipFees)
+[\[16\]](#ref-shibbolethConsortiumMembershipFees)
 
 - Als Consortium Mitglied bezahlt man basierend auf der Art und Größe
   der Institution einen jährlichen Geldbetrag (Fee)
@@ -1465,7 +1579,7 @@ href="#ref-switchIntroductionSWITCHaai2024"
 role="doc-biblioref">[1]</a></span></figcaption>
 </figure>
 
-[\[30\]](#ref-switchSWITCHaai2024)
+[\[34\]](#ref-switchSWITCHaai2024)
 
 - ohne AAI: Registrierung bei jeder Ressource
   - jeweils Nutzername und Passwort
@@ -1533,7 +1647,7 @@ role="doc-biblioref">[11]</a></span></figcaption>
   - erst nach Schließen des Browsers oder bestimmter Zeit erneut
     notwendig
 
-##### 1.8.6.2.2 Medium Demo [\[31\]](#ref-switchMediumDemoSwitchAAI2024)
+##### 1.8.6.2.2 Medium Demo [\[35\]](#ref-switchMediumDemoSwitchAAI2024)
 
 - selbiges Szenario wie in Einfache Demo
 - Live Demo (ggf. für **Präsentation**?)
@@ -1544,12 +1658,12 @@ role="doc-biblioref">[11]</a></span></figcaption>
 
 <figure>
 <img src="https://help.switch.ch/aai/demo/resources/medium_complete.png"
-alt="Vollständiger Login-Prozess vom Shibboleth [31] (Schritt-für-Schritt-Bilder vorhanden)" />
+alt="Vollständiger Login-Prozess vom Shibboleth [35] (Schritt-für-Schritt-Bilder vorhanden)" />
 <figcaption aria-hidden="true">Vollständiger Login-Prozess vom
 Shibboleth <span class="citation"
 data-cites="switchMediumDemoSwitchAAI2024"><a
 href="#ref-switchMediumDemoSwitchAAI2024"
-role="doc-biblioref">[31]</a></span> (Schritt-für-Schritt-Bilder
+role="doc-biblioref">[35]</a></span> (Schritt-für-Schritt-Bilder
 vorhanden)</figcaption>
 </figure>
 

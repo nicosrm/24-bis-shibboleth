@@ -49,6 +49,23 @@ Beispielszenarios. Weiterhin werden die Vor- und Nachteile im Vergleich
 zu ähnlichen Softwarelösungen diskutiert. Abschließend wird ein Fazit
 gezogen.
 
+Akademische Institutionen profitieren sehr von der Nutzung von
+Shibboleth. An der HTWK Leipzig ermöglicht Shibboleth beispielsweise ein
+sicheres Identitätsmanagement und den Login mit nur einem Passwort und
+Benutzernamen bei verschiedenen Web-Diensten. So ist es möglich, sich
+u.a. bei Opal, der HTWK Webseite, AutoTool, den GitLab Instanzen, der
+Bibliothek oder wissenschaftliche Ressourcen wie IEEE und Springer mit
+ein und den selben Logindaten anzumelden. Die Anmeldung wird über den
+HTWK eigenen Identiy Provider durchgeführt und macht die Nutzung der
+Services durch Studierende und Mitarbeitende sehr viel einfacher. Auch
+das Identitätsmanagement wird dadurch für die Administratoren einfacher
+und sicherer.
+
+In diesem Artikel wird ein Überblick über Shibboleth gegeben. Es werden
+grundlegende Begriffe erklärt, der Prozessablauf im Detail an einem
+Beispielszenario gezeigt und Vor- und Nachteile im Vergleich mit
+ähnlichen Softwarelösungen beschrieben.
+
 ## 1.2 Grundlegende Begriffe
 
 Im folgenden Abschnitt werden verschiedene theoretische Grundlagen

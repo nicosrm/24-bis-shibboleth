@@ -49,22 +49,45 @@ Beispielszenarios. Weiterhin werden die Vor- und Nachteile im Vergleich
 zu ähnlichen Softwarelösungen diskutiert. Abschließend wird ein Fazit
 gezogen.
 
-Akademische Institutionen profitieren sehr von der Nutzung von
-Shibboleth. An der HTWK Leipzig ermöglicht Shibboleth beispielsweise ein
-sicheres Identitätsmanagement und den Login mit nur einem Passwort und
-Benutzernamen bei verschiedenen Web-Diensten. So ist es möglich, sich
-u.a. bei Opal, der HTWK Webseite, AutoTool, den GitLab Instanzen, der
-Bibliothek oder wissenschaftliche Ressourcen wie IEEE und Springer mit
-ein und den selben Logindaten anzumelden. Die Anmeldung wird über den
-HTWK eigenen Identiy Provider durchgeführt und macht die Nutzung der
-Services durch Studierende und Mitarbeitende sehr viel einfacher. Auch
-das Identitätsmanagement wird dadurch für die Administratoren einfacher
-und sicherer.
+*Shibboleth* ist ein Open-Source-Softwareprojekt für Web-basiertes SSO
+und Identitätsmanagement für föderierte Systeme, wie beispielsweise
+akademische Institute, Identitätsverbände oder kommerzielle
+Organisationen. Verschiedene Komponenten verwalten die Authentifizierung
+sowie den Zugriff auf geschützte Ressourcen
+[\[2\]](#ref-shibbolethShibbolethConsortium2024),
+[\[3\]](#ref-cantorConsortiumFAQShibboleth2023),
+[\[4\]](#ref-shibbolethOurMembers2024).
 
-In diesem Artikel wird ein Überblick über Shibboleth gegeben. Es werden
-grundlegende Begriffe erklärt, der Prozessablauf im Detail an einem
-Beispielszenario gezeigt und Vor- und Nachteile im Vergleich mit
-ähnlichen Softwarelösungen beschrieben.
+Vor allem an akademischen Institutionen, wie der Hochschule für Technik,
+Wirtschaft und Kultur Leipzig (HTWK), wird Shibboleth eingesetzt. Bei
+der HTWK ermöglicht Shibboleth im Verbund des *Deutschen
+Forschungsnetzes* (DFN) beispielsweise ein sicheres Identitätsmanagement
+und sowie ein Login mit nur einem Benutzernamen und Passwort bei
+verschiedenen Web-Diensten
+[\[1\]](#ref-switchIntroductionSWITCHaai2024),
+[\[4\]](#ref-shibbolethOurMembers2024),
+[\[5\]](#ref-hochschulefuertechnikwirtschaftundkulturleipzigMedienOnlineNutzen).
+
+So ist es an der HTWK möglich, sich unter anderem bei den E-Learning
+Plattformen [*OPAL*](https://www.bps-system.de/opal-lernplattform/)
+sowie [*AutoTool*](https://git.imn.htwk-leipzig.de/waldmann/autotool/),
+der HTWK-Webseite, den verschiedenen GitLab-Instanzen, der
+Hochschulbibliothek oder verschiedenen wissenschaftliche Ressourcen wie
+*IEEE Xplore* und *SpringerLink* mit denselben Logindaten anzumelden
+[\[1\]](#ref-switchIntroductionSWITCHaai2024),
+[\[5\]](#ref-hochschulefuertechnikwirtschaftundkulturleipzigMedienOnlineNutzen).
+Die Authentifizierung wird über einen zentralen *Identity Provider*
+durchgeführt und vereinfacht die Nutzung der Services durch Studierende
+und Mitarbeitende. Ebenso ist eine einfachere und sicherere
+Administration des Identitätsmanagements ermöglicht
+[\[1\]](#ref-switchIntroductionSWITCHaai2024).
+
+Der folgende Artikel gibt einen Überblick über Shibboleth. Zunächst
+werden die grundlegenden Begriffe erläutert, gefolgt von einer
+detaillierten Darstellung des Prozessablaufs anhand eines
+Beispielszenarios. Weiterhin werden die Vor- und Nachteile im Vergleich
+zu ähnlichen Softwarelösungen diskutiert. Abschließend wird ein Fazit
+gezogen.
 
 ## 1.2 Grundlegende Begriffe
 

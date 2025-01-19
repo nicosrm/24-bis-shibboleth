@@ -517,8 +517,8 @@ passwortlosen Authentifikation befassen
 ## 1.6 Zusammenfassung
 
 Shibboleth ist ein sich weiterentwickelndes Web-basiertes SSO und
-Identitätsmanagementsystem, bestehend aus drei Komponenten: dem Identity
-Provider, dem Service Provider und dem Discovery Service.
+Identitätsmanagementsystem, bestehend aus drei Komponenten: Identity
+Provider (IdP), Service Provider (SP) und dem Discovery Service (DS).
 
 Zuständig für die Verwaltung der geschützten Ressourcen ist der SP,
 welcher bei einer Zugriffsanfrage nach einer aktiven Session und
@@ -530,8 +530,8 @@ SP.
 
 Dieses Verfahren ermöglicht den Austausch von Authentifizierungsdaten
 auch zwischen verschiedenen externen Organisationen und wird dadurch vor
-allem von akademischen Institutionen eingesetzt. Als Open Source
-Software fallen keine Kosten an, es gibt aber die Möglichkeit einer
+allem von föderierten Institutionen eingesetzt. Als Open Source Software
+fallen keine Kosten an, es gibt aber die Möglichkeit einer
 kostenpflichtigen Mitgliedschaft, welche unter anderem Support für die
 ansonsten eigenverantwortliche Administration anbietet.
 

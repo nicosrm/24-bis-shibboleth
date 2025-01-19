@@ -1,5 +1,24 @@
 % !TeX root = ../main.tex
 
 \begin{frame}{Fazit}
-    TODO
+    \begin{itemize}
+        \item etabliertes Web-basiertes SSO und Identitätsmanagement
+        
+        \item drei zentrale Komponenten
+        \begin{itemize}
+            \item Identity Provider (IdP) $\to$ Authentifizierung
+            \item Service Provider (SP) $\to$ Autorisierung, Ressourcenzugriff
+            \item Discovery Service (DS) $\to$ Ermittlung IdP {\footnotesize (WAYF)}
+        \end{itemize}
+
+        \item Zugriff auf \emph{geschützte} Ressource in 3 Phasen
+        \begin{enumerate}
+            \item Erster Zugriff auf den SP und IdP
+            \item Session Initialisierung und Authentifizierungsanfrage
+            \item Authentifizierung, Autorisierung und Ressourcenzugriff
+        \end{enumerate}
+
+        \item Einsatz v.a in föderierten Institutionen, bspw. DFN
+        \item Open Source, optionale kostenpflichtige Mitgliedschaft
+    \end{itemize}
 \end{frame}

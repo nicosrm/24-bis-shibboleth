@@ -44,14 +44,6 @@ So ist es an der HTWK möglich, sich unter anderem bei den E-Learning Plattforme
 
 Der folgende Artikel gibt einen Überblick über Shibboleth. Zunächst werden die grundlegenden Begriffe erläutert, gefolgt von einer detaillierten Darstellung des Prozessablaufs anhand eines Beispielszenarios. Weiterhin werden die Vor- und Nachteile im Vergleich zu ähnlichen Softwarelösungen diskutiert. Abschließend wird ein Fazit gezogen.
 
-*Shibboleth* ist ein Open-Source-Softwareprojekt für Web-basiertes SSO und Identitätsmanagement für föderierte Systeme, wie beispielsweise akademische Institute, Identitätsverbände oder kommerzielle Organisationen. Verschiedene Komponenten verwalten die Authentifizierung sowie den Zugriff auf geschützte Ressourcen [@shibbolethShibbolethConsortium2024; @cantorConsortiumFAQShibboleth2023; @shibbolethOurMembers2024].
-
-Vor allem an akademischen Institutionen, wie der Hochschule für Technik, Wirtschaft und Kultur Leipzig (HTWK), wird Shibboleth eingesetzt. Bei der HTWK ermöglicht Shibboleth im Verbund des *Deutschen Forschungsnetzes* (DFN) beispielsweise ein sicheres Identitätsmanagement und sowie ein Login mit nur einem Benutzernamen und Passwort bei verschiedenen Web-Diensten [@switchIntroductionSWITCHaai2024; @hochschulefuertechnikwirtschaftundkulturleipzigMedienOnlineNutzen; @shibbolethOurMembers2024].
-
-So ist es an der HTWK möglich, sich unter anderem bei den E-Learning Plattformen [*OPAL*](https://www.bps-system.de/opal-lernplattform/) sowie [*AutoTool*](https://git.imn.htwk-leipzig.de/waldmann/autotool/), der HTWK-Webseite, den verschiedenen GitLab-Instanzen, der Hochschulbibliothek oder verschiedenen wissenschaftliche Ressourcen wie *IEEE Xplore* und *SpringerLink* mit denselben Logindaten anzumelden [@switchIntroductionSWITCHaai2024; @hochschulefuertechnikwirtschaftundkulturleipzigMedienOnlineNutzen]. Die Authentifizierung wird über einen zentralen *Identity Provider* durchgeführt und vereinfacht die Nutzung der Services durch Studierende und Mitarbeitende. Ebenso ist eine einfachere und sicherere Administration des Identitätsmanagements ermöglicht [@switchIntroductionSWITCHaai2024].
-
-Der folgende Artikel gibt einen Überblick über Shibboleth. Zunächst werden die grundlegenden Begriffe erläutert, gefolgt von einer detaillierten Darstellung des Prozessablaufs anhand eines Beispielszenarios. Weiterhin werden die Vor- und Nachteile im Vergleich zu ähnlichen Softwarelösungen diskutiert. Abschließend wird ein Fazit gezogen.
-
 
 ## Grundlegende Begriffe {#sec:grundlegende-begriffe}
 

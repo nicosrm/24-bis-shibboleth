@@ -1,0 +1,47 @@
+% !TeX root = ../main.tex
+
+\section{Grundlegende Begriffe}
+
+\begin{frame}{Komponenten}
+    \alert{\textbf{Identity Provider}} (IdP)
+    \vspace{-\topsep}
+    \begin{itemize}
+        \item Authentifizierung der Benutzer:in über Home-Organisation ~\cite{shibbolethShibbolethConcepts2023, dfnDFNAAIDokumentationEinfuhrung}
+        \item bspw. Bildungs- und Forschungseinrichtungen (HTWK)
+    \end{itemize}
+    
+    \pause
+    \alert{\textbf{Service Provider}} (SP)
+    \vspace{-\topsep}
+    \begin{itemize}
+        \item Prüfung der Authentifizierung und Autorisierung
+        \item Zugriff auf Ressource~\cite{shibbolethShibbolethConcepts2023, shibbolethServiceProviderApplication2021, shibbolethServiceProviderProtectContent2021}
+        \item bspw. E-Learning-Plattformen (OPAL), Bibliotheken~\cite{dfnDFNAAIDokumentationEinfuhrung}
+    \end{itemize}
+    
+    \pause
+    \alert{\textbf{Discovery Service}} (DS)
+    \vspace{-\topsep}
+    \begin{itemize}
+        \item Unterstützung der SP bei Ermittlung eines geeigneten IdP
+        \item \emph{Where Are You From?} (WAYF)~\cite{shibbolethShibbolethConcepts2023, shibbolethIdPDiscoveryShibbolethConcepts2020, switchSimpleDemoSwitchAAI2024}
+    \end{itemize}
+\end{frame}
+
+
+\begin{frame}{Grundlegender Prozessablauf}
+    \begin{figure}
+        \includegraphics[height=0.7\paperheight]{../assets/basic_interaction_article.drawio.pdf}
+        \caption{Grundlegender Prozessablauf~\cite{shibbolethShibbolethConcepts2023, switchExpertDemoSWITCHaai2024a, michelsIdentityManagementUnd}}
+    \end{figure}
+\end{frame}
+
+
+\begin{frame}{Szenario}
+    \begin{itemize}
+        \item Zugriff auf Ressource $B$ unter \texttt{pool.example/resource-b}
+        \item Home-Organisation: \texttt{uni-a.example}
+        \item Identity Provider: \texttt{idp.uni-a.example}
+        \item Discovery Service: \texttt{discovery.pool.example}
+    \end{itemize}
+\end{frame}

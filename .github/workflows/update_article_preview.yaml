@@ -3,6 +3,8 @@ on:
   push:
     paths:
       - article/article.pandoc.md
+    tags-ignore:
+      - '**'
 
 env:
   INPUT_PATH: article/article.pandoc.md

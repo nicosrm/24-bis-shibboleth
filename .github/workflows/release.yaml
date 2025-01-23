@@ -35,6 +35,6 @@ jobs:
         - name: Create release
           uses: ncipollo/release-action@v1.14.0
           with:
-            artifacts: ${{ env.SLIDES_ARTIFACT_NAME }}.pdf,${{ env.ARTICLE_ARTIFACT_NAME }}.pdf
+            artifacts: ${{ env.SLIDES_ARTIFACT_NAME }}/*, ${{ env.ARTICLE_ARTIFACT_NAME }}/*
             body: "Release of version ${{ github.ref_name }}"
             allowUpdates: true
